@@ -1,0 +1,26 @@
+delete_merged_file: true
+language:
+  label:
+    fig: 'Rysunek '
+    tab: 'Tabela '
+    eq: 'Równanie '
+    thm: ''
+    lem: ''
+    cor: ''
+    prp: ''
+    cnj: ''
+    def: ''
+    exm: ''
+    exr: ''
+    hyp: ''
+    proof: ''
+    remark: 'Remark. '
+    solution: 'Solution. '
+ui:
+    edit: Edit
+    chapter_name: ''
+    appendix_name: ''
+    abstract_name: ''
+    abstract: ''
+output_dir: "docs"
+split_by: rmd
