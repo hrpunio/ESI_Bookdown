@@ -1,0 +1,402 @@
+contname;contcode;ctrname;ctrcode;ctry3code;ctrnumber;tmp;name;symbol;yr;frate
+Asia;AS;Afghanistan, Islamic Republic of;AF;AFG;4;===;Afghanistan;AFG;2003;7.14
+Asia;AS;Afghanistan, Islamic Republic of;AF;AFG;4;===;Afghanistan;AFG;2018;4.33
+Europe;EU;Albania, Republic of;AL;ALB;8;===;Albania;ALB;2003;1.9
+Europe;EU;Albania, Republic of;AL;ALB;8;===;Albania;ALB;2018;1.71
+Africa;AF;Algeria, People's Democratic Republic of;DZ;DZA;12;===;Algeria;DZA;2003;2.41
+Africa;AF;Algeria, People's Democratic Republic of;DZ;DZA;12;===;Algeria;DZA;2018;2.64
+Africa;AF;Angola, Republic of;AO;AGO;24;===;Angola;AGO;2003;6.54
+Africa;AF;Angola, Republic of;AO;AGO;24;===;Angola;AGO;2018;5.55
+North America;NA;Antigua and Barbuda;AG;ATG;28;===;Antigua and Barbuda;ATG;2003;2.27
+North America;NA;Antigua and Barbuda;AG;ATG;28;===;Antigua and Barbuda;ATG;2018;2.03
+South America;SA;Argentina, Argentine Republic;AR;ARG;32;===;Argentina;ARG;2003;2.5
+South America;SA;Argentina, Argentine Republic;AR;ARG;32;===;Argentina;ARG;2018;2.26
+Asia;AS;Armenia, Republic of;AM;ARM;51;===;Armenia;ARM;2003;1.4
+Asia;AS;Armenia, Republic of;AM;ARM;51;===;Armenia;ARM;2018;1.6
+North America;NA;Aruba;AW;ABW;533;===;Aruba;ABW;2003;1.81
+North America;NA;Aruba;AW;ABW;533;===;Aruba;ABW;2018;1.8
+Oceania;OC;Australia, Commonwealth of;AU;AUS;36;===;Australia;AUS;2003;1.79
+Oceania;OC;Australia, Commonwealth of;AU;AUS;36;===;Australia;AUS;2018;1.83
+Europe;EU;Austria, Republic of;AT;AUT;40;===;Austria;AUT;2003;1.38
+Europe;EU;Austria, Republic of;AT;AUT;40;===;Austria;AUT;2018;1.52
+Asia;AS;Azerbaijan, Republic of;AZ;AZE;31;===;Azerbaijan;AZE;2003;1.87
+Asia;AS;Azerbaijan, Republic of;AZ;AZE;31;===;Azerbaijan;AZE;2018;2.04
+North America;NA;Bahamas, Commonwealth of the;BS;BHS;44;===;Bahamas;BHS;2003;1.89
+North America;NA;Bahamas, Commonwealth of the;BS;BHS;44;===;Bahamas;BHS;2018;1.75
+Asia;AS;Bahrain, Kingdom of;BH;BHR;48;===;Bahrain;BHR;2003;2.6
+Asia;AS;Bahrain, Kingdom of;BH;BHR;48;===;Bahrain;BHR;2018;1.99
+Asia;AS;Bangladesh, People's Republic of;BD;BGD;50;===;Bangladesh;BGD;2003;2.8
+Asia;AS;Bangladesh, People's Republic of;BD;BGD;50;===;Bangladesh;BGD;2018;2.05
+North America;NA;Barbados;BB;BRB;52;===;Barbados;BRB;2003;1.75
+North America;NA;Barbados;BB;BRB;52;===;Barbados;BRB;2018;1.8
+Europe;EU;Belarus, Republic of;BY;BLR;112;===;Belarus;BLR;2003;1.26
+Europe;EU;Belarus, Republic of;BY;BLR;112;===;Belarus;BLR;2018;1.72
+Europe;EU;Belgium, Kingdom of;BE;BEL;56;===;Belgium;BEL;2003;1.7
+Europe;EU;Belgium, Kingdom of;BE;BEL;56;===;Belgium;BEL;2018;1.8
+North America;NA;Belize;BZ;BLZ;84;===;Belize;BLZ;2003;3.28
+North America;NA;Belize;BZ;BLZ;84;===;Belize;BLZ;2018;2.44
+Africa;AF;Benin, Republic of;BJ;BEN;204;===;Benin;BEN;2003;5.75
+Africa;AF;Benin, Republic of;BJ;BEN;204;===;Benin;BEN;2018;4.84
+Asia;AS;Bhutan, Kingdom of;BT;BTN;64;===;Bhutan;BTN;2003;3.09
+Asia;AS;Bhutan, Kingdom of;BT;BTN;64;===;Bhutan;BTN;2018;1.99
+South America;SA;Bolivia, Republic of;BO;BOL;68;===;Bolivia;BOL;2003;3.77
+South America;SA;Bolivia, Republic of;BO;BOL;68;===;Bolivia;BOL;2018;2.8
+Europe;EU;Bosnia and Herzegovina;BA;BIH;70;===;Bosnia and Herzegovina;BIH;2003;1.33
+Europe;EU;Bosnia and Herzegovina;BA;BIH;70;===;Bosnia and Herzegovina;BIH;2018;1.39
+Africa;AF;Botswana, Republic of;BW;BWA;72;===;Botswana;BWA;2003;3.11
+Africa;AF;Botswana, Republic of;BW;BWA;72;===;Botswana;BWA;2018;2.64
+South America;SA;Brazil, Federative Republic of;BR;BRA;76;===;Brazil;BRA;2003;2.1
+South America;SA;Brazil, Federative Republic of;BR;BRA;76;===;Brazil;BRA;2018;1.7
+Asia;AS;Brunei Darussalam;BN;BRN;96;===;Brunei;BRN;2003;1.95
+Asia;AS;Brunei Darussalam;BN;BRN;96;===;Brunei;BRN;2018;1.85
+Europe;EU;Bulgaria, Republic of;BG;BGR;100;===;Bulgaria;BGR;2003;1.26
+Europe;EU;Bulgaria, Republic of;BG;BGR;100;===;Bulgaria;BGR;2018;1.59
+Africa;AF;Burkina Faso;BF;BFA;854;===;Burkina Faso;BFA;2003;6.4
+Africa;AF;Burkina Faso;BF;BFA;854;===;Burkina Faso;BFA;2018;5.19
+Africa;AF;Burundi, Republic of;BI;BDI;108;===;Burundi;BDI;2003;6.82
+Africa;AF;Burundi, Republic of;BI;BDI;108;===;Burundi;BDI;2018;5.53
+Asia;AS;Cambodia, Kingdom of;KH;KHM;116;===;Cambodia;KHM;2003;3.41
+Asia;AS;Cambodia, Kingdom of;KH;KHM;116;===;Cambodia;KHM;2018;2.5
+Africa;AF;Cameroon, Republic of;CM;CMR;120;===;Cameroon;CMR;2003;5.43
+Africa;AF;Cameroon, Republic of;CM;CMR;120;===;Cameroon;CMR;2018;4.57
+North America;NA;Canada;CA;CAN;124;===;Canada;CAN;2003;1.53
+North America;NA;Canada;CA;CAN;124;===;Canada;CAN;2018;1.56
+Africa;AF;Cape Verde, Republic of;CV;CPV;132;===;Cape Verde;CPV;2003;3.36
+Africa;AF;Cape Verde, Republic of;CV;CPV;132;===;Cape Verde;CPV;2018;2.27
+Africa;AF;Central African Republic;CF;CAF;140;===;Central African Republic;CAF;2003;5.44
+Africa;AF;Central African Republic;CF;CAF;140;===;Central African Republic;CAF;2018;4.72
+Africa;AF;Chad, Republic of;TD;TCD;148;===;Chad;TCD;2003;7.21
+Africa;AF;Chad, Republic of;TD;TCD;148;===;Chad;TCD;2018;5.75
+South America;SA;Chile, Republic of;CL;CHL;152;===;Chile;CHL;2003;2.02
+South America;SA;Chile, Republic of;CL;CHL;152;===;Chile;CHL;2018;1.76
+Asia;AS;China, People's Republic of;CN;CHN;156;===;China;CHN;2003;1.54
+Asia;AS;China, People's Republic of;CN;CHN;156;===;China;CHN;2018;1.64
+South America;SA;Colombia, Republic of;CO;COL;170;===;Colombia;COL;2003;2.27
+South America;SA;Colombia, Republic of;CO;COL;170;===;Colombia;COL;2018;1.82
+Africa;AF;Comoros, Union of the;KM;COM;174;===;Comoros;COM;2003;5.28
+Africa;AF;Comoros, Union of the;KM;COM;174;===;Comoros;COM;2018;4.2
+Africa;AF;Congo, Republic of the;CG;COG;178;===;Congo;COG;2003;5.07
+Africa;AF;Congo, Republic of the;CG;COG;178;===;Congo;COG;2018;4.54
+North America;NA;Costa Rica, Republic of;CR;CRI;188;===;Costa Rica;CRI;2003;2.16
+North America;NA;Costa Rica, Republic of;CR;CRI;188;===;Costa Rica;CRI;2018;1.75
+Africa;AF;Cote d'Ivoire, Republic of;CI;CIV;384;===;Cote d'Ivoire;CIV;2003;5.52
+Africa;AF;Cote d'Ivoire, Republic of;CI;CIV;384;===;Cote d'Ivoire;CIV;2018;4.78
+Europe;EU;Croatia, Republic of;HR;HRV;191;===;Croatia;HRV;2003;1.38
+Europe;EU;Croatia, Republic of;HR;HRV;191;===;Croatia;HRV;2018;1.45
+North America;NA;Cuba, Republic of;CU;CUB;192;===;Cuba;CUB;2003;1.58
+North America;NA;Cuba, Republic of;CU;CUB;192;===;Cuba;CUB;2018;1.72
+Asia;AS;Cyprus, Republic of;CY;CYP;196;===;Cyprus;CYP;2003;1.58
+Asia;AS;Cyprus, Republic of;CY;CYP;196;===;Cyprus;CYP;2018;1.34
+Europe;EU;Czech Republic;CZ;CZE;203;===;Czech Republic;CZE;2003;1.21
+Europe;EU;Czech Republic;CZ;CZE;203;===;Czech Republic;CZE;2018;1.57
+Africa;AF;Congo, Democratic Republic of the;CD;COD;180;===;Democratic Republic of Congo;COD;2003;6.81
+Africa;AF;Congo, Democratic Republic of the;CD;COD;180;===;Democratic Republic of Congo;COD;2018;5.92
+Europe;EU;Denmark, Kingdom of;DK;DNK;208;===;Denmark;DNK;2003;1.76
+Europe;EU;Denmark, Kingdom of;DK;DNK;208;===;Denmark;DNK;2018;1.76
+Africa;AF;Djibouti, Republic of;DJ;DJI;262;===;Djibouti;DJI;2003;4.12
+Africa;AF;Djibouti, Republic of;DJ;DJI;262;===;Djibouti;DJI;2018;2.73
+North America;NA;Dominican Republic;DO;DOM;214;===;Dominican Republic;DOM;2003;2.81
+North America;NA;Dominican Republic;DO;DOM;214;===;Dominican Republic;DOM;2018;2.36
+South America;SA;Ecuador, Republic of;EC;ECU;218;===;Ecuador;ECU;2003;2.87
+South America;SA;Ecuador, Republic of;EC;ECU;218;===;Ecuador;ECU;2018;2.43
+Africa;AF;Egypt, Arab Republic of;EG;EGY;818;===;Egypt;EGY;2003;3.09
+Africa;AF;Egypt, Arab Republic of;EG;EGY;818;===;Egypt;EGY;2018;3.15
+North America;NA;El Salvador, Republic of;SV;SLV;222;===;El Salvador;SLV;2003;2.69
+North America;NA;El Salvador, Republic of;SV;SLV;222;===;El Salvador;SLV;2018;2.04
+Africa;AF;Equatorial Guinea, Republic of;GQ;GNQ;226;===;Equatorial Guinea;GNQ;2003;5.68
+Africa;AF;Equatorial Guinea, Republic of;GQ;GNQ;226;===;Equatorial Guinea;GNQ;2018;4.51
+Africa;AF;Eritrea, State of;ER;ERI;232;===;Eritrea;ERI;2003;5.07
+Africa;AF;Eritrea, State of;ER;ERI;232;===;Eritrea;ERI;2018;3.99
+Europe;EU;Estonia, Republic of;EE;EST;233;===;Estonia;EST;2003;1.43
+Europe;EU;Estonia, Republic of;EE;EST;233;===;Estonia;EST;2018;1.66
+Africa;AF;Ethiopia, Federal Democratic Republic of;ET;ETH;231;===;Ethiopia;ETH;2003;6.04
+Africa;AF;Ethiopia, Federal Democratic Republic of;ET;ETH;231;===;Ethiopia;ETH;2018;3.97
+Oceania;OC;Fiji, Republic of the Fiji Islands;FJ;FJI;242;===;Fiji;FJI;2003;2.95
+Oceania;OC;Fiji, Republic of the Fiji Islands;FJ;FJI;242;===;Fiji;FJI;2018;2.47
+Europe;EU;Finland, Republic of;FI;FIN;246;===;Finland;FIN;2003;1.76
+Europe;EU;Finland, Republic of;FI;FIN;246;===;Finland;FIN;2018;1.78
+Europe;EU;France, French Republic;FR;FRA;250;===;France;FRA;2003;1.89
+Europe;EU;France, French Republic;FR;FRA;250;===;France;FRA;2018;1.97
+South America;SA;French Guiana;GF;GUF;254;===;French Guiana;GUF;2003;3.72
+South America;SA;French Guiana;GF;GUF;254;===;French Guiana;GUF;2018;3.25
+Oceania;OC;French Polynesia;PF;PYF;258;===;French Polynesia;PYF;2003;2.33
+Oceania;OC;French Polynesia;PF;PYF;258;===;French Polynesia;PYF;2018;1.98
+Africa;AF;Gabon, Gabonese Republic;GA;GAB;266;===;Gabon;GAB;2003;4.33
+Africa;AF;Gabon, Gabonese Republic;GA;GAB;266;===;Gabon;GAB;2018;3.66
+Africa;AF;Gambia, Republic of the;GM;GMB;270;===;Gambia;GMB;2003;5.88
+Africa;AF;Gambia, Republic of the;GM;GMB;270;===;Gambia;GMB;2018;5.29
+Asia;AS;Georgia;GE;GEO;268;===;Georgia;GEO;2003;1.6
+Asia;AS;Georgia;GE;GEO;268;===;Georgia;GEO;2018;1.98
+Europe;EU;Germany, Federal Republic of;DE;DEU;276;===;Germany;DEU;2003;1.35
+Europe;EU;Germany, Federal Republic of;DE;DEU;276;===;Germany;DEU;2018;1.48
+Africa;AF;Ghana, Republic of;GH;GHA;288;===;Ghana;GHA;2003;4.61
+Africa;AF;Ghana, Republic of;GH;GHA;288;===;Ghana;GHA;2018;3.87
+Europe;EU;Greece, Hellenic Republic;GR;GRC;300;===;Greece;GRC;2003;1.36
+Europe;EU;Greece, Hellenic Republic;GR;GRC;300;===;Greece;GRC;2018;1.3
+North America;NA;Greenland;GL;GRL;304;===;Greenland;GRL;2003;2.37
+North America;NA;Grenada;GD;GRD;308;===;Grenada;GRD;2003;2.41
+North America;NA;Grenada;GD;GRD;308;===;Grenada;GRD;2018;2.06
+North America;NA;Guadeloupe;GP;GLP;312;===;Guadeloupe;GLP;2003;2.08
+North America;NA;Guadeloupe;GP;GLP;312;===;Guadeloupe;GLP;2018;1.92
+Oceania;OC;Guam;GU;GUM;316;===;Guam;GUM;2003;2.72
+Oceania;OC;Guam;GU;GUM;316;===;Guam;GUM;2018;2.31
+North America;NA;Guatemala, Republic of;GT;GTM;320;===;Guatemala;GTM;2003;4.25
+North America;NA;Guatemala, Republic of;GT;GTM;320;===;Guatemala;GTM;2018;2.87
+Africa;AF;Guinea, Republic of;GN;GIN;324;===;Guinea;GIN;2003;5.88
+Africa;AF;Guinea, Republic of;GN;GIN;324;===;Guinea;GIN;2018;4.7
+Africa;AF;Guinea-Bissau, Republic of;GW;GNB;624;===;Guinea-Bissau;GNB;2003;5.56
+Africa;AF;Guinea-Bissau, Republic of;GW;GNB;624;===;Guinea-Bissau;GNB;2018;4.48
+South America;SA;Guyana, Co-operative Republic of;GY;GUY;328;===;Guyana;GUY;2003;2.92
+South America;SA;Guyana, Co-operative Republic of;GY;GUY;328;===;Guyana;GUY;2018;2.46
+North America;NA;Haiti, Republic of;HT;HTI;332;===;Haiti;HTI;2003;3.96
+North America;NA;Haiti, Republic of;HT;HTI;332;===;Haiti;HTI;2018;2.82
+North America;NA;Honduras, Republic of;HN;HND;340;===;Honduras;HND;2003;3.69
+North America;NA;Honduras, Republic of;HN;HND;340;===;Honduras;HND;2018;2.39
+Asia;AS;Hong Kong, Special Administrative Region of China;HK;HKG;344;===;Hong Kong;HKG;2003;0.95
+Asia;AS;Hong Kong, Special Administrative Region of China;HK;HKG;344;===;Hong Kong;HKG;2018;1.34
+Europe;EU;Hungary, Republic of;HU;HUN;348;===;Hungary;HUN;2003;1.29
+Europe;EU;Hungary, Republic of;HU;HUN;348;===;Hungary;HUN;2018;1.4
+Europe;EU;Iceland, Republic of;IS;ISL;352;===;Iceland;ISL;2003;2.02
+Europe;EU;Iceland, Republic of;IS;ISL;352;===;Iceland;ISL;2018;1.91
+Asia;AS;India, Republic of;IN;IND;356;===;India;IND;2003;3.11
+Asia;AS;India, Republic of;IN;IND;356;===;India;IND;2018;2.28
+Asia;AS;Indonesia, Republic of;ID;IDN;360;===;Indonesia;IDN;2003;2.51
+Asia;AS;Indonesia, Republic of;ID;IDN;360;===;Indonesia;IDN;2018;2.31
+Asia;AS;Iran, Islamic Republic of;IR;IRN;364;===;Iran;IRN;2003;1.93
+Asia;AS;Iran, Islamic Republic of;IR;IRN;364;===;Iran;IRN;2018;1.61
+Asia;AS;Iraq, Republic of;IQ;IRQ;368;===;Iraq;IRQ;2003;4.64
+Asia;AS;Iraq, Republic of;IQ;IRQ;368;===;Iraq;IRQ;2018;4.25
+Europe;EU;Ireland;IE;IRL;372;===;Ireland;IRL;2003;1.97
+Europe;EU;Ireland;IE;IRL;372;===;Ireland;IRL;2018;1.98
+Asia;AS;Israel, State of;IL;ISR;376;===;Israel;ISR;2003;2.91
+Asia;AS;Israel, State of;IL;ISR;376;===;Israel;ISR;2018;2.92
+Europe;EU;Italy, Italian Republic;IT;ITA;380;===;Italy;ITA;2003;1.31
+Europe;EU;Italy, Italian Republic;IT;ITA;380;===;Italy;ITA;2018;1.5
+North America;NA;Jamaica;JM;JAM;388;===;Jamaica;JAM;2003;2.44
+North America;NA;Jamaica;JM;JAM;388;===;Jamaica;JAM;2018;1.98
+Asia;AS;Japan;JP;JPN;392;===;Japan;JPN;2003;1.3
+Asia;AS;Japan;JP;JPN;392;===;Japan;JPN;2018;1.48
+Asia;AS;Jordan, Hashemite Kingdom of;JO;JOR;400;===;Jordan;JOR;2003;3.83
+Asia;AS;Jordan, Hashemite Kingdom of;JO;JOR;400;===;Jordan;JOR;2018;3.24
+Asia;AS;Kazakhstan, Republic of;KZ;KAZ;398;===;Kazakhstan;KAZ;2003;2.07
+Asia;AS;Kazakhstan, Republic of;KZ;KAZ;398;===;Kazakhstan;KAZ;2018;2.57
+Africa;AF;Kenya, Republic of;KE;KEN;404;===;Kenya;KEN;2003;4.98
+Africa;AF;Kenya, Republic of;KE;KEN;404;===;Kenya;KEN;2018;3.74
+Oceania;OC;Kiribati, Republic of;KI;KIR;296;===;Kiribati;KIR;2003;3.95
+Oceania;OC;Kiribati, Republic of;KI;KIR;296;===;Kiribati;KIR;2018;3.57
+Asia;AS;Kuwait, State of;KW;KWT;414;===;Kuwait;KWT;2003;2.62
+Asia;AS;Kuwait, State of;KW;KWT;414;===;Kuwait;KWT;2018;1.95
+Asia;AS;Kyrgyz Republic;KG;KGZ;417;===;Kyrgyzstan;KGZ;2003;2.52
+Asia;AS;Kyrgyz Republic;KG;KGZ;417;===;Kyrgyzstan;KGZ;2018;2.91
+Asia;AS;Lao People's Democratic Republic;LA;LAO;418;===;Laos;LAO;2003;3.85
+Asia;AS;Lao People's Democratic Republic;LA;LAO;418;===;Laos;LAO;2018;2.59
+Europe;EU;Latvia, Republic of;LV;LVA;428;===;Latvia;LVA;2003;1.3
+Europe;EU;Latvia, Republic of;LV;LVA;428;===;Latvia;LVA;2018;1.57
+Asia;AS;Lebanon, Lebanese Republic;LB;LBN;422;===;Lebanon;LBN;2003;1.94
+Asia;AS;Lebanon, Lebanese Republic;LB;LBN;422;===;Lebanon;LBN;2018;1.71
+Africa;AF;Lesotho, Kingdom of;LS;LSO;426;===;Lesotho;LSO;2003;3.74
+Africa;AF;Lesotho, Kingdom of;LS;LSO;426;===;Lesotho;LSO;2018;3
+Africa;AF;Liberia, Republic of;LR;LBR;430;===;Liberia;LBR;2003;5.64
+Africa;AF;Liberia, Republic of;LR;LBR;430;===;Liberia;LBR;2018;4.45
+Africa;AF;Libyan Arab Jamahiriya;LY;LBY;434;===;Libya;LBY;2003;2.6
+Africa;AF;Libyan Arab Jamahiriya;LY;LBY;434;===;Libya;LBY;2018;2.2
+Europe;EU;Lithuania, Republic of;LT;LTU;440;===;Lithuania;LTU;2003;1.29
+Europe;EU;Lithuania, Republic of;LT;LTU;440;===;Lithuania;LTU;2018;1.67
+Europe;EU;Luxembourg, Grand Duchy of;LU;LUX;442;===;Luxembourg;LUX;2003;1.66
+Europe;EU;Luxembourg, Grand Duchy of;LU;LUX;442;===;Luxembourg;LUX;2018;1.59
+Asia;AS;Macao, Special Administrative Region of China;MO;MAC;446;===;Macao;MAC;2003;0.83
+Asia;AS;Macao, Special Administrative Region of China;MO;MAC;446;===;Macao;MAC;2018;1.36
+Europe;EU;Macedonia, The Former Yugoslav Republic of;MK;MKD;807;===;Macedonia;MKD;2003;1.61
+Europe;EU;Macedonia, The Former Yugoslav Republic of;MK;MKD;807;===;Macedonia;MKD;2018;1.55
+Africa;AF;Madagascar, Republic of;MG;MDG;450;===;Madagascar;MDG;2003;5.24
+Africa;AF;Madagascar, Republic of;MG;MDG;450;===;Madagascar;MDG;2018;4.08
+Africa;AF;Malawi, Republic of;MW;MWI;454;===;Malawi;MWI;2003;6
+Africa;AF;Malawi, Republic of;MW;MWI;454;===;Malawi;MWI;2018;4.44
+Asia;AS;Malaysia;MY;MYS;458;===;Malaysia;MYS;2003;2.44
+Asia;AS;Malaysia;MY;MYS;458;===;Malaysia;MYS;2018;2
+Asia;AS;Maldives, Republic of;MV;MDV;462;===;Maldives;MDV;2003;2.51
+Asia;AS;Maldives, Republic of;MV;MDV;462;===;Maldives;MDV;2018;2.01
+Africa;AF;Mali, Republic of;ML;MLI;466;===;Mali;MLI;2003;6.84
+Africa;AF;Mali, Republic of;ML;MLI;466;===;Mali;MLI;2018;5.88
+Europe;EU;Malta, Republic of;MT;MLT;470;===;Malta;MLT;2003;1.47
+Europe;EU;Malta, Republic of;MT;MLT;470;===;Malta;MLT;2018;1.48
+North America;NA;Martinique;MQ;MTQ;474;===;Martinique;MTQ;2003;1.95
+North America;NA;Martinique;MQ;MTQ;474;===;Martinique;MTQ;2018;1.88
+Africa;AF;Mauritania, Islamic Republic of;MR;MRT;478;===;Mauritania;MRT;2003;5.28
+Africa;AF;Mauritania, Islamic Republic of;MR;MRT;478;===;Mauritania;MRT;2018;4.55
+Africa;AF;Mauritius, Republic of;MU;MUS;480;===;Mauritius;MUS;2003;1.9
+Africa;AF;Mauritius, Republic of;MU;MUS;480;===;Mauritius;MUS;2018;1.43
+Africa;AF;Mayotte;YT;MYT;175;===;Mayotte;MYT;2003;4.8
+Africa;AF;Mayotte;YT;MYT;175;===;Mayotte;MYT;2018;3.69
+North America;NA;Mexico, United Mexican States;MX;MEX;484;===;Mexico;MEX;2003;2.58
+North America;NA;Mexico, United Mexican States;MX;MEX;484;===;Mexico;MEX;2018;2.12
+Oceania;OC;Micronesia, Federated States of;FM;FSM;583;===;Micronesia;FSM;2003;4.01
+Oceania;OC;Micronesia, Federated States of;FM;FSM;583;===;Micronesia;FSM;2018;3.05
+Europe;EU;Moldova, Republic of;MD;MDA;498;===;Moldova;MDA;2003;1.25
+Europe;EU;Moldova, Republic of;MD;MDA;498;===;Moldova;MDA;2018;1.23
+Asia;AS;Mongolia;MN;MNG;496;===;Mongolia;MNG;2003;2.08
+Asia;AS;Mongolia;MN;MNG;496;===;Mongolia;MNG;2018;2.67
+Europe;EU;Montenegro, Republic of;ME;MNE;499;===;Montenegro;MNE;2003;1.85
+Europe;EU;Montenegro, Republic of;ME;MNE;499;===;Montenegro;MNE;2018;1.65
+Africa;AF;Morocco, Kingdom of;MA;MAR;504;===;Morocco;MAR;2003;2.64
+Africa;AF;Morocco, Kingdom of;MA;MAR;504;===;Morocco;MAR;2018;2.42
+Africa;AF;Mozambique, Republic of;MZ;MOZ;508;===;Mozambique;MOZ;2003;5.78
+Africa;AF;Mozambique, Republic of;MZ;MOZ;508;===;Mozambique;MOZ;2018;5.12
+Asia;AS;Myanmar, Union of;MM;MMR;104;===;Myanmar;MMR;2003;2.83
+Asia;AS;Myanmar, Union of;MM;MMR;104;===;Myanmar;MMR;2018;2.17
+Africa;AF;Namibia, Republic of;NA;NAM;516;===;Namibia;NAM;2003;3.77
+Africa;AF;Namibia, Republic of;NA;NAM;516;===;Namibia;NAM;2018;3.3
+Asia;AS;Nepal, State of;NP;NPL;524;===;Nepal;NPL;2003;3.58
+Asia;AS;Nepal, State of;NP;NPL;524;===;Nepal;NPL;2018;2.05
+Europe;EU;Netherlands, Kingdom of the;NL;NLD;528;===;Netherlands;NLD;2003;1.75
+Europe;EU;Netherlands, Kingdom of the;NL;NLD;528;===;Netherlands;NLD;2018;1.75
+North America;NA;Netherlands Antilles;AN;ANT;530;===;Netherlands Antilles;ANT;2003;2.07
+North America;NA;Netherlands Antilles;AN;ANT;530;===;Netherlands Antilles;ANT;2018;1.84
+Oceania;OC;New Caledonia;NC;NCL;540;===;New Caledonia;NCL;2003;2.31
+Oceania;OC;New Caledonia;NC;NCL;540;===;New Caledonia;NCL;2018;2.13
+Oceania;OC;New Zealand;NZ;NZL;554;===;New Zealand;NZL;2003;1.98
+Oceania;OC;New Zealand;NZ;NZL;554;===;New Zealand;NZL;2018;1.97
+North America;NA;Nicaragua, Republic of;NI;NIC;558;===;Nicaragua;NIC;2003;2.81
+North America;NA;Nicaragua, Republic of;NI;NIC;558;===;Nicaragua;NIC;2018;2.14
+Africa;AF;Niger, Republic of;NE;NER;562;===;Niger;NER;2003;7.64
+Africa;AF;Niger, Republic of;NE;NER;562;===;Niger;NER;2018;7.13
+Africa;AF;Nigeria, Federal Republic of;NG;NGA;566;===;Nigeria;NGA;2003;6.04
+Africa;AF;Nigeria, Federal Republic of;NG;NGA;566;===;Nigeria;NGA;2018;5.39
+Asia;AS;Korea, Democratic People's Republic of;KP;PRK;408;===;North Korea;PRK;2003;2
+Asia;AS;Korea, Democratic People's Republic of;KP;PRK;408;===;North Korea;PRK;2018;1.89
+Europe;EU;Norway, Kingdom of;NO;NOR;578;===;Norway;NOR;2003;1.8
+Europe;EU;Norway, Kingdom of;NO;NOR;578;===;Norway;NOR;2018;1.83
+Asia;AS;Oman, Sultanate of;OM;OMN;512;===;Oman;OMN;2003;3.14
+Asia;AS;Oman, Sultanate of;OM;OMN;512;===;Oman;OMN;2018;2.52
+Asia;AS;Pakistan, Islamic Republic of;PK;PAK;586;===;Pakistan;PAK;2003;4.21
+Asia;AS;Pakistan, Islamic Republic of;PK;PAK;586;===;Pakistan;PAK;2018;3.35
+Asia;AS;Palestinian Territory, Occupied;PS;PSE;275;===;Palestine;PSE;2003;4.97
+Asia;AS;Palestinian Territory, Occupied;PS;PSE;275;===;Palestine;PSE;2018;3.88
+North America;NA;Panama, Republic of;PA;PAN;591;===;Panama;PAN;2003;2.68
+North America;NA;Panama, Republic of;PA;PAN;591;===;Panama;PAN;2018;2.46
+Oceania;OC;Papua New Guinea, Independent State of;PG;PNG;598;===;Papua New Guinea;PNG;2003;4.37
+Oceania;OC;Papua New Guinea, Independent State of;PG;PNG;598;===;Papua New Guinea;PNG;2018;3.56
+South America;SA;Paraguay, Republic of;PY;PRY;600;===;Paraguay;PRY;2003;3.21
+South America;SA;Paraguay, Republic of;PY;PRY;600;===;Paraguay;PRY;2018;2.43
+South America;SA;Peru, Republic of;PE;PER;604;===;Peru;PER;2003;2.77
+South America;SA;Peru, Republic of;PE;PER;604;===;Peru;PER;2018;2.34
+Asia;AS;Philippines, Republic of the;PH;PHL;608;===;Philippines;PHL;2003;3.65
+Asia;AS;Philippines, Republic of the;PH;PHL;608;===;Philippines;PHL;2018;2.86
+Europe;EU;Poland, Republic of;PL;POL;616;===;Poland;POL;2003;1.28
+Europe;EU;Poland, Republic of;PL;POL;616;===;Poland;POL;2018;1.29
+Europe;EU;Portugal, Portuguese Republic;PT;PRT;620;===;Portugal;PRT;2003;1.44
+Europe;EU;Portugal, Portuguese Republic;PT;PRT;620;===;Portugal;PRT;2018;1.24
+North America;NA;Puerto Rico, Commonwealth of;PR;PRI;630;===;Puerto Rico;PRI;2003;1.84
+North America;NA;Puerto Rico, Commonwealth of;PR;PRI;630;===;Puerto Rico;PRI;2018;1.46
+Asia;AS;Qatar, State of;QA;QAT;634;===;Qatar;QAT;2003;2.86
+Asia;AS;Qatar, State of;QA;QAT;634;===;Qatar;QAT;2018;1.87
+Africa;AF;Reunion;RE;REU;638;===;Reunion;REU;2003;2.43
+Africa;AF;Reunion;RE;REU;638;===;Reunion;REU;2018;2.27
+Europe;EU;Romania;RO;ROU;642;===;Romania;ROU;2003;1.33
+Europe;EU;Romania;RO;ROU;642;===;Romania;ROU;2018;1.54
+Asia;AS;Russian Federation;RU;RUS;643;===;Russia;RUS;2003;1.33
+Asia;AS;Russian Federation;RU;RUS;643;===;Russia;RUS;2018;1.76
+Africa;AF;Rwanda, Republic of;RW;RWA;646;===;Rwanda;RWA;2003;5.35
+Africa;AF;Rwanda, Republic of;RW;RWA;646;===;Rwanda;RWA;2018;3.74
+North America;NA;Saint Lucia;LC;LCA;662;===;Saint Lucia;LCA;2003;1.83
+North America;NA;Saint Lucia;LC;LCA;662;===;Saint Lucia;LCA;2018;1.44
+North America;NA;Saint Vincent and the Grenadines;VC;VCT;670;===;Saint Vincent and the Grenadines;VCT;2003;2.23
+North America;NA;Saint Vincent and the Grenadines;VC;VCT;670;===;Saint Vincent and the Grenadines;VCT;2018;1.89
+Oceania;OC;Samoa, Independent State of;WS;WSM;882;===;Samoa;WSM;2003;4.45
+Oceania;OC;Samoa, Independent State of;WS;WSM;882;===;Samoa;WSM;2018;3.88
+Africa;AF;Sao Tome and Principe, Democratic Republic of;ST;STP;678;===;Sao Tome and Principe;STP;2003;5.12
+Africa;AF;Sao Tome and Principe, Democratic Republic of;ST;STP;678;===;Sao Tome and Principe;STP;2018;4.33
+Asia;AS;Saudi Arabia, Kingdom of;SA;SAU;682;===;Saudi Arabia;SAU;2003;3.6
+Asia;AS;Saudi Arabia, Kingdom of;SA;SAU;682;===;Saudi Arabia;SAU;2018;2.45
+Africa;AF;Senegal, Republic of;SN;SEN;686;===;Senegal;SEN;2003;5.25
+Africa;AF;Senegal, Republic of;SN;SEN;686;===;Senegal;SEN;2018;4.62
+Europe;EU;Serbia, Republic of;RS;SRB;688;===;Serbia;SRB;2003;1.69
+Europe;EU;Serbia, Republic of;RS;SRB;688;===;Serbia;SRB;2018;1.62
+Africa;AF;Seychelles, Republic of;SC;SYC;690;===;Seychelles;SYC;2003;2.2
+Africa;AF;Seychelles, Republic of;SC;SYC;690;===;Seychelles;SYC;2018;2.25
+Africa;AF;Sierra Leone, Republic of;SL;SLE;694;===;Sierra Leone;SLE;2003;6.07
+Africa;AF;Sierra Leone, Republic of;SL;SLE;694;===;Sierra Leone;SLE;2018;4.26
+Asia;AS;Singapore, Republic of;SG;SGP;702;===;Singapore;SGP;2003;1.27
+Asia;AS;Singapore, Republic of;SG;SGP;702;===;Singapore;SGP;2018;1.26
+Europe;EU;Slovakia (Slovak Republic);SK;SVK;703;===;Slovak Republic;SVK;2003;1.22
+Europe;EU;Slovakia (Slovak Republic);SK;SVK;703;===;Slovak Republic;SVK;2018;1.47
+Europe;EU;Slovenia, Republic of;SI;SVN;705;===;Slovenia;SVN;2003;1.24
+Europe;EU;Slovenia, Republic of;SI;SVN;705;===;Slovenia;SVN;2018;1.65
+Oceania;OC;Solomon Islands;SB;SLB;90;===;Solomon Islands;SLB;2003;4.58
+Oceania;OC;Solomon Islands;SB;SLB;90;===;Solomon Islands;SLB;2018;3.74
+Africa;AF;Somalia, Somali Republic;SO;SOM;706;===;Somalia;SOM;2003;7.45
+Africa;AF;Somalia, Somali Republic;SO;SOM;706;===;Somalia;SOM;2018;6.08
+Africa;AF;South Africa, Republic of;ZA;ZAF;710;===;South Africa;ZAF;2003;2.73
+Africa;AF;South Africa, Republic of;ZA;ZAF;710;===;South Africa;ZAF;2018;2.4
+Asia;AS;Korea, Republic of;KR;KOR;410;===;South Korea;KOR;2003;1.21
+Asia;AS;Korea, Republic of;KR;KOR;410;===;South Korea;KOR;2018;1.33
+Africa;AF;South Sudan;SS;SSD;728;===;South Sudan;SSD;2003;5.97
+Africa;AF;South Sudan;SS;SSD;728;===;South Sudan;SSD;2018;4.7
+Europe;EU;Spain, Kingdom of;ES;ESP;724;===;Spain;ESP;2003;1.3
+Europe;EU;Spain, Kingdom of;ES;ESP;724;===;Spain;ESP;2018;1.39
+Asia;AS;Sri Lanka, Democratic Socialist Republic of;LK;LKA;144;===;Sri Lanka;LKA;2003;2.27
+Asia;AS;Sri Lanka, Democratic Socialist Republic of;LK;LKA;144;===;Sri Lanka;LKA;2018;2.02
+Africa;AF;Sudan, Republic of;SD;SDN;736;===;Sudan;SDN;2003;5.27
+Africa;AF;Sudan, Republic of;SD;SDN;736;===;Sudan;SDN;2018;4.41
+South America;SA;Suriname, Republic of;SR;SUR;740;===;Suriname;SUR;2003;2.75
+South America;SA;Suriname, Republic of;SR;SUR;740;===;Suriname;SUR;2018;2.32
+Africa;AF;Swaziland, Kingdom of;SZ;SWZ;748;===;Swaziland;SWZ;2003;3.98
+Africa;AF;Swaziland, Kingdom of;SZ;SWZ;748;===;Swaziland;SWZ;2018;2.98
+Europe;EU;Sweden, Kingdom of;SE;SWE;752;===;Sweden;SWE;2003;1.73
+Europe;EU;Sweden, Kingdom of;SE;SWE;752;===;Sweden;SWE;2018;1.91
+Europe;EU;Switzerland, Swiss Confederation;CH;CHE;756;===;Switzerland;CHE;2003;1.42
+Europe;EU;Switzerland, Swiss Confederation;CH;CHE;756;===;Switzerland;CHE;2018;1.55
+Asia;AS;Syrian Arab Republic;SY;SYR;760;===;Syria;SYR;2003;3.74
+Asia;AS;Syrian Arab Republic;SY;SYR;760;===;Syria;SYR;2018;2.82
+Asia;AS;Taiwan;TW;TWN;158;===;Taiwan;TWN;2003;1.24
+Asia;AS;Taiwan;TW;TWN;158;===;Taiwan;TWN;2018;1.22
+Asia;AS;Tajikistan, Republic of;TJ;TJK;762;===;Tajikistan;TJK;2003;3.59
+Asia;AS;Tajikistan, Republic of;TJ;TJK;762;===;Tajikistan;TJK;2018;3.27
+Africa;AF;Tanzania, United Republic of;TZ;TZA;834;===;Tanzania;TZA;2003;5.66
+Africa;AF;Tanzania, United Republic of;TZ;TZA;834;===;Tanzania;TZA;2018;4.89
+Asia;AS;Thailand, Kingdom of;TH;THA;764;===;Thailand;THA;2003;1.6
+Asia;AS;Thailand, Kingdom of;TH;THA;764;===;Thailand;THA;2018;1.45
+Asia;AS;Timor-Leste, Democratic Republic of;TL;TLS;626;===;Timor-Leste;TLS;2003;6.97
+Asia;AS;Timor-Leste, Democratic Republic of;TL;TLS;626;===;Timor-Leste;TLS;2018;5.28
+Africa;AF;Togo, Togolese Republic;TG;TGO;768;===;Togo;TGO;2003;5.28
+Africa;AF;Togo, Togolese Republic;TG;TGO;768;===;Togo;TGO;2018;4.32
+Oceania;OC;Tonga, Kingdom of;TO;TON;776;===;Tonga;TON;2003;4.2
+Oceania;OC;Tonga, Kingdom of;TO;TON;776;===;Tonga;TON;2018;3.56
+North America;NA;Trinidad and Tobago, Republic of;TT;TTO;780;===;Trinidad and Tobago;TTO;2003;1.75
+North America;NA;Trinidad and Tobago, Republic of;TT;TTO;780;===;Trinidad and Tobago;TTO;2018;1.73
+Africa;AF;Tunisia, Tunisian Republic;TN;TUN;788;===;Tunisia;TUN;2003;2.02
+Africa;AF;Tunisia, Tunisian Republic;TN;TUN;788;===;Tunisia;TUN;2018;2.15
+Asia;AS;Turkey, Republic of;TR;TUR;792;===;Turkey;TUR;2003;2.35
+Asia;AS;Turkey, Republic of;TR;TUR;792;===;Turkey;TUR;2018;2.02
+Asia;AS;Turkmenistan;TM;TKM;795;===;Turkmenistan;TKM;2003;2.7
+Asia;AS;Turkmenistan;TM;TKM;795;===;Turkmenistan;TKM;2018;2.79
+Africa;AF;Uganda, Republic of;UG;UGA;800;===;Uganda;UGA;2003;6.72
+Africa;AF;Uganda, Republic of;UG;UGA;800;===;Uganda;UGA;2018;5.41
+Europe;EU;Ukraine;UA;UKR;804;===;Ukraine;UKR;2003;1.17
+Europe;EU;Ukraine;UA;UKR;804;===;Ukraine;UKR;2018;1.56
+Asia;AS;United Arab Emirates;AE;ARE;784;===;United Arab Emirates;ARE;2003;2.33
+Asia;AS;United Arab Emirates;AE;ARE;784;===;United Arab Emirates;ARE;2018;1.72
+Europe;EU;United Kingdom of Great Britain & Northern Ireland;GB;GBR;826;===;United Kingdom;GBR;2003;1.69
+Europe;EU;United Kingdom of Great Britain & Northern Ireland;GB;GBR;826;===;United Kingdom;GBR;2018;1.87
+North America;NA;United States of America;US;USA;840;===;United States;USA;2003;2.05
+North America;NA;United States of America;US;USA;840;===;United States;USA;2018;1.9
+North America;NA;United States Virgin Islands;VI;VIR;850;===;United States Virgin Islands;VIR;2003;2.18
+North America;NA;United States Virgin Islands;VI;VIR;850;===;United States Virgin Islands;VIR;2018;2.18
+South America;SA;Uruguay, Eastern Republic of;UY;URY;858;===;Uruguay;URY;2003;2.19
+South America;SA;Uruguay, Eastern Republic of;UY;URY;858;===;Uruguay;URY;2018;1.97
+Asia;AS;Uzbekistan, Republic of;UZ;UZB;860;===;Uzbekistan;UZB;2003;2.51
+Asia;AS;Uzbekistan, Republic of;UZ;UZB;860;===;Uzbekistan;UZB;2018;2.23
+Oceania;OC;Vanuatu, Republic of;VU;VUT;548;===;Vanuatu;VUT;2003;4.06
+Oceania;OC;Vanuatu, Republic of;VU;VUT;548;===;Vanuatu;VUT;2018;3.2
+South America;SA;Venezuela, Bolivarian Republic of;VE;VEN;862;===;Venezuela;VEN;2003;2.7
+South America;SA;Venezuela, Bolivarian Republic of;VE;VEN;862;===;Venezuela;VEN;2018;2.27
+Asia;AS;Vietnam, Socialist Republic of;VN;VNM;704;===;Vietnam;VNM;2003;1.9
+Asia;AS;Vietnam, Socialist Republic of;VN;VNM;704;===;Vietnam;VNM;2018;1.95
+Africa;AF;Western Sahara;EH;ESH;732;===;Western Sahara;ESH;2003;2.8
+Africa;AF;Western Sahara;EH;ESH;732;===;Western Sahara;ESH;2018;2.41
+Asia;AS;Yemen;YE;YEM;887;===;Yemen;YEM;2003;5.78
+Asia;AS;Yemen;YE;YEM;887;===;Yemen;YEM;2018;3.79
+Africa;AF;Zambia, Republic of;ZM;ZMB;894;===;Zambia;ZMB;2003;5.92
+Africa;AF;Zambia, Republic of;ZM;ZMB;894;===;Zambia;ZMB;2018;4.87
+Africa;AF;Zimbabwe, Republic of;ZW;ZWE;716;===;Zimbabwe;ZWE;2003;3.99
+Africa;AF;Zimbabwe, Republic of;ZW;ZWE;716;===;Zimbabwe;ZWE;2018;3.61

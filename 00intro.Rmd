@@ -1,0 +1,194 @@
+# Przedmiot, metody i organizacja badań statystycznych
+
+## Przedmiot statystyki
+
+**Statystyka**: analiza struktury, przedziały ufności i weryfikacja hipotez,
+analiza współzależności.
+
+**Etapy analizy statystycznej**: -- przełóż obserwacje na postać
+liczbową -- wnioskuj (zastosuj odpowiednie statystyki)
+
+**Analiza eksploracyjna**
+Exploratory research is the stage of the research process that aims at
+connecting ideas as to unveil the ``why''s of potential cause/effect
+relationships. This occurs when researchers get started at
+understanding what they are actually observing when in the process of
+building cause/effect models. 
+
+**Analiza konfirmacyjna**
+Confirmatory research (a.k.a. hypothesis
+testing) is where researchers have a pretty good idea of what's going
+on. That is, researcher has a theory (or several theories), and the
+objective is to find out if the theory is supported by the facts.
+
+**Data wrangling**, sometimes referred to as **data munging**, is the
+process of transforming and mapping data from one raw data form into
+another format with the intent of making it more appropriate and
+valuable for a variety of downstream purposes such as analytics.
+
+**Data science** also known as data-driven science, is an
+interdisciplinary field of scientific methods, processes, algorithms
+and systems to extract knowledge or insights from data in various
+forms, either structured or unstructured.
+
+**Opis statystyczny** -- liczbowe przedstawienie badanych zbiorowości lub
+zjawisk w postaci opisu: -- tabelarycznego; -- graficznego; -- parametrycznego
+
+**Opis statystyczny** może dotyczyć: -- struktury zbiorowości; --
+współzależności; -- zmian zjawisk w czasie.
+
+**Badanie statystyczne** to zespół czynności zmierzających do
+uzyskania (za pomocą metod statystycznych) informacji
+charakteryzujących badaną zbiorowość lub zjawisko.  Najważniejsze
+kryteria klasyfikacji badań: -- zakres obserwacji badanych jednostek
+(pełne, częściowe); -- częstotliwość: (ciągłe, okresowe, doraźne); --
+zasięg przestrzenny (międzynarodowe, krajowe, regionalne,
+środowiskowe, monograficzne); -- dziedzina badań (demograficzne,
+społeczne, ekonomiczne, rolnicze, jakości środowiska naturalnego itp.
+
+**Populacja, zbiorowość statystyczna**: zbiór obiektów (osób,
+przedmiotów, zdarzeń) logicznie ze sobą powiązanych (ale nie
+identycznych), poddany badaniu statystycznemu.
+
+**Jednostka statystyczna**: jednostki statystyczne w danej populacji
+różnią się od innych jednostek spoza danej populacji poprzez swoje
+własności wspólne (cechy stałe), jednocześnie różnią się między sobą
+cechami (cechy zmienne), które są przedmiotem zainteresowania badacza.
+
+**Cechy statystyczne** -- właściwości jednostek statystycznych Cechy
+stałe -- jednakowe dla wszystkich jednostek badania: rzeczowa (co?
+kto? jest badane/y) przestrzenna (gdzie?)  czasowa (kiedy?)
+
+**Cechy zmienne** -- właściwości różnicujące jednostki
+jednostki z badanej populacji, tj. takie które mogą posiadać więcej niż 1 wariant
+(jeżeli posiadają jeden mamy do czynienia z przypadkiem trywialnym). Cechy
+zmienne dzielimy na: -- jakościowe (płeć, rok studiów) -- ilościowe (wiek)
+
+Pojęcia stosowane w statystyce publicznej
+https://stat.gov.pl/metainformacje/slownik-pojec/pojecia-stosowane-w-statystyce-publicznej/lista.html
+
+## Pomiar
+
+**Pomiar** (zwany też obserwacją) -- przyporządkowanie wariantom cechy zmiennej liczb
+lub symboli. W naukach przyrodniczych (fizyka, chemia) pomiaru dokonuje
+przy zastosowaniu precyzyjnych/jednoznacznie określonych definicji **miar**.
+W naukach społecznych jest niestety inaczej: wiele definicji jest 
+nieprecyzyjnych (na przykład **turysta** albo **emigrant**), a wiele miar przybliżonych. 
+Przy czym brak precyzji nie wynika z błędu pomiaru (źle przyłożona linijka), 
+ale jest cechą użytej **skali pomiarowej** (nieprecyzyjna linijka).
+
+**Rodzaje skal pomiarowych** 
+
+- **nominalna** (nominal scale), klasyfikuje: płeć; 
+
+- **porządkowa** (ordinal scale), klasyfikuje i porządkuje: zdolność kredytowa firmy, stadia choroby,
+
+-- **przedziałowa** (interval scale), posiada jeszcze stałą jednostkę
+  miary (ów przedział) oraz umowne zero (temperatura w stopniach Celsjusza) 
+
+-- **ilorazowa** (rational scale), posiada to co przedziałowa plus 
+  naturalne zero (wiek, wzrost, obrót, temperatura w stopniach Kelwina).
+
+Skala Kelvina temperatury jest ilorazowa, skala Celsiusza jest przedziałowa.
+Zero w skali Kelvina to zero bezwzględne, 200K jest 2 razy mniejsze niż 400K
+podczas gdy 200C nie jest dwa razy mniejsze niż 400C. Na skali 
+przedziałowej **nie można** w *bezpieczny* sposób dokonywać dzielenia.
+Na liczbach w skali porządkowej nie można dokonywać nawet dodawania.
+Wszystkie operacje arytmetyczne są *bezpieczne* tylko dla skali ilorazowej.
+
+**Cecha statystyczna mierzalna (ilościowa)** -- określana jest za
+pomocą liczb np. oceny, płace. Cechy mierzalne dzielą się na skokowe
+i ciągłe.  Skokowe są to cechy, które przyjmują skończoną liczbę
+wartości, zwykle są to liczby całkowite; Ciągłe są to cechy, które
+przyjmują dowolne wartości liczbowe z pewnego przedziału liczbowego
+np. dochody, długość ziarna fasoli.
+
+## Rodzaje badań statystycznych
+
+**Pełne** (spis, rejestracja), **częściowe** (reprezentacyjne),
+**szacunki interpolacyjne i ekstrapolacyjne** (ustalenie wartości na podstawie
+znanych wartości podobnych/poprzednich/sąsiednich; 
+wbrew pozorom często stosowana metoda).
+
+**Ciągłe** (ewidencja urodzeń), **okresowe** (spisy rolne, spis powszechny), 
+**doraźne** (sondaż poparcia w wyborach prezydenckich)
+
+**Spis** to gromadzenie danych na potrzeby badania; **Rejestracja** to gromadzenie danych przy
+okazji wykonywania innych działań (ewidencja 
+ludności, działanie wymiaru sprawiedliwości, gromadzenie danych pogodowych itp...)
+
+Badanie **reprezentacyjne** to badanie oparte na **próbie** pobrane ze zbiorowości w taki sposób, 
+że wyniki uzyskane dla tej próby można uogólnić na 
+całą populację (wymaga to odpowiedniego sposobu wybrania jednostek do próby; nie każda
+próba jest **reprezentacyjna**)
+
+## Organizacja badań statystycznych
+
+Etapy wstępne badania statystycznego:
+
+* ustalenie **celu i metody** (pełne częściowe); 
+
+* określenie **zbiorowości** i **jednostki badania**;
+
+* określenie **cech/wartości cech** podlegających gromadzeniu (**definiowanie/klasyfikacja**) oraz sposobu pomiaru;
+
+* zdefiniowanie **jednostki sprawozdawczej** (od kogo pozyskamy dane).
+
+**Klasyfikacja** to ustalenie (wyodrębnienie) wariantów cechy.
+Cechy/wartości cech nie mogą być wymyślane ad hoc ale (w imię porównywalności)
+powinny być definiowane z użyciem powszechnie stosowanych 
+słowników/taksonomii/klasyfikacji (TERYT, PESEL, EKD)
+
+Kto to jest turysta? Co to jest hotel? Co to jest las?
+
+**Materiał pierwotny** (dane zgromadzone specjalnie dla celów badania),
+**materiał wtórny** (dane zgromadzone z innych powodów ale przydatne do badania statystycznego; dane rejestrowane).
+Wg Sobczaka (2024): większą wartość 
+mają materiały pierwotne, ponieważ są aktualne, gromadzone z określoną dokładością i nie
+są obciążone zbytecznymi informacjami. Powyższe można uznać za mocno nieaktualne.
+Współcześnie dane z rejestrów 
+są coraz zarówno lepsze jakościowo jak i dominują ilościowo (Facebook/Google najlepszym przykładem).
+
+## Opracowanie danych
+
+**Grupowanie** -- podział zbiorowości na jednorodne lub względnie
+jednorodne podgrupy z punktu widzenia wyróżnionej cechy (cech):
+-- typologiczne (cechy jakościowe); -- wariancyjne (cechy ilościowe).
+
+Zasady logiki formalnej: grupowanie musi być wyczerpujące -- każda
+jednostka zbiorowości musi być sklasyfikowana i włączona do
+odpowiedniej podgrupy; -- grupowanie powinno być rozłączne --
+wyodrębnione podgrupy muszą się wzajemnie wykluczać; -- grupowanie
+powinno być efektywne -- wyróżnione podgrupy powinny być na tyle
+jednorodne jakościowo, by mogły stanowić podstawę twierdzeń
+uogólniających
+
+**Szereg statystyczny** to zbiór wyników **obserwacji** (pomiaru) pewnej cechy.
+Jeżeli pomiaru dokonano na zbiorze jednostek to mówimy o **szeregu przekrojowym** lub
+strukturalnym (mierzymy wiele jednostek w pewnym
+momencie/okresie czasu), jeżeli pomiar dotyczy jednostki, a nie zbioru, ale dokonany został
+w kolejnych momentach/okresach czasu, to mówimy o **szeregu czasowym**. Jeżeli zbiór mierzonych jednostek
+zawiera informacje o ich położeniu na powierzchni Ziemi (np. współrzędne geograficzne), to  mówimy o **szeregu przestrzennym**.
+Zamiast szereg używa się teminu **dane** (dane przekrojowe/czasowe/przestrzenne)
+
+Reasumując: szereg strukturalny przestawia rozkład wartości cechy w pewnej zbiorowości (strukturę stąd nazwa);
+**szereg czasowy** określa zmianę wartości cechy w czasie, zaś
+**szereg przestrzenny** rozkład wartości cechy na powierzchni Ziemi.
+
+Szereg przekrojowy/przestrzenny może być **szczegółowy** lub **rozdzielczy**.
+Szereg jest **szczegółowy** jeżeli tworzący go zbiór wartości zostanie uporządkowany (według wartości cechy)
+Szereg jest **rozdzielczy** jeżeli zostanie pogrupowany i uporządkowany tj. zostanie zamieniony na
+uporządkowane pary (cecha--liczebność cechy)
+
+**Szereg czasowy** może być **szeregiem okresów** (**strumieni**) lub
+momentów (**stanów**).  Przykładowo: liczba urodzeń żywych w powiecie kwidzyńskim w latach 2000--2019,
+to **szereg czasowy okresów**
+(strumieni); w szczególności można dodać liczbę urodzeń
+w poszczególnych latach otrzymując łączną liczbę urodzonych w tym okresie.
+
+Liczba zarejestrowanych pojazdów w powiecie kwidzyńskim w latach 2000--2019 to szereg momentów (stan);
+nie można sumować liczby zarejestrowanych samochodów, bo taka suma nie ma merytorycznie sensu.
+Można podać średnią (przeciętny stan) zarejestrowanych samochodów w latach 2000--2019.
+
+Wiele danych ekonomiczno-społecznych jest mierzonych na poziomie jednostek administracyjnych (gmina, powiat, województwo, państwo).
+Formalnie taki zbiór danych jest  **szeregiem przestrzennym**. 
