@@ -1,4 +1,4 @@
-## Literatura
+# Literatura
 
 Sobczak Mieczysław, Statystyka, PWN 2024
 (jeden z wielu podręczników do statystyki dla ekonomistów;

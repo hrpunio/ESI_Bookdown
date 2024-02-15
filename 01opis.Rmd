@@ -1,3 +1,26 @@
+# Analiza struktury
+
+Analiza struktury -- opisane zbiorowości ze
+względu na obserwowane w badaniu cechy zmienne.
+
+Podstawę do oceny struktury zbiorowości stanowią dane w postaci
+**szeregu szczegółowego**, bądź też pogrupowane (**szereg rozdzielczy**)
+
+Analizę prowadzić można na podstawie wykresów, szeregów
+rozdzielczych oraz (najczęściej) za pomocą odpowiednio obliczonych
+charakterystyk, zwanych parametrami (dla populacji) lub
+statystykami (dla próby).
+
+**Rozkład cechy** -- przyporządkowanie liczby wystąpień (liczebności, częstości lub
+prawdopodobieństwa) odpowiednim wartościom cechy zmiennej.
+
+Analiza struktury obejmuje:
+**określenie tendencji centralnej** (tzw. **miary położenia** / wartość przeciętna, mediana, dominanta);
+**zróżnicowanie wartości** (rozproszenie);
+**asymetrię** (rozłożenie wartości wokół średniej);
+**koncentrację** (podział wartości cechy pomiędzy jednostki)
+
+
 ## Tablice statystyczne
 
 **Tablica statystyczna** to (w podstawowej formie) dwukolumnowa tabela zawierająca
@@ -306,27 +329,6 @@ Jest mało dużych miast a dużo małych. Podobnie wyglądają rozkłady
 firm/ludzi względem przychodów/zysków czy elektrowni względem mocy
 zainstalowanej.
 
-## Analiza struktury
-
-Analiza struktury -- opisane zbiorowości ze
-względu na obserwowane w badaniu cechy zmienne.
-
-Podstawę do oceny struktury zbiorowości stanowią dane w postaci
-**szeregu szczegółowego**, bądź też pogrupowane (**szereg rozdzielczy**)
-
-Analizę prowadzić można na podstawie wykresów, szeregów
-rozdzielczych oraz (najczęściej) za pomocą odpowiednio obliczonych
-charakterystyk, zwanych parametrami (dla populacji) lub
-statystykami (dla próby).
-
-**Rozkład cechy** -- przyporządkowanie liczby wystąpień (liczebności, częstości lub
-prawdopodobieństwa) odpowiednim wartościom cechy zmiennej.
-
-Analiza struktury obejmuje:
-**określenie tendencji centralnej** (tzw. **miary położenia** / wartość przeciętna, mediana, dominanta);
-**zróżnicowanie wartości** (rozproszenie);
-**asymetrię** (rozłożenie wartości wokół średniej);
-**koncentrację** (podział wartości cechy pomiędzy jednostki)
 
 
 ## Wizualizacja danych i wykresy
@@ -348,7 +350,7 @@ Rodzaje wykresów (podział ze względu na zastosowanie):
 wykres rozrzutu (scatter-plot), wykres liniowy liniowy
 
 
-## Wykresy
+### Wykresy przedstawiające rozkład wartości jednej zmiennej
 
 Celem jest pokazanie rozkładu wartości cechy w populacji: jakie wartości występują
 często a jakie rzadko, jak bardzo wartości różnią się między sobą. Jak różnią
@@ -357,7 +359,7 @@ się rozkłady dla różnych ale logicznie powiązanych populacji
 Do tego celu stosuje się: **histogram** (albo wykres słupkowy dla skal nominalnych),
 **wykres punktowy**, **wykres pudełkowy** oraz **kołowy**. Omówimy je na przykładach
 
-## Przykład 1: Dzietność kobiet na świecie
+### Histogram
 
 Współczynnik dzietności -- przeciętna liczba urodzonych dzieci przypadających na jedną kobietę w wieku rozrodczym (15–49 lat). Przyjmuje się, iż FR między 2,10–2,15 zapewnia zastępowalność pokoleń.
 
@@ -462,6 +464,9 @@ histogramów to powinny one mieć: tę samą rozpiętość przedziałów, te sam
 Istnieją wzory na optymalną liczbę przedziałów ale nalepszą metodą jest metoda
 prób i błędów.
 
+
+### Wykres punktowy
+
 Czasami jeżeli liczebność populacji nie jest za duża można spróbować 
 przedstawić rozkład cechy na wykresie punktowym:
 
@@ -488,7 +493,7 @@ dp2003 <- ggplot(d2003, aes(x = reorder(symbol, frate) )) +
 ggarrange(dp2003, dp2018, ncol=2, nrow=1)
 ```
 
-**Porównanie wielu rozkładów**
+### Porównanie wielu rozkładów
 
 Jeżeli używamy histogramu to w zasadzie jedyną opcją jest wykreślenie każdego
 histogramu oddzielnie a następnie umieszczenie ich obok siebie. Wyjątkowo
@@ -526,7 +531,7 @@ ggplot(dA, aes(x = reorder(symbol, frate) )) +
 ```
 
 
-## Przykład 2: Wykresy kołowe (Pie charts), wykresy punktowe (dot plots), histogram
+### Wykresy kołowe
 
 Dane pochodzą z bazy danych Eurostatu są dostępne pod adresem
 https://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=tour_occ_nim&lang=en
@@ -641,7 +646,7 @@ nie należy stosować bo są znacznie gorszym sposobem wizualizacji
 informacji niż słupkowe.
 
 
-## Przykład 3: Wykres pudełkowy
+### Wykres pudełkowy
 
 Uwaga: poniższy opis **wykresu pudełkowego** zawiera pojęcia jeszcze nie wyjaśnione (kwartyle, mediana, rozproszenie i IQR),  które opisano dokładanie dalej,
 w punktach miary położenia/miary zmienności.
@@ -679,7 +684,7 @@ przed 40-tką w literaturze, przed trzydziestką w chemii, medycynie i nagrodzie
 
 Wykres niezwykle użyteczny do porównywania różnic w rozkładach wartości cechy.
 
-## Przykład 4: wykres skrzypcowy wariant wykresu pudełkowego
+### Wykres skrzypcowy (wariant wykresu pudełkowego)
 
 In general, **violin plots** are a method of plotting numeric data and can be considered a combination of the box plot with a **kernel density plot**. In the violin plot, we can find the same information as in the box plots:
 -- median; -- interquartile range;
@@ -793,7 +798,7 @@ poszczególnych kontynentach (w roku 2018)
 ![](PPViolinCC.png){width=80%}
 
 
-## Przykład 5: Zaufanie do Politykow
+### Przykład: Zaufanie do Politykow
 
 CBOS realizuje co najmniej 12 razy w roku sondaż "Aktualne problemy i wydarzenia", na reprezentatywnej ok. 1000-osobowej próbie dorosłych mieszkańców Polski. (cf https://www.cbos.pl/PL/trendy/trendy.php?)
 
@@ -952,7 +957,7 @@ polityków, jak i porównanie dla konkretnego polityka (czy zaufanie jest więks
 liczba wymiarów będzie większa niż trzy wykres straci 
 na przejrzystości zamieniając się w chmurę różnokolorowych kropek.
 
-## Przykład 6: Marimekko mosaic chart
+### Przykład: Marimekko mosaic chart
 
 Przykład: Kraje wg emisji C02 (wysokość prostokąta jest równa emisji per capita; szerokość liczbie ludności). Pola prostokątów odpowiadają globalnej
 emisji, wysokości emisji na głowę. Prostokąty są uszeregowane wg. emisji per capita, co utrudnia porówania wielkości globalnych. Ale i tak widać, że nie tylko Polska emituje mniej niż Niemcy ale przeciętny Niemiec emituje więcej
@@ -965,7 +970,7 @@ niż przeciętny spalający na potęgę czarny węgiel Polak.
 
 ## Analiza parametryczna
 
-## Miary położenia
+### Miary położenia
 
 Miary przeciętne charakteryzują średni lub
 typowy poziom wartości cechy. Są to więc takie wartości, wokół których
@@ -1027,7 +1032,7 @@ populację w proporcji 25/75%, kwartyl drugi w proporcji 50/50%, a kwartyl trzec
 Przykładowo wartość 99 centyla 
 i mniejszą ma 99% jednostek w populacji.
 
-## Miary zmienności
+### Miary zmienności
 
 Wariancja, odchylenie standardowe, odchylenie przeciętne, współczynnik
 zmienności (Pearsona)
@@ -1117,7 +1122,7 @@ Vm -- współczynnik zmienności tj Vm = Sm / Tm * 100
 Dla lutego współczynnik zmienności przymuje absurdalną wartość 6 tysięcy (procent).
 Do tego na minus.
 
-## Miary asymetrii
+### Miary asymetrii
 
 Asymetria (*skewness*), to odwrotność symetrii. Szereg jest symetryczny
 jeżeli jednostki są rozłożone ,,równomiernie'' wokół wartości średniej:
@@ -1158,7 +1163,7 @@ $$
 W_{sq} =  \frac{(Q_3 - Q_2) - (Q_2 - Q_1)}{Q_3 - Q_1}
 $$
 
-## Miary koncentracji
+### Miary koncentracji
 
 **Koncentracja** -- nierównomierny podział wartości cechy w zbiorowości.
 

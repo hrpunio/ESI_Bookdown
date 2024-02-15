@@ -1,3 +1,135 @@
-## Przykłady analizy parametrycznej
+# Analiza korelacji
 
-[...]
+## Pojęcia wstępne
+
+Pomiędzy zjawiskami występują związki (zależności.) Nauki formułują te związki
+w postaci **praw**. Jak takie **prawo naukowe** powstaje? Typowo w dwu etapach,
+najpierw za pomocą **dedukcji** stawia się **hipotezę**, potem konfrontuje się 
+hipotezę z danymi (podejście hipotetyczno-dedukcyjne). 
+Na tym drugim etapie używa się statystyki (lub matematyki jeżeli prawo ma charakter deterministyczny)
+
+Upraszczając *metoda hypodedukcji* sprowadza się do dedukcyjnego sformułowania hipotezy, która następnie jest empirycznie *falsyfikowana*, tj. próbuje się wykazać, że jest ona nieprawdziwa. Konsekwencje:
+nie można dowieść prawdziwości żadnej hipotezy, można natomiast wykazać, że 
+hipoteza jest fałszywa.
+
+Związki między cechami mogą być: **funkcyjne** (nauki przyrodnicze) -- wartościom jednej zmiennej odpowiada tylko jedna wartość drugiej zmiennej lub
+**stochastyczne** -- wartościom jednej zmiennej odpowiadają z pewnym
+przybliżeniem wartości innej zmiennej.
+
+Problem: czy istnieje związek (zależność) pomiędzy cechami? 
+Jaki jest charakter zależności? Jaka jest siła zależności?
+Przykładowo czy istnieje związek pomiędzy wielkością dochodu (przyczyna)
+a wielkością spożycia mięsa (skutek), albo jako jest zależność  pomiędzy wielkością
+produkcji, nakładami kapitałowymi i wielkości nakładów pracy?
+
+### Korelacyjny wykres rozrzutu (korelogram, wykres XY w Excelu, scatter plot)
+
+W układzie kartezjańskim każdej obserwacji odpowiada
+kropka o współrzędnych XY. 
+
+O występowaniu związku świadczy układanie się kropek według jakiegoś
+kształtu (krzywej). O braku związku
+świadczy chmura punktów niepodobna do żadnej krzywej.
+
+Punkty układające się według prostej świadczą o zależności liniowej
+(wyjątek: linia pozioma lub pionowa)
+Punkty układające się według krzywej świadczą
+o zależności nieliniowej.
+
+**Przykład:  Zależność pomiędzy zamożnością a spożyciem mięsa**
+
+Organizacja Narodów Zjednoczonych do spraw Wyżywienia i Rolnictwa znana jako FAO
+udostępnia dane dotyczące konsumpcji żywności na świecie. Bank światowy
+udostępnia dane dotyczące dochodu narodowego. 
+
+Konsumpcja mięsa jest mierzona jako średnia konsumpcja w kilogramach w każdym kraju (*per capita* się mówi);
+Dochód podobnie jako średnia wielkość dochodu narodowego *per capita*. 
+Dane dotyczą roku 2013.
+
+
+```{r message=FALSE, echo=FALSE}
+## Dane FAO/WorldBank
+meatCons <- read.csv(file='meatCons_vs_GDP.csv',sep=';',header=T)
+ggplot(meatCons, aes(x = gdp2013, y = y2013)) +
+  geom_point(color="steelblue", size=1) +
+  geom_smooth(method = "lm") +
+  geom_smooth(method = "loess", color="red")
+```
+
+###  Pomiar siły zależności: współczynnik korelacji liniowej Pearsona
+
+Kowariancja to średnia arytemtyczna iloczynów odchyleń wartości zmiennych $X$, $Y$
+od ich wartości średnich. Dla $n$ obserwacji na zmiennych $X$ oraz $Y$
+można powyższe zapisać w postaci następującej formuły:
+
+$$\mathrm{cov} (xy) = \frac{1}{n} \left( (x_1 - \bar x) (y_1 - \bar y)  + ... +
+(x_n- \bar x) (y_n - \bar y) \right)$$
+
+Kowariancja zależy od rozproszenia (im większe tym większa), 
+ma też dziwną jednostkę (jednostkaX · jednostkaY) oraz zależy 
+od wybranych skal (tony vs gramy na przykład.)
+
+Z powyższych powodów do pomiaru związku pomiędzy cechami używa się
+standaryzowanego współczynnika kowariancji, 
+zwanego **współczynnikiem korelacji liniowej**, (*Pearson linear
+correlation coefficient*). Standaryzacja polega na podzieleniu wartości
+kowariacji przez iloczyn odchyleń standardowych $s_x$ oraz $s_y$.
+
+$$r_{xy} = \frac{\mathrm{cov}(xy) }{s_x \cdot s_y}$$
+
+Współczynnik jest miarą niemianowaną, przyjmującą wartości ze zbioru $[-1;1]$; 
+Skrajne wartości $\pm 1$
+świadczą o związku funkcyjnym (wszystkie punkty układają się na linii prostej);
+wartość zero świadczy o braku związku (linia pozioma/pionowa)
+
+![](./covariance_explained.png){width=75%}
+
+
+Interpretacja opisowa: wartości powyżej 0,9 świadczą o silnej zależności.
+
+**Przykład: korelacja między spożyciem mięsa a GDP**
+
+```{r, results=F, echo=F, message=F}
+rpm <- cor(meatCons$y1980, meatCons$y2013, method = "pearson")
+rpm.out <- cor.test(meatCons$y1980, meatCons$y2013, method="pearson")
+rpm.p <- rpm.out["p.value"]
+```
+
+Współczynnik korelacji liniowej wynosi `r rpm` (umiarkowana korelacja).
+
+Czy ta wartość jest istotnie różna od zera? Jest na to stosowny
+test statystyczny, który sprowadza się do określenia jakie jest
+prawdopodobieństwo otrzymania r = `r rpm` przy założeniu że 
+prawdziwa wartość r wynosi zero. Otóż w naszym przykładzie
+to prawdopodobieństwo wynosi `r sprintf ("%e", rpm.p)` 
+(czyli jest ekstremalnie małe -- r jest istotnie różne od zera).
+
+### Macierz korelacji
+
+Wstępnym etapem analizy zależności między zmiennymi jest często
+hurtowa ocena współczynników korelacji w postaci kwadratowej **macierzy korelacji**. 
+
+**Przykład: korelacja pomiędzy wiekiem, edukacją, szczęściem a stanem zdrowia**
+
+Mohammadi S. i inni badali zależność pomiędzy wiekiem, poziomem edukacji, szczęściem a stanem zdrowia.
+(The relationship between happiness and self-rated health: A population-based study of 19499 Iranian adults;
+https://doi.org/10.1371/journal.pone.0265914)
+
+```{r, message=F}
+h0 <- read.csv("iran_happiness.csv", sep = ',', dec = ".",  header=T, na.string="NA" ) %>%
+  select (age, edu, Happiness, Health) %>%
+  na.omit()
+cor(h0, use = "complete.obs")
+```
+
+Albo w bardziej efektownej postaci tekstowo-graficznej:
+
+```{r, message=F}
+library("corrplot")
+corrplot.mixed(cor(h0))
+```
+
+## Pomiar siły zależności: regresja liniowa
+
+
+

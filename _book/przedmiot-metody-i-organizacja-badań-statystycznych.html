@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Wprowadzenie do statystyki dla ekonomistów</title>
+  <meta name="description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Wprowadzenie do statystyki dla ekonomistów" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Wprowadzenie do statystyki dla ekonomistów" />
+  
+  <meta name="twitter:description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="analiza-struktury.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-metody-i-organizacja-badań-statystycznych" id="toc-przedmiot-metody-i-organizacja-badań-statystycznych"><span class="toc-section-number">1</span> Przedmiot, metody i organizacja badań statystycznych</a>
+<ul>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-statystyki" id="toc-przedmiot-statystyki"><span class="toc-section-number">1.1</span> Przedmiot statystyki</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#pomiar" id="toc-pomiar"><span class="toc-section-number">1.2</span> Pomiar</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#rodzaje-badań-statystycznych" id="toc-rodzaje-badań-statystycznych"><span class="toc-section-number">1.3</span> Rodzaje badań statystycznych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#organizacja-badań-statystycznych" id="toc-organizacja-badań-statystycznych"><span class="toc-section-number">1.4</span> Organizacja badań statystycznych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#opracowanie-danych" id="toc-opracowanie-danych"><span class="toc-section-number">1.5</span> Opracowanie danych</a></li>
+</ul></li>
+<li><a href="analiza-struktury.html#analiza-struktury" id="toc-analiza-struktury"><span class="toc-section-number">2</span> Analiza struktury</a>
+<ul>
+<li><a href="analiza-struktury.html#tablice-statystyczne" id="toc-tablice-statystyczne"><span class="toc-section-number">2.1</span> Tablice statystyczne</a></li>
+<li><a href="analiza-struktury.html#rozkład-empiryczny" id="toc-rozkład-empiryczny"><span class="toc-section-number">2.2</span> Rozkład empiryczny</a></li>
+<li><a href="analiza-struktury.html#rozkład-normalny" id="toc-rozkład-normalny"><span class="toc-section-number">2.3</span> Rozkład normalny</a></li>
+<li><a href="analiza-struktury.html#wizualizacja-danych-i-wykresy" id="toc-wizualizacja-danych-i-wykresy"><span class="toc-section-number">2.4</span> Wizualizacja danych i wykresy</a>
+<ul>
+<li><a href="analiza-struktury.html#wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej" id="toc-wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej"><span class="toc-section-number">2.4.1</span> Wykresy przedstawiające rozkład wartości jednej zmiennej</a></li>
+<li><a href="analiza-struktury.html#histogram" id="toc-histogram"><span class="toc-section-number">2.4.2</span> Histogram</a></li>
+<li><a href="analiza-struktury.html#wykres-punktowy" id="toc-wykres-punktowy"><span class="toc-section-number">2.4.3</span> Wykres punktowy</a></li>
+<li><a href="analiza-struktury.html#porównanie-wielu-rozkładów" id="toc-porównanie-wielu-rozkładów"><span class="toc-section-number">2.4.4</span> Porównanie wielu rozkładów</a></li>
+<li><a href="analiza-struktury.html#wykresy-kołowe" id="toc-wykresy-kołowe"><span class="toc-section-number">2.4.5</span> Wykresy kołowe</a></li>
+<li><a href="analiza-struktury.html#wykres-pudełkowy" id="toc-wykres-pudełkowy"><span class="toc-section-number">2.4.6</span> Wykres pudełkowy</a></li>
+<li><a href="analiza-struktury.html#wykres-skrzypcowy-wariant-wykresu-pudełkowego" id="toc-wykres-skrzypcowy-wariant-wykresu-pudełkowego"><span class="toc-section-number">2.4.7</span> Wykres skrzypcowy (wariant wykresu pudełkowego)</a></li>
+<li><a href="analiza-struktury.html#przykład-zaufanie-do-politykow" id="toc-przykład-zaufanie-do-politykow"><span class="toc-section-number">2.4.8</span> Przykład: Zaufanie do Politykow</a></li>
+<li><a href="analiza-struktury.html#przykład-marimekko-mosaic-chart" id="toc-przykład-marimekko-mosaic-chart"><span class="toc-section-number">2.4.9</span> Przykład: Marimekko mosaic chart</a></li>
+</ul></li>
+<li><a href="analiza-struktury.html#analiza-parametryczna" id="toc-analiza-parametryczna"><span class="toc-section-number">2.5</span> Analiza parametryczna</a>
+<ul>
+<li><a href="analiza-struktury.html#miary-położenia" id="toc-miary-położenia"><span class="toc-section-number">2.5.1</span> Miary położenia</a></li>
+<li><a href="analiza-struktury.html#miary-zmienności" id="toc-miary-zmienności"><span class="toc-section-number">2.5.2</span> Miary zmienności</a></li>
+<li><a href="analiza-struktury.html#miary-asymetrii" id="toc-miary-asymetrii"><span class="toc-section-number">2.5.3</span> Miary asymetrii</a></li>
+<li><a href="analiza-struktury.html#miary-koncentracji" id="toc-miary-koncentracji"><span class="toc-section-number">2.5.4</span> Miary koncentracji</a></li>
+</ul></li>
+</ul></li>
+<li><a href="interference.html#interference" id="toc-interference"><span class="toc-section-number">3</span> Łagodne wprowadzenie do wnioskowania statystycznego</a>
+<ul>
+<li><a href="interference.html#masa-ciała-uczestników-pś-w-rugby" id="toc-masa-ciała-uczestników-pś-w-rugby"><span class="toc-section-number">3.1</span> Masa ciała uczestników PŚ w rugby</a></li>
+<li><a href="interference.html#wiek-kandydatów-na-radnych" id="toc-wiek-kandydatów-na-radnych"><span class="toc-section-number">3.2</span> Wiek kandydatów na radnych</a></li>
+<li><a href="interference.html#rozkład-normalny-1" id="toc-rozkład-normalny-1"><span class="toc-section-number">3.3</span> Rozkład normalny</a></li>
+<li><a href="interference.html#odsetek-kobiet-wśród-kandydatów-na-radnych" id="toc-odsetek-kobiet-wśród-kandydatów-na-radnych"><span class="toc-section-number">3.4</span> Odsetek kobiet wśród kandydatów na radnych</a></li>
+<li><a href="interference.html#wnioskowanie-statystyczne" id="toc-wnioskowanie-statystyczne"><span class="toc-section-number">3.5</span> Wnioskowanie statystyczne</a>
+<ul>
+<li><a href="interference.html#estymacja-punktowa" id="toc-estymacja-punktowa"><span class="toc-section-number">3.5.1</span> Estymacja punktowa</a></li>
+<li><a href="interference.html#estymacja-przedziałowa" id="toc-estymacja-przedziałowa"><span class="toc-section-number">3.5.2</span> Estymacja przedziałowa</a></li>
+<li><a href="interference.html#testowanie-hipotez" id="toc-testowanie-hipotez"><span class="toc-section-number">3.5.3</span> Testowanie hipotez</a></li>
+<li><a href="interference.html#testy-nieparametryczne" id="toc-testy-nieparametryczne"><span class="toc-section-number">3.5.4</span> Testy nieparametryczne</a></li>
+</ul></li>
+<li><a href="interference.html#słownik-terminów-które-warto-znać" id="toc-słownik-terminów-które-warto-znać"><span class="toc-section-number">3.6</span> Słownik terminów które warto znać</a></li>
+</ul></li>
+<li><a href="analiza-korelacji.html#analiza-korelacji" id="toc-analiza-korelacji"><span class="toc-section-number">4</span> Analiza korelacji</a>
+<ul>
+<li><a href="analiza-korelacji.html#pojęcia-wstępne" id="toc-pojęcia-wstępne"><span class="toc-section-number">4.1</span> Pojęcia wstępne</a>
+<ul>
+<li><a href="analiza-korelacji.html#korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot" id="toc-korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot"><span class="toc-section-number">4.1.1</span> Korelacyjny wykres rozrzutu (korelogram, wykres XY w Excelu, scatter plot)</a></li>
+<li><a href="analiza-korelacji.html#pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona" id="toc-pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona"><span class="toc-section-number">4.1.2</span> Pomiar siły zależności: współczynnik korelacji liniowej Pearsona</a></li>
+<li><a href="analiza-korelacji.html#macierz-korelacji" id="toc-macierz-korelacji"><span class="toc-section-number">4.1.3</span> Macierz korelacji</a></li>
+</ul></li>
+<li><a href="analiza-korelacji.html#pomiar-siły-zależności-regresja-liniowa" id="toc-pomiar-siły-zależności-regresja-liniowa"><span class="toc-section-number">4.2</span> Pomiar siły zależności: regresja liniowa</a></li>
+</ul></li>
+<li><a href="analiza-szeregów-czasowych.html#analiza-szeregów-czasowych" id="toc-analiza-szeregów-czasowych"><span class="toc-section-number">5</span> Analiza szeregów czasowych</a>
+<ul>
+<li><a href="analiza-szeregów-czasowych.html#pojęcia-wstępne-1" id="toc-pojęcia-wstępne-1"><span class="toc-section-number">5.1</span> Pojęcia wstępne</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wykresy" id="toc-wykresy"><span class="toc-section-number">5.2</span> Wykresy</a>
+<ul>
+<li><a href="analiza-szeregów-czasowych.html#przykład-zwiedzający-muzeum-zamkowe-w-malborku" id="toc-przykład-zwiedzający-muzeum-zamkowe-w-malborku"><span class="toc-section-number">5.2.1</span> Przykład: Zwiedzający Muzeum Zamkowe w Malborku</a></li>
+</ul></li>
+<li><a href="analiza-szeregów-czasowych.html#przyrosty" id="toc-przyrosty"><span class="toc-section-number">5.3</span> Przyrosty</a></li>
+<li><a href="analiza-szeregów-czasowych.html#indeksy-agregatowe" id="toc-indeksy-agregatowe"><span class="toc-section-number">5.4</span> Indeksy agregatowe</a></li>
+<li><a href="analiza-szeregów-czasowych.html#dekompozycja-szeregów-czasowych" id="toc-dekompozycja-szeregów-czasowych"><span class="toc-section-number">5.5</span> Dekompozycja szeregów czasowych</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wygładzanie-za-pomocą-średniej-ruchomej" id="toc-wygładzanie-za-pomocą-średniej-ruchomej"><span class="toc-section-number">5.6</span> Wygładzanie za pomocą średniej ruchomej</a></li>
+<li><a href="analiza-szeregów-czasowych.html#liniowa-funkcja-trendu" id="toc-liniowa-funkcja-trendu"><span class="toc-section-number">5.7</span> Liniowa funkcja trendu</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wygładzanie-wykładnicze" id="toc-wygładzanie-wykładnicze"><span class="toc-section-number">5.8</span> Wygładzanie wykładnicze</a></li>
+<li><a href="analiza-szeregów-czasowych.html#oszacowanie-dokładności-modelu" id="toc-oszacowanie-dokładności-modelu"><span class="toc-section-number">5.9</span> Oszacowanie dokładności modelu</a></li>
+<li><a href="analiza-szeregów-czasowych.html#szacowanie-wskaźników-sezonowości" id="toc-szacowanie-wskaźników-sezonowości"><span class="toc-section-number">5.10</span> Szacowanie wskaźników sezonowości</a></li>
+</ul></li>
+<li><a href="literatura.html#literatura" id="toc-literatura"><span class="toc-section-number">6</span> Literatura</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wprowadzenie do statystyki dla ekonomistów</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Wprowadzenie do statystyki dla ekonomistów</h1>
+<p class="author multi-author"><em>Tomasz Przechlewski</em></p>
+<address class="author_afil">
+Powiślańska Szkoła Wyższa (Kwidzyn-Gdańsk)<br>
+<a class="author_email" href="mailto:#"><a href="mailto:t.plata-przechlewski@psw.kwidzyn.edu.pl" class="email">t.plata-przechlewski@psw.kwidzyn.edu.pl</a></a>
+</address>
+<p class="date"><em><img src="./FN.jpg" style="width:50.0%" alt="Styczeń 2024/wersja robocza" /></em></p>
+</div>
+<div id="przedmiot-metody-i-organizacja-badań-statystycznych" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Przedmiot, metody i organizacja badań statystycznych</h1>
+<div id="przedmiot-statystyki" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Przedmiot statystyki</h2>
+<p><strong>Statystyka</strong>: analiza struktury, przedziały ufności i weryfikacja hipotez,
+analiza współzależności.</p>
+<p><strong>Etapy analizy statystycznej</strong>: – przełóż obserwacje na postać
+liczbową – wnioskuj (zastosuj odpowiednie statystyki)</p>
+<p><strong>Analiza eksploracyjna</strong>
+Exploratory research is the stage of the research process that aims at
+connecting ideas as to unveil the ``why’’s of potential cause/effect
+relationships. This occurs when researchers get started at
+understanding what they are actually observing when in the process of
+building cause/effect models.</p>
+<p><strong>Analiza konfirmacyjna</strong>
+Confirmatory research (a.k.a. hypothesis
+testing) is where researchers have a pretty good idea of what’s going
+on. That is, researcher has a theory (or several theories), and the
+objective is to find out if the theory is supported by the facts.</p>
+<p><strong>Data wrangling</strong>, sometimes referred to as <strong>data munging</strong>, is the
+process of transforming and mapping data from one raw data form into
+another format with the intent of making it more appropriate and
+valuable for a variety of downstream purposes such as analytics.</p>
+<p><strong>Data science</strong> also known as data-driven science, is an
+interdisciplinary field of scientific methods, processes, algorithms
+and systems to extract knowledge or insights from data in various
+forms, either structured or unstructured.</p>
+<p><strong>Opis statystyczny</strong> – liczbowe przedstawienie badanych zbiorowości lub
+zjawisk w postaci opisu: – tabelarycznego; – graficznego; – parametrycznego</p>
+<p><strong>Opis statystyczny</strong> może dotyczyć: – struktury zbiorowości; –
+współzależności; – zmian zjawisk w czasie.</p>
+<p><strong>Badanie statystyczne</strong> to zespół czynności zmierzających do
+uzyskania (za pomocą metod statystycznych) informacji
+charakteryzujących badaną zbiorowość lub zjawisko. Najważniejsze
+kryteria klasyfikacji badań: – zakres obserwacji badanych jednostek
+(pełne, częściowe); – częstotliwość: (ciągłe, okresowe, doraźne); –
+zasięg przestrzenny (międzynarodowe, krajowe, regionalne,
+środowiskowe, monograficzne); – dziedzina badań (demograficzne,
+społeczne, ekonomiczne, rolnicze, jakości środowiska naturalnego itp.</p>
+<p><strong>Populacja, zbiorowość statystyczna</strong>: zbiór obiektów (osób,
+przedmiotów, zdarzeń) logicznie ze sobą powiązanych (ale nie
+identycznych), poddany badaniu statystycznemu.</p>
+<p><strong>Jednostka statystyczna</strong>: jednostki statystyczne w danej populacji
+różnią się od innych jednostek spoza danej populacji poprzez swoje
+własności wspólne (cechy stałe), jednocześnie różnią się między sobą
+cechami (cechy zmienne), które są przedmiotem zainteresowania badacza.</p>
+<p><strong>Cechy statystyczne</strong> – właściwości jednostek statystycznych Cechy
+stałe – jednakowe dla wszystkich jednostek badania: rzeczowa (co?
+kto? jest badane/y) przestrzenna (gdzie?) czasowa (kiedy?)</p>
+<p><strong>Cechy zmienne</strong> – właściwości różnicujące jednostki
+jednostki z badanej populacji, tj. takie które mogą posiadać więcej niż 1 wariant
+(jeżeli posiadają jeden mamy do czynienia z przypadkiem trywialnym). Cechy
+zmienne dzielimy na: – jakościowe (płeć, rok studiów) – ilościowe (wiek)</p>
+<p>Pojęcia stosowane w statystyce publicznej
+<a href="https://stat.gov.pl/metainformacje/slownik-pojec/pojecia-stosowane-w-statystyce-publicznej/lista.html" class="uri">https://stat.gov.pl/metainformacje/slownik-pojec/pojecia-stosowane-w-statystyce-publicznej/lista.html</a></p>
+</div>
+<div id="pomiar" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Pomiar</h2>
+<p><strong>Pomiar</strong> (zwany też obserwacją) – przyporządkowanie wariantom cechy zmiennej liczb
+lub symboli. W naukach przyrodniczych (fizyka, chemia) pomiaru dokonuje
+przy zastosowaniu precyzyjnych/jednoznacznie określonych definicji <strong>miar</strong>.
+W naukach społecznych jest niestety inaczej: wiele definicji jest
+nieprecyzyjnych (na przykład <strong>turysta</strong> albo <strong>emigrant</strong>), a wiele miar przybliżonych.
+Przy czym brak precyzji nie wynika z błędu pomiaru (źle przyłożona linijka),
+ale jest cechą użytej <strong>skali pomiarowej</strong> (nieprecyzyjna linijka).</p>
+<p><strong>Rodzaje skal pomiarowych</strong></p>
+<ul>
+<li><p><strong>nominalna</strong> (nominal scale), klasyfikuje: płeć;</p></li>
+<li><p><strong>porządkowa</strong> (ordinal scale), klasyfikuje i porządkuje: zdolność kredytowa firmy, stadia choroby,</p></li>
+</ul>
+<p>– <strong>przedziałowa</strong> (interval scale), posiada jeszcze stałą jednostkę
+miary (ów przedział) oraz umowne zero (temperatura w stopniach Celsjusza)</p>
+<p>– <strong>ilorazowa</strong> (rational scale), posiada to co przedziałowa plus
+naturalne zero (wiek, wzrost, obrót, temperatura w stopniach Kelwina).</p>
+<p>Skala Kelvina temperatury jest ilorazowa, skala Celsiusza jest przedziałowa.
+Zero w skali Kelvina to zero bezwzględne, 200K jest 2 razy mniejsze niż 400K
+podczas gdy 200C nie jest dwa razy mniejsze niż 400C. Na skali
+przedziałowej <strong>nie można</strong> w <em>bezpieczny</em> sposób dokonywać dzielenia.
+Na liczbach w skali porządkowej nie można dokonywać nawet dodawania.
+Wszystkie operacje arytmetyczne są <em>bezpieczne</em> tylko dla skali ilorazowej.</p>
+<p><strong>Cecha statystyczna mierzalna (ilościowa)</strong> – określana jest za
+pomocą liczb np. oceny, płace. Cechy mierzalne dzielą się na skokowe
+i ciągłe. Skokowe są to cechy, które przyjmują skończoną liczbę
+wartości, zwykle są to liczby całkowite; Ciągłe są to cechy, które
+przyjmują dowolne wartości liczbowe z pewnego przedziału liczbowego
+np. dochody, długość ziarna fasoli.</p>
+</div>
+<div id="rodzaje-badań-statystycznych" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Rodzaje badań statystycznych</h2>
+<p><strong>Pełne</strong> (spis, rejestracja), <strong>częściowe</strong> (reprezentacyjne),
+<strong>szacunki interpolacyjne i ekstrapolacyjne</strong> (ustalenie wartości na podstawie
+znanych wartości podobnych/poprzednich/sąsiednich;
+wbrew pozorom często stosowana metoda).</p>
+<p><strong>Ciągłe</strong> (ewidencja urodzeń), <strong>okresowe</strong> (spisy rolne, spis powszechny),
+<strong>doraźne</strong> (sondaż poparcia w wyborach prezydenckich)</p>
+<p><strong>Spis</strong> to gromadzenie danych na potrzeby badania; <strong>Rejestracja</strong> to gromadzenie danych przy
+okazji wykonywania innych działań (ewidencja
+ludności, działanie wymiaru sprawiedliwości, gromadzenie danych pogodowych itp…)</p>
+<p>Badanie <strong>reprezentacyjne</strong> to badanie oparte na <strong>próbie</strong> pobrane ze zbiorowości w taki sposób,
+że wyniki uzyskane dla tej próby można uogólnić na
+całą populację (wymaga to odpowiedniego sposobu wybrania jednostek do próby; nie każda
+próba jest <strong>reprezentacyjna</strong>)</p>
+</div>
+<div id="organizacja-badań-statystycznych" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Organizacja badań statystycznych</h2>
+<p>Etapy wstępne badania statystycznego:</p>
+<ul>
+<li><p>ustalenie <strong>celu i metody</strong> (pełne częściowe);</p></li>
+<li><p>określenie <strong>zbiorowości</strong> i <strong>jednostki badania</strong>;</p></li>
+<li><p>określenie <strong>cech/wartości cech</strong> podlegających gromadzeniu (<strong>definiowanie/klasyfikacja</strong>) oraz sposobu pomiaru;</p></li>
+<li><p>zdefiniowanie <strong>jednostki sprawozdawczej</strong> (od kogo pozyskamy dane).</p></li>
+</ul>
+<p><strong>Klasyfikacja</strong> to ustalenie (wyodrębnienie) wariantów cechy.
+Cechy/wartości cech nie mogą być wymyślane ad hoc ale (w imię porównywalności)
+powinny być definiowane z użyciem powszechnie stosowanych
+słowników/taksonomii/klasyfikacji (TERYT, PESEL, EKD)</p>
+<p>Kto to jest turysta? Co to jest hotel? Co to jest las?</p>
+<p><strong>Materiał pierwotny</strong> (dane zgromadzone specjalnie dla celów badania),
+<strong>materiał wtórny</strong> (dane zgromadzone z innych powodów ale przydatne do badania statystycznego; dane rejestrowane).
+Wg Sobczaka (2024): większą wartość
+mają materiały pierwotne, ponieważ są aktualne, gromadzone z określoną dokładością i nie
+są obciążone zbytecznymi informacjami. Powyższe można uznać za mocno nieaktualne.
+Współcześnie dane z rejestrów
+są coraz zarówno lepsze jakościowo jak i dominują ilościowo (Facebook/Google najlepszym przykładem).</p>
+</div>
+<div id="opracowanie-danych" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> Opracowanie danych</h2>
+<p><strong>Grupowanie</strong> – podział zbiorowości na jednorodne lub względnie
+jednorodne podgrupy z punktu widzenia wyróżnionej cechy (cech):
+– typologiczne (cechy jakościowe); – wariancyjne (cechy ilościowe).</p>
+<p>Zasady logiki formalnej: grupowanie musi być wyczerpujące – każda
+jednostka zbiorowości musi być sklasyfikowana i włączona do
+odpowiedniej podgrupy; – grupowanie powinno być rozłączne –
+wyodrębnione podgrupy muszą się wzajemnie wykluczać; – grupowanie
+powinno być efektywne – wyróżnione podgrupy powinny być na tyle
+jednorodne jakościowo, by mogły stanowić podstawę twierdzeń
+uogólniających</p>
+<p><strong>Szereg statystyczny</strong> to zbiór wyników <strong>obserwacji</strong> (pomiaru) pewnej cechy.
+Jeżeli pomiaru dokonano na zbiorze jednostek to mówimy o <strong>szeregu przekrojowym</strong> lub
+strukturalnym (mierzymy wiele jednostek w pewnym
+momencie/okresie czasu), jeżeli pomiar dotyczy jednostki, a nie zbioru, ale dokonany został
+w kolejnych momentach/okresach czasu, to mówimy o <strong>szeregu czasowym</strong>. Jeżeli zbiór mierzonych jednostek
+zawiera informacje o ich położeniu na powierzchni Ziemi (np. współrzędne geograficzne), to mówimy o <strong>szeregu przestrzennym</strong>.
+Zamiast szereg używa się teminu <strong>dane</strong> (dane przekrojowe/czasowe/przestrzenne)</p>
+<p>Reasumując: szereg strukturalny przestawia rozkład wartości cechy w pewnej zbiorowości (strukturę stąd nazwa);
+<strong>szereg czasowy</strong> określa zmianę wartości cechy w czasie, zaś
+<strong>szereg przestrzenny</strong> rozkład wartości cechy na powierzchni Ziemi.</p>
+<p>Szereg przekrojowy/przestrzenny może być <strong>szczegółowy</strong> lub <strong>rozdzielczy</strong>.
+Szereg jest <strong>szczegółowy</strong> jeżeli tworzący go zbiór wartości zostanie uporządkowany (według wartości cechy)
+Szereg jest <strong>rozdzielczy</strong> jeżeli zostanie pogrupowany i uporządkowany tj. zostanie zamieniony na
+uporządkowane pary (cecha–liczebność cechy)</p>
+<p><strong>Szereg czasowy</strong> może być <strong>szeregiem okresów</strong> (<strong>strumieni</strong>) lub
+momentów (<strong>stanów</strong>). Przykładowo: liczba urodzeń żywych w powiecie kwidzyńskim w latach 2000–2019,
+to <strong>szereg czasowy okresów</strong>
+(strumieni); w szczególności można dodać liczbę urodzeń
+w poszczególnych latach otrzymując łączną liczbę urodzonych w tym okresie.</p>
+<p>Liczba zarejestrowanych pojazdów w powiecie kwidzyńskim w latach 2000–2019 to szereg momentów (stan);
+nie można sumować liczby zarejestrowanych samochodów, bo taka suma nie ma merytorycznie sensu.
+Można podać średnią (przeciętny stan) zarejestrowanych samochodów w latach 2000–2019.</p>
+<p>Wiele danych ekonomiczno-społecznych jest mierzonych na poziomie jednostek administracyjnych (gmina, powiat, województwo, państwo).
+Formalnie taki zbiór danych jest <strong>szeregiem przestrzennym</strong>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="analiza-struktury.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

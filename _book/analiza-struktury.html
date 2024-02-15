@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Analiza struktury | Wprowadzenie do statystyki dla ekonomistów</title>
+  <meta name="description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Analiza struktury | Wprowadzenie do statystyki dla ekonomistów" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Analiza struktury | Wprowadzenie do statystyki dla ekonomistów" />
+  
+  <meta name="twitter:description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="przedmiot-metody-i-organizacja-badań-statystycznych.html"/>
+<link rel="next" href="interference.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-metody-i-organizacja-badań-statystycznych" id="toc-przedmiot-metody-i-organizacja-badań-statystycznych"><span class="toc-section-number">1</span> Przedmiot, metody i organizacja badań statystycznych</a>
+<ul>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-statystyki" id="toc-przedmiot-statystyki"><span class="toc-section-number">1.1</span> Przedmiot statystyki</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#pomiar" id="toc-pomiar"><span class="toc-section-number">1.2</span> Pomiar</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#rodzaje-badań-statystycznych" id="toc-rodzaje-badań-statystycznych"><span class="toc-section-number">1.3</span> Rodzaje badań statystycznych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#organizacja-badań-statystycznych" id="toc-organizacja-badań-statystycznych"><span class="toc-section-number">1.4</span> Organizacja badań statystycznych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#opracowanie-danych" id="toc-opracowanie-danych"><span class="toc-section-number">1.5</span> Opracowanie danych</a></li>
+</ul></li>
+<li><a href="analiza-struktury.html#analiza-struktury" id="toc-analiza-struktury"><span class="toc-section-number">2</span> Analiza struktury</a>
+<ul>
+<li><a href="analiza-struktury.html#tablice-statystyczne" id="toc-tablice-statystyczne"><span class="toc-section-number">2.1</span> Tablice statystyczne</a></li>
+<li><a href="analiza-struktury.html#rozkład-empiryczny" id="toc-rozkład-empiryczny"><span class="toc-section-number">2.2</span> Rozkład empiryczny</a></li>
+<li><a href="analiza-struktury.html#rozkład-normalny" id="toc-rozkład-normalny"><span class="toc-section-number">2.3</span> Rozkład normalny</a></li>
+<li><a href="analiza-struktury.html#wizualizacja-danych-i-wykresy" id="toc-wizualizacja-danych-i-wykresy"><span class="toc-section-number">2.4</span> Wizualizacja danych i wykresy</a>
+<ul>
+<li><a href="analiza-struktury.html#wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej" id="toc-wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej"><span class="toc-section-number">2.4.1</span> Wykresy przedstawiające rozkład wartości jednej zmiennej</a></li>
+<li><a href="analiza-struktury.html#histogram" id="toc-histogram"><span class="toc-section-number">2.4.2</span> Histogram</a></li>
+<li><a href="analiza-struktury.html#wykres-punktowy" id="toc-wykres-punktowy"><span class="toc-section-number">2.4.3</span> Wykres punktowy</a></li>
+<li><a href="analiza-struktury.html#porównanie-wielu-rozkładów" id="toc-porównanie-wielu-rozkładów"><span class="toc-section-number">2.4.4</span> Porównanie wielu rozkładów</a></li>
+<li><a href="analiza-struktury.html#wykresy-kołowe" id="toc-wykresy-kołowe"><span class="toc-section-number">2.4.5</span> Wykresy kołowe</a></li>
+<li><a href="analiza-struktury.html#wykres-pudełkowy" id="toc-wykres-pudełkowy"><span class="toc-section-number">2.4.6</span> Wykres pudełkowy</a></li>
+<li><a href="analiza-struktury.html#wykres-skrzypcowy-wariant-wykresu-pudełkowego" id="toc-wykres-skrzypcowy-wariant-wykresu-pudełkowego"><span class="toc-section-number">2.4.7</span> Wykres skrzypcowy (wariant wykresu pudełkowego)</a></li>
+<li><a href="analiza-struktury.html#przykład-zaufanie-do-politykow" id="toc-przykład-zaufanie-do-politykow"><span class="toc-section-number">2.4.8</span> Przykład: Zaufanie do Politykow</a></li>
+<li><a href="analiza-struktury.html#przykład-marimekko-mosaic-chart" id="toc-przykład-marimekko-mosaic-chart"><span class="toc-section-number">2.4.9</span> Przykład: Marimekko mosaic chart</a></li>
+</ul></li>
+<li><a href="analiza-struktury.html#analiza-parametryczna" id="toc-analiza-parametryczna"><span class="toc-section-number">2.5</span> Analiza parametryczna</a>
+<ul>
+<li><a href="analiza-struktury.html#miary-położenia" id="toc-miary-położenia"><span class="toc-section-number">2.5.1</span> Miary położenia</a></li>
+<li><a href="analiza-struktury.html#miary-zmienności" id="toc-miary-zmienności"><span class="toc-section-number">2.5.2</span> Miary zmienności</a></li>
+<li><a href="analiza-struktury.html#miary-asymetrii" id="toc-miary-asymetrii"><span class="toc-section-number">2.5.3</span> Miary asymetrii</a></li>
+<li><a href="analiza-struktury.html#miary-koncentracji" id="toc-miary-koncentracji"><span class="toc-section-number">2.5.4</span> Miary koncentracji</a></li>
+</ul></li>
+</ul></li>
+<li><a href="interference.html#interference" id="toc-interference"><span class="toc-section-number">3</span> Łagodne wprowadzenie do wnioskowania statystycznego</a>
+<ul>
+<li><a href="interference.html#masa-ciała-uczestników-pś-w-rugby" id="toc-masa-ciała-uczestników-pś-w-rugby"><span class="toc-section-number">3.1</span> Masa ciała uczestników PŚ w rugby</a></li>
+<li><a href="interference.html#wiek-kandydatów-na-radnych" id="toc-wiek-kandydatów-na-radnych"><span class="toc-section-number">3.2</span> Wiek kandydatów na radnych</a></li>
+<li><a href="interference.html#rozkład-normalny-1" id="toc-rozkład-normalny-1"><span class="toc-section-number">3.3</span> Rozkład normalny</a></li>
+<li><a href="interference.html#odsetek-kobiet-wśród-kandydatów-na-radnych" id="toc-odsetek-kobiet-wśród-kandydatów-na-radnych"><span class="toc-section-number">3.4</span> Odsetek kobiet wśród kandydatów na radnych</a></li>
+<li><a href="interference.html#wnioskowanie-statystyczne" id="toc-wnioskowanie-statystyczne"><span class="toc-section-number">3.5</span> Wnioskowanie statystyczne</a>
+<ul>
+<li><a href="interference.html#estymacja-punktowa" id="toc-estymacja-punktowa"><span class="toc-section-number">3.5.1</span> Estymacja punktowa</a></li>
+<li><a href="interference.html#estymacja-przedziałowa" id="toc-estymacja-przedziałowa"><span class="toc-section-number">3.5.2</span> Estymacja przedziałowa</a></li>
+<li><a href="interference.html#testowanie-hipotez" id="toc-testowanie-hipotez"><span class="toc-section-number">3.5.3</span> Testowanie hipotez</a></li>
+<li><a href="interference.html#testy-nieparametryczne" id="toc-testy-nieparametryczne"><span class="toc-section-number">3.5.4</span> Testy nieparametryczne</a></li>
+</ul></li>
+<li><a href="interference.html#słownik-terminów-które-warto-znać" id="toc-słownik-terminów-które-warto-znać"><span class="toc-section-number">3.6</span> Słownik terminów które warto znać</a></li>
+</ul></li>
+<li><a href="analiza-korelacji.html#analiza-korelacji" id="toc-analiza-korelacji"><span class="toc-section-number">4</span> Analiza korelacji</a>
+<ul>
+<li><a href="analiza-korelacji.html#pojęcia-wstępne" id="toc-pojęcia-wstępne"><span class="toc-section-number">4.1</span> Pojęcia wstępne</a>
+<ul>
+<li><a href="analiza-korelacji.html#korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot" id="toc-korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot"><span class="toc-section-number">4.1.1</span> Korelacyjny wykres rozrzutu (korelogram, wykres XY w Excelu, scatter plot)</a></li>
+<li><a href="analiza-korelacji.html#pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona" id="toc-pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona"><span class="toc-section-number">4.1.2</span> Pomiar siły zależności: współczynnik korelacji liniowej Pearsona</a></li>
+<li><a href="analiza-korelacji.html#macierz-korelacji" id="toc-macierz-korelacji"><span class="toc-section-number">4.1.3</span> Macierz korelacji</a></li>
+</ul></li>
+<li><a href="analiza-korelacji.html#pomiar-siły-zależności-regresja-liniowa" id="toc-pomiar-siły-zależności-regresja-liniowa"><span class="toc-section-number">4.2</span> Pomiar siły zależności: regresja liniowa</a></li>
+</ul></li>
+<li><a href="analiza-szeregów-czasowych.html#analiza-szeregów-czasowych" id="toc-analiza-szeregów-czasowych"><span class="toc-section-number">5</span> Analiza szeregów czasowych</a>
+<ul>
+<li><a href="analiza-szeregów-czasowych.html#pojęcia-wstępne-1" id="toc-pojęcia-wstępne-1"><span class="toc-section-number">5.1</span> Pojęcia wstępne</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wykresy" id="toc-wykresy"><span class="toc-section-number">5.2</span> Wykresy</a>
+<ul>
+<li><a href="analiza-szeregów-czasowych.html#przykład-zwiedzający-muzeum-zamkowe-w-malborku" id="toc-przykład-zwiedzający-muzeum-zamkowe-w-malborku"><span class="toc-section-number">5.2.1</span> Przykład: Zwiedzający Muzeum Zamkowe w Malborku</a></li>
+</ul></li>
+<li><a href="analiza-szeregów-czasowych.html#przyrosty" id="toc-przyrosty"><span class="toc-section-number">5.3</span> Przyrosty</a></li>
+<li><a href="analiza-szeregów-czasowych.html#indeksy-agregatowe" id="toc-indeksy-agregatowe"><span class="toc-section-number">5.4</span> Indeksy agregatowe</a></li>
+<li><a href="analiza-szeregów-czasowych.html#dekompozycja-szeregów-czasowych" id="toc-dekompozycja-szeregów-czasowych"><span class="toc-section-number">5.5</span> Dekompozycja szeregów czasowych</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wygładzanie-za-pomocą-średniej-ruchomej" id="toc-wygładzanie-za-pomocą-średniej-ruchomej"><span class="toc-section-number">5.6</span> Wygładzanie za pomocą średniej ruchomej</a></li>
+<li><a href="analiza-szeregów-czasowych.html#liniowa-funkcja-trendu" id="toc-liniowa-funkcja-trendu"><span class="toc-section-number">5.7</span> Liniowa funkcja trendu</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wygładzanie-wykładnicze" id="toc-wygładzanie-wykładnicze"><span class="toc-section-number">5.8</span> Wygładzanie wykładnicze</a></li>
+<li><a href="analiza-szeregów-czasowych.html#oszacowanie-dokładności-modelu" id="toc-oszacowanie-dokładności-modelu"><span class="toc-section-number">5.9</span> Oszacowanie dokładności modelu</a></li>
+<li><a href="analiza-szeregów-czasowych.html#szacowanie-wskaźników-sezonowości" id="toc-szacowanie-wskaźników-sezonowości"><span class="toc-section-number">5.10</span> Szacowanie wskaźników sezonowości</a></li>
+</ul></li>
+<li><a href="literatura.html#literatura" id="toc-literatura"><span class="toc-section-number">6</span> Literatura</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wprowadzenie do statystyki dla ekonomistów</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="analiza-struktury" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Analiza struktury</h1>
+<p>Analiza struktury – opisane zbiorowości ze
+względu na obserwowane w badaniu cechy zmienne.</p>
+<p>Podstawę do oceny struktury zbiorowości stanowią dane w postaci
+<strong>szeregu szczegółowego</strong>, bądź też pogrupowane (<strong>szereg rozdzielczy</strong>)</p>
+<p>Analizę prowadzić można na podstawie wykresów, szeregów
+rozdzielczych oraz (najczęściej) za pomocą odpowiednio obliczonych
+charakterystyk, zwanych parametrami (dla populacji) lub
+statystykami (dla próby).</p>
+<p><strong>Rozkład cechy</strong> – przyporządkowanie liczby wystąpień (liczebności, częstości lub
+prawdopodobieństwa) odpowiednim wartościom cechy zmiennej.</p>
+<p>Analiza struktury obejmuje:
+<strong>określenie tendencji centralnej</strong> (tzw. <strong>miary położenia</strong> / wartość przeciętna, mediana, dominanta);
+<strong>zróżnicowanie wartości</strong> (rozproszenie);
+<strong>asymetrię</strong> (rozłożenie wartości wokół średniej);
+<strong>koncentrację</strong> (podział wartości cechy pomiędzy jednostki)</p>
+<div id="tablice-statystyczne" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Tablice statystyczne</h2>
+<p><strong>Tablica statystyczna</strong> to (w podstawowej formie) dwukolumnowa tabela zawierająca
+wartości cechy oraz odpowiadające tym wartościom liczebności.</p>
+<p><strong>Przykład 1</strong>: Tablica dla cechy niemierzalnej (nominalnej albo porządkowej)</p>
+<p>Absolwenci studiów pielęgniarskich w ośmiu największych
+krajach UE w roku 2018</p>
+<p><strong>Jednostka badania</strong>: absolwent studiów pielęgniarskich w roku 2018,</p>
+<p><strong>Badana cecha</strong>: kraj w którym ukończył studia (nominalna)</p>
+<p>Tablica: Absolwenci studiów pielęgniarskich w ośmiu największych
+krajach UE w roku 2018</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">kraj</th>
+<th align="right">liczba</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Belgium</td>
+<td align="right">7203</td>
+</tr>
+<tr class="even">
+<td align="left">Germany</td>
+<td align="right">35742</td>
+</tr>
+<tr class="odd">
+<td align="left">Spain</td>
+<td align="right">9936</td>
+</tr>
+<tr class="even">
+<td align="left">France</td>
+<td align="right">25757</td>
+</tr>
+<tr class="odd">
+<td align="left">Italy</td>
+<td align="right">11207</td>
+</tr>
+<tr class="even">
+<td align="left">Netherlands</td>
+<td align="right">9920</td>
+</tr>
+<tr class="odd">
+<td align="left">Poland</td>
+<td align="right">9070</td>
+</tr>
+<tr class="even">
+<td align="left">Romania</td>
+<td align="right">18664</td>
+</tr>
+</tbody>
+</table>
+<p>Źródło: Eurostat, tablica Health graduates (HLTH_RS_GRD)</p>
+<p><strong>Przykład 2</strong>: Tablica dla cechy mierzalnej (liczbowej; skokowej lub ciągłej)</p>
+<p>Jeżeli liczba wariantów cechy jest mała tablica zawiera wyliczenie
+wariantów cechy i odpowiadających im liczebności. Jeżeli liczba wariantów
+cechy jest duża tablica zawiera klasy wartości (przedziały wartości)
+oraz odpowiadające im liczebności.</p>
+<ul>
+<li><p>Co do zasady klasy wartości powinny być jednakowej rozpiętości.</p></li>
+<li><p>Na zasadzie wyjątku dopuszcza się aby pierwszy i ostatni przedział
+były <strong>otwarte</strong>, tj. nie miały dolnej (pierwszy) lub górnej
+(ostatni) <strong>granicy</strong></p></li>
+</ul>
+<p>Tablica: Gospodarstwa domowe we wsi X wg liczby samochodów w roku 2022</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">liczba samochodów</th>
+<th align="right">liczba gospodarstw</th>
+<th align="right">%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="right">230</td>
+<td align="right">39.3162393</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="right">280</td>
+<td align="right">47.8632479</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="right">70</td>
+<td align="right">11.9658120</td>
+</tr>
+<tr class="even">
+<td align="left">3 i więcej</td>
+<td align="right">5</td>
+<td align="right">0.8547009</td>
+</tr>
+<tr class="odd">
+<td align="left">razem</td>
+<td align="right">585</td>
+<td align="right">100.0000000</td>
+</tr>
+</tbody>
+</table>
+<p>Źródło: obliczenia własne</p>
+<p>Tablica dla cechy mierzalnej (liczbowej ciągłej–wymaga pogrupowania w klasy):</p>
+<p><strong>Przykład</strong>: Dzietność kobiet na świecie</p>
+<p>Współczynnik dzietności (<em>fertility ratio</em> albo FR) – przeciętna liczba urodzonych dzieci przypadających
+na jedną kobietę w wieku rozrodczym (15–49 lat).
+Przyjmuje się, iż FR między 2,10–2,15 zapewnia zastępowalność pokoleń.</p>
+<p>Dane dotyczące dzietności dla wszystkich krajów świata można
+znaleźć na stronie <a href="https://ourworldindata.org/grapher/fertility-rate-complete-gapminder" class="uri">https://ourworldindata.org/grapher/fertility-rate-complete-gapminder</a>)
+Zbudujmy tablicę przedstawiającą rozkład współczynników dzietności w roku 2018</p>
+<p>Krajów jest 201. Wartość minimalna to 1.22 a wartość
+maksymalna to 7.13. Decydujemy się na rozpiętość przedziału równą 0,5;
+dolny koniec pierwszego przedziału przyjmujemy jako 1,0.</p>
+<p>Zwykle przyjmuje się za końce przedziałów <strong>okrągłe liczby</strong>
+bo dziwnie by wyglądało gdyby koniec przedziału np. był równy 1,05
+zamiast 1,0.</p>
+<p>Liczba przedziałów jest dobierana metodą prób i błędów, tak aby:</p>
+<ul>
+<li><p>nie było przedziałów z zerową liczebnością</p></li>
+<li><p>przedziałów nie było za dużo ani za mało (typowo 8–15)</p></li>
+<li><p>większość populacji nie znajdowała się w jednej czy dwóch przedziałach</p></li>
+</ul>
+<p>Tablica: Kraje świata według współczynnika dzietności (2018)</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Wsp. dzietności</th>
+<th align="right">liczba krajów</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(1,1.5]</td>
+<td align="right">24</td>
+</tr>
+<tr class="even">
+<td align="left">(1.5,2]</td>
+<td align="right">61</td>
+</tr>
+<tr class="odd">
+<td align="left">(2,2.5]</td>
+<td align="right">40</td>
+</tr>
+<tr class="even">
+<td align="left">(2.5,3]</td>
+<td align="right">17</td>
+</tr>
+<tr class="odd">
+<td align="left">(3,3.5]</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td align="left">(3.5,4]</td>
+<td align="right">15</td>
+</tr>
+<tr class="odd">
+<td align="left">(4,4.5]</td>
+<td align="right">11</td>
+</tr>
+<tr class="even">
+<td align="left">(4.5,5]</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">(5,5.5]</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td align="left">(5.5,6]</td>
+<td align="right">5</td>
+</tr>
+<tr class="odd">
+<td align="left">(6,6.5]</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">(7,7.5]</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>Źródło: <a href="https://ourworldindata.org/grapher/fertility-rate-complete-gapminder" class="uri">https://ourworldindata.org/grapher/fertility-rate-complete-gapminder</a></p>
+<p>Każda tablica statystyczna <strong>musi</strong> mieć:</p>
+<ol style="list-style-type: decimal">
+<li><p>Część liczbową (kolumny i wiersze);</p>
+<ul>
+<li>żadna rubryka w części liczbowej nie może być pusta (żelazna zasada); w szczególności brak danych należy
+explicite zaznaczyć umownym symbolem</li>
+</ul></li>
+<li><p>Część opisową:</p>
+<ul>
+<li>tytuł tablicy;</li>
+<li>nazwy (opisy zawartości) wierszy;</li>
+<li>nazwy (opisy zawartości) kolumn;</li>
+<li>wskazanie źródła danych;</li>
+<li>ewentualne uwagi odnoszące się do danych liczb.</li>
+</ul></li>
+</ol>
+<p>Pominięcie czegokolwiek z powyższego jest <strong>ciężkim błędem</strong>. Jeżeli
+nie ma danych (a często nie ma–z różnych powodów – należy to zaznaczyć a nie
+pozostawiać pustą rubrykę)</p>
+</div>
+<div id="rozkład-empiryczny" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Rozkład empiryczny</h2>
+<p><strong>Rozkład empiryczny</strong> zmiennej to
+przyporządkowanie wartościom zmiennej odpowiadających im liczebności
+lub <strong>częstości</strong> (czyli udziału procentowego w całości).</p>
+<p>Jak taki rozkład <em>wygląda</em>?</p>
+<p>Rozkład wiek laureatów nagrody Nobla (od 1901 roku do 2018, N=934).
+Rozkład wieku zawodników, którzy brali udział w turniejach o Puchar Świata w Rugby w latach 1999-2019 (N= 3649).</p>
+<p><img src="rozklady61.png" style="width:80.0%" /></p>
+<p>Rozkłady powiatów w Polsce wg powierzchni (stan na 2017, N=380);
+bez powiatów miejskich po prawej (N=380 - 66)</p>
+<p><img src="rozklady62.png" style="width:80.0%" /></p>
+<p>Rozkład powiatów Polsce wg liczby hoteli (stan na 2017, N=380)
+Rozkład elektrowni w Niemczech/Francji/Wlk Brytanii wg mocy (Mgw, stan na 2019, N=4586)</p>
+<p><img src="rozklady63.png" style="width:80.0%" /></p>
+<p>Dane dotyczące elektrowni pochodzą z bazy
+<a href="http://datasets.wri.org/dataset/globalpowerplantdatabase" class="uri">http://datasets.wri.org/dataset/globalpowerplantdatabase</a></p>
+<p>Rozkłady liczebności i częstości mogą mieć postać <strong>rozkładów skumulowanych</strong>. Rozkład skumulowany to przyporządkowanie
+dla każdej wartości zmiennej odpowiadającej jej liczebności
+oraz liczebności wszystkich wartości mniejszych
+od tej wartości (potocznie:
+dla każdego x liczba obserwacji o wartości nie większej od x).
+Liczebność skumulowana dla wartości maksymalnej jest równa
+liczebności populacji (lub 100% dla rozkładu częstości.)</p>
+<p>Przykład: wiek zawodników którzy brali udział w turniejach o Puchar Świata w Rugby w latach 1999-2019 (rozkład liczebności, skumulowany
+liczebności, częstości oraz skumulowany częstości)</p>
+<pre><code>##  wiek   N  cum   proc cumproc
+##    18   1    1  0.027   0.027
+##    19   8    9  0.219   0.247
+##    20  37   46  1.015   1.261
+##    21  86  132  2.358   3.619
+##    22 155  287  4.250   7.869
+##    23 239  526  6.553  14.423
+##    24 296  822  8.116  22.539
+##    25 354 1176  9.707  32.246
+##    26 370 1546 10.145  42.391
+##    27 381 1927 10.447  52.838
+##    28 350 2277  9.597  62.435
+##    29 337 2614  9.240  71.675
+##    30 300 2914  8.226  79.901
+##    31 226 3140  6.197  86.098
+##    32 176 3316  4.826  90.924
+##    33 142 3458  3.894  94.818
+##    34  97 3555  2.660  97.477
+##    35  51 3606  1.398  98.876
+##    36  19 3625  0.521  99.397
+##    37  12 3637  0.329  99.726
+##    38   9 3646  0.247  99.973
+##    39   0 3646  0.000  99.973
+##    40   1 3647  0.027 100.000</code></pre>
+<p>Czyli przykładowo było 381 zawodników w wieku 27 lat,
+albo 1927 zawodników w wieku 27 i mniej lat,
+albo zawodnicy w wieku 27 lat
+stanowili 10.447% wszystkich
+uczestników turnieju, albo zawodnicy w wieku 27 lat i mniej
+stanowili 52.838% wszystkich
+uczestników turnieju.</p>
+</div>
+<div id="rozkład-normalny" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Rozkład normalny</h2>
+<p>Cecha mierzalna ciągła to na przykład wiek mierzony z nieskończoną dokładnością. Istnieje funcja określona formułą:
+<span class="math display">\[f(x) = \frac{1}{s \sqrt{2 \pi}} \cdot \exp(-(x -m)^2/2s^2)\]</span></p>
+<p>zwana <strong>rozkładem normalnym</strong>, która może interpolować wiele rozkładów empirycznych. Właściwością tej funkcji jest,
+że jej kształt jest zdefiniowany jedynie przez
+dwa parametry: <span class="math inline">\(m\)</span> jest <strong>średnią wartością</strong>,
+a <span class="math inline">\(s\)</span> jest <strong>odchyleniem standardowym</strong> (co to jest odchylenie standardowe wyjaśniamy dalej).
+Zatem mając rozkład empiryczny
+można policzyć średnią oraz odchylenie standardowe
+i w ten sposób wyznaczyć konkrety wariant <strong>rozkładu normalnego</strong>.</p>
+<p>Przykładowo poniżej przedstawiono rozkład empiryczny wieku laureatów
+nagrody Nobla:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>niebieska krzywa to rozkład Normalny (o średniej 59.8469274 oraz
+odchyleniu standardowym 12.3913637).</p>
+<p>Wiele rozkładów empirycznych spotykanych w otaczającej nas rzeczywistości
+jest zbliżonych do rozkładu normalnego (wiek, waga, błąd pomiaru, długość itd), ale wiele zjawisk ekonomiczno-społecznych nie jest.</p>
+<p>Przykładowo poniżej przedstawiono rozkład empiryczny miast w Polsce
+ze względu na liczbę mieszkańców (dane za Wikipedią)</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Fioletowa krzywa to rozkład normalny
+o średniej 24465.0 oraz odchyleniu standardowym 81404.0.
+Aproksymacja jest taka-sobie mówiąc oględnie…</p>
+<p>Tego typu rozkładu z kolei dobrze aproksymuje inny rozkład, określany
+jako <strong>logarytmiczno-normalny</strong>, w którym zamiast oryginalnej wartości cechy
+używa się logarytmu wartości. Rozkład wielkości miast aproksymowany
+rozkładem logarytmiczno-normalnym przedstawia następny przykład:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Jest mało dużych miast a dużo małych. Podobnie wyglądają rozkłady
+firm/ludzi względem przychodów/zysków czy elektrowni względem mocy
+zainstalowanej.</p>
+</div>
+<div id="wizualizacja-danych-i-wykresy" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Wizualizacja danych i wykresy</h2>
+<p><strong>Wykresy statystyczne</strong> są graficzną formą prezentacji materiału
+statystycznego, są mniej precyzyjne i szczegółowe niż tablice,
+natomiast bardziej sugestywne.</p>
+<p>Rodzaje wykresów (podział ze względu na zastosowanie):</p>
+<p><strong>Jedna cecha</strong></p>
+<p><strong>szeregi strukturalne</strong>: punktowe, słupkowe, histogram, pudełkowe, kołowe;
+<strong>szeregi czasowe</strong>: liniowe, słupkowe, punktowe;
+<strong>szeregi przestrzenne</strong>: kartogramy.</p>
+<p><strong>Dwie cechy</strong></p>
+<p>wykres rozrzutu (scatter-plot), wykres liniowy liniowy</p>
+<div id="wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Wykresy przedstawiające rozkład wartości jednej zmiennej</h3>
+<p>Celem jest pokazanie rozkładu wartości cechy w populacji: jakie wartości występują
+często a jakie rzadko, jak bardzo wartości różnią się między sobą. Jak różnią
+się rozkłady dla różnych ale logicznie powiązanych populacji
+(np rozkład czegoś-tam w kraju A i B albo w roku X, Y i Z).
+Do tego celu stosuje się: <strong>histogram</strong> (albo wykres słupkowy dla skal nominalnych),
+<strong>wykres punktowy</strong>, <strong>wykres pudełkowy</strong> oraz <strong>kołowy</strong>. Omówimy je na przykładach</p>
+</div>
+<div id="histogram" class="section level3" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Histogram</h3>
+<p>Współczynnik dzietności – przeciętna liczba urodzonych dzieci przypadających na jedną kobietę w wieku rozrodczym (15–49 lat). Przyjmuje się, iż FR między 2,10–2,15 zapewnia zastępowalność pokoleń.</p>
+<p>Plik <code>fertility_rate_2003_2018.csv</code> (źródło: <a href="https://ourworldindata.org/grapher/fertility-rate-complete-gapminder" class="uri">https://ourworldindata.org/grapher/fertility-rate-complete-gapminder</a>) zawiera wartości współczynnika w roku 2003 oraz 2018 (czyli po 15 latach) dla 202 krajów.</p>
+<p>Do oceny rozkładu wartości zmiennej służy <strong>histogram</strong> (por <a href="https://pl.wikipedia.org/wiki/Histogram" class="uri">https://pl.wikipedia.org/wiki/Histogram</a>). Jeżeli
+umieścimy obok siebie dwa (lub więcej) histogramy, możemy w ten sposób
+porównać (wizualnie) dwa rozkłady:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="960" /></p>
+<p>Kształt histogramu zależy od wyboru rozpiętości przedziału; im przedział węższy
+tym więcej słupków (ale ich wysokość będzie mniejsza). Poniżej przedstawiono
+ten sam rozkład dla rozpiętości przedziału równej odpowiednio 0,1, 0,25 oraz 0,5:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" width="960" /></p>
+<p>Dlatego jeżeli porównujemy różne rozkłady za pomocą umieszczonych obok siebie
+histogramów to powinny one mieć: tę samą rozpiętość przedziałów, te same skale na obu osiach.</p>
+<p>Istnieją wzory na optymalną liczbę przedziałów ale nalepszą metodą jest metoda
+prób i błędów.</p>
+</div>
+<div id="wykres-punktowy" class="section level3" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> Wykres punktowy</h3>
+<p>Czasami jeżeli liczebność populacji nie jest za duża można spróbować
+przedstawić rozkład cechy na wykresie punktowym:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="porównanie-wielu-rozkładów" class="section level3" number="2.4.4">
+<h3><span class="header-section-number">2.4.4</span> Porównanie wielu rozkładów</h3>
+<p>Jeżeli używamy histogramu to w zasadzie jedyną opcją jest wykreślenie każdego
+histogramu oddzielnie a następnie umieszczenie ich obok siebie. Wyjątkowo
+można spróbować wykreślić dwa na jednym wykresie (jeżeli program, którym się posługujemy
+umożliwia rysowanie kolorem przeźroczystym):</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="960" /></p>
+<p>Łącznie na jednym wykresie (wykres punktowy):</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="wykresy-kołowe" class="section level3" number="2.4.5">
+<h3><span class="header-section-number">2.4.5</span> Wykresy kołowe</h3>
+<p>Dane pochodzą z bazy danych Eurostatu są dostępne pod adresem
+<a href="https://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=tour_occ_nim&amp;lang=en" class="uri">https://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=tour_occ_nim&amp;lang=en</a></p>
+<p>Nights spent at tourist accommodation establishments by non residents (id tabeli: <code>tour_occ_ninat</code>) czyli po polsku
+<em>Noclegi udzielone w turystycznych obiektach noclegowych</em> (<a href="https://ec.europa.eu/eurostat/web/products-datasets/-/tin00175" class="uri">https://ec.europa.eu/eurostat/web/products-datasets/-/tin00175</a>;
+<a href="https://stat.gov.pl/metainformacje/slownik-pojec/pojecia-stosowane-w-statystyce-publicznej/1233,pojecie.html" class="uri">https://stat.gov.pl/metainformacje/slownik-pojec/pojecia-stosowane-w-statystyce-publicznej/1233,pojecie.html</a>;
+<a href="https://stat.gov.pl/en/metainformations/glossary/terms-used-in-official-statistics/1233,term.html" class="uri">https://stat.gov.pl/en/metainformations/glossary/terms-used-in-official-statistics/1233,term.html</a>)
+Poniższy rysunek przedstawia typową tabelę (wielowymarową) z danymi
+dotyczącymi wykorzystania miejsc noclegowych w krajach UE.</p>
+<p>Nagłówek tabeli:
+<strong>TIME</strong>, <strong>GEO</strong>, <strong>Unit of measure</strong>, <strong>Classification of economic activities</strong>,
+<strong>Country of residencie</strong> definiuje cechy stałe zbiorowści statystycznej. Dla każdej cechy zwykle możliwy jest wybór z kilku dostępnych wariantów. Tabela na rysunku przedstawia dane roczne,
+dla krajów UE, dotyczące liczby noclegów w <em>hotels, holidays and other short-stay accomodations,
+camping grounds, recreational vehicle parks and trailes parks</em>
+(Hotele, Obiekty noclegowe turystyczne i miejsca krótkotrwałego zakwaterowania,
+Pola kempingowe, włączając pola dla pojazdów kempingowych i pola namiotowe;
+<a href="https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm" class="uri">https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm</a>). Skrót NACE oznacza
+klasyfikację działalności gospodarczej, która służy do określenia jakie miejsca noclegowe
+są uważane za <strong>turystyczne</strong> (bo to nie jest oczywiste).</p>
+<p><img src="nights_spent_2017.png" /></p>
+<p>Liczbę noclegów dla 10 najczęściej odwiedzanych przez turystów krajów (oraz dla reszty
+oznaczonej jako Rest28)
+przestawiono na <strong>wykresie kołowym</strong> (<a href="https://pl.wikipedia.org/wiki/Diagram_ko%C5%82owy" class="uri">https://pl.wikipedia.org/wiki/Diagram_ko%C5%82owy</a>).
+Wielkość każdego wycinka koła (pole tego wycinka albo, kąt) jest proporcjonalna do liczby noclegów w danym kraju. Stąd wykres kołowy wizualizuje <strong>udział</strong> (popularnie zwany procentem) każdego wycinka w całości. Możemy dodać etykiety zawierające albo ów udział (prawy wariant na
+przykładzie poniżej); albo oryginalne liczby.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>Wykres pokazuje dobitnie wszystkie wady wykresu kołowego: niemożliwe jest określnie
+różnic pomiędzy wycinkami, chybna że różnice te są ogromne. Np niemożliwe jest ustalenie
+czy jak bardzo różni się udział w UK i Francji. Albo czy liczba noclewgów w Austrii
+jest mniejsza/większa/równa niż w Niemczech, itd… Jeżeli dodamy liczby to sprawa się
+wyjaśni (prawy wariant) tylko po co wtedy rysunek?</p>
+<p>Znacznie bardziej efektywne są wykresy punktowe (lewy) lub słupkowe (prawy):</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>Dużo lepiej widać różnice pomiędzy krajami. Niepotrzebna jest legenda. Nazwy krajów
+są na osi OY, liczba noclegów na osi OX.
+Na wykresie kołowym albo w wycinku mieściła się nazwa kraju albo procent
+nie było miejsca dla obu, stąd potrzebna była legenda (utrudniająca interpretację)</p>
+<p>Wniosek: każdy wykres kołowy można i TRZEBA zamienić na słupkowy. Wykresów kołych
+nie należy stosować bo są znacznie gorszym sposobem wizualizacji
+informacji niż słupkowe.</p>
+</div>
+<div id="wykres-pudełkowy" class="section level3" number="2.4.6">
+<h3><span class="header-section-number">2.4.6</span> Wykres pudełkowy</h3>
+<p>Uwaga: poniższy opis <strong>wykresu pudełkowego</strong> zawiera pojęcia jeszcze nie wyjaśnione (kwartyle, mediana, rozproszenie i IQR), które opisano dokładanie dalej,
+w punktach miary położenia/miary zmienności.</p>
+<p>Konstrukcja pudełka na wykresie:
+górny/dolny bok równy kwartylom, a linia pozioma w środku pudełka równa medianie;
+linie pionowe (zwane wąsami) mają długość równą Q1 minus 1,5 IQR oraz Q3 plus IQR (Q1, Q3 to kwartyle, IQR to odstęp między kwartlowy;
+co to jest kwartyl, mediana i odstęp międzykwartylowy jest wyjaśnione poniżej);
+Linia pozioma w połowie pudełka określa przeciętny poziom zjawiska; wysokość pudełka/wąsów
+określa zmienność (im większe wąsy/wysokość tym większa zmienność).
+Obserwacje nietypowe (czyli takie których wartość jest albo mniejsza od <span class="math inline">\(Q1 - 1,5IQR\)</span>
+albo większa od <span class="math inline">\(Q3 + 1,5IQR\)</span>)są zaznaczana
+indywidualnie jako kropki nad/pod wąsami.</p>
+<p><img src="box-plot-0.jpg" /></p>
+<p>Ze strony komiteu Noblowskiego pobrano listę Laureatów Nagrody Nobla
+Wiek laureatów nagrody Nobla w momencie przyznania
+nagrody (ponad 900 laureatów; plik <code>nobel_laureates3.csv</code>):</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p>Najstarsi przeciętnie: ekonomia; najmłodsi przeciętnie: fizyka. Najmniejsze zróżnicowanie:
+ekonomia; największe zróżnicowanie: fizyka.
+Nie ma szans na nobla (koniec dolnego wąsa) przed pięćdziesiątką
+w ekonomii,
+przed 40-tką w literaturze, przed trzydziestką w chemii, medycynie i nagrodzie pokojowej.</p>
+<p>Wykres niezwykle użyteczny do porównywania różnic w rozkładach wartości cechy.</p>
+</div>
+<div id="wykres-skrzypcowy-wariant-wykresu-pudełkowego" class="section level3" number="2.4.7">
+<h3><span class="header-section-number">2.4.7</span> Wykres skrzypcowy (wariant wykresu pudełkowego)</h3>
+<p>In general, <strong>violin plots</strong> are a method of plotting numeric data and can be considered a combination of the box plot with a <strong>kernel density plot</strong>. In the violin plot, we can find the same information as in the box plots:
+– median; – interquartile range;
+– the lower/upper adjacent values (defined as first quartile — 1.5 IQR
+and third quartile + 1.5 IQR respectively.)</p>
+<p>Jako ilustrację przedstawmy rozkłady elektrowni (<a href="http://datasets.wri.org/dataset/globalpowerplantdatabase" class="uri">http://datasets.wri.org/dataset/globalpowerplantdatabase</a>) w podziale
+na wykorzystywane paliwo:
+numlearnych, solarnych, na biomasę oraz węglowych.</p>
+<p>Nukleane (rozkład w miarę symetryczny/jednomodalny.)
+Zwróćmy uwagę, że wykres skrzypcowy zachowuje kształt
+dzwonu tyle, że podwojonego: dwa szpiczaste końce i wybrzuszenie
+w środkowej części.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>Solarne (rozkład skrajnie asymetryczny)
+Wykres skrzypcowy dla wykresu asymetrycznego ma tylko jeden szpic.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>Na biomasę (także asymetryczny ale o asymetrii mniejszej niż poprzedni)</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>Węglowe (wielomodalny/asymetria lewostronna)
+Kształt wykresu skrzypcowego dla rozkładu wielomodalnego jest pofalowany.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p>Współczynnik dzietności w latach 2003/2018 oraz współczynniki dzietności na
+poszczególnych kontynentach (w roku 2018)</p>
+<p><img src="PPViolinCCY.png" style="width:80.0%" /></p>
+<p><img src="PPViolinCC.png" style="width:80.0%" /></p>
+</div>
+<div id="przykład-zaufanie-do-politykow" class="section level3" number="2.4.8">
+<h3><span class="header-section-number">2.4.8</span> Przykład: Zaufanie do Politykow</h3>
+<p>CBOS realizuje co najmniej 12 razy w roku sondaż “Aktualne problemy i wydarzenia”, na reprezentatywnej ok. 1000-osobowej próbie dorosłych mieszkańców Polski. (cf <a href="https://www.cbos.pl/PL/trendy/trendy.php" class="uri">https://www.cbos.pl/PL/trendy/trendy.php</a>?)</p>
+<p>Częścią tych badań jest badanie zaufania do Polityków. Które to zaufanie
+jest mierzone w taki sposób, że respondenci odpowiadają na jedno pytanie,
+które brzmi: <em>Ludzie aktywni publicznie – swoim zachowaniem, tym, co mówią, do czego dążą – budzą mniejsze lub większe
+zaufanie. Przedstawimy teraz Panu(i) listę osób aktywnych w życiu politycznym naszego kraju. O każdej z nich proszę powiedzieć,
+w jakim stopniu budzi ona Pana(i) zaufanie. Odpowiadając, proszę posłużyć się skalą, na której –5 oznacza, że osoba ta budzi
+w Panu(i) głęboką nieufność, 0 – że jest ona Panu(i) obojętna, a +5 oznacza, że ma Pan(i) do tej osoby pełne zaufanie. Oczywiście
+może się Pan(i) posługiwać innymi ocenami tej skali. Jeżeli kogoś Pan(i) nie zna, proszę powiedzieć</em></p>
+<p>Odsetki badanych wyrażających zaufanie – wskazania punktów od +1 do +5, nieufność – wskazania punktów od –1 do –5,
+obojętność – 0</p>
+<p>W zestawieniu CBOS pomija odpowiedzi „trudno powiedzieć”
+i odmowy odpowiedzi.</p>
+<p>Analiza CBOS (przykład raportu jest
+w pliku <code>zaufanie_do_politykow_CBOS_2019.pdf</code>) posługuje się
+skumulowanym wykresem słupkowym (<em>stacked barchart</em>):</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-25-1.png" width="960" /></p>
+<p>Skumulowany wykres słupkowy jest w zasadzie jest wykresem kołowym,
+tyle że zamiast kółek są prostokąty (cf <a href="https://eagereyes.org/techniques/stacked-bars-are-the-worst" class="uri">https://eagereyes.org/techniques/stacked-bars-are-the-worst</a>).
+Można łatwo porównywać
+łączną wartość albo wartość przedstawioną za pomocą pierwszego słupka
+(bo mają wspólną linię dla wartości zero, <em>common baseline</em>).
+Pozostałe słupki nie są oparte o wspólną linię zerowej wartości i w związku
+z tym porównanie ich wartości jest trudne.
+W przykładzie każdy słupek ma 3 kategorie a już jest trudno
+wskazać czy nieufność do Pawła Kukiza jest większa czy mniejsza od nieufności
+do Roberta Biedronia. Gorzej wykres sugeruje, że nieufność do Biedronia
+jest większa niż do Kukiza, podczas gdy w rzeczywistości jest odwrotnie.
+Podobnie trudno jest określić dla konkretnego polityka czy zaufanie jest większe od nieufności albo o ile jest większe (lub mniejsze)..</p>
+<p>Można trochę poprawić
+wykres jeżeli wartości podzielimy na ujemne/dodatnie
+(wykres po prawej). Można ale po co? Najlepiej po prostu wykreślić
+oddzielne wykresy słupkowe dla każdej kategorii czyli wykreślić
+słupki z każdej kategorii oddzielniem na wspólnej linii zera:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Wykres kołowy kolejny raz jest najmniej przydatny. Niemożliwe albo
+bardzo trudne jest zorientowanie się w różnicach odsetka zaufania/nieufności/nieznajmości dla poszczególnych kandydatów:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="960" /></p>
+<p>Można spróbować połączyć wykres punktowy z wykresem słupkowym:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Patrząc na słupki można ocenić nieznajomość;
+patrząc na kropki zaufanie/nieufność. W porówaniu do skumulowanego
+wykresu słupkowego zarówno łatwe jest porównanie poziomów każdego
+czynnika dla wszystkich ocenianych
+polityków, jak i porównanie dla konkretnego polityka (czy zaufanie jest większe od nieufności albo o ile jest większe/mniejsze). Ale uwaga jeżeli
+liczba wymiarów będzie większa niż trzy wykres straci
+na przejrzystości zamieniając się w chmurę różnokolorowych kropek.</p>
+</div>
+<div id="przykład-marimekko-mosaic-chart" class="section level3" number="2.4.9">
+<h3><span class="header-section-number">2.4.9</span> Przykład: Marimekko mosaic chart</h3>
+<p>Przykład: Kraje wg emisji C02 (wysokość prostokąta jest równa emisji per capita; szerokość liczbie ludności). Pola prostokątów odpowiadają globalnej
+emisji, wysokości emisji na głowę. Prostokąty są uszeregowane wg. emisji per capita, co utrudnia porówania wielkości globalnych. Ale i tak widać, że nie tylko Polska emituje mniej niż Niemcy ale przeciętny Niemiec emituje więcej
+niż przeciętny spalający na potęgę czarny węgiel Polak.</p>
+<p><img src="2019-Worldwide-Co2-emissions-scaled.jpg" style="width:80.0%" /></p>
+</div>
+</div>
+<div id="analiza-parametryczna" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Analiza parametryczna</h2>
+<div id="miary-położenia" class="section level3" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Miary położenia</h3>
+<p>Miary przeciętne charakteryzują średni lub
+typowy poziom wartości cechy. Są to więc takie wartości, wokół których
+skupiają się wszystkie pozostałe wartości analizowanej cechy.</p>
+<p><img src="canvas_distr_11.png" style="width:85.0%" /></p>
+<p>Na rysunku po lewej mamy dwa rozkłady różniące się poziomem przeciętnym (czerwony ma przeciętnie mniejsze wartości niż turkusowy). Są to rozkłady jednomodalne, tj. wartości skupiają się wokół jednej wartości. Dla takich rozkładów ma sens obliczanie średnich.</p>
+<p>Na rysunku po prawej mamy rozkłady nietypowe: wielomodalne (turkusowy) lub niesymetryczne
+(wartości skupiają się nie centralnie ale po prawej/lewej od środka przedziału zmienności).</p>
+<p>W świecie rzeczywistym zdecydowana większość rozkładów jest jednomodalna.</p>
+<p>Klasyczne (<strong>średnia arytmetyczna</strong>) i pozycyjne (<strong>mediana</strong>, <strong>dominanta</strong>,
+kwartyle, kwantyle, decyle).</p>
+<p>Średnia artmetyczna (<em>Mean</em>, <em>Arithmetic mean</em>).
+Oblicznie średniej dla szeregu prostego (suma wartości podzielona
+przez liczbę składników sumy):
+<span class="math display">\[
+\bar x = \frac{\sum_{i=1}^N x_i} {N}
+\]</span></p>
+<p><strong>Mediana</strong> (<em>Median</em>, kwartyl drugi) dzieli zbiorowość na dwie równe części; połowa
+jednostek ma wartości cechy mniejsze lub równe medianie, a połowa
+wartości cechy równe lub większe od Me. Stąd też mediana bywa nazywana
+wartością środkową.</p>
+<p><strong>Właśności mediany</strong> – odporna na wartości nietypowe (w przeciwieństwie do średniej)</p>
+<p><strong>Przykład: współczynnik dzietności na świecie w roku 2018</strong></p>
+<p>Średnia wartość współczynnika 2.6778607; mediana – 2.2.
+Interpretacja średniej:
+wartość współczynnika dzietności wyniosła 2.6778607 dziecka. Uwaga:
+średnia dzietność na świecie <strong>nie wynosi</strong> 2.6778607 (bo kraje różnią się liczbą ludności). Interpretacja mediany: dzietność kobiet w połowie krajów na świecie
+wynosiło 2.2 i mniej. Uwaga: dzietność połowy kobiet na świecie wyniosła
+2.2 i mniej jest niepoprawną interpretacją (różne wielkości krajów.)</p>
+<p><strong>Generalna uwaga</strong>: interpretacja średniej-średnich często jest nieoczywista i należy uważać.
+(a współczynnik dzietości jest średnią: średnia liczba dzieci urodzonych przez kobietę
+w wieku rozrodczym. Jeżeli liczymy średnią dla 202 krajów, to mamy <em>średnią-średnich</em>).
+Inny przykład: odsetek ludności w wieku poprodukcyjnym wg powiatów (średnia z czegoś takiego nie da nam odsetka ludności w wieku poprodukcyjnym w Polsce,
+bo powiaty różnią się liczbą ludności.)</p>
+<p><strong>Dominanta</strong> (<em>Mode</em>, Moda, wartość modalna, wartość
+najczęstsza) jest to wartość cechy statystycznej, która w szeregu
+empirycznym występuje najczęściej. W szeregach prostych
+i rozdzielczych jest to wartość cechy, której odpowiada największa
+liczebność (częstość).</p>
+<p><strong>Kwartyle</strong> (Q, <em>quartile</em>, <span class="math inline">\(Q_1\)</span>, <span class="math inline">\(Q_3\)</span>) – wartości cechy dla jednostek
+dzielących populację na cztery równe części. Kwartyl pierwszy dzieli
+populację w proporcji 25/75%, kwartyl drugi w proporcji 50/50%, a kwartyl trzeci w proporcji 75/25%.
+<strong>kwantyle</strong> (D, wartości dziesiętne), podobnie jak kwartyle, tyle że dzielą na 10 części.
+<strong>Centyle</strong> (P, wartości setne), podobnie jak kwantyle tyle że dzielą na 100 części.
+Przykładowo wartość 99 centyla
+i mniejszą ma 99% jednostek w populacji.</p>
+</div>
+<div id="miary-zmienności" class="section level3" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Miary zmienności</h3>
+<p>Wariancja, odchylenie standardowe, odchylenie przeciętne, współczynnik
+zmienności (Pearsona)</p>
+<p><strong>Wariancja</strong> (<em>variance</em>) jest to średnia arytmetyczna kwadratów
+odchyleń poszczególnych wartości cechy od średniej arytmetycznej
+zbiorowości.</p>
+<p>Oblicznie wariancji dla szeregu prostego:</p>
+<p><span class="math display">\[
+S^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \bar x)^2
+\]</span></p>
+<p>często zamiast dzielenie przez <span class="math inline">\(N\)</span> dzielimy przez <span class="math inline">\(N-1\)</span>.</p>
+<p><strong>Odchylenie standardowe</strong> (<em>standard deviation</em>, sd) jest
+pierwiastkiem kwadratowym z wariancji. Parametr ten określa
+przeciętne zróżnicowanie poszczególnych wartości cechy od średniej
+arytmetycznej.</p>
+<p>Współczynniki pozycyjne. Odchylenie ćwiartkowe (Q, <em>midhinge</em>):
+<span class="math display">\[
+Q = \frac{Q_3 - Q_1}{2}
+\]</span>
+i rozstęp ćwiartkowy (<em>interquartile range</em>, IQR):
+<span class="math display">\[
+R_Q = Q_3 - Q_1
+\]</span></p>
+<p><strong>Współczynnik zmienności</strong> jest ilorazem bezwzględnej miary
+zmienności cechy i średniej wartości tej cechy. W analizie struktury
+korzysta się z różnych miar położenia i zmienności, dlatego są
+współczynniki zmienności klasyczne i pozycyjne.</p>
+<p>Współczynniki klasyczne:</p>
+<p><span class="math display">\[
+V_s = \frac{s}{\bar x}\qquad \textrm{lub}\qquad
+V_d = \frac{d}{\bar x}
+\]</span>
+pozycyjne
+<span class="math display">\[
+V_Q = \frac{Q_3 - Q_1}{\textrm{Me}}
+\]</span>
+albo (<em>Quartile coefficient of dispersion</em>):
+<span class="math display">\[
+V_Q = \frac{Q_3 - Q_1}{Q_3 + Q_1}
+\]</span></p>
+<p><strong>Współczynnik zmienności</strong> jest wartością niemianowaną. Wartości
+liczbowe współczynników zmienności najczęściej są podawane
+w procentach. Przyjmuje się, że jeżeli współczynnik zmienności jest
+poniżej 10%, to cechy wykazują zróżnicowanie statystycznie nieistotne.
+Duże wartości tego współczynnika świadczą o dużym zróżnicowaniu, a
+więc niejednorodności zbiorowości.</p>
+<p>Współczynnik zmienności stosuje się zwykle w porównaniach, gdy chce
+się ocenić zróżnicowanie: kilku zbiorowości pod względem tej samej
+cechy, tej samej zbiorowości pod względem kilku różnych cech.</p>
+<p>UWAGA: ten współczynnik może dawać dziwne rezulataty jeżeli średnia wynosi zero
+(niezdefiniowany), jest ujemna lub jest bliska zera; zwłaszcza jeżeli użyjemy skali
+przedziałowej. Przykład:</p>
+<pre><code>Średnie temperatury miesięczne. Sopot, Polska
+
+mc   2010    2011    2012    2013    2014    2015    2016    2017    2018    2019       Tm  Sm      Vm
+01  -5.36   -0.41   -0.37   -1.77   -2.27    1.53   -2.39   -1.16    0.62   -0.31   -0.74   2.23 -299.54
+02  -1.08   -3.19   -3.31   -0.13    2.55    1.44    2.72   -0.08   -2.56    3.27   -0.04   2.36 -6658.52
+03   3.65    2.83    5.04   -0.87    6.09    4.91    4.09    5.04   -0.07    5.26   3.60    2.21    61.57
+04   7.47    9.47    7.59    6.55    9.37    7.94    8.30    6.70   10.43    8.62   8.25    1.19    14.37
+05  10.85   12.78   13.11   14.10   12.82   12.01   14.37   12.77   15.40   11.56   12.98   1.29    9.95
+06  16.06   17.65   14.91   17.15   15.37   15.36   17.62   16.18   17.51   20.03   16.78   1.45    8.65
+07  20.49   18.11   18.07   18.53   20.51   17.52   18.51   16.84   20.20   17.17   18.59   1.29    6.94
+08  18.71   17.58   17.66   18.11   17.70   19.47   17.36   17.53   19.46   18.65   18.22   0.76    4.15
+09  13.03   14.79   13.91   12.38   14.41   14.16   15.53   13.47   15.04   13.69   14.04   0.90    6.44
+10   6.24    9.27    8.23    9.93    8.78    7.78    7.76   10.05   10.17    9.70   8.79    1.21    13.81
+11   4.54    4.54    5.03    5.50    4.89    6.01    3.51    4.76    4.88    5.27   4.89    0.63    12.83
+12  -5.03    3.00   -1.70    3.40    1.02    4.56    2.67    2.18    2.05    3.54   1.57    2.73    174.09
+
+Tm -- średnia dla lat 2010-2019
+Sm -- odchylenie standardowe dla lat 2010--2019
+Vm -- współczynnik zmienności tj Vm = Sm / Tm * 100</code></pre>
+<p>Dla lutego współczynnik zmienności przymuje absurdalną wartość 6 tysięcy (procent).
+Do tego na minus.</p>
+</div>
+<div id="miary-asymetrii" class="section level3" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> Miary asymetrii</h3>
+<p>Asymetria (<em>skewness</em>), to odwrotność symetrii. Szereg jest symetryczny
+jeżeli jednostki są rozłożone ,,równomiernie’’ wokół wartości średniej:
+<span class="math display">\[
+\bar x = \textrm{Me} = D
+\]</span>
+Asymetria prawostronna, lewostronna; wskaźnik asymetrii (skośności),
+współczynniki asymetrii (skośności).</p>
+<p><strong>Moment trzeci centralny</strong> – średnia arytmetyczna z podniesionych do potęgi
+trzeciej odchyleń wartości cechy od średniej arytmetycznej
+<span class="math display">\[
+\mu_3 = \frac{1}{N} \sum_{i=1}^N (x_i - \bar x)^3
+\]</span>
+jeżeli <span class="math inline">\(\mu_3 = 0\)</span> szereg symetryczny,
+<span class="math inline">\(\mu_3 &gt; 0\)</span> asymetria dodatnia (prawostronna),
+<span class="math inline">\(\mu_3 &lt; 0\)</span> asymetria ujemna (lewostronna)</p>
+<p>Moment trzeci względny określa siłę i kierunek asymetrii:
+<span class="math display">\[
+g_1 =  \frac{\mu_3}{s^3}
+\]</span>
+Na podstawie badań empirycznych: <span class="math inline">\(-2 &lt; g_1 &lt; 2\)</span>,
+w skrajnych przypadkach może przekraczać ten przedział.</p>
+<p>Współczynnik asymetrii (skośności) oparty na
+odległościach między średnimi (K. Pearson).
+<span class="math display">\[
+W_s =  \frac{\bar x - D}{s}
+\]</span>
+rzadziej używa się:
+<span class="math display">\[
+W_s =  \frac{\bar x - \textrm{Me}}{s}
+\]</span>
+Współczynnik asymetrii (skośności) oparty na odległościach między kwartylami
+lub decylami:
+<span class="math display">\[
+W_{sq} =  \frac{(Q_3 - Q_2) - (Q_2 - Q_1)}{Q_3 - Q_1}
+\]</span></p>
+</div>
+<div id="miary-koncentracji" class="section level3" number="2.5.4">
+<h3><span class="header-section-number">2.5.4</span> Miary koncentracji</h3>
+<p><strong>Koncentracja</strong> – nierównomierny podział wartości cechy w zbiorowości.</p>
+<p><em>Współczynnik Giniego i Krzywa Lorenza</em></p>
+<p><strong>Krzywa Lorenza</strong> jest funkcją określoną na zbiorze liczb dodatnich L(Cn),
+gdzie Cn jest kumulowaną liczebnością zaś L kumulowaną wartość cechy.
+Zwykle wartości kumulowane są przedstawione w procentach co pozwala
+na zgrabną interpretację w stylu:
+20% jednostek ma 5% łącznej wartości cechy albo 50% rolników posiada 15% łacznych
+areałów, itp.</p>
+<p><img src="LorenzCurve.png" style="width:80.0%" /></p>
+<p>przekątna łącząca lewy-dolny, prawy-górny wierzchołek jest nazywana linią
+równomiernego rozkładu (koncentracji równomiernej, <em>line of equality</em>).
+<strong>Współczynnik Giniego</strong> to iloraz pola A do sumy pół A+B.</p>
+<p>Im większa koncentracji, tym krzywa Lorenza jest bardziej wygięta, a wartość
+współczynnika Ginego większa (maksymalną wartością jest 1)</p>
+<p><em>Współczynnik HH</em></p>
+<p>Innym współczynnikiem koncentracji jest współczynnik Herfindahla-Hirschmana
+(HH-Index, <a href="https://en.wikipedia.org/wiki/Herfindahl%E2%80%93Hirschman_Index" class="uri">https://en.wikipedia.org/wiki/Herfindahl%E2%80%93Hirschman_Index</a>):</p>
+<p><span class="math display">\[HH = \sum_{i=1}^N x_i^2, \quad\mathrm{gdzie}: \sum_{i=1}^N x_i =100%\]</span>
+Maksymalną wartością tego współczynnika jest 10000, wartości większe od 1800
+świadczą o znacznej koncentracji.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="przedmiot-metody-i-organizacja-badań-statystycznych.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="interference.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

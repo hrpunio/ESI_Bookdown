@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Analiza szeregów czasowych | Wprowadzenie do statystyki dla ekonomistów</title>
+  <meta name="description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Analiza szeregów czasowych | Wprowadzenie do statystyki dla ekonomistów" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Analiza szeregów czasowych | Wprowadzenie do statystyki dla ekonomistów" />
+  
+  <meta name="twitter:description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="analiza-korelacji.html"/>
+<link rel="next" href="literatura.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-metody-i-organizacja-badań-statystycznych" id="toc-przedmiot-metody-i-organizacja-badań-statystycznych"><span class="toc-section-number">1</span> Przedmiot, metody i organizacja badań statystycznych</a>
+<ul>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-statystyki" id="toc-przedmiot-statystyki"><span class="toc-section-number">1.1</span> Przedmiot statystyki</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#pomiar" id="toc-pomiar"><span class="toc-section-number">1.2</span> Pomiar</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#rodzaje-badań-statystycznych" id="toc-rodzaje-badań-statystycznych"><span class="toc-section-number">1.3</span> Rodzaje badań statystycznych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#organizacja-badań-statystycznych" id="toc-organizacja-badań-statystycznych"><span class="toc-section-number">1.4</span> Organizacja badań statystycznych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#opracowanie-danych" id="toc-opracowanie-danych"><span class="toc-section-number">1.5</span> Opracowanie danych</a></li>
+</ul></li>
+<li><a href="analiza-struktury.html#analiza-struktury" id="toc-analiza-struktury"><span class="toc-section-number">2</span> Analiza struktury</a>
+<ul>
+<li><a href="analiza-struktury.html#tablice-statystyczne" id="toc-tablice-statystyczne"><span class="toc-section-number">2.1</span> Tablice statystyczne</a></li>
+<li><a href="analiza-struktury.html#rozkład-empiryczny" id="toc-rozkład-empiryczny"><span class="toc-section-number">2.2</span> Rozkład empiryczny</a></li>
+<li><a href="analiza-struktury.html#rozkład-normalny" id="toc-rozkład-normalny"><span class="toc-section-number">2.3</span> Rozkład normalny</a></li>
+<li><a href="analiza-struktury.html#wizualizacja-danych-i-wykresy" id="toc-wizualizacja-danych-i-wykresy"><span class="toc-section-number">2.4</span> Wizualizacja danych i wykresy</a>
+<ul>
+<li><a href="analiza-struktury.html#wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej" id="toc-wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej"><span class="toc-section-number">2.4.1</span> Wykresy przedstawiające rozkład wartości jednej zmiennej</a></li>
+<li><a href="analiza-struktury.html#histogram" id="toc-histogram"><span class="toc-section-number">2.4.2</span> Histogram</a></li>
+<li><a href="analiza-struktury.html#wykres-punktowy" id="toc-wykres-punktowy"><span class="toc-section-number">2.4.3</span> Wykres punktowy</a></li>
+<li><a href="analiza-struktury.html#porównanie-wielu-rozkładów" id="toc-porównanie-wielu-rozkładów"><span class="toc-section-number">2.4.4</span> Porównanie wielu rozkładów</a></li>
+<li><a href="analiza-struktury.html#wykresy-kołowe" id="toc-wykresy-kołowe"><span class="toc-section-number">2.4.5</span> Wykresy kołowe</a></li>
+<li><a href="analiza-struktury.html#wykres-pudełkowy" id="toc-wykres-pudełkowy"><span class="toc-section-number">2.4.6</span> Wykres pudełkowy</a></li>
+<li><a href="analiza-struktury.html#wykres-skrzypcowy-wariant-wykresu-pudełkowego" id="toc-wykres-skrzypcowy-wariant-wykresu-pudełkowego"><span class="toc-section-number">2.4.7</span> Wykres skrzypcowy (wariant wykresu pudełkowego)</a></li>
+<li><a href="analiza-struktury.html#przykład-zaufanie-do-politykow" id="toc-przykład-zaufanie-do-politykow"><span class="toc-section-number">2.4.8</span> Przykład: Zaufanie do Politykow</a></li>
+<li><a href="analiza-struktury.html#przykład-marimekko-mosaic-chart" id="toc-przykład-marimekko-mosaic-chart"><span class="toc-section-number">2.4.9</span> Przykład: Marimekko mosaic chart</a></li>
+</ul></li>
+<li><a href="analiza-struktury.html#analiza-parametryczna" id="toc-analiza-parametryczna"><span class="toc-section-number">2.5</span> Analiza parametryczna</a>
+<ul>
+<li><a href="analiza-struktury.html#miary-położenia" id="toc-miary-położenia"><span class="toc-section-number">2.5.1</span> Miary położenia</a></li>
+<li><a href="analiza-struktury.html#miary-zmienności" id="toc-miary-zmienności"><span class="toc-section-number">2.5.2</span> Miary zmienności</a></li>
+<li><a href="analiza-struktury.html#miary-asymetrii" id="toc-miary-asymetrii"><span class="toc-section-number">2.5.3</span> Miary asymetrii</a></li>
+<li><a href="analiza-struktury.html#miary-koncentracji" id="toc-miary-koncentracji"><span class="toc-section-number">2.5.4</span> Miary koncentracji</a></li>
+</ul></li>
+</ul></li>
+<li><a href="interference.html#interference" id="toc-interference"><span class="toc-section-number">3</span> Łagodne wprowadzenie do wnioskowania statystycznego</a>
+<ul>
+<li><a href="interference.html#masa-ciała-uczestników-pś-w-rugby" id="toc-masa-ciała-uczestników-pś-w-rugby"><span class="toc-section-number">3.1</span> Masa ciała uczestników PŚ w rugby</a></li>
+<li><a href="interference.html#wiek-kandydatów-na-radnych" id="toc-wiek-kandydatów-na-radnych"><span class="toc-section-number">3.2</span> Wiek kandydatów na radnych</a></li>
+<li><a href="interference.html#rozkład-normalny-1" id="toc-rozkład-normalny-1"><span class="toc-section-number">3.3</span> Rozkład normalny</a></li>
+<li><a href="interference.html#odsetek-kobiet-wśród-kandydatów-na-radnych" id="toc-odsetek-kobiet-wśród-kandydatów-na-radnych"><span class="toc-section-number">3.4</span> Odsetek kobiet wśród kandydatów na radnych</a></li>
+<li><a href="interference.html#wnioskowanie-statystyczne" id="toc-wnioskowanie-statystyczne"><span class="toc-section-number">3.5</span> Wnioskowanie statystyczne</a>
+<ul>
+<li><a href="interference.html#estymacja-punktowa" id="toc-estymacja-punktowa"><span class="toc-section-number">3.5.1</span> Estymacja punktowa</a></li>
+<li><a href="interference.html#estymacja-przedziałowa" id="toc-estymacja-przedziałowa"><span class="toc-section-number">3.5.2</span> Estymacja przedziałowa</a></li>
+<li><a href="interference.html#testowanie-hipotez" id="toc-testowanie-hipotez"><span class="toc-section-number">3.5.3</span> Testowanie hipotez</a></li>
+<li><a href="interference.html#testy-nieparametryczne" id="toc-testy-nieparametryczne"><span class="toc-section-number">3.5.4</span> Testy nieparametryczne</a></li>
+</ul></li>
+<li><a href="interference.html#słownik-terminów-które-warto-znać" id="toc-słownik-terminów-które-warto-znać"><span class="toc-section-number">3.6</span> Słownik terminów które warto znać</a></li>
+</ul></li>
+<li><a href="analiza-korelacji.html#analiza-korelacji" id="toc-analiza-korelacji"><span class="toc-section-number">4</span> Analiza korelacji</a>
+<ul>
+<li><a href="analiza-korelacji.html#pojęcia-wstępne" id="toc-pojęcia-wstępne"><span class="toc-section-number">4.1</span> Pojęcia wstępne</a>
+<ul>
+<li><a href="analiza-korelacji.html#korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot" id="toc-korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot"><span class="toc-section-number">4.1.1</span> Korelacyjny wykres rozrzutu (korelogram, wykres XY w Excelu, scatter plot)</a></li>
+<li><a href="analiza-korelacji.html#pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona" id="toc-pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona"><span class="toc-section-number">4.1.2</span> Pomiar siły zależności: współczynnik korelacji liniowej Pearsona</a></li>
+<li><a href="analiza-korelacji.html#macierz-korelacji" id="toc-macierz-korelacji"><span class="toc-section-number">4.1.3</span> Macierz korelacji</a></li>
+</ul></li>
+<li><a href="analiza-korelacji.html#pomiar-siły-zależności-regresja-liniowa" id="toc-pomiar-siły-zależności-regresja-liniowa"><span class="toc-section-number">4.2</span> Pomiar siły zależności: regresja liniowa</a></li>
+</ul></li>
+<li><a href="analiza-szeregów-czasowych.html#analiza-szeregów-czasowych" id="toc-analiza-szeregów-czasowych"><span class="toc-section-number">5</span> Analiza szeregów czasowych</a>
+<ul>
+<li><a href="analiza-szeregów-czasowych.html#pojęcia-wstępne-1" id="toc-pojęcia-wstępne-1"><span class="toc-section-number">5.1</span> Pojęcia wstępne</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wykresy" id="toc-wykresy"><span class="toc-section-number">5.2</span> Wykresy</a>
+<ul>
+<li><a href="analiza-szeregów-czasowych.html#przykład-zwiedzający-muzeum-zamkowe-w-malborku" id="toc-przykład-zwiedzający-muzeum-zamkowe-w-malborku"><span class="toc-section-number">5.2.1</span> Przykład: Zwiedzający Muzeum Zamkowe w Malborku</a></li>
+</ul></li>
+<li><a href="analiza-szeregów-czasowych.html#przyrosty" id="toc-przyrosty"><span class="toc-section-number">5.3</span> Przyrosty</a></li>
+<li><a href="analiza-szeregów-czasowych.html#indeksy-agregatowe" id="toc-indeksy-agregatowe"><span class="toc-section-number">5.4</span> Indeksy agregatowe</a></li>
+<li><a href="analiza-szeregów-czasowych.html#dekompozycja-szeregów-czasowych" id="toc-dekompozycja-szeregów-czasowych"><span class="toc-section-number">5.5</span> Dekompozycja szeregów czasowych</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wygładzanie-za-pomocą-średniej-ruchomej" id="toc-wygładzanie-za-pomocą-średniej-ruchomej"><span class="toc-section-number">5.6</span> Wygładzanie za pomocą średniej ruchomej</a></li>
+<li><a href="analiza-szeregów-czasowych.html#liniowa-funkcja-trendu" id="toc-liniowa-funkcja-trendu"><span class="toc-section-number">5.7</span> Liniowa funkcja trendu</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wygładzanie-wykładnicze" id="toc-wygładzanie-wykładnicze"><span class="toc-section-number">5.8</span> Wygładzanie wykładnicze</a></li>
+<li><a href="analiza-szeregów-czasowych.html#oszacowanie-dokładności-modelu" id="toc-oszacowanie-dokładności-modelu"><span class="toc-section-number">5.9</span> Oszacowanie dokładności modelu</a></li>
+<li><a href="analiza-szeregów-czasowych.html#szacowanie-wskaźników-sezonowości" id="toc-szacowanie-wskaźników-sezonowości"><span class="toc-section-number">5.10</span> Szacowanie wskaźników sezonowości</a></li>
+</ul></li>
+<li><a href="literatura.html#literatura" id="toc-literatura"><span class="toc-section-number">6</span> Literatura</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wprowadzenie do statystyki dla ekonomistów</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="analiza-szeregów-czasowych" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Analiza szeregów czasowych</h1>
+<div id="pojęcia-wstępne-1" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Pojęcia wstępne</h2>
+<p><strong>Szereg czasowy</strong> to ciąg pomiarów z kolejnych momentów/okresów czasu.</p>
+<p><strong>Szereg czasowy</strong> jest <strong>szeregiem okresów</strong> jeżeli dotyczy <strong>strumieni</strong> (zasobów).
+Przykładowo liczba urodzeń żywych w powiecie kwidzyńskim w latach 2010–2019,
+to <strong>szereg okresów</strong>.
+W szczególności można dodać liczbę urodzeń
+w poszczególnych latach otrzymując łączną liczbę urodzonych w tym okresie.</p>
+<pre><code>Urodzenia żywe w powiecie kwidzyńskim w latach 2010--2019 
+2010  | 2011 | 2012 | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 |  2019
+------+------+------+------+------+------+------+------+------+------
+ 965  |  937 | 907  | 821  |  831 |  785 |  813 |  861 |  834 |   833
+Źródło: https://bdl.stat.gov.pl/</code></pre>
+<p>W latach 2010–2019 w powiecie kwidzyńskim urodziło
+się 965 + 937 + … + 833 = 8587 dzieci (średnio 858,7 rocznie).</p>
+<p>Albo <strong>szereg czasowy</strong> jest <strong>szeregiem momentów</strong> jeżeli dotyczy <strong>stanów</strong>.
+Przykładowo liczba ludności powiatu kwidzyńskiego w latach 2010–2019 (stan na 31.12),
+to <strong>szereg czasowy momentów</strong>.</p>
+<pre><code>Ludność ogółem w powiecie kwidzyńskim w latach 2010--2019 
+2010  | 2011 |  2012 | 2013 | 2014 | 2015 | 2016 | 2017 | 2018 |  2019
+------+------+-------+------+------+------+------+------+------+------
+83562 |83734 | 83783 |83611 |83627 |83464 |83495 |83423 |83291 | 83174
+Źródło: https://bdl.stat.gov.pl/</code></pre>
+<p>(Zwróćmy uwagę że taki szereg zwykle w tytule ma magiczną formułę
+stan na <em>dzień-miesiąc</em> – w przykładzie stan na ostatni dzień roku)
+Nie można sumować liczby mieszkańców z kolejnych lat, bo taka suma nie ma merytorycznie sensu.
+Można podać średnią (przeciętny stan) ludności jako wartość średniej chronologicznej:</p>
+<p><span class="math display">\[\bar x_{ch} = (\frac{1}{2} x_1 + x_2 + ... + x_{n-1} +
+\frac{1}{2} x_{n} ) / (n-1) = (83562/2 + 83734 + ... + 83291 + 83174/2)/9 = 83532,9\]</span></p>
+<p>Średnia roczna liczba ludności w powiecie kwidzyńskim w latach 2010–2019 wyniosła zatem 83532,9 mieszkańców.</p>
+<p>Szeregi czasowe mogą różnić się częstotliwością (dzienna, tygodniowa, miesięczna, kwartalna, roczna).</p>
+</div>
+<div id="wykresy" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Wykresy</h2>
+<p>W przypadku szeregów czasowych celem wizualizacji jest: pokazanie poziomu
+zjawiska, jego dynamiki (spada, rośnie, zmienia się cyklicznie), porównanie poziomów/dynamiki wielu zmiennych.</p>
+<p>Do wizualizacji szeregów czasowych należy stosować wykresy liniowe, słupkowe lub punktowe,</p>
+<div id="przykład-zwiedzający-muzeum-zamkowe-w-malborku" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Przykład: Zwiedzający Muzeum Zamkowe w Malborku</h3>
+<p>Liczbę zwiedzających Muzeum Zamkowe w Malborku w latach 2015–2019 (dane miesięczne)
+przedstawiono na wykresach</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-45-1.png" width="960" /></p>
+<p>Wykres kropkowy zwykle się nie sprawdza. Jeżeli przebieg zjawiska nie jest uporządkowany,
+albo wykres zawiera kilka zmiennych (w przykładzie dwie zmienne).
+to wynikiem jest chmura różnokolowych kropek, w której trudno się połapać.</p>
+<p>Wykres liniowy zwykle daje najlepsze rezultaty.</p>
+<p>Wykres słupkowy z półprzeźroczystymi słupkami też zwykle się nie sprawdza
+(w przykładzie jeden słupek zawsze zachodzi na drugi, co w rezultacie prowadzi do sytuacji,
+że turkusowego koloru w ogóle nie ma na wykresie)</p>
+<p>Wykres słupkowy ze słupkami przylegającymi do siebie (grupowany) jest dobrą alternatywą dla wykresu liniowego.</p>
+</div>
+</div>
+<div id="przyrosty" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Przyrosty</h2>
+<p>Oznaczmy wartość zmiennej <span class="math inline">\(Y\)</span> w okresie <span class="math inline">\(t\)</span> jako <span class="math inline">\(y_t\)</span> (mówi się okres badany)
+oraz wartość zmiennej <span class="math inline">\(Y\)</span> w okresie <span class="math inline">\(0\)</span> jako <span class="math inline">\(y_0\)</span> (okres podstawowy).</p>
+<p>Przyrost absolutny to po prostu <span class="math inline">\(y_t - y_0\)</span>. Jeżeli obliczamy przyrosty dla wielu okresów, to można porównywać
+zawsze do jednego okresu/momentu:</p>
+<p><span class="math display">\[y_2 - y_1, y_3 - y_1, \ldots, y_{n-1} - y_1, y_{n} - y_1\]</span></p>
+<p>lub dla poprzedniego okresu/momentu</p>
+<p><span class="math display">\[y_2 - y_1, y_3 - y_2, \ldots, y_{n-1} - y_{n-2}, y_{n} - y_{n-1}\]</span></p>
+<p>W pierwszym przypadku mówimy o przyrostach jednopodstawowych, w drugim zaś o przyrostach łańcuchowych. Zwróćmy
+uwagę, że podstawa nie musi być równa pierwszej wartości. Może to być np. wartość ostatnia lub środkowa:</p>
+<p><span class="math display">\[y_1 - y_n, y_2 - y_n, \ldots, y_{n-2} - y_n, y_{n-1} - y_n\]</span></p>
+<p>Interpretacja: o ile wzrosła/spadła wielkość zjawiska w okresie badanym w porównaniu do podstawowego
+w jednostkach zmiennej <span class="math inline">\(Y\)</span> oczywiście.</p>
+<p>Przyrost względny to <span class="math inline">\((y_t - y_0)/y_0\)</span> Jeżeli obliczamy przyrosty dla wielu okresów, to podobnie jak
+przyrosty absolutne możemy się posługiwać indeksami jednopodstawowymi lub łańcuchowymi.</p>
+<p>Przyrost względny zwykle wyrażone są w procentach jeżeli <span class="math inline">\(y_t = 115\)</span> a <span class="math inline">\(y_0 = 100\)</span>, to
+$(y_t - y_0)/y_0 =115 $. Zjawisko ma o 15% wyższy poziom w roku <span class="math inline">\(t\)</span>.</p>
+<p>Wskaźniki dynamiki (indeksy): określają względną zmianę wartości
+szeregów czasowych (popularny procent zmiany), czyli <span class="math inline">\(y_t/y_0\)</span>.
+Jeżeli podstawą porównań jest okres poprzedni <span class="math inline">\(y_t/y_{t-1}\)</span> to indeks nazywany jest <strong>łańcuchowym</strong>, jeżeli
+podstawa porównań jest stała, tj. <span class="math inline">\(y_t/y_{c}\)</span>, to indeks nazywany jest <strong>jednopodstawowy</strong>.</p>
+<p>Indeks zwykle wyrażone są w procentach jeżeli <span class="math inline">\(y_t = 115\)</span> a <span class="math inline">\(y_0 = 100\)</span>, to
+$y_t/y_0 =15 $. Zjawisko ma o 15% wyższy poziom w roku <span class="math inline">\(t\)</span>.</p>
+<p>Używamy średniej geometrycznej do obliczenia średniego tempa zmian zjawiska w czasie:</p>
+<p><span class="math display">\[\bar y_g = \sqrt[n-1]{y_n/y_1}\]</span></p>
+<p>Przykład: Zwiedzający Muzeum Zamkowe w Malborku</p>
+</div>
+<div id="indeksy-agregatowe" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Indeksy agregatowe</h2>
+<p>Jeżeli celem jest porównanie wielu różnych dóbr należy znaleść wspólny mianownik, którym jest zwykle
+cena albo koszty. Załóżmy że jest to cena. Dysponujemy informacją na temat wielkości sprzedaży
+pewnej grupy <span class="math inline">\(i\)</span> dóbr w okresie <span class="math inline">\(1\)</span>, tj. <span class="math inline">\(q_{1i}\)</span> oraz w okresie <span class="math inline">\(0\)</span>, tj. <span class="math inline">\(q_{0i}\)</span>.
+Dysponujemy także informacją na temat cen tych
+<span class="math inline">\(i\)</span> dóbr w okresie <span class="math inline">\(1\)</span>, tj. <span class="math inline">\(p_{1i}\)</span> oraz w okresie <span class="math inline">\(0\)</span>, tj. <span class="math inline">\(p_{0i}\)</span>.</p>
+<p>Agregatowy indeks wartości jest definiowany jako:</p>
+<p>$$I_w = </p>
+<p>Indeks ten określa jak widać zmianę względną wartości grupy towarów w okresie <span class="math inline">\(1\)</span> w porówaniu
+do okresu <span class="math inline">\(0\)</span>.</p>
+<p>Można też szacować wpływ zmiany cen i ilości towarów oddzielnie stosując następujące formuły</p>
+<p>agregatowy indeks ilości Laspeyresa: <span class="math inline">\(I^L_q = \frac{\sum_i q_{1i} p_{0i}}{ \sum_i q_{0i} p_{0i}}\)</span></p>
+<p>agregatowy indeks ceny Laspeyresa: <span class="math inline">\(I^L_p = \frac{\sum_i q_{0i} p_{1i}}{ \sum_i q_{0i} p_{0i}}\)</span></p>
+<p>agregatowy indeks ilości Paaschego: <span class="math inline">\(I^P_q = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{1i}}\)</span></p>
+<p>agregatowy indeks ceny Paaschego: <span class="math inline">\(I^P_p = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{1i}}\)</span></p>
+<p>Interpretacja: przy przyjęciu poziomu cen z okresu <span class="math inline">\(x\)</span> ceny/ilości zmieniły się o <span class="math inline">\(y\)</span> procent.
+Co jest <span class="math inline">\(x\)</span>em zależy od przyjętej formuły standaryzacyjnej.</p>
+</div>
+<div id="dekompozycja-szeregów-czasowych" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Dekompozycja szeregów czasowych</h2>
+<p>Najczęściej stosowanym modelem szeregu czasowego dla zjawisk ekonomiczno-społecznych jest
+traktowanie go jako <strong>sumy</strong> (lub iloczynu) trzech składników: ogólnej, wieloletniej tendencji
+cyklicznych wahań okresowych oraz czynników pozostałych:
+<span class="math display">\[Y_t = T_t + S_t + e_t\]</span>
+Ogólna, wieloletnia tendencja zwana jest trendem, zaś cyklicznych wahań okresowych
+potocznie określane są jako <strong>sezonowość</strong>.
+Sezonowość jest typowym atrybutem wielu kategorii ekonomicznych i wynika
+ze zmienności warunków przyrodniczych czy
+też systemu społeczno-prawnego (okres urlopowy, koniec roku finansowego itd.)</p>
+<p>Metody wyodrębniania tendencji rozwojowej (trendu): średnia ruchoma,
+liniowa funkcja trendu, wygładzanie wykładnicze.</p>
+<p><strong>Sezonowość a ocena kierunku/wielkości zmiany wartości szeregu czasowego</strong>:
+wyciąganie wniosków na podstawie <strong>wyłącznie</strong> porównywania obserwacji w kolejnych okresach w szeregu czasowym
+cechującym się sezonowością jest
+albo przejawem niewiedzy albo manipulacji (zwykle motywowanej politycznie). Na przykład wiadomo, że wielkość zatrudnienia wykazuje
+wahania sezonowe, bo w zimie zapotrzebowanie na pracowników spada. Stąd na przykład zatrudnienie w pierwszym kwartale
+(prawie) zawsze będzie niższe niż w czwartym kwartale roku poprzedniego.
+Jeżeli ktoś <em>sprzedaje</em> ten fakt jako argument,
+że rząd sobie nie radzi z gospodarką, to mamy do czynienia z manipulacją.
+Należy w takiej sytuacji porównywać rok-do-roku (czyli kwartał-do-kwartału dla danych kwartalnych),
+lub porównywać dane <strong>odsezonowane</strong>, czyli takie, które zostały poddane transformacji usuwającej efekt wahań sezonowych.
+Nb. <strong>odsezonowanie</strong> zawsze pozostawia pole do manipulacji w postaci konkretnej metody <strong>odsezonowania</strong>.
+Dlatego osobiście wolę porównywać
+dane z <strong>okresów jednoimiennych</strong> (porównanie rok-do-roku) co i państwu radzę:-)</p>
+</div>
+<div id="wygładzanie-za-pomocą-średniej-ruchomej" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Wygładzanie za pomocą średniej ruchomej</h2>
+<p>Koncepcyjnie bardzo prosta metoda: obliczamy <strong>średnią</strong> dla kolejnych <span class="math inline">\(k\)</span> wartości
+szeregu czasowego. Obliczone wartości zastępują wartości oryginalne.
+Wartości średniej ruchomej <span class="math inline">\(k\)</span>-elementowej są obliczane jako:
+<span class="math display">\[\bar y_p = (x_p + x_{p+1} + x_{p+2})/3, \textrm{gdzie: } p=1,\dots, N-2\]</span></p>
+<p>Rezultatem jest szereg skrócony dokładnie o <span class="math inline">\(N-2\)</span> elementów, gdzie <span class="math inline">\(N\)</span> jest liczbą elementów
+szeregu oryginalnego. Jest też problem z określeniem okresu, którego dotyczą obliczone wartości.
+Czy <span class="math inline">\(\bar y_1\)</span> to obserwacja dla pierwszego, drugiego czy trzeciego okresu?
+W zasadzie każdy wariant będzie OK, zwykle wybiera się element środkowy.
+Dla danych miesięcznych i <span class="math inline">\(k=12\)</span> szereg wygładzony będzie krótszy o 11 obserwacji i nie ma elementu środkowego
+(są dwa środkowe: czerwiec i lipiec). Można kompliować metodę i liczyć średnią ze środkowych albo zdecydować się
+na przypisanie średniej wartości do czerwca albo do lipca.
+Takie to są uroki średniej ruchomej…</p>
+</div>
+<div id="liniowa-funkcja-trendu" class="section level2" number="5.7">
+<h2><span class="header-section-number">5.7</span> Liniowa funkcja trendu</h2>
+<p>Metoda zakładająca, że trend ma postać funkcji liniowej postaci <span class="math inline">\(Y=b1\dot t +b0\)</span>. Parametry tej funkcji są obliczane
+metodą najmniejszych kwadratów, w której minimalizuje się sumę
+kwadratów odchyleń wartości empirycznych (<em>observed values</em>) od
+wartości teoretycznych (<em>predicted values</em>), tj.
+$_i^N y - y $,
+gdzie <span class="math inline">\(\hat y\)</span> to wartości teoretyczne
+czyli <span class="math inline">\(\hat y = b1 \cdot t + b0\)</span>, zaś <span class="math inline">\(t=1,...N\)</span>.
+Różnica <span class="math inline">\(y - \hat y\)</span> to <strong>błąd</strong> (<em>error</em>). Ideę metody NK zwanej jest w języku angielskim <em>Least Squares</em> przedstawia rysunek (zamiast <span class="math inline">\(t\)</span> jest tam <span class="math inline">\(x\)</span>).</p>
+<p><img src="LeastSquares.png" style="width:80.0%" /></p>
+<p>Wartość <span class="math inline">\(b1\)</span> ma interesującą interpretację, a mianowicie jest to przeciętna zmiana <span class="math inline">\(Y\)</span> z okresu na okres.</p>
+</div>
+<div id="wygładzanie-wykładnicze" class="section level2" number="5.8">
+<h2><span class="header-section-number">5.8</span> Wygładzanie wykładnicze</h2>
+<p>Oryginalne obserwacje są zastępowane obserwacjami obliczonymi według
+<span class="math inline">\(S_t = α y_{t-1} + (1 – α) S_{t-1}\)</span>, gdzie <span class="math inline">\(a \in (0,1)\)</span> im <span class="math inline">\(\alpha\)</span> bliższe jedności tym krzywa trendu
+będąca wynikiem wgładzenia jest bardziej gładka.</p>
+</div>
+<div id="oszacowanie-dokładności-modelu" class="section level2" number="5.9">
+<h2><span class="header-section-number">5.9</span> Oszacowanie dokładności modelu</h2>
+<p>Zastąpienie wartości oryginalnych (empirycznych) obliczonymi (teoretycznymi)
+prowadzi do błędu <span class="math inline">\(\hat y_t - y_t = e_t\)</span>. Błąd średniokwadratowy (MSE) definiowany
+jako
+<span class="math inline">\(\sum_i^N (\hat y-y)^2\)</span>
+to jak widać suma kwadratów różnic
+między wartościami <em>teoretycznymi</em> a oryginalnymi (<strong>empirycznymi</strong>). Im MSE jest większe tym model
+teoretyczny mniej dokładnie opisuje dane empiryczne.
+Jest to miara mianowana a mianem jest kwadrat jedostki miary <span class="math inline">\(Y\)</span>. Czyli jeżeli na przykład
+<span class="math inline">\(Y\)</span> jest liczbą zwiedzających, to MSE będzie kwadratem liczby zwiedzających.
+Dość abstrakcyjne pojęcie, zatem
+do celów interpretacji oblicza się zwykle RMSE, pierwiastek błędu średniokwadratowego. RMSE ma już normalną
+interpretację: wartości teoretyczne średnio
+różnią się od rzeczywistych wartości zmiennych o wartość współczynnika RMSE.</p>
+<p>Względną miarą dokładności może być następujący wariant współczynnika zmienności:
+<span class="math inline">\(V_\mathrm{RMSE} = \frac{\mathrm{RMSE}}{\bar y }\cdot 100\)</span>.
+Interpretacja: średnio błąd stanowi <span class="math inline">\(V_\mathrm{RMSE}\)</span>
+procent wartości średniej zmiennej <span class="math inline">\(Y\)</span>.</p>
+</div>
+<div id="szacowanie-wskaźników-sezonowości" class="section level2" number="5.10">
+<h2><span class="header-section-number">5.10</span> Szacowanie wskaźników sezonowości</h2>
+<p>Najprostszą metodą oszacowania sezonowości jest obliczenie średnich dla okresów jednoimiennych, tj dla danych
+kwartalnych będą to średnie dla poszczególnych kwartałów a dla danych miesięcznych dla miesięcy. Następnie
+obliczamy <strong>wskaźniki sezonowości</strong> według formuły: <span class="math inline">\(S_k = \bar y_k / \bar y\)</span>, gdzie <span class="math inline">\(\bar y_k\)</span> średnia
+dla okresu <span class="math inline">\(k\)</span>, <span class="math inline">\(\bar y\)</span> średnia wartość szeregu czasowego (wszystkie obserwacje). Dla celów interpretacji
+zwykle mnoży się <span class="math inline">\(S_k\)</span> przez <span class="math inline">\(100\)</span>, co pozwala na stwierdzenia
+w rodzaju przeciętnie <em>w pierwszym kwartale wartości Y są wyższe o 12%
+od wartości trendu</em>
+Obliczone wartości mogą służyć do poprawienia dokładności modelu zamiast <span class="math inline">\(\hat y=at +b\)</span>
+obliczamy <span class="math inline">\(\hat y=(at+B)*S_k\)</span>.</p>
+<p>Przykład: Zwiedzający Muzeum Zamkowe w Malborku</p>
+<p>Wyznaczania trendu z wykorzystaniem średniej ruchomej, trendu liniowego, wygładzania
+wykładniczego za pomocą arkusza LibreOffice (który polecam) służą funkcje dostępne w menu Dane-Statystyka
+(a dalej al</p>
+<p>oraz oszacowania wskaźników sezonowości można</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="analiza-korelacji.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="literatura.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

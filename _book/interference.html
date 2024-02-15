@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Łagodne wprowadzenie do wnioskowania statystycznego | Wprowadzenie do statystyki dla ekonomistów</title>
+  <meta name="description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Łagodne wprowadzenie do wnioskowania statystycznego | Wprowadzenie do statystyki dla ekonomistów" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Łagodne wprowadzenie do wnioskowania statystycznego | Wprowadzenie do statystyki dla ekonomistów" />
+  
+  <meta name="twitter:description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="analiza-struktury.html"/>
+<link rel="next" href="analiza-korelacji.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-metody-i-organizacja-badań-statystycznych" id="toc-przedmiot-metody-i-organizacja-badań-statystycznych"><span class="toc-section-number">1</span> Przedmiot, metody i organizacja badań statystycznych</a>
+<ul>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-statystyki" id="toc-przedmiot-statystyki"><span class="toc-section-number">1.1</span> Przedmiot statystyki</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#pomiar" id="toc-pomiar"><span class="toc-section-number">1.2</span> Pomiar</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#rodzaje-badań-statystycznych" id="toc-rodzaje-badań-statystycznych"><span class="toc-section-number">1.3</span> Rodzaje badań statystycznych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#organizacja-badań-statystycznych" id="toc-organizacja-badań-statystycznych"><span class="toc-section-number">1.4</span> Organizacja badań statystycznych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#opracowanie-danych" id="toc-opracowanie-danych"><span class="toc-section-number">1.5</span> Opracowanie danych</a></li>
+</ul></li>
+<li><a href="analiza-struktury.html#analiza-struktury" id="toc-analiza-struktury"><span class="toc-section-number">2</span> Analiza struktury</a>
+<ul>
+<li><a href="analiza-struktury.html#tablice-statystyczne" id="toc-tablice-statystyczne"><span class="toc-section-number">2.1</span> Tablice statystyczne</a></li>
+<li><a href="analiza-struktury.html#rozkład-empiryczny" id="toc-rozkład-empiryczny"><span class="toc-section-number">2.2</span> Rozkład empiryczny</a></li>
+<li><a href="analiza-struktury.html#rozkład-normalny" id="toc-rozkład-normalny"><span class="toc-section-number">2.3</span> Rozkład normalny</a></li>
+<li><a href="analiza-struktury.html#wizualizacja-danych-i-wykresy" id="toc-wizualizacja-danych-i-wykresy"><span class="toc-section-number">2.4</span> Wizualizacja danych i wykresy</a>
+<ul>
+<li><a href="analiza-struktury.html#wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej" id="toc-wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej"><span class="toc-section-number">2.4.1</span> Wykresy przedstawiające rozkład wartości jednej zmiennej</a></li>
+<li><a href="analiza-struktury.html#histogram" id="toc-histogram"><span class="toc-section-number">2.4.2</span> Histogram</a></li>
+<li><a href="analiza-struktury.html#wykres-punktowy" id="toc-wykres-punktowy"><span class="toc-section-number">2.4.3</span> Wykres punktowy</a></li>
+<li><a href="analiza-struktury.html#porównanie-wielu-rozkładów" id="toc-porównanie-wielu-rozkładów"><span class="toc-section-number">2.4.4</span> Porównanie wielu rozkładów</a></li>
+<li><a href="analiza-struktury.html#wykresy-kołowe" id="toc-wykresy-kołowe"><span class="toc-section-number">2.4.5</span> Wykresy kołowe</a></li>
+<li><a href="analiza-struktury.html#wykres-pudełkowy" id="toc-wykres-pudełkowy"><span class="toc-section-number">2.4.6</span> Wykres pudełkowy</a></li>
+<li><a href="analiza-struktury.html#wykres-skrzypcowy-wariant-wykresu-pudełkowego" id="toc-wykres-skrzypcowy-wariant-wykresu-pudełkowego"><span class="toc-section-number">2.4.7</span> Wykres skrzypcowy (wariant wykresu pudełkowego)</a></li>
+<li><a href="analiza-struktury.html#przykład-zaufanie-do-politykow" id="toc-przykład-zaufanie-do-politykow"><span class="toc-section-number">2.4.8</span> Przykład: Zaufanie do Politykow</a></li>
+<li><a href="analiza-struktury.html#przykład-marimekko-mosaic-chart" id="toc-przykład-marimekko-mosaic-chart"><span class="toc-section-number">2.4.9</span> Przykład: Marimekko mosaic chart</a></li>
+</ul></li>
+<li><a href="analiza-struktury.html#analiza-parametryczna" id="toc-analiza-parametryczna"><span class="toc-section-number">2.5</span> Analiza parametryczna</a>
+<ul>
+<li><a href="analiza-struktury.html#miary-położenia" id="toc-miary-położenia"><span class="toc-section-number">2.5.1</span> Miary położenia</a></li>
+<li><a href="analiza-struktury.html#miary-zmienności" id="toc-miary-zmienności"><span class="toc-section-number">2.5.2</span> Miary zmienności</a></li>
+<li><a href="analiza-struktury.html#miary-asymetrii" id="toc-miary-asymetrii"><span class="toc-section-number">2.5.3</span> Miary asymetrii</a></li>
+<li><a href="analiza-struktury.html#miary-koncentracji" id="toc-miary-koncentracji"><span class="toc-section-number">2.5.4</span> Miary koncentracji</a></li>
+</ul></li>
+</ul></li>
+<li><a href="interference.html#interference" id="toc-interference"><span class="toc-section-number">3</span> Łagodne wprowadzenie do wnioskowania statystycznego</a>
+<ul>
+<li><a href="interference.html#masa-ciała-uczestników-pś-w-rugby" id="toc-masa-ciała-uczestników-pś-w-rugby"><span class="toc-section-number">3.1</span> Masa ciała uczestników PŚ w rugby</a></li>
+<li><a href="interference.html#wiek-kandydatów-na-radnych" id="toc-wiek-kandydatów-na-radnych"><span class="toc-section-number">3.2</span> Wiek kandydatów na radnych</a></li>
+<li><a href="interference.html#rozkład-normalny-1" id="toc-rozkład-normalny-1"><span class="toc-section-number">3.3</span> Rozkład normalny</a></li>
+<li><a href="interference.html#odsetek-kobiet-wśród-kandydatów-na-radnych" id="toc-odsetek-kobiet-wśród-kandydatów-na-radnych"><span class="toc-section-number">3.4</span> Odsetek kobiet wśród kandydatów na radnych</a></li>
+<li><a href="interference.html#wnioskowanie-statystyczne" id="toc-wnioskowanie-statystyczne"><span class="toc-section-number">3.5</span> Wnioskowanie statystyczne</a>
+<ul>
+<li><a href="interference.html#estymacja-punktowa" id="toc-estymacja-punktowa"><span class="toc-section-number">3.5.1</span> Estymacja punktowa</a></li>
+<li><a href="interference.html#estymacja-przedziałowa" id="toc-estymacja-przedziałowa"><span class="toc-section-number">3.5.2</span> Estymacja przedziałowa</a></li>
+<li><a href="interference.html#testowanie-hipotez" id="toc-testowanie-hipotez"><span class="toc-section-number">3.5.3</span> Testowanie hipotez</a></li>
+<li><a href="interference.html#testy-nieparametryczne" id="toc-testy-nieparametryczne"><span class="toc-section-number">3.5.4</span> Testy nieparametryczne</a></li>
+</ul></li>
+<li><a href="interference.html#słownik-terminów-które-warto-znać" id="toc-słownik-terminów-które-warto-znać"><span class="toc-section-number">3.6</span> Słownik terminów które warto znać</a></li>
+</ul></li>
+<li><a href="analiza-korelacji.html#analiza-korelacji" id="toc-analiza-korelacji"><span class="toc-section-number">4</span> Analiza korelacji</a>
+<ul>
+<li><a href="analiza-korelacji.html#pojęcia-wstępne" id="toc-pojęcia-wstępne"><span class="toc-section-number">4.1</span> Pojęcia wstępne</a>
+<ul>
+<li><a href="analiza-korelacji.html#korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot" id="toc-korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot"><span class="toc-section-number">4.1.1</span> Korelacyjny wykres rozrzutu (korelogram, wykres XY w Excelu, scatter plot)</a></li>
+<li><a href="analiza-korelacji.html#pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona" id="toc-pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona"><span class="toc-section-number">4.1.2</span> Pomiar siły zależności: współczynnik korelacji liniowej Pearsona</a></li>
+<li><a href="analiza-korelacji.html#macierz-korelacji" id="toc-macierz-korelacji"><span class="toc-section-number">4.1.3</span> Macierz korelacji</a></li>
+</ul></li>
+<li><a href="analiza-korelacji.html#pomiar-siły-zależności-regresja-liniowa" id="toc-pomiar-siły-zależności-regresja-liniowa"><span class="toc-section-number">4.2</span> Pomiar siły zależności: regresja liniowa</a></li>
+</ul></li>
+<li><a href="analiza-szeregów-czasowych.html#analiza-szeregów-czasowych" id="toc-analiza-szeregów-czasowych"><span class="toc-section-number">5</span> Analiza szeregów czasowych</a>
+<ul>
+<li><a href="analiza-szeregów-czasowych.html#pojęcia-wstępne-1" id="toc-pojęcia-wstępne-1"><span class="toc-section-number">5.1</span> Pojęcia wstępne</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wykresy" id="toc-wykresy"><span class="toc-section-number">5.2</span> Wykresy</a>
+<ul>
+<li><a href="analiza-szeregów-czasowych.html#przykład-zwiedzający-muzeum-zamkowe-w-malborku" id="toc-przykład-zwiedzający-muzeum-zamkowe-w-malborku"><span class="toc-section-number">5.2.1</span> Przykład: Zwiedzający Muzeum Zamkowe w Malborku</a></li>
+</ul></li>
+<li><a href="analiza-szeregów-czasowych.html#przyrosty" id="toc-przyrosty"><span class="toc-section-number">5.3</span> Przyrosty</a></li>
+<li><a href="analiza-szeregów-czasowych.html#indeksy-agregatowe" id="toc-indeksy-agregatowe"><span class="toc-section-number">5.4</span> Indeksy agregatowe</a></li>
+<li><a href="analiza-szeregów-czasowych.html#dekompozycja-szeregów-czasowych" id="toc-dekompozycja-szeregów-czasowych"><span class="toc-section-number">5.5</span> Dekompozycja szeregów czasowych</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wygładzanie-za-pomocą-średniej-ruchomej" id="toc-wygładzanie-za-pomocą-średniej-ruchomej"><span class="toc-section-number">5.6</span> Wygładzanie za pomocą średniej ruchomej</a></li>
+<li><a href="analiza-szeregów-czasowych.html#liniowa-funkcja-trendu" id="toc-liniowa-funkcja-trendu"><span class="toc-section-number">5.7</span> Liniowa funkcja trendu</a></li>
+<li><a href="analiza-szeregów-czasowych.html#wygładzanie-wykładnicze" id="toc-wygładzanie-wykładnicze"><span class="toc-section-number">5.8</span> Wygładzanie wykładnicze</a></li>
+<li><a href="analiza-szeregów-czasowych.html#oszacowanie-dokładności-modelu" id="toc-oszacowanie-dokładności-modelu"><span class="toc-section-number">5.9</span> Oszacowanie dokładności modelu</a></li>
+<li><a href="analiza-szeregów-czasowych.html#szacowanie-wskaźników-sezonowości" id="toc-szacowanie-wskaźników-sezonowości"><span class="toc-section-number">5.10</span> Szacowanie wskaźników sezonowości</a></li>
+</ul></li>
+<li><a href="literatura.html#literatura" id="toc-literatura"><span class="toc-section-number">6</span> Literatura</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wprowadzenie do statystyki dla ekonomistów</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="interference" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Łagodne wprowadzenie do wnioskowania statystycznego</h1>
+<p><strong>Chcemy się dowiedzieć czegoś na temat populacji (całości)
+na podstawie próby (części tej całości).</strong></p>
+<p>Przykładowo chcemy ocenić ile wynosi średnia waga główki kapusty
+na 100 h polu. Można ściąć wszystkie i zważyć, ale można też ściąć
+trochę (pobrać próbę się mówi uczenie) zważyć i poznać średnią
+na całym polu z dobrą dokładnością.</p>
+<div id="masa-ciała-uczestników-pś-w-rugby" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Masa ciała uczestników PŚ w rugby</h2>
+<p>W turnieju o Puchar Świata w rugby w 2015 roku uczestniczyło
+623 rugbystów. Znamy szczegółowe dane odnośnie wzrostu i wagi każdego
+uczestnika turnieju. Obliczamy (prawdziwą) średnią, odchylenie standardowe
+i współczynnik zmienności masy ciała:</p>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    65.0    93.0   103.0   102.8   113.0   145.0</code></pre>
+<p>Czyli średnio rugbysta na turnieju RWC’2015 ważył
+102.80 kg (<code>Mean</code> na wydruku powyżej)
+a odchylenie standardowe (<em>s</em>) wyniosło 12.92 kg.</p>
+<p>Rozkład, pokazany na rysunku <a href="interference.html#fig:rwcWeight">3.1</a>, jest dwumodalny, bo w rugby są dwie grupy zawodników
+i wcale nie wszyscy ważą ponad 110 kilogramów.</p>
+<div class="figure"><span style="display:block;" id="fig:rwcWeight"></span>
+<img src="_main_files/figure-html/rwcWeight-1.png" alt="Rozkład wagi zawodników" width="672" />
+<p class="caption">
+Figure 3.1: Rozkład wagi zawodników
+</p>
+</div>
+<p><strong>Szacujemy średnią na podstawie 2 zawodników pobranych losowo</strong></p>
+<p>Powtarzamy eksperyment 1000 razy (dwóch bo dla jednego nie obliczymy
+wariancji)</p>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    79.0    96.5   102.5   102.6   109.0   135.0</code></pre>
+<p>Średnia (średnich z próby) ma wartość 102.64 kilogramów
+a odchylenie standardowe 9.14 kilogramów.
+Wartość <span class="math inline">\(s/\sqrt{2}\)</span> (odchylenie standardowe podzielone przez pierwiastek kwadratowy
+z liczebności próby) jest równa 9.14. Zauważmy że ta wartość
+jest zbliżona do odchylenia standardowego uzyskanego
+w eksperymencie (9.14 vs 9.14).</p>
+<p>Zauważmy też że wartość najniższej średniej wyniosła 79 kilogramów zaś najwyższej 135 kilogramów.
+Gdybyśmy mieli pecha i wylosowali te skrajnie nieprawdziwe wartości to mylimy się
+o 23.64 kilogramów
+na minus lub 32.36 kilogramów na plus.</p>
+<p><strong>szacujemy średnią na podstawie 10 zawodników pobranych losowo</strong></p>
+<p>Powtarzamy eksperyment 1000 razy</p>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    90.5   100.3   102.8   102.9   105.4   115.1</code></pre>
+<p>średnia wyszła 102.92 kilogramów a odchylenie standardowe
+3.89 kilogramów.
+Wartość <span class="math inline">\(s/\sqrt{10}\)</span> jest równa 4.09.</p>
+<p><strong>szacujemy średnią na podstawie 40 zawodników pobranych losowo</strong></p>
+<p>Uwaga: 40 zawodników to około 6.4%
+całego zbioru.
+Powtarzamy eksperyment 1000 razy</p>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    96.8   101.3   102.6   102.7   104.1   109.7</code></pre>
+<p>średnia jest równa 102.67 kilogramów a odchylenie standardowe 2.03 kilogramów.
+Wartość <span class="math inline">\(s/\sqrt{40}\)</span> jest równa 2.04.</p>
+<p>Zauważmy też że wartość najniższej średniej wyniosła 96.8 kilogramów zaś najwyższej 109.725 kilogramów.
+Gdybyśmy mieli pecha i wylosowali te skrajnie nieprawdziwe wartości to mylimy się o 5.87 kilogramów
+na minus lub 7.06 kilogramów na plus. Niewątpliwie wynik znacznie lepszy niż dla próby
+dwuelementowej.</p>
+<p>Podsumujmy eksperyment wykresem rozkładu wartości średnich (por. rysunek <a href="interference.html#fig:wagaSrednia">3.2</a>).</p>
+<div class="figure"><span style="display:block;" id="fig:wagaSrednia"></span>
+<img src="_main_files/figure-html/wagaSrednia-1.png" alt="Rozkład średniej wagi rugbystów w zależności od wielkości próby" width="672" />
+<p class="caption">
+Figure 3.2: Rozkład średniej wagi rugbystów w zależności od wielkości próby
+</p>
+</div>
+<p><strong>Wnioski z eksperymentu</strong></p>
+<p>Wartość średnią wyznaczamy na podstawie jakiejś konkretnej <strong>metody</strong>.
+Wydaje się na podstawie powyższych eksperymentów, że z dobrym skutkiem
+możemy jako metodę wykorzystać <strong>średnią-z-próby</strong>.</p>
+<p>W ogólności taką metodą, która formalnie jest funkcją elementów z próby, nazywa się
+w statystyce <strong>estymatorem</strong>. Warto to pojęcie zapamiętać. Wnioskujemy
+o wartości nieznanego parametru w populacji posługując się estymatorem.</p>
+<p>Kontynuując wnioski z eksperymentu należy zauważyć, że
+wszystkie średnie-ze-średnich (bez względu na liczebność próby) są zbliżone do wartości
+prawdziwej (to się nazywa <strong>nieobciążoność</strong> estymatora);
+Mówiąc innymi słowy jeżeli będziemy oceniać wartość prawdziwej średniej na podstawie próby,
+a naszą ocenę powtórzymy wielokrotnie,
+to średnia będzie zbliżona do wartości prawdziwej (a nie np. niższa czy wyższa)
+Ta cecha jest niezależna od wielkości próby.</p>
+<p>Jeżeli rośnie liczebność próby to zmienność wartości średniej-w-próbie maleje, co za tym
+idzie prawdopodobieństwo, że wartość oceniona na podstawie
+średniej z próby będzie zbliżona do wartości szacowanego parametru rośnie (to się nazywa <strong>zgodność</strong>).
+Co więcej dobrym przybliżeniem zmienności średniej-w-próbie
+jest prosta formuła <span class="math inline">\(s/\sqrt{n}\)</span> gdzie <span class="math inline">\(n\)</span> jest liczebnością próby a <span class="math inline">\(s\)</span> jest odchyleniem
+standardowym w populacji z której pobrano próbę.</p>
+<p>Jeżeli mamy dwa różne estymatory służące do oszacowania parametru
+i oba są <strong>nieobciążone</strong> oraz <strong>zgodne</strong>, to który wybrać?
+Ten która ma <strong>mniejszą wariancję</strong>. Taki estymator nazywa się <strong>efektywny</strong>.</p>
+<p>Estymator zatem powinien być <strong>nieobciążony</strong>, <strong>zgodny</strong> oraz <strong>efektywny</strong> (czyli mieć
+małą wariancję). Można matematycznie udowodnić, że pewien estymator ma tak małą wariancję, że
+niemożliwe jest wynalezienie czegoś jeszcze bardziej efektywnego. Takim estymatorem
+średniej w populacji jest średnia z próby…</p>
+<p>Konkretną wartość estymatora dla konkretnych wartości próby nazywamy <strong>oceną</strong>
+(parametru).</p>
+</div>
+<div id="wiek-kandydatów-na-radnych" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Wiek kandydatów na radnych</h2>
+<p>W wyborach samorządowych w Polsce w roku 2018 o mandat radnego
+sejmików wojewódzkich ubiegało się 7076 kandydatów.
+Znamy szczegółowe dane odnośnie wieku każdego kandydata,
+bo to zostało publicznie podane przez Państwową Komisję Wyborczą.
+Obliczamy (prawdziwą) średnią, odchylenie standardowe
+i współczynnik zmienności wieku kandydatów:</p>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   18.00   34.00   46.00   46.24   58.00   91.00</code></pre>
+<p>Czyli średnio kandydat miał 46.24 lat
+a odchylenie standardowe wieku wyniosło 14.61 lat.</p>
+<p>Rozkład znowu jest dwumodalny z jakiś powodów (por. rysunek <a href="interference.html#fig:wiekKnR">3.3</a>).</p>
+<div class="figure"><span style="display:block;" id="fig:wiekKnR"></span>
+<img src="_main_files/figure-html/wiekKnR-1.png" alt="Rozkład wieku kandydatów na radnych" width="672" />
+<p class="caption">
+Figure 3.3: Rozkład wieku kandydatów na radnych
+</p>
+</div>
+<p><strong>Szacujemy średnią na podstawie 2 kandydatów pobranych losowo</strong></p>
+<p>Powtarzamy eksperyment 1000 razy</p>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   21.00   38.00   46.00   45.66   53.50   71.00</code></pre>
+<p>Średnia średnich z próby ma wartość 45.66 lat.
+Odchylenie standardowe wyniosło 10.36.
+Wartość <span class="math inline">\(s/\sqrt{2}\)</span> jest równa 10.33.</p>
+<p>Wartość najniższej średniej wyniosła 21 lat zaś najwyższej 71 lat.
+Gdybyśmy mieli pecha i wylosowali te skrajnie nieprawdziwe wartości to mylimy się
+o 24.66 lat
+na minus lub 25.34 lat na plus.</p>
+<p><strong>Szacujemy średnią na podstawie 10 kandydatów pobranych losowo</strong></p>
+<p>Powtarzamy eksperyment 1000 razy.</p>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   31.50   42.70   46.10   46.14   49.60   59.50</code></pre>
+<p>Średnia średnich z próby ma wartość 46.14 lat.
+Odchylenie standardowe wyniosło 4.72.
+Wartość <span class="math inline">\(s/\sqrt{10}\)</span> jest równa 4.62.</p>
+<p><strong>Szacujemy średnią na podstawie 40 kandydatów pobranych losowo</strong></p>
+<p>Uwaga: 40 kandydatów to ok 0.6% całości.
+Powtarzamy eksperyment 1000 razy.</p>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   38.92   44.55   46.10   46.14   47.73   53.10</code></pre>
+<p>Średnia średnich z próby ma wartość 46.14 lat.
+Odchylenie standardowe wyniosło 2.32.
+Wartość <span class="math inline">\(s/\sqrt{40}\)</span> jest równa 2.31.</p>
+<p><strong>Szacujemy średnią na podstawie 70 kandydatów pobranych losowo</strong></p>
+<p>Uwaga: 70 kandydatów to około ok 1% całości (1000 powtórzeń)</p>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   41.29   45.07   46.24   46.26   47.47   51.81</code></pre>
+<p>Średnia średnich z próby ma wartość 46.26 lat.
+Odchylenie standardowe wyniosło 1.78
+Wartość <span class="math inline">\(s/\sqrt{70}\)</span> jest równa 1.75.</p>
+<p>Wartość najniższej średniej wyniosła 41.29 lat zaś najwyższej 51.81 lat.
+Gdybyśmy mieli pecha i wylosowali te skrajnie nieprawdziwe wartości to mylimy się
+już tylko o 4.97 lat
+na minus lub 5.56 lat na plus.</p>
+<p>Podsumujmy eksperyment wykresem rozkładu wartości średnich (rysunek <a href="interference.html#fig:wiekSredni">3.4</a>).</p>
+<div class="figure"><span style="display:block;" id="fig:wiekSredni"></span>
+<img src="_main_files/figure-html/wiekSredni-1.png" alt="Rozkład średniej wieku kandydatów w zależności od wielkości próby" width="672" />
+<p class="caption">
+Figure 3.4: Rozkład średniej wieku kandydatów w zależności od wielkości próby
+</p>
+</div>
+<p>Obserwujemy to samo co w przypadku wagi rugbystów: im większa próba tym
+dokładniejsza wartość średniej wieku. Bez względu na wielkość próby przeciętnie
+otrzymujemy prawdziwą wartość średniej.</p>
+<p>Wniosek: precyzja wnioskowania zwiększa się wraz z liczebnością próby; tym szybciej
+im rozproszenie w populacji generalnej jest mniejsze. Żeby z dużą dokładnością
+wnioskować o średniej dla dużej populacji wcale nie trzeba pobierać
+dużej próby (w ostatnim przykładzie było to 1% całości).</p>
+</div>
+<div id="rozkład-normalny-1" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Rozkład normalny</h2>
+<p><strong>Rozkład empiryczny</strong> zmiennej to
+przyporządkowanie kolejnym wartościom zmiennej odpowiadających im liczebności.</p>
+<p>Załóżmy że istnieje zapotrzebowanie społeczne na wiedzę na temat wieku kandydatów
+na radnych. Możemy to jak widać łatwo liczyć ale jednocześnie jest to kłopotliwe.
+Należy do tego mieć zbiór ponad 7 tys liczb.
+<strong>Rozkład teoretyczny</strong> to matematyczne uogólnienie <strong>rozkładu empirycznego</strong>.
+Jest to model matematyczny operujący pojęciem (ściśle sformalizowanym) <strong>prawdopodobieństwa</strong>
+(zamiast liczebności). <strong>Rozkład teoretyczny</strong> jest:</p>
+<ul>
+<li><p>zbliżony do empirycznego jeżeli chodzi o wyniki (jest przybliżeniem empirycznego)</p></li>
+<li><p>jest zdefiniowany za pomocą kilku liczb; nie ma potrzeby korzystania z liczebności</p></li>
+</ul>
+<p>Żeby było ciekawiej istnieje dokładnie jeden <strong>rozkład teoretyczny</strong>, który z dobrą dokładnością
+opisuje rozkłady empiryczne będące wynikiem powyższej zabawy.
+Ten rozkład (zwany <strong>normalnym</strong>)
+zależy tylko od dwóch parametrów: średniej i odchylenia standardowego, gdzie średnia będzie
+równa (prawdziwej) średniej w populacji a odchylenie standardowe
+równe odchyleniu standardowemu w populacji podzielonemu przez pierwiastek z wielkości próby.</p>
+<p>Przybliżenie za pomocą rozkładu normalnego średniego rozkładu wieku kandydatów na radnych
+dla próby 40-elementowej oraz 70-elementowej pokazuje rysunek <a href="interference.html#fig:normalApprox">3.5</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:normalApprox"></span>
+<img src="_main_files/figure-html/normalApprox-1.png" alt="Rozkład normalny" width="99%" />
+<p class="caption">
+Figure 3.5: Rozkład normalny
+</p>
+</div>
+<p>Prawda, że wynik jest całkiem dobry? Teoretyczność czerwonej krzywej
+polega na tym, że ona zawsze będzie identyczna, podczas gdy histogram będzie różny.
+Gdybyśmy powtórzyli nasz
+eksperyment (generowania 1000 losowych prób przypominam),
+to zapewne trochę by się różnił, bo byśmy wylosowali inne wartości do prób.
+Ta <strong>teoretyczna abstrakcja</strong> nazywa się
+<strong>prawdopodobieństwem</strong>. Rzucając monetą 1000 razy spodziewamy
+się po 500 orłów i reszek,
+co w modelu matematycznym będzie opisane jak:
+prawdopodobieństwo wyrzucenia orła wynosi 0,5.
+Rzucanie monetą to bardzo prosty eksperyment; nasz z liczeniem średniej
+wieku jest bardziej skomplikowany więc miło jest się
+dowiedzieć, że używając czerwonej krzywej można łatwo obliczyć jak bardzo
+prawdopodobne jest na przykład popełnienie błędu większego niż 10% średniej, albo
+większego niż 0,1 lat. Albo jak duża powinna być próba żeby ten
+błąd był nie większy niż 0,1 lat.</p>
+<p>Interpretacja wartości rozkładu empirycznego zwykle jest w kategoriach ryzyka/szansy czy
+prawdopodobieństwa. Przykładowo interesuje nas prawdopodobieństwo, że kandydat ma
+mniej niż 30 lat.
+Takich kandydatów jest 1091
+a wszystkich kandydatów dla przypomnienia
+jest 7076. Iloraz tych wartości będzie interpretowany
+jako ryzyko/szansa/prawdopodobieństwo
+(wynosi ono 15.42%.)</p>
+<p>Podobnie można obliczyć prawdopodobieństwo, że wiek kandydata będzie się
+zawierał w przedziale 50–60 lat.
+Ponieważ kandydatów w wieku 50–60 lat jest 1570,
+to szukane prawdopodobieństwo
+jest równe: 22.19%.)</p>
+<p>Jeżeli zamiast rozkładu empirycznego będziemy używać rozkład normalnego, który jak widzimy
+jest jego dobrym przybliżeniem, to nie musimy liczyć empirycznych liczebności. Wystarczy że
+znamy średnią i odchylenie standardowe a potrafimy obliczyć każde prawdopodobieństwo dla
+każdego przedziału wartości zmiennej.</p>
+<p>W szczególności dla rozkładu normalnego prawdopodobieństwo <span class="math inline">\(m \pm s\)</span> (przyjęcie wartości z przedziału
+średnia plus/minus odchylenie standardowe) wynosi około 0,68
+prawdopodobieństwo <span class="math inline">\(m \pm 2 \times s\)</span> wynosi około 0,95 a <span class="math inline">\(m \pm 3 \times s\)</span> około 0,997.
+Czyli w przedziale <span class="math inline">\([-3s &lt; m, m +3s]\)</span> znajdują się praktycznie wszystkie wartości
+rozkładu. Albo innymi słowy przyjęcie wartości spoza przedziału średnia plus/minus trzykrotność
+odchylenia standardowego jest bardzo mało prawdopodobna.</p>
+<p>Rozkład normalny będzie identyczny dla wagi rugbystów, wieku, wagi noworodków itd/itp.
+Uogólnieniem teoretycznym pojęcia <strong>zmiennej statystycznej</strong>, które do tej pory
+używaliśmy jest <strong>zmienna losowa</strong>, zmienna której wartości są liczbami a realizują się
+z określonym prawdopodobieństwem np. określonym przez rozkład normalny.</p>
+</div>
+<div id="odsetek-kobiet-wśród-kandydatów-na-radnych" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Odsetek kobiet wśród kandydatów na radnych</h2>
+<p>Dane dotyczące kandydatów na radnych do sejmików wojewódzkich zawierają także płeć kandydata.
+Ktoś może być ciekaw
+jaki był odsetek kobiet w tej grupie. Taki parametr nazywa się proporcją
+albo ryzykiem, a potocznie i niefachowo procentem.
+Matematycznym modelem jest <strong>zmienna dwuwartościowa</strong>, która
+z określonym prawdopodobieństwem przyjmuje wartość <code>kobieta</code>.
+Obliczmy
+empiryczną wartość tego prawdopodobieństwa jako liczbę kobiet do liczby
+wszystkich kandydatów. Wartość tego parametru wynosi 0.4587 (albo
+45.87%).
+Potraktujmy to jako prawdziwą wartość prawdopodobieństwa (p), że
+kandydat jest kobietą i empirycznie sprawdźmy czy możemy szacować
+o prawdziwej wartości tego parametru
+używając (jako estymatora żeby się przyzwyczajać do nowych terminów) proporcji z próby.
+Tradycyjnie powtarzamy eksperyment 1000 razy
+dla trzech różnych wielkości próby.
+Rozkład otrzymanych wartości przedstawia rysunek <a href="interference.html#fig:rozkladP">3.6</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:rozkladP"></span>
+<img src="_main_files/figure-html/rozkladP-1.png" alt="Rozkład wielkości p dla różnej wielkości próby" width="672" />
+<p class="caption">
+Figure 3.6: Rozkład wielkości p dla różnej wielkości próby
+</p>
+</div>
+<p>Wnioski:</p>
+<ul>
+<li><p>Dla próby 20 elementowej rozkład nie przypomina rozkładu normalnego.</p></li>
+<li><p>Dla prób 120 i 420 elementowej rozkład jest podobny do normalnego.</p></li>
+<li><p>Zmienność estymatora maleje wraz ze wzrostem liczebności próby;
+każe nam to przypuszczać (i tak jest w istocie) że jest on zgodny.</p></li>
+<li><p>W każdym przypadku średnia z 1000 eksperymentów jest zbliżona do wartości prawdziwej;
+każe nam to przypuszczać (i tak jest w istocie) że estymator jest nieobciążony.</p></li>
+</ul>
+<p>Rozkład normalny jest tak magiczny że nawet jeżeli zmienna, której parametr
+szacujemy nie ma rozkładu zbliżonego
+do normalnego (jak w przypadku zmiennej, która przyjmuje tylko dwie wartości)
+to i tak estymator tego parametru będzie normalny. Co najwyżej będziemy
+potrzebowali większej próby żeby „znormalniał” (jak w opisywanym przykładzie).</p>
+</div>
+<div id="wnioskowanie-statystyczne" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Wnioskowanie statystyczne</h2>
+<p>Analizując dane uzyskane z próby celem jest ich <strong>uogólnienie</strong> na całą populację. To uogólnienie
+nazywa się wnioskowaniem (<em>interferance</em>). Przypominamy, że <strong>wnioskujemy</strong>
+o wartości parametru w populacji posługując się <strong>estymatorem</strong>. W przypadku
+wnioskowania o średniej estymatorem jest średnia-z-próby.
+Dobrze by było wiedzieć jak bardzo wiarygodna jest ta wartość (zwana oceną parametru) uzyskana
+na podstawie konkretnego estymatora, inaczej mówiąc jak dużo mogliśmy się pomylić.</p>
+<p>Do oceny tej wiarygodności można użyć wariancji-średniej-z-próby (która nazywa się
+<strong>wariancją błędu</strong> albo <em>error variance</em>).
+Jeżeli wariancja błędu jest duża, to w pojedynczej próbie mogą wystąpić wartości
+znacznie różniące się od prawdziwej średniej; jeżeli jest mała to takie bardzo różniące
+się od prawdziwej średniej wartości mają małe szanse na zaistnienie. Do tego w przypadku rozkładu
+normalnego wiemy ze wariancja błędu jest równa <span class="math inline">\(s^2/n\)</span>
+(gdzie <span class="math inline">\(s^2\)</span> jest wariancją w populacji a <span class="math inline">\(n\)</span> wielkością próby.)</p>
+<p>W ramach wnioskowania stosowane są trzy metody (podejścia):</p>
+<ul>
+<li><p>estymacja punktowa,</p></li>
+<li><p>estymacja przedziałowa,</p></li>
+<li><p>testowanie hipotez.</p></li>
+</ul>
+<div id="estymacja-punktowa" class="section level3" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Estymacja punktowa</h3>
+<p>Szacujemy średnią (albo inny parametr) i tę wartość uznajemy za wartość prawdziwą;
+dokładność szacunku jest nieokreślona. Inaczej mówiąc wartość <strong>estymatora</strong>
+dla konkretnej próby przyjmujemy za ocenę parametru.</p>
+<p>Estymatorem punktowym średniej jest średnia z próby a estymatorem
+punktowym proporcji/ryzyka jest proporcja/ryzyko z próby.</p>
+</div>
+<div id="estymacja-przedziałowa" class="section level3" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> Estymacja przedziałowa</h3>
+<p>Nie można ustalić prawdopodobieństwa popełnienia
+błędu dla dokładnej wartości parametru (co wynika z właściwości matematycznych
+modelu), ale można dla dowolnego przedziału od–do.</p>
+<p>Czyli nie można ustalić, że z prawdopodobieństwem 95%
+oszacujemy wartość średnią czegoś jako 5,000000,
+ale można z prawdopodobieństwem 95% oszacować
+<strong>przedział</strong>, w którym znajdzie się średnia (przykładowo, że będzie to przedział 4,9–5,1).</p>
+<p>Estymacja przedziałowa to oszacowanie przedziału wartości od–do,
+który z zadanym z góry prawdopodobieństwem zawiera prawdziwą wartość parametru.</p>
+<p>Z góry wyznaczone prawdopodobieństwo nazywa się
+<strong>poziomem ufności</strong> (określa jak często mamy się NIE rąbnąć).</p>
+</div>
+<div id="testowanie-hipotez" class="section level3" number="3.5.3">
+<h3><span class="header-section-number">3.5.3</span> Testowanie hipotez</h3>
+<p>Większość analiz statystycznych polega na porównaniu. W wyniku
+tego porównania otrzymujemy liczbę. Załóżmy, że mamy dwie próby dotyczące wieku
+kandydatów na radnych do sejmików wojewódzkich z roku 2018 (średnia 46,1)
+oraz z roku 2014 (47,2). Różnica wynosi 1,1 lat i może być spowodowana błędem przypadkowym
+(tj. gdybyśmy wylosowali jeszcze raz dwie próby, to wynik byłby zupełnie odmienny np 46,9 vs 46,5)
+i/lub wynikać z tego, że faktycznie w roku 2014 kandydaci byli starsi.</p>
+<p>Formalnie stawiamy <strong>hipotezę</strong>, że różnica średnich wynosi zero. Jest to tzw. <strong>hipoteza zerowa</strong>. Niezbędne jest także postawienie <strong>hipotezy alternatywnej</strong>,
+którą może być proste zaprzeczenie zerowej.
+Zapisuje się to następująco (<span class="math inline">\(m_{14}\)</span>/<span class="math inline">\(m_{18}\)</span> oznacza odpowiednio średnie w latach 2014/2018):</p>
+<p><span class="math inline">\(H_0\)</span>: różnica średnich wieku wynosi zero (<span class="math inline">\(m_{14} = m_{18}\)</span>)</p>
+<p><span class="math inline">\(H_1\)</span>: różnica średnich wieku jest różna od zera (<span class="math inline">\(m_{14} \not= m_{18}\)</span>)</p>
+<p>Hipotezy sprawdzamy wykorzystując <strong>test statystyczny</strong> czyli zmienną losową
+której rozkład prawdopodobieństwa zależy (jest funkcją powiedziałby matematyk)
+od wartości testowanych parametrów (w tym przypadku <span class="math inline">\(m_{14}\)</span> oraz <span class="math inline">\(m_{18}\)</span>).
+Tę zmienną losową nazywa się <strong>statystyką testu</strong>.</p>
+<p>Nie jest chyba wielkim zaskoczeniem, że <strong>statystyką testu</strong> w teście różnicy średnich jest
+różnica średnich w próbie (poprawnie mówiąc różnica uwzględniająca liczebność próby
+oraz zmienność obu populacji). Całkiem <strong>zdroworozsądkowo</strong> możemy przyjąć, że duże różnice
+<strong>statystyki testu</strong> świadczą na rzecz
+hipotezy alternatywnej, natomiast małe na rzecz hipotezy zerowej.</p>
+<p>Duża różnica pomiędzy <strong>hipotezą</strong> a wynikiem z próby może wynikać z tego, że</p>
+<ol style="list-style-type: decimal">
+<li><p>Pechowo trafiła nam się nietypowa próba, który zdarza się rzadko (rozkład normalny).</p></li>
+<li><p>Hipoteza jest fałszywa, średnie mają inną wartość niż zakładamy w hipotezie zerowej.</p></li>
+</ol>
+<p>Statystyk zawsze wybierze drugą wersję. Pozostaje tylko ustalić (dla statystyka) co to jest rzadko?</p>
+<p>Rzadko to z prawdopodobieństwem mniejszym niż z góry ustalone prawdopodobieństwo
+otrzymania różnicy (zakładając, że hipoteza zerowa jest prawdziwa),
+którą otrzymaliśmy w próbie lub większej
+(coś jak założenie, że zrealizował się najlepszy z najgorszych scenariuszy).</p>
+<p>Przyjmijmy przykładowo, że prawdopodobieństwo wystąpienia różnicy 1,1 lat (i większej) oszacowane
+na podstawie odpowiedniego modelu matematycznego (rozkład normalny) wynosi 0,3
+co znaczy że coś takiego
+zdarza się względnie często – trzy razy na 10 pobranych prób.</p>
+<p>Załóżmy z kolei że, ta różnica wyniosła 3,2 lata. Prawdopodobieństwo
+wystąpienia takiej różnicy (i większej) wynosi 0,009 co znaczy że coś takiego
+zdarza się względnie rzadko – 9 razy na tysiąc prób.</p>
+<p>Przyjmując, że możemy się mylić 5 razy na 100 w pierwszym przypadku statystyk powie,
+że nie ma podstaw do odrzucenia hipotezy <span class="math inline">\(H_0\)</span>.
+Różnica 1,1 lat wynika z przypadku. W drugim wypadku
+statystyk powie, że hipoteza jest fałszywa, bo zdarzyło się coś co nie powinno się zdarzyć.</p>
+<p>Prawdopodobieństwo „graniczne” ustalamy z góry i
+nazywa się ono <strong>poziomem istotności</strong>. Określa ono jak często
+możemy się rąbnąć <strong>odrzucając hipotezę zerową, która jest prawdziwa</strong>.</p>
+<p>Ale jest jeszcze drugi przypadek popełnienia błędu:
+<strong>przyjmujemy hipotezę zerową, która jest fałszywa</strong>. W testach
+statystycznych nie określa się prawdopodobieństwa popełnienia tego błędu, a w związku z tym nie można
+<strong>przyjąć hipotezy zerowej</strong> (bo nie znamy ryzyka popełnienia błędu).</p>
+<p>W konsekwencji hipotezę zerową albo się odrzuca albo <strong>nie ma podstaw do odrzucenia</strong>.
+Wniosek cokolwiek niekonkluzywny, ale tak jest.</p>
+<p>Dlatego też często „opłaca się” tak postawić hipotezę zerową aby ją następnie odrzucić,
+bo taki rezultat jest bardziej konkretny.</p>
+</div>
+<div id="testy-nieparametryczne" class="section level3" number="3.5.4">
+<h3><span class="header-section-number">3.5.4</span> Testy nieparametryczne</h3>
+<p>Można testować hipotezy na temat wartości parametrów, ale można też testować
+przypuszczenia o charakterze mniej konkretnym. Na przykład, że dwie zmienne
+są niezależne (co to znaczy wyjaśniono w następnym rozdziale), albo
+że dwa rozkłady są podobne do siebie (rozkłady nie średnie).
+Takie hipotezy/testy określa się jako <strong>nieparametryczne</strong>.
+Przykładami są testy niezależności chi-kwadrat albo normalności
+Shapiro-Wilka (opisane w następnym rozdziale)</p>
+<p>Oczywiste, ale powtórzmy: przypuszczenia o charakterze nieparametrycznym
+możemy tylko testować (sprawdzać hipotezy);
+nie obliczamy wtedy ani ocen ani nie wyznaczamy przedziałów ufności.</p>
+</div>
+</div>
+<div id="słownik-terminów-które-warto-znać" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Słownik terminów które warto znać</h2>
+<p>Estymacja (punktowa, przedziałowa): szacowanie wartości parametru na podstawie próby.</p>
+<p>Estymator (nieobciążony, zgodny, efektywny): funkcja na wartościach próby która służy
+do oszacowania parametru.</p>
+<p>Hipoteza statystyczna: przypuszczenie dotyczące parametru lub rozkładu zmiennej.</p>
+<p>Ocena (parametru): konkretna wartość estymatora dla pewnej próby.</p>
+<p>Poziom istotności (testu; oznaczany jako <span class="math inline">\(\alpha\)</span>; zwykle 0,05): prawdopodobieństwo
+popełnienia błędu.</p>
+<p>Poziom ufności = prawdopodobieństwo, że przedział ufności zawiera prawdziwą wartość parametru;
+oznaczany jako <span class="math inline">\(1- \alpha\)</span>; zwykle 0,95.</p>
+<p>Rozkład (prawdopodobieństwa): przypisanie prawdopodobieństwa wartościom zmiennej losowej.</p>
+<p>Test statystyczny: metoda weryfikacji hipotezy statystycznej.</p>
+<p>Wnioskowanie statystyczne: wnioskowanie o całości na podstawie próby.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="analiza-struktury.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="analiza-korelacji.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

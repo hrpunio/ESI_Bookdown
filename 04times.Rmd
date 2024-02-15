@@ -1,11 +1,11 @@
-## Analiza szeregów czasowych
+# Analiza szeregów czasowych
 
 ## Pojęcia wstępne
 
-Przypomnijmy: **szereg czasowy** to zbiór pomiarów z kolejnych momentów/okresów czasu.
+**Szereg czasowy** to ciąg pomiarów z kolejnych momentów/okresów czasu.
 
 **Szereg czasowy** jest **szeregiem okresów** jeżeli dotyczy **strumieni** (zasobów).
-Przykładowo: liczba urodzeń żywych w powiecie kwidzyńskim w latach 2010--2019,
+Przykładowo liczba urodzeń żywych w powiecie kwidzyńskim w latach 2010--2019,
 to **szereg okresów**.
 W szczególności można dodać liczbę urodzeń
 w poszczególnych latach otrzymując łączną liczbę urodzonych w tym okresie.
@@ -21,7 +21,7 @@ W latach 2010--2019 w powiecie kwidzyńskim urodziło
 się 965 + 937 + ... + 833 = 8587 dzieci (średnio 858,7 rocznie).
 
 Albo **szereg czasowy** jest **szeregiem momentów** jeżeli dotyczy **stanów**.
-Przykładowo: liczba ludności powiatu kwidzyńskiego w latach 2010--2019 (stan na 31.12),
+Przykładowo liczba ludności powiatu kwidzyńskiego w latach 2010--2019 (stan na 31.12),
 to **szereg czasowy momentów**.
 
 ```
@@ -36,9 +36,11 @@ Ludność ogółem w powiecie kwidzyńskim w latach 2010--2019
 stan na *dzień-miesiąc* -- w przykładzie stan na ostatni dzień roku)
 Nie można sumować liczby mieszkańców z kolejnych lat, bo taka suma nie ma merytorycznie sensu.
 Można podać średnią (przeciętny stan) ludności jako wartość średniej chronologicznej:
-$$\bar x_{ch} = (\frac{1}{2} x_1 + x_2 + ... + x_{n-1} + \frac{1}{2} x_{n} ) / (n-1) = (83562/2 + 83734 + ... + 83291 + 83174/2)/9 = 83532,9$$
 
-Średnia roczna liczba ludności wpowiecie kwidzyńskim wyniosła zatem 83532,9 mieszkańców.
+$$\bar x_{ch} = (\frac{1}{2} x_1 + x_2 + ... + x_{n-1} +
+\frac{1}{2} x_{n} ) / (n-1) = (83562/2 + 83734 + ... + 83291 + 83174/2)/9 = 83532,9$$
+
+Średnia roczna liczba ludności w powiecie kwidzyńskim w latach 2010--2019 wyniosła zatem 83532,9 mieszkańców.
 
 Szeregi czasowe mogą różnić się częstotliwością (dzienna, tygodniowa, miesięczna, kwartalna, roczna).
 
@@ -47,13 +49,12 @@ Szeregi czasowe mogą różnić się częstotliwością (dzienna, tygodniowa, mi
 W przypadku szeregów czasowych celem wizualizacji jest: pokazanie poziomu
 zjawiska, jego dynamiki (spada, rośnie, zmienia się cyklicznie), porównanie poziomów/dynamiki wielu zmiennych.
 
-Do wizualizacji szeregów czasowych należy stosować wykresy punktowe,
-liniowe lub słupkowe.
+Do wizualizacji szeregów czasowych należy stosować wykresy liniowe, słupkowe lub punktowe,
 
-## Przykład 1: Zwiedzający Muzeum Zamkowe w Malborku
+### Przykład: Zwiedzający Muzeum Zamkowe w Malborku
 
-Plik `MZM.csv` zawiera liczę zwiedzających Muzeum Zamkowe w Malborku
-(w latach 2015-2019; dane miesięczne)
+Liczbę zwiedzających Muzeum Zamkowe w Malborku w latach 2015--2019 (dane miesięczne)
+przedstawiono na wykresach
 
 ```{r message=FALSE, echo=F, warning=FALSE, fig.width=10}
 dane <- read.csv(file= "MZM.csv", header=T, sep=";");
@@ -98,38 +99,93 @@ p4 <- ggplot(data=daneC, aes(x=as.Date(data), y=liczba, fill=kat)) +
 ggarrange(p1, p2, p3, p4, ncol = 2, nrow = 2)
 ```
 
-Wykres kropkowy zwykle się nie sprawdza. Jeżeli przebieg zjawiska nie jest uporządkowany albo wykres zawiera kilka zmiennych (w przykładzie dwie zmienne).
-to wynikiem jest chmura różnokolowych kropek w której trudno się połapać.
+Wykres kropkowy zwykle się nie sprawdza. Jeżeli przebieg zjawiska nie jest uporządkowany,
+albo wykres zawiera kilka zmiennych (w przykładzie dwie zmienne).
+to wynikiem jest chmura różnokolowych kropek, w której trudno się połapać.
 
 Wykres liniowy zwykle daje najlepsze rezultaty.
 
 Wykres słupkowy z półprzeźroczystymi słupkami też zwykle się nie sprawdza
-(w przykładzie jeden słupek zawsze zachodzi na drugi, co w rezultacie prowadzi do sytuacji, że turkusowego koloru w ogóle nie ma na wykresie)
+(w przykładzie jeden słupek zawsze zachodzi na drugi, co w rezultacie prowadzi do sytuacji,
+że turkusowego koloru w ogóle nie ma na wykresie)
 
 Wykres słupkowy ze słupkami przylegającymi do siebie (grupowany) jest dobrą alternatywą dla wykresu liniowego.
 
-## Przykład 2: Sprzedaż gazet w Polsce
 
-Związek Kontroli Dystrybucji Prasy (cf https://pl.wikipedia.org/wiki/Zwi%C4%85zek_Kontroli_Dystrybucji_Prasy)
-publikuje dane nt sprzedaży prasy w Polsce (cf https://www.zkdp.pl/).
-Plik `newspaper_sales_EF.csv` zawiera dane nt. miesięcznej sprzedaży
-największych polskich dzienników w latach 2015--2019.
+## Przyrosty
 
-## Przykład 3: Spożycie mięsa
+Oznaczmy wartość zmiennej $Y$ w okresie $t$ jako $y_t$ (mówi się okres badany)
+oraz wartość zmiennej $Y$ w okresie $0$ jako $y_0$ (okres podstawowy).
 
-[Oddzielny plik]
+Przyrost absolutny to po prostu $y_t - y_0$. Jeżeli obliczamy przyrosty dla wielu okresów, to można porównywać
+zawsze do jednego okresu/momentu:
 
-## Przykład 4: https://ourworldindata.org/
+$$y_2 - y_1, y_3 - y_1, \ldots, y_{n-1} - y_1, y_{n} - y_1$$
 
-## Analiza parametryczna
+lub dla poprzedniego okresu/momentu
 
-Wskaźniki dynamiki (indeksy): określają względną zmianę wartości szeregów czasowych (popularny procent zmiany). Jeżeli
-wartość szeregu w okresie $t$ oznaczymy jako $y_t$ a w okresie przyjętym za podstawę porównań jako $y_0$, to
-wzór na indeks może być zapisany jako $y_t/y_0$.
+$$y_2 - y_1, y_3 - y_2, \ldots, y_{n-1} - y_{n-2}, y_{n} - y_{n-1}$$
+
+W pierwszym przypadku mówimy o przyrostach jednopodstawowych, w drugim zaś o przyrostach łańcuchowych. Zwróćmy
+uwagę, że podstawa nie musi być równa pierwszej wartości. Może to być np. wartość ostatnia lub środkowa:
+
+$$y_1 - y_n, y_2 - y_n, \ldots, y_{n-2} - y_n, y_{n-1} - y_n$$
+
+Interpretacja: o ile wzrosła/spadła wielkość zjawiska w okresie badanym w porównaniu do podstawowego
+w jednostkach zmiennej $Y$ oczywiście.
+
+Przyrost względny to $(y_t - y_0)/y_0$  Jeżeli obliczamy przyrosty dla wielu okresów, to podobnie jak
+przyrosty absolutne możemy się posługiwać  indeksami jednopodstawowymi lub łańcuchowymi.
+
+Przyrost względny zwykle wyrażone są w procentach jeżeli $y_t = 115$ a $y_0 = 100$, to
+$(y_t - y_0)/y_0 \cdot 100 =115 $. Zjawisko ma o 15% wyższy poziom w roku $t$.
+
+Wskaźniki dynamiki (indeksy): określają względną zmianę wartości
+szeregów czasowych (popularny procent zmiany), czyli $y_t/y_0$.
 Jeżeli podstawą porównań jest okres poprzedni $y_t/y_{t-1}$ to indeks nazywany jest **łańcuchowym**, jeżeli
 podstawa porównań jest stała, tj. $y_t/y_{c}$, to indeks nazywany jest **jednopodstawowy**.
 
+Indeks zwykle wyrażone są w procentach jeżeli $y_t = 115$ a $y_0 = 100$, to
+$y_t/y_0 \cdot 100 =15 $. Zjawisko ma o 15% wyższy poziom w roku $t$.
+
+
+Używamy średniej geometrycznej do obliczenia średniego tempa zmian zjawiska w czasie:
+
+$$\bar y_g = \sqrt[n-1]{y_n/y_1}$$
+
+
+
+
 Przykład: Zwiedzający Muzeum Zamkowe w Malborku
+
+
+## Indeksy agregatowe
+
+Jeżeli celem jest porównanie wielu różnych dóbr należy znaleść wspólny mianownik, którym jest zwykle
+cena albo koszty. Załóżmy że jest to cena. Dysponujemy informacją na temat wielkości sprzedaży
+pewnej grupy $i$ dóbr w okresie $1$, tj. $q_{1i}$ oraz w okresie $0$, tj. $q_{0i}$.
+Dysponujemy także informacją na temat cen tych 
+ $i$ dóbr w okresie $1$, tj. $p_{1i}$ oraz w okresie $0$, tj. $p_{0i}$.
+
+Agregatowy indeks wartości jest definiowany jako:
+
+$$I_w = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{0i}}
+
+Indeks ten określa jak widać zmianę względną wartości grupy towarów w okresie $1$ w porówaniu
+do okresu $0$. 
+
+Można też szacować wpływ zmiany cen i ilości towarów oddzielnie stosując następujące formuły
+
+agregatowy indeks ilości Laspeyresa: $I^L_q = \frac{\sum_i q_{1i} p_{0i}}{ \sum_i q_{0i} p_{0i}}$
+
+agregatowy indeks ceny Laspeyresa: $I^L_p = \frac{\sum_i q_{0i} p_{1i}}{ \sum_i q_{0i} p_{0i}}$
+
+agregatowy indeks ilości Paaschego: $I^P_q = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{1i}}$
+
+agregatowy indeks ceny Paaschego: $I^P_p = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{1i}}$
+
+Interpretacja: przy przyjęciu poziomu cen z okresu $x$ ceny/ilości zmieniły się o $y$ procent.
+Co jest $x$em zależy od przyjętej formuły standaryzacyjnej.
 
 ## Dekompozycja szeregów czasowych
 
@@ -237,36 +293,4 @@ wykładniczego za pomocą arkusza LibreOffice (który polecam) służą funkcje 
 (a dalej al
 
 oraz oszacowania wskaźników sezonowości można 
-
-## Analiza korelacji
-
-## Pojęcia wstępne
-
-## Wykresy
-
-Zależność pomiędzy uzwiązkowieniem (liczonym jako udział płac związkowców w całości płac)
-a wielkością GDP (na głowę, czyli per capita):
-
-```{r message=FALSE, echo=F, warning=FALSE}
-d <- read.csv("union_density_and_gdp.csv", sep = ';',  header=T, na.string="NA");
-
-## tu.density = ratio of  wage and salary earners
-## that are trade union members, divided by the total number of wage and salary earners:
-## gdppc = GDP per capita
-ggplot(d, aes(d$tu.density,d$gdppc)) + geom_point() +
-  geom_text(aes(label=d$iso),size=2.0, vjust=-0.35)  + xlab("TU density (%)") + ylab("GDPpc (tys USD)") +
-  scale_colour_discrete(name="") +
-  geom_smooth(method=lm,se=T, size=2)
-
-lm <- lm(data=d, gdppc ~ tu.density ); 
-##summary(lm)
-```
-
-## Analiza parametryczna
-
-Współczynnik korelacji
-
-## Wnioskowanie statystyczne
-
-[...]
 

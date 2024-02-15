@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Wizualizacja danych i wykresy | Wprowadzenie do statystyki dla ekonomistów</title>
+  <meta name="description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Wizualizacja danych i wykresy | Wprowadzenie do statystyki dla ekonomistów" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Wizualizacja danych i wykresy | Wprowadzenie do statystyki dla ekonomistów" />
+  
+  <meta name="twitter:description" content="(c) Tomasz Przechlewski / CC-BY license" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="przedmiot-metody-i-organizacja-badań-statystycznych.html"/>
+<link rel="next" href="analiza-parametryczna.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-metody-i-organizacja-badań-statystycznych" id="toc-przedmiot-metody-i-organizacja-badań-statystycznych"><span class="toc-section-number">1</span> Przedmiot, metody i organizacja badań statystycznych</a>
+<ul>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-statystyki" id="toc-przedmiot-statystyki"><span class="toc-section-number">1.1</span> Przedmiot statystyki</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#pomiar" id="toc-pomiar"><span class="toc-section-number">1.2</span> Pomiar</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#rodzaje-badań-statystycznych" id="toc-rodzaje-badań-statystycznych"><span class="toc-section-number">1.3</span> Rodzaje badań statystycznych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#organizacja-badań-statystycznych" id="toc-organizacja-badań-statystycznych"><span class="toc-section-number">1.4</span> Organizacja badań statystycznych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#opracowanie-danych" id="toc-opracowanie-danych"><span class="toc-section-number">1.5</span> Opracowanie danych</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#analiza-struktury" id="toc-analiza-struktury"><span class="toc-section-number">1.6</span> Analiza struktury</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#tablice-statystyczne" id="toc-tablice-statystyczne"><span class="toc-section-number">1.7</span> Tablice statystyczne</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#rozkład-empiryczny" id="toc-rozkład-empiryczny"><span class="toc-section-number">1.8</span> Rozkład empiryczny</a></li>
+<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#rozkład-normalny" id="toc-rozkład-normalny"><span class="toc-section-number">1.9</span> Rozkład normalny</a></li>
+</ul></li>
+<li><a href="wizualizacja-danych-i-wykresy.html#wizualizacja-danych-i-wykresy" id="toc-wizualizacja-danych-i-wykresy"><span class="toc-section-number">2</span> Wizualizacja danych i wykresy</a>
+<ul>
+<li><a href="wizualizacja-danych-i-wykresy.html#wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej" id="toc-wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej"><span class="toc-section-number">2.1</span> Wykresy przedstawiające rozkład wartości jednej zmiennej</a></li>
+<li><a href="wizualizacja-danych-i-wykresy.html#histogram" id="toc-histogram"><span class="toc-section-number">2.2</span> Histogram</a></li>
+<li><a href="wizualizacja-danych-i-wykresy.html#wykres-punktowy" id="toc-wykres-punktowy"><span class="toc-section-number">2.3</span> Wykres punktowy</a></li>
+<li><a href="wizualizacja-danych-i-wykresy.html#porównanie-wielu-rozkładów" id="toc-porównanie-wielu-rozkładów"><span class="toc-section-number">2.4</span> Porównanie wielu rozkładów</a></li>
+<li><a href="wizualizacja-danych-i-wykresy.html#wykresy-kołowe" id="toc-wykresy-kołowe"><span class="toc-section-number">2.5</span> Wykresy kołowe</a></li>
+<li><a href="wizualizacja-danych-i-wykresy.html#wykres-pudełkowy" id="toc-wykres-pudełkowy"><span class="toc-section-number">2.6</span> Wykres pudełkowy</a></li>
+<li><a href="wizualizacja-danych-i-wykresy.html#wykres-skrzypcowy-wariant-wykresu-pudełkowego" id="toc-wykres-skrzypcowy-wariant-wykresu-pudełkowego"><span class="toc-section-number">2.7</span> Wykres skrzypcowy (wariant wykresu pudełkowego)</a></li>
+<li><a href="wizualizacja-danych-i-wykresy.html#przykład-zaufanie-do-politykow" id="toc-przykład-zaufanie-do-politykow"><span class="toc-section-number">2.8</span> Przykład: Zaufanie do Politykow</a></li>
+<li><a href="wizualizacja-danych-i-wykresy.html#przykład-marimekko-mosaic-chart" id="toc-przykład-marimekko-mosaic-chart"><span class="toc-section-number">2.9</span> Przykład: Marimekko mosaic chart</a></li>
+</ul></li>
+<li><a href="analiza-parametryczna.html#analiza-parametryczna" id="toc-analiza-parametryczna"><span class="toc-section-number">3</span> Analiza parametryczna</a>
+<ul>
+<li><a href="analiza-parametryczna.html#miary-położenia" id="toc-miary-położenia"><span class="toc-section-number">3.1</span> Miary położenia</a></li>
+<li><a href="analiza-parametryczna.html#miary-zmienności" id="toc-miary-zmienności"><span class="toc-section-number">3.2</span> Miary zmienności</a></li>
+<li><a href="analiza-parametryczna.html#miary-asymetrii" id="toc-miary-asymetrii"><span class="toc-section-number">3.3</span> Miary asymetrii</a></li>
+<li><a href="analiza-parametryczna.html#miary-koncentracji" id="toc-miary-koncentracji"><span class="toc-section-number">3.4</span> Miary koncentracji</a></li>
+</ul></li>
+<li><a href="interference.html#interference" id="toc-interference"><span class="toc-section-number">4</span> Łagodne wprowadzenie do wnioskowania statystycznego</a>
+<ul>
+<li><a href="interference.html#masa-ciała-uczestników-pś-w-rugby" id="toc-masa-ciała-uczestników-pś-w-rugby"><span class="toc-section-number">4.1</span> Masa ciała uczestników PŚ w rugby</a></li>
+<li><a href="interference.html#wiek-kandydatów-na-radnych" id="toc-wiek-kandydatów-na-radnych"><span class="toc-section-number">4.2</span> Wiek kandydatów na radnych</a></li>
+<li><a href="interference.html#rozkład-normalny-1" id="toc-rozkład-normalny-1"><span class="toc-section-number">4.3</span> Rozkład normalny</a></li>
+<li><a href="interference.html#odsetek-kobiet-wśród-kandydatów-na-radnych" id="toc-odsetek-kobiet-wśród-kandydatów-na-radnych"><span class="toc-section-number">4.4</span> Odsetek kobiet wśród kandydatów na radnych</a></li>
+<li><a href="interference.html#wnioskowanie-statystyczne" id="toc-wnioskowanie-statystyczne"><span class="toc-section-number">4.5</span> Wnioskowanie statystyczne</a>
+<ul>
+<li><a href="interference.html#estymacja-punktowa" id="toc-estymacja-punktowa"><span class="toc-section-number">4.5.1</span> Estymacja punktowa</a></li>
+<li><a href="interference.html#estymacja-przedziałowa" id="toc-estymacja-przedziałowa"><span class="toc-section-number">4.5.2</span> Estymacja przedziałowa</a></li>
+<li><a href="interference.html#testowanie-hipotez" id="toc-testowanie-hipotez"><span class="toc-section-number">4.5.3</span> Testowanie hipotez</a></li>
+<li><a href="interference.html#testy-nieparametryczne" id="toc-testy-nieparametryczne"><span class="toc-section-number">4.5.4</span> Testy nieparametryczne</a></li>
+</ul></li>
+<li><a href="interference.html#statystyk-carl-pearson" id="toc-statystyk-carl-pearson"><span class="toc-section-number">4.6</span> Statystyk Carl Pearson</a></li>
+<li><a href="interference.html#słownik-terminów-które-warto-znać" id="toc-słownik-terminów-które-warto-znać"><span class="toc-section-number">4.7</span> Słownik terminów które warto znać</a></li>
+<li><a href="interference.html#przykłady-analizy-parametrycznej" id="toc-przykłady-analizy-parametrycznej"><span class="toc-section-number">4.8</span> Przykłady analizy parametrycznej</a></li>
+<li><a href="interference.html#analiza-szeregów-czasowych" id="toc-analiza-szeregów-czasowych"><span class="toc-section-number">4.9</span> Analiza szeregów czasowych</a></li>
+<li><a href="interference.html#pojęcia-wstępne" id="toc-pojęcia-wstępne"><span class="toc-section-number">4.10</span> Pojęcia wstępne</a></li>
+<li><a href="interference.html#wykresy" id="toc-wykresy"><span class="toc-section-number">4.11</span> Wykresy</a></li>
+<li><a href="interference.html#przykład-1-zwiedzający-muzeum-zamkowe-w-malborku" id="toc-przykład-1-zwiedzający-muzeum-zamkowe-w-malborku"><span class="toc-section-number">4.12</span> Przykład 1: Zwiedzający Muzeum Zamkowe w Malborku</a></li>
+<li><a href="interference.html#przykład-2-sprzedaż-gazet-w-polsce" id="toc-przykład-2-sprzedaż-gazet-w-polsce"><span class="toc-section-number">4.13</span> Przykład 2: Sprzedaż gazet w Polsce</a></li>
+<li><a href="interference.html#przykład-3-spożycie-mięsa" id="toc-przykład-3-spożycie-mięsa"><span class="toc-section-number">4.14</span> Przykład 3: Spożycie mięsa</a></li>
+<li><a href="interference.html#przykład-4-httpsourworldindata.org" id="toc-przykład-4-httpsourworldindata.org"><span class="toc-section-number">4.15</span> Przykład 4: https://ourworldindata.org/</a></li>
+<li><a href="interference.html#analiza-parametryczna-1" id="toc-analiza-parametryczna-1"><span class="toc-section-number">4.16</span> Analiza parametryczna</a></li>
+<li><a href="interference.html#dekompozycja-szeregów-czasowych" id="toc-dekompozycja-szeregów-czasowych"><span class="toc-section-number">4.17</span> Dekompozycja szeregów czasowych</a></li>
+<li><a href="interference.html#wygładzanie-za-pomocą-średniej-ruchomej" id="toc-wygładzanie-za-pomocą-średniej-ruchomej"><span class="toc-section-number">4.18</span> Wygładzanie za pomocą średniej ruchomej</a></li>
+<li><a href="interference.html#liniowa-funkcja-trendu" id="toc-liniowa-funkcja-trendu"><span class="toc-section-number">4.19</span> Liniowa funkcja trendu</a></li>
+<li><a href="interference.html#wygładzanie-wykładnicze" id="toc-wygładzanie-wykładnicze"><span class="toc-section-number">4.20</span> Wygładzanie wykładnicze</a></li>
+<li><a href="interference.html#oszacowanie-dokładności-modelu" id="toc-oszacowanie-dokładności-modelu"><span class="toc-section-number">4.21</span> Oszacowanie dokładności modelu</a></li>
+<li><a href="interference.html#szacowanie-wskaźników-sezonowości" id="toc-szacowanie-wskaźników-sezonowości"><span class="toc-section-number">4.22</span> Szacowanie wskaźników sezonowości</a></li>
+<li><a href="interference.html#analiza-korelacji" id="toc-analiza-korelacji"><span class="toc-section-number">4.23</span> Analiza korelacji</a></li>
+<li><a href="interference.html#pojęcia-wstępne-1" id="toc-pojęcia-wstępne-1"><span class="toc-section-number">4.24</span> Pojęcia wstępne</a></li>
+<li><a href="interference.html#wykresy-1" id="toc-wykresy-1"><span class="toc-section-number">4.25</span> Wykresy</a></li>
+<li><a href="interference.html#analiza-parametryczna-2" id="toc-analiza-parametryczna-2"><span class="toc-section-number">4.26</span> Analiza parametryczna</a></li>
+<li><a href="interference.html#wnioskowanie-statystyczne-1" id="toc-wnioskowanie-statystyczne-1"><span class="toc-section-number">4.27</span> Wnioskowanie statystyczne</a></li>
+<li><a href="interference.html#literatura" id="toc-literatura"><span class="toc-section-number">4.28</span> Literatura</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wprowadzenie do statystyki dla ekonomistów</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="wizualizacja-danych-i-wykresy" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Wizualizacja danych i wykresy</h1>
+<p><strong>Wykresy statystyczne</strong> są graficzną formą prezentacji materiału
+statystycznego, są mniej precyzyjne i szczegółowe niż tablice,
+natomiast bardziej sugestywne.</p>
+<p>Rodzaje wykresów (podział ze względu na zastosowanie):</p>
+<p><strong>Jedna cecha</strong></p>
+<p><strong>szeregi strukturalne</strong>: punktowe, słupkowe, histogram, pudełkowe, kołowe;
+<strong>szeregi czasowe</strong>: liniowe, słupkowe, punktowe;
+<strong>szeregi przestrzenne</strong>: kartogramy.</p>
+<p><strong>Dwie cechy</strong></p>
+<p>wykres rozrzutu (scatter-plot), wykres liniowy liniowy</p>
+<div id="wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Wykresy przedstawiające rozkład wartości jednej zmiennej</h2>
+<p>Celem jest pokazanie rozkładu wartości cechy w populacji: jakie wartości występują
+często a jakie rzadko, jak bardzo wartości różnią się między sobą. Jak różnią
+się rozkłady dla różnych ale logicznie powiązanych populacji
+(np rozkład czegoś-tam w kraju A i B albo w roku X, Y i Z).
+Do tego celu stosuje się: <strong>histogram</strong> (albo wykres słupkowy dla skal nominalnych),
+<strong>wykres punktowy</strong>, <strong>wykres pudełkowy</strong> oraz <strong>kołowy</strong>. Omówimy je na przykładach</p>
+</div>
+<div id="histogram" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Histogram</h2>
+<p>Współczynnik dzietności – przeciętna liczba urodzonych dzieci przypadających na jedną kobietę w wieku rozrodczym (15–49 lat). Przyjmuje się, iż FR między 2,10–2,15 zapewnia zastępowalność pokoleń.</p>
+<p>Plik <code>fertility_rate_2003_2018.csv</code> (źródło: <a href="https://ourworldindata.org/grapher/fertility-rate-complete-gapminder" class="uri">https://ourworldindata.org/grapher/fertility-rate-complete-gapminder</a>) zawiera wartości współczynnika w roku 2003 oraz 2018 (czyli po 15 latach) dla 202 krajów.</p>
+<p>Do oceny rozkładu wartości zmiennej służy <strong>histogram</strong> (por <a href="https://pl.wikipedia.org/wiki/Histogram" class="uri">https://pl.wikipedia.org/wiki/Histogram</a>). Jeżeli
+umieścimy obok siebie dwa (lub więcej) histogramy, możemy w ten sposób
+porównać (wizualnie) dwa rozkłady:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="960" /></p>
+<p>Kształt histogramu zależy od wyboru rozpiętości przedziału; im przedział węższy
+tym więcej słupków (ale ich wysokość będzie mniejsza). Poniżej przedstawiono
+ten sam rozkład dla rozpiętości przedziału równej odpowiednio 0,1, 0,25 oraz 0,5:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" width="960" /></p>
+<p>Dlatego jeżeli porównujemy różne rozkłady za pomocą umieszczonych obok siebie
+histogramów to powinny one mieć: tę samą rozpiętość przedziałów, te same skale na obu osiach.</p>
+<p>Istnieją wzory na optymalną liczbę przedziałów ale nalepszą metodą jest metoda
+prób i błędów.</p>
+</div>
+<div id="wykres-punktowy" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Wykres punktowy</h2>
+<p>Czasami jeżeli liczebność populacji nie jest za duża można spróbować
+przedstawić rozkład cechy na wykresie punktowym:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="porównanie-wielu-rozkładów" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Porównanie wielu rozkładów</h2>
+<p>Jeżeli używamy histogramu to w zasadzie jedyną opcją jest wykreślenie każdego
+histogramu oddzielnie a następnie umieszczenie ich obok siebie. Wyjątkowo
+można spróbować wykreślić dwa na jednym wykresie (jeżeli program, którym się posługujemy
+umożliwia rysowanie kolorem przeźroczystym):</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="960" /></p>
+<p>Łącznie na jednym wykresie (wykres punktowy):</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="wykresy-kołowe" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Wykresy kołowe</h2>
+<p>Dane pochodzą z bazy danych Eurostatu są dostępne pod adresem
+<a href="https://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=tour_occ_nim&amp;lang=en" class="uri">https://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=tour_occ_nim&amp;lang=en</a></p>
+<p>Nights spent at tourist accommodation establishments by non residents (id tabeli: <code>tour_occ_ninat</code>) czyli po polsku
+<em>Noclegi udzielone w turystycznych obiektach noclegowych</em> (<a href="https://ec.europa.eu/eurostat/web/products-datasets/-/tin00175" class="uri">https://ec.europa.eu/eurostat/web/products-datasets/-/tin00175</a>;
+<a href="https://stat.gov.pl/metainformacje/slownik-pojec/pojecia-stosowane-w-statystyce-publicznej/1233,pojecie.html" class="uri">https://stat.gov.pl/metainformacje/slownik-pojec/pojecia-stosowane-w-statystyce-publicznej/1233,pojecie.html</a>;
+<a href="https://stat.gov.pl/en/metainformations/glossary/terms-used-in-official-statistics/1233,term.html" class="uri">https://stat.gov.pl/en/metainformations/glossary/terms-used-in-official-statistics/1233,term.html</a>)
+Poniższy rysunek przedstawia typową tabelę (wielowymarową) z danymi
+dotyczącymi wykorzystania miejsc noclegowych w krajach UE.</p>
+<p>Nagłówek tabeli:
+<strong>TIME</strong>, <strong>GEO</strong>, <strong>Unit of measure</strong>, <strong>Classification of economic activities</strong>,
+<strong>Country of residencie</strong> definiuje cechy stałe zbiorowści statystycznej. Dla każdej cechy zwykle możliwy jest wybór z kilku dostępnych wariantów. Tabela na rysunku przedstawia dane roczne,
+dla krajów UE, dotyczące liczby noclegów w <em>hotels, holidays and other short-stay accomodations,
+camping grounds, recreational vehicle parks and trailes parks</em>
+(Hotele, Obiekty noclegowe turystyczne i miejsca krótkotrwałego zakwaterowania,
+Pola kempingowe, włączając pola dla pojazdów kempingowych i pola namiotowe;
+<a href="https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm" class="uri">https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm</a>). Skrót NACE oznacza
+klasyfikację działalności gospodarczej, która służy do określenia jakie miejsca noclegowe
+są uważane za <strong>turystyczne</strong> (bo to nie jest oczywiste).</p>
+<p><img src="nights_spent_2017.png" /></p>
+<p>Liczbę noclegów dla 10 najczęściej odwiedzanych przez turystów krajów (oraz dla reszty
+oznaczonej jako Rest28)
+przestawiono na <strong>wykresie kołowym</strong> (<a href="https://pl.wikipedia.org/wiki/Diagram_ko%C5%82owy" class="uri">https://pl.wikipedia.org/wiki/Diagram_ko%C5%82owy</a>).
+Wielkość każdego wycinka koła (pole tego wycinka albo, kąt) jest proporcjonalna do liczby noclegów w danym kraju. Stąd wykres kołowy wizualizuje <strong>udział</strong> (popularnie zwany procentem) każdego wycinka w całości. Możemy dodać etykiety zawierające albo ów udział (prawy wariant na
+przykładzie poniżej); albo oryginalne liczby.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>Wykres pokazuje dobitnie wszystkie wady wykresu kołowego: niemożliwe jest określnie
+różnic pomiędzy wycinkami, chybna że różnice te są ogromne. Np niemożliwe jest ustalenie
+czy jak bardzo różni się udział w UK i Francji. Albo czy liczba noclewgów w Austrii
+jest mniejsza/większa/równa niż w Niemczech, itd… Jeżeli dodamy liczby to sprawa się
+wyjaśni (prawy wariant) tylko po co wtedy rysunek?</p>
+<p>Znacznie bardziej efektywne są wykresy punktowe (lewy) lub słupkowe (prawy):</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>Dużo lepiej widać różnice pomiędzy krajami. Niepotrzebna jest legenda. Nazwy krajów
+są na osi OY, liczba noclegów na osi OX.
+Na wykresie kołowym albo w wycinku mieściła się nazwa kraju albo procent
+nie było miejsca dla obu, stąd potrzebna była legenda (utrudniająca interpretację)</p>
+<p>Wniosek: każdy wykres kołowy można i TRZEBA zamienić na słupkowy. Wykresów kołych
+nie należy stosować bo są znacznie gorszym sposobem wizualizacji
+informacji niż słupkowe.</p>
+</div>
+<div id="wykres-pudełkowy" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Wykres pudełkowy</h2>
+<p>Uwaga: poniższy opis <strong>wykresu pudełkowego</strong> zawiera pojęcia jeszcze nie wyjaśnione (kwartyle, mediana, rozproszenie i IQR), które opisano dokładanie dalej,
+w punktach miary położenia/miary zmienności.</p>
+<p>Konstrukcja pudełka na wykresie:
+górny/dolny bok równy kwartylom, a linia pozioma w środku pudełka równa medianie;
+linie pionowe (zwane wąsami) mają długość równą Q1 minus 1,5 IQR oraz Q3 plus IQR (Q1, Q3 to kwartyle, IQR to odstęp między kwartlowy;
+co to jest kwartyl, mediana i odstęp międzykwartylowy jest wyjaśnione poniżej);
+Linia pozioma w połowie pudełka określa przeciętny poziom zjawiska; wysokość pudełka/wąsów
+określa zmienność (im większe wąsy/wysokość tym większa zmienność).
+Obserwacje nietypowe (czyli takie których wartość jest albo mniejsza od <span class="math inline">\(Q1 - 1,5IQR\)</span>
+albo większa od <span class="math inline">\(Q3 + 1,5IQR\)</span>)są zaznaczana
+indywidualnie jako kropki nad/pod wąsami.</p>
+<p><img src="box-plot-0.jpg" /></p>
+<p>Ze strony komiteu Noblowskiego pobrano listę Laureatów Nagrody Nobla
+Wiek laureatów nagrody Nobla w momencie przyznania
+nagrody (ponad 900 laureatów; plik <code>nobel_laureates3.csv</code>):</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p>Najstarsi przeciętnie: ekonomia; najmłodsi przeciętnie: fizyka. Najmniejsze zróżnicowanie:
+ekonomia; największe zróżnicowanie: fizyka.
+Nie ma szans na nobla (koniec dolnego wąsa) przed pięćdziesiątką
+w ekonomii,
+przed 40-tką w literaturze, przed trzydziestką w chemii, medycynie i nagrodzie pokojowej.</p>
+<p>Wykres niezwykle użyteczny do porównywania różnic w rozkładach wartości cechy.</p>
+</div>
+<div id="wykres-skrzypcowy-wariant-wykresu-pudełkowego" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Wykres skrzypcowy (wariant wykresu pudełkowego)</h2>
+<p>In general, <strong>violin plots</strong> are a method of plotting numeric data and can be considered a combination of the box plot with a <strong>kernel density plot</strong>. In the violin plot, we can find the same information as in the box plots:
+– median; – interquartile range;
+– the lower/upper adjacent values (defined as first quartile — 1.5 IQR
+and third quartile + 1.5 IQR respectively.)</p>
+<p>Jako ilustrację przedstawmy rozkłady elektrowni (<a href="http://datasets.wri.org/dataset/globalpowerplantdatabase" class="uri">http://datasets.wri.org/dataset/globalpowerplantdatabase</a>) w podziale
+na wykorzystywane paliwo:
+numlearnych, solarnych, na biomasę oraz węglowych.</p>
+<p>Nukleane (rozkład w miarę symetryczny/jednomodalny.)
+Zwróćmy uwagę, że wykres skrzypcowy zachowuje kształt
+dzwonu tyle, że podwojonego: dwa szpiczaste końce i wybrzuszenie
+w środkowej części.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>Solarne (rozkład skrajnie asymetryczny)
+Wykres skrzypcowy dla wykresu asymetrycznego ma tylko jeden szpic.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>Na biomasę (także asymetryczny ale o asymetrii mniejszej niż poprzedni)</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>Węglowe (wielomodalny/asymetria lewostronna)
+Kształt wykresu skrzypcowego dla rozkładu wielomodalnego jest pofalowany.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p>Współczynnik dzietności w latach 2003/2018 oraz współczynniki dzietności na
+poszczególnych kontynentach (w roku 2018)</p>
+<p><img src="PPViolinCCY.png" style="width:80.0%" /></p>
+<p><img src="PPViolinCC.png" style="width:80.0%" /></p>
+</div>
+<div id="przykład-zaufanie-do-politykow" class="section level2" number="2.8">
+<h2><span class="header-section-number">2.8</span> Przykład: Zaufanie do Politykow</h2>
+<p>CBOS realizuje co najmniej 12 razy w roku sondaż “Aktualne problemy i wydarzenia”, na reprezentatywnej ok. 1000-osobowej próbie dorosłych mieszkańców Polski. (cf <a href="https://www.cbos.pl/PL/trendy/trendy.php" class="uri">https://www.cbos.pl/PL/trendy/trendy.php</a>?)</p>
+<p>Częścią tych badań jest badanie zaufania do Polityków. Które to zaufanie
+jest mierzone w taki sposób, że respondenci odpowiadają na jedno pytanie,
+które brzmi: <em>Ludzie aktywni publicznie – swoim zachowaniem, tym, co mówią, do czego dążą – budzą mniejsze lub większe
+zaufanie. Przedstawimy teraz Panu(i) listę osób aktywnych w życiu politycznym naszego kraju. O każdej z nich proszę powiedzieć,
+w jakim stopniu budzi ona Pana(i) zaufanie. Odpowiadając, proszę posłużyć się skalą, na której –5 oznacza, że osoba ta budzi
+w Panu(i) głęboką nieufność, 0 – że jest ona Panu(i) obojętna, a +5 oznacza, że ma Pan(i) do tej osoby pełne zaufanie. Oczywiście
+może się Pan(i) posługiwać innymi ocenami tej skali. Jeżeli kogoś Pan(i) nie zna, proszę powiedzieć</em></p>
+<p>Odsetki badanych wyrażających zaufanie – wskazania punktów od +1 do +5, nieufność – wskazania punktów od –1 do –5,
+obojętność – 0</p>
+<p>W zestawieniu CBOS pomija odpowiedzi „trudno powiedzieć”
+i odmowy odpowiedzi.</p>
+<p>Analiza CBOS (przykład raportu jest
+w pliku <code>zaufanie_do_politykow_CBOS_2019.pdf</code>) posługuje się
+skumulowanym wykresem słupkowym (<em>stacked barchart</em>):</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-25-1.png" width="960" /></p>
+<p>Skumulowany wykres słupkowy jest w zasadzie jest wykresem kołowym,
+tyle że zamiast kółek są prostokąty (cf <a href="https://eagereyes.org/techniques/stacked-bars-are-the-worst" class="uri">https://eagereyes.org/techniques/stacked-bars-are-the-worst</a>).
+Można łatwo porównywać
+łączną wartość albo wartość przedstawioną za pomocą pierwszego słupka
+(bo mają wspólną linię dla wartości zero, <em>common baseline</em>).
+Pozostałe słupki nie są oparte o wspólną linię zerowej wartości i w związku
+z tym porównanie ich wartości jest trudne.
+W przykładzie każdy słupek ma 3 kategorie a już jest trudno
+wskazać czy nieufność do Pawła Kukiza jest większa czy mniejsza od nieufności
+do Roberta Biedronia. Gorzej wykres sugeruje, że nieufność do Biedronia
+jest większa niż do Kukiza, podczas gdy w rzeczywistości jest odwrotnie.
+Podobnie trudno jest określić dla konkretnego polityka czy zaufanie jest większe od nieufności albo o ile jest większe (lub mniejsze)..</p>
+<p>Można trochę poprawić
+wykres jeżeli wartości podzielimy na ujemne/dodatnie
+(wykres po prawej). Można ale po co? Najlepiej po prostu wykreślić
+oddzielne wykresy słupkowe dla każdej kategorii czyli wykreślić
+słupki z każdej kategorii oddzielniem na wspólnej linii zera:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Wykres kołowy kolejny raz jest najmniej przydatny. Niemożliwe albo
+bardzo trudne jest zorientowanie się w różnicach odsetka zaufania/nieufności/nieznajmości dla poszczególnych kandydatów:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="960" /></p>
+<p>Można spróbować połączyć wykres punktowy z wykresem słupkowym:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Patrząc na słupki można ocenić nieznajomość;
+patrząc na kropki zaufanie/nieufność. W porówaniu do skumulowanego
+wykresu słupkowego zarówno łatwe jest porównanie poziomów każdego
+czynnika dla wszystkich ocenianych
+polityków, jak i porównanie dla konkretnego polityka (czy zaufanie jest większe od nieufności albo o ile jest większe/mniejsze). Ale uwaga jeżeli
+liczba wymiarów będzie większa niż trzy wykres straci
+na przejrzystości zamieniając się w chmurę różnokolorowych kropek.</p>
+</div>
+<div id="przykład-marimekko-mosaic-chart" class="section level2" number="2.9">
+<h2><span class="header-section-number">2.9</span> Przykład: Marimekko mosaic chart</h2>
+<p>Przykład: Kraje wg emisji C02 (wysokość prostokąta jest równa emisji per capita; szerokość liczbie ludności). Pola prostokątów odpowiadają globalnej
+emisji, wysokości emisji na głowę. Prostokąty są uszeregowane wg. emisji per capita, co utrudnia porówania wielkości globalnych. Ale i tak widać, że nie tylko Polska emituje mniej niż Niemcy ale przeciętny Niemiec emituje więcej
+niż przeciętny spalający na potęgę czarny węgiel Polak.</p>
+<p><img src="2019-Worldwide-Co2-emissions-scaled.jpg" style="width:80.0%" /></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="przedmiot-metody-i-organizacja-badań-statystycznych.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="analiza-parametryczna.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
