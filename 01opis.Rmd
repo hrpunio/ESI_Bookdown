@@ -128,14 +128,26 @@ Zwykle przyjmuje się za końce przedziałów **okrągłe liczby**
 bo dziwnie by wyglądało gdyby koniec przedziału np. był równy 1,05
 zamiast 1,0. 
 
-Liczba przedziałów jest dobierana metodą prób i błędów, tak aby:
+Liczbę przedziałów klasowych ($k$) wyznacza się na podstawie formuł:
 
-* nie było przedziałów z zerową liczebnością
 
-* przedziałów nie było za dużo ani za mało (typowo 8--15)
+$$k= 1 + 3,322 \log(n)$$
+albo
 
-* większość populacji nie znajdowała się w jednej czy dwóch przedziałach
+$$
+k \approx 5 \log(n)
+$$
+albo
 
+$$k\approx \sqrt{n}$$
+
+rozpiętość przedziału ($h$) jest równa:
+
+$$h = \frac{(x_\max - x_\min) }{k}
+$$
+
+Należy tak zbudować szereg aby pogrupowany szereg był **jednomodalny**
+oraz aby nie było przedziału z zerową liczebnością.
 
 Tablica: Kraje świata według współczynnika dzietności (2018)
 
@@ -170,6 +182,29 @@ Każda tablica statystyczna **musi** mieć:
 Pominięcie czegokolwiek z powyższego jest **ciężkim błędem**. Jeżeli
 nie ma danych (a często nie ma--z różnych powodów -- należy to zaznaczyć a nie
 pozostawiać pustą rubrykę)
+
+Liczebności cząstkowe ($n_i$) inaczej absolutne przedstawiają liczbę obserwacji
+(częstości) występowania wariantu cechy $x_i$.
+
+liczebności względne (stosunkowe) tzw.
+wskaźniki struktury ($w_s$) Przedstawiają udział części zbiorowości statystycznej
+do całości i są najczęściej wyrażone w procentach $w_s = \frac{n_i}{N} \cdot 100$
+Wskaźniki struktury są **liczbami niemianowanymi**.
+
+
+```{r, echo=F}
+## https://www.statology.org/data-binning-in-r/
+d2018 <- d2018 %>% mutate(frateClass = cut(frate, breaks=seq(1, 8, by=.5)))
+##levels(d2018$frateClass)
+
+d2018s <- d2018 %>% group_by(frateClass) %>% summarise(n=n()) %>%
+  ungroup() %>%
+  mutate (n=n/sum(n)*100)
+
+t2 <- kable(d2018s, col.names = c('Wsp. dzietności', '% krajów'))
+t2
+```
+
 
 ## Rozkład empiryczny
 
@@ -307,7 +342,7 @@ towns %>%
 
 Fioletowa krzywa to rozkład normalny 
 o średniej `r sprintf ("%.1f", mean(towns$Pop2019, na.rm=T))` oraz odchyleniu standardowym `r sprintf("%.1f", sd(towns$Pop2019, na.rm=T))`.
-Aproksymacja jest taka-sobie mówiąc oględnie...
+Aproksymacja jest taka-sobie (mówiąc oględnie...)
 
 Tego typu rozkładu z kolei dobrze aproksymuje inny rozkład, określany
 jako **logarytmiczno-normalny**, w którym zamiast oryginalnej wartości cechy
@@ -329,7 +364,17 @@ Jest mało dużych miast a dużo małych. Podobnie wyglądają rozkłady
 firm/ludzi względem przychodów/zysków czy elektrowni względem mocy
 zainstalowanej.
 
+**Reguła 3 sigm**
 
+około 68,3% jednostek zbiorowości mieści się w granicach 1 odchylenia standardowego
+
+około 95,5% jednostek zbiorowości mieści się w granicach 2 odchyleń standardowych
+
+około 99,7% jednostek zbiorowości mieści się w granicach 3 odchyleń standardowych:
+
+**Typowy obszar zmienności** $x_t$ będzie znajdował się w przedziale:
+
+$$\bar x - S_x < x_t < \bar x + S_x $$
 
 ## Wizualizacja danych i wykresy
 
@@ -342,12 +387,14 @@ Rodzaje wykresów (podział ze względu na zastosowanie):
 **Jedna cecha**
 
 **szeregi strukturalne**: punktowe, słupkowe, histogram, pudełkowe, kołowe;
+
 **szeregi czasowe**: liniowe, słupkowe, punktowe;
+
 **szeregi przestrzenne**: kartogramy.
 
 **Dwie cechy**
 
-wykres rozrzutu (scatter-plot), wykres liniowy liniowy
+wykres rozrzutu (*scatter-plot*), wykres liniowy
 
 
 ### Wykresy przedstawiające rozkład wartości jednej zmiennej
@@ -665,7 +712,7 @@ indywidualnie jako kropki nad/pod wąsami.
 
 ![](./box-plot-0.jpg)
 
-Ze strony komiteu Noblowskiego pobrano listę Laureatów Nagrody Nobla
+Ze strony komitetu Noblowskiego pobrano listę Laureatów Nagrody Nobla
 Wiek laureatów nagrody Nobla w momencie przyznania 
 nagrody (ponad 900 laureatów; plik `nobel_laureates3.csv`):
 
@@ -798,7 +845,7 @@ poszczególnych kontynentach (w roku 2018)
 ![](PPViolinCC.png){width=80%}
 
 
-### Przykład: Zaufanie do Politykow
+### Przykład: Zaufanie do Polityków
 
 CBOS realizuje co najmniej 12 razy w roku sondaż "Aktualne problemy i wydarzenia", na reprezentatywnej ok. 1000-osobowej próbie dorosłych mieszkańców Polski. (cf https://www.cbos.pl/PL/trendy/trendy.php?)
 
@@ -991,8 +1038,21 @@ kwartyle, kwantyle, decyle).
 Średnia artmetyczna (*Mean*, *Arithmetic mean*).
 Oblicznie średniej dla szeregu prostego (suma wartości podzielona 
 przez liczbę składników sumy):
+
 $$
 \bar x = \frac{\sum_{i=1}^N x_i} {N}
+$$
+Dla szeregu rozdzielczego punktowego:
+
+
+$$
+\bar x = \frac{\sum_{i=1}^N x_i n_i} {N}
+$$
+Dla szeregu rozdzielczego przedziałowego:
+
+
+$$
+\bar x = \frac{\sum_{i=1}^N \dot x_i n_i} {N}
 $$
 
 
@@ -1048,6 +1108,18 @@ S^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \bar x)^2
 $$
 
 często zamiast dzielenie przez $N$ dzielimy przez $N-1$.
+
+Dla szeregu rozdzielczego punktowego:
+
+$$
+S^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \bar x) n_i^2
+$$
+Dla szeregu rozdzielczego przedziałowego:
+
+$$
+S^2 = \frac{1}{N} \sum_{i=1}^N (\dot x_i - \bar x) n_i^2
+$$
+
 
 **Odchylenie standardowe** (*standard deviation*, sd) jest
 pierwiastkiem kwadratowym z wariancji.  Parametr ten określa
@@ -1134,9 +1206,21 @@ współczynniki asymetrii (skośności).
 
 **Moment trzeci centralny** -- średnia arytmetyczna z podniesionych do potęgi
 trzeciej odchyleń wartości cechy od średniej arytmetycznej
+
 $$
 \mu_3 = \frac{1}{N} \sum_{i=1}^N (x_i - \bar x)^3
 $$
+szereg rozdzielczy punktowy
+
+$$
+\mu_3 = \frac{1}{N} \sum_{i=1}^N (x_i - \bar x)^3 n_i
+$$
+szereg rozdzielczy przedziałowy
+
+$$
+\mu_3 = \frac{1}{N} \sum_{i=1}^N (\dot x_i - \bar x)^3 n_i
+$$
+
 jeżeli $\mu_3 = 0$ szereg symetryczny,
 $\mu_3 > 0$ asymetria dodatnia (prawostronna),
 $\mu_3 < 0$ asymetria ujemna (lewostronna)
@@ -1157,7 +1241,7 @@ rzadziej używa się:
 $$
 W_s =  \frac{\bar x - \textrm{Me}}{s}
 $$
-Współczynnik asymetrii (skośności) oparty na odległościach między kwartylami
+Współczynnik asymetrii (*skośności*) oparty na odległościach między kwartylami
 lub decylami:
 $$
 W_{sq} =  \frac{(Q_3 - Q_2) - (Q_2 - Q_1)}{Q_3 - Q_1}
@@ -1167,7 +1251,7 @@ $$
 
 **Koncentracja** -- nierównomierny podział wartości cechy w zbiorowości.
 
-*Współczynnik Giniego i Krzywa Lorenza*
+*Współczynnik Giniego i Krzywa Lorenza*
 
 **Krzywa Lorenza** jest funkcją określoną na zbiorze liczb dodatnich L(Cn),
 gdzie Cn jest kumulowaną liczebnością zaś L kumulowaną wartość cechy.

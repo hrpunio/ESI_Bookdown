@@ -37,67 +37,12 @@ stan na *dzień-miesiąc* -- w przykładzie stan na ostatni dzień roku)
 Nie można sumować liczby mieszkańców z kolejnych lat, bo taka suma nie ma merytorycznie sensu.
 Można podać średnią (przeciętny stan) ludności jako wartość średniej chronologicznej:
 
-$$\bar x_{ch} = (\frac{1}{2} x_1 + x_2 + ... + x_{n-1} +
-\frac{1}{2} x_{n} ) / (n-1) = (83562/2 + 83734 + ... + 83291 + 83174/2)/9 = 83532,9$$
+$$\bar x_{ch} = \frac{(\frac{1}{2} x_1 + x_2 + ... + x_{n-1} +
+\frac{1}{2} x_{n} )}{n-1} = (83562/2 + 83734 + ... + 83291 + 83174/2)/9 = 83532,9$$
 
 Średnia roczna liczba ludności w powiecie kwidzyńskim w latach 2010--2019 wyniosła zatem 83532,9 mieszkańców.
 
 Szeregi czasowe mogą różnić się częstotliwością (dzienna, tygodniowa, miesięczna, kwartalna, roczna).
-
-## Wykresy
-
-W przypadku szeregów czasowych celem wizualizacji jest: pokazanie poziomu
-zjawiska, jego dynamiki (spada, rośnie, zmienia się cyklicznie), porównanie poziomów/dynamiki wielu zmiennych.
-
-Do wizualizacji szeregów czasowych należy stosować wykresy liniowe, słupkowe lub punktowe,
-
-### Przykład: Zwiedzający Muzeum Zamkowe w Malborku
-
-Liczbę zwiedzających Muzeum Zamkowe w Malborku w latach 2015--2019 (dane miesięczne)
-przedstawiono na wykresach
-
-```{r message=FALSE, echo=F, warning=FALSE, fig.width=10}
-dane <- read.csv(file= "MZM.csv", header=T, sep=";");
-
-p1 <- ggplot() +
-  geom_point(data=dane, mapping=aes(x=as.Date(data), 
-                  y=razem, colour="razem"), alpha=.5, size=2) +  
-  geom_point(data=dane, mapping=aes(x=as.Date(data), 
-                      y=krajowi, colour="krajowi"), alpha=.5, size=2) +  
-  ylab(label="zwiedzający") +
-  xlab(label="") +
-  theme(legend.position="top") +
-  theme(legend.title=element_blank()) 
-
-p2 <- ggplot() +
-geom_line(data=dane, mapping=aes(x=as.Date(data), y=razem, colour="razem"), alpha=.5, size=1) +  
-  geom_line(data=dane, mapping=aes(x=as.Date(data), y=krajowi, colour="krajowi"), alpha=.5, size=1) +  
-  ylab(label="zwiedzający") +
-  xlab(label="") +
-  theme(legend.position="top") +
-  theme(legend.title=element_blank()) 
-
-p3 <- ggplot() +
-geom_bar(data=dane, mapping=aes(x=as.Date(data), y=razem, fill="razem", stat = 'identity'), stat = 'identity', alpha=.5, size=1) +  
-geom_bar(data=dane, mapping=aes(x=as.Date(data), y=krajowi, fill="krajowi", stat = 'identity'), stat = 'identity', alpha=.5, size=1) +  
-  ylab(label="zwiedzający") +
-  xlab(label="") +
-  theme(legend.position="top") +
-  theme(legend.title=element_blank()) 
-
-daneC <- dane %>% gather(kat, liczba, razem:krajowi) %>%
-   filter(kat=="razem" | kat =="krajowi") %>% as.data.frame
-
-p4 <- ggplot(data=daneC, aes(x=as.Date(data), y=liczba, fill=kat)) +
-   geom_bar(stat = 'identity', position=position_dodge(), alpha=.5, size=1) +  
-  ylab(label="zwiedzający") +
-  xlab(label="") +
-  theme(legend.position="top") +
-  theme(legend.title=element_blank()) 
-
-
-ggarrange(p1, p2, p3, p4, ncol = 2, nrow = 2)
-```
 
 Wykres kropkowy zwykle się nie sprawdza. Jeżeli przebieg zjawiska nie jest uporządkowany,
 albo wykres zawiera kilka zmiennych (w przykładzie dwie zmienne).
@@ -112,13 +57,13 @@ Wykres słupkowy z półprzeźroczystymi słupkami też zwykle się nie sprawdza
 Wykres słupkowy ze słupkami przylegającymi do siebie (grupowany) jest dobrą alternatywą dla wykresu liniowego.
 
 
-## Przyrosty
+## Przyrosty i indeksy
 
 Oznaczmy wartość zmiennej $Y$ w okresie $t$ jako $y_t$ (mówi się okres badany)
 oraz wartość zmiennej $Y$ w okresie $0$ jako $y_0$ (okres podstawowy).
 
-Przyrost absolutny to po prostu $y_t - y_0$. Jeżeli obliczamy przyrosty dla wielu okresów, to można porównywać
-zawsze do jednego okresu/momentu:
+Przyrost absolutny to po prostu $y_t - y_0$. Jeżeli obliczamy przyrosty dla wielu okresów, to można je 
+porównywać do jednego okresu/momentu ($y_1$ w zapisie poniżej):
 
 $$y_2 - y_1, y_3 - y_1, \ldots, y_{n-1} - y_1, y_{n} - y_1$$
 
@@ -134,13 +79,14 @@ $$y_1 - y_n, y_2 - y_n, \ldots, y_{n-2} - y_n, y_{n-1} - y_n$$
 Interpretacja: o ile wzrosła/spadła wielkość zjawiska w okresie badanym w porównaniu do podstawowego
 w jednostkach zmiennej $Y$ oczywiście.
 
-Przyrost względny to $(y_t - y_0)/y_0$  Jeżeli obliczamy przyrosty dla wielu okresów, to podobnie jak
-przyrosty absolutne możemy się posługiwać  indeksami jednopodstawowymi lub łańcuchowymi.
+**Przyrost względny** to $(y_t - y_0)/y_0$  Jeżeli obliczamy przyrosty dla wielu okresów, to podobnie jak
+miało to miejsce w przypadku przyrostów absolutnych możemy się posługiwać  
+indeksami jednopodstawowymi lub łańcuchowymi.
 
 Przyrost względny zwykle wyrażone są w procentach jeżeli $y_t = 115$ a $y_0 = 100$, to
-$(y_t - y_0)/y_0 \cdot 100 =115 $. Zjawisko ma o 15% wyższy poziom w roku $t$.
+$(y_t - y_0)/y_0 \cdot 100 =115$. Zjawisko ma o 15% wyższy poziom w roku $t$.
 
-Wskaźniki dynamiki (indeksy): określają względną zmianę wartości
+**Wskaźniki dynamiki** (indeksy) określają względną zmianę wartości
 szeregów czasowych (popularny procent zmiany), czyli $y_t/y_0$.
 Jeżeli podstawą porównań jest okres poprzedni $y_t/y_{t-1}$ to indeks nazywany jest **łańcuchowym**, jeżeli
 podstawa porównań jest stała, tj. $y_t/y_{c}$, to indeks nazywany jest **jednopodstawowy**.
@@ -153,10 +99,30 @@ Używamy średniej geometrycznej do obliczenia średniego tempa zmian zjawiska w
 
 $$\bar y_g = \sqrt[n-1]{y_n/y_1}$$
 
+**Przykład:** Zwiedzający Muzeum Zamkowe w Malborku w latach 2015--2016
 
+```{r}
+dane <- read.csv(file= "MZM.csv", header=T, sep=";");
+dane.indeks <- dane %>%  
+  mutate (year = substr(data, 1, 4), data = substr(data, 1, 7)) %>%
+  filter (as.numeric(year) < 2017) %>%
+  select (data, zwiedzający=razem) %>%
+  mutate (przyrost =  zwiedzający - lag(zwiedzający, 1),
+          przyrostst =  zwiedzający - first(zwiedzający),
+          przyrostw = ( zwiedzający - lag( zwiedzający, 1))/lag( zwiedzający, 1) * 100,
+          przyrostwst = ( zwiedzający - first( zwiedzający))/first(zwiedzający) * 100,
+          indeks =  zwiedzający /lag( zwiedzający, 1) * 100,
+          indeksst =  zwiedzający /first(zwiedzający) * 100
+          )
+t1 <- kable(dane.indeks, digits=2,
+            col.names = c('rok-miesiąc', 'zwiedzający', '(1)', '(2)', '(3)', '(4)', '(5)', '(6)'))
+t1
+```
 
+Zawartość kolumn: (1) przyrosty łańcuchowe, (2) przyrosty jednopodstawowe (2015-01=100%),
+(3) przyrosty względne łańcuchowe, (4) przyrosty względne jednopodstawowe (2015-01=100%),
+(5) indeksy łańcuchowe, (6) indeksy jednopodstawowe (2015-01=100%).
 
-Przykład: Zwiedzający Muzeum Zamkowe w Malborku
 
 
 ## Indeksy agregatowe
@@ -169,128 +135,567 @@ Dysponujemy także informacją na temat cen tych
 
 Agregatowy indeks wartości jest definiowany jako:
 
-$$I_w = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{0i}}
+$$I_w = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{0i}}$$
 
 Indeks ten określa jak widać zmianę względną wartości grupy towarów w okresie $1$ w porówaniu
 do okresu $0$. 
 
 Można też szacować wpływ zmiany cen i ilości towarów oddzielnie stosując następujące formuły
 
-agregatowy indeks ilości Laspeyresa: $I^L_q = \frac{\sum_i q_{1i} p_{0i}}{ \sum_i q_{0i} p_{0i}}$
+agregatowy indeks ilości Laspeyresa: 
 
-agregatowy indeks ceny Laspeyresa: $I^L_p = \frac{\sum_i q_{0i} p_{1i}}{ \sum_i q_{0i} p_{0i}}$
+$$I^L_q = \frac{\sum_i q_{1i} p_{0i}}{ \sum_i q_{0i} p_{0i}}$$
 
-agregatowy indeks ilości Paaschego: $I^P_q = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{1i}}$
+agregatowy indeks ceny Laspeyresa: 
 
-agregatowy indeks ceny Paaschego: $I^P_p = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{1i}}$
+$$I^L_p = \frac{\sum_i q_{0i} p_{1i}}{ \sum_i q_{0i} p_{0i}}$$
+
+agregatowy indeks ilości Paaschego: 
+
+
+$$I^P_q = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{1i}}$$
+
+agregatowy indeks ceny Paaschego: 
+
+$$I^P_p = \frac{\sum_i q_{1i} p_{1i}}{ \sum_i q_{0i} p_{1i}}$$
 
 Interpretacja: przy przyjęciu poziomu cen z okresu $x$ ceny/ilości zmieniły się o $y$ procent.
-Co jest $x$em zależy od przyjętej formuły standaryzacyjnej.
+Co jest $x$em 
+zależy od przyjętej formuły standaryzacyjnej. 
 
-## Dekompozycja szeregów czasowych
+## Wykresy
 
-Najczęściej stosowanym modelem szeregu czasowego dla zjawisk ekonomiczno-społecznych jest
-traktowanie go jako **sumy** (lub iloczynu) trzech składników: ogólnej, wieloletniej tendencji
-cyklicznych wahań okresowych oraz czynników pozostałych:
-$$Y_t = T_t + S_t + e_t$$
-Ogólna, wieloletnia tendencja zwana jest trendem, zaś cyklicznych wahań okresowych
-potocznie określane są jako **sezonowość**.
-Sezonowość jest typowym atrybutem wielu kategorii ekonomicznych i wynika
-ze zmienności warunków przyrodniczych czy
-też systemu społeczno-prawnego (okres urlopowy, koniec roku finansowego itd.)
+W przypadku szeregów czasowych wykres liniowy (ewentualnie punktowy lub słupkowy) 
+jest najpopularniejszy. Przykład: 
+z bazy danych WHO (https://www.who.int/data/gho) pobrano informacje nt odsetka
+osób dorosłych z nadwagą (BMI 30 i więcej;  *Prevalence of obesity among adults...*)
+dla Polski w latach 1975--2016.
 
-Metody wyodrębniania tendencji rozwojowej (trendu): średnia ruchoma, 
-liniowa funkcja trendu, wygładzanie wykładnicze.
+Uwaga: WHO podaje wskaźniki surowe (*crude*) i standaryzowane; pobrano surowe
 
-**Sezonowość a ocena kierunku/wielkości zmiany wartości szeregu czasowego**:
-wyciąganie wniosków na podstawie **wyłącznie** porównywania obserwacji w kolejnych okresach w szeregu czasowym
-cechującym się sezonowością jest
-albo przejawem niewiedzy albo manipulacji (zwykle motywowanej politycznie). Na przykład wiadomo, że wielkość zatrudnienia wykazuje
-wahania sezonowe, bo w zimie zapotrzebowanie na pracowników spada. Stąd na przykład zatrudnienie w pierwszym kwartale
-(prawie) zawsze będzie niższe niż w czwartym kwartale roku poprzedniego.
-Jeżeli ktoś *sprzedaje* ten fakt jako argument,
-że rząd sobie nie radzi z gospodarką, to mamy do czynienia z manipulacją.
-Należy w takiej sytuacji porównywać rok-do-roku (czyli kwartał-do-kwartału dla danych kwartalnych),
-lub porównywać dane **odsezonowane**, czyli takie, które zostały poddane transformacji usuwającej efekt wahań sezonowych.
-Nb. **odsezonowanie** zawsze pozostawia pole do manipulacji w postaci konkretnej metody **odsezonowania**.
-Dlatego osobiście wolę porównywać
-dane z **okresów jednoimiennych** (porównanie rok-do-roku) co i państwu radzę:-)
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 
-## Wygładzanie za pomocą średniej ruchomej
+obesity <- read.csv(file='obesity_POL.csv',sep=';',header=T)
+```
 
-Koncepcyjnie bardzo prosta metoda: obliczamy **średnią** dla kolejnych $k$ wartości
-szeregu czasowego. Obliczone wartości zastępują wartości oryginalne.
-Wartości średniej ruchomej $k$-elementowej są obliczane jako:
-$$\bar y_p = (x_p + x_{p+1} + x_{p+2})/3, \textrm{gdzie: } p=1,\dots, N-2$$
+Wykres liniowy
 
-Rezultatem jest szereg skrócony dokładnie o $N-2$ elementów, gdzie $N$ jest liczbą elementów
-szeregu oryginalnego. Jest też problem z określeniem okresu, którego dotyczą obliczone wartości.
-Czy $\bar y_1$ to obserwacja dla pierwszego, drugiego czy trzeciego okresu?
-W zasadzie każdy wariant będzie OK, zwykle wybiera się element środkowy.
-Dla danych miesięcznych i $k=12$ szereg wygładzony będzie krótszy o 11 obserwacji i nie ma elementu środkowego
-(są dwa środkowe: czerwiec i lipiec). Można kompliować metodę i liczyć średnią ze środkowych albo zdecydować się 
-na przypisanie średniej wartości do czerwca albo do lipca.
-Takie to są uroki średniej ruchomej...
+```{r, echo=FALSE}
+popl <- ggplot(obesity, aes(x= as.Date(as.character(rok), "%Y"),
+        ##group=as.factor(plec), color=as.factor(plec), 
+        y=bmio )) +
+  geom_line(size=.5, color='steelblue' ) +
+  #geom_point(size=2.5, alpha=.3) +
+  ylab(label="%") +
+  xlab(label="") +
+  scale_x_date(breaks = date_breaks("4 years"),  labels = date_format("%Y")) +
+  #scale_color_discrete(name="Płeć", labels =c("M", 'F'),
+  #                     breaks=c('MLE', 'FMLE')) +
+  ggtitle("Nadwaga w PL w latach 1975--2016 (BMI30 ogółem)")
+popl
+```
 
-## Liniowa funkcja trendu
+Interpretacja: czy zjawisko rośnie czy spada; jak szybko rośnie jak
+szybko spada. 
 
-Metoda zakładająca, że trend ma postać funkcji liniowej postaci $Y=b1\dot t +b0$. Parametry tej funkcji są obliczane
-metodą najmniejszych kwadratów, w której minimalizuje się sumę
-kwadratów odchyleń wartości empirycznych (*observed values*) od
-wartości teoretycznych (*predicted values*), tj.
-$\sum_i^N y - \hat y \Rightarrow \min $, 
-gdzie $\hat y$ to wartości teoretyczne
-czyli $\hat y = b1 \cdot t + b0$, zaś $t=1,...N$.
-Różnica $y - \hat y$ to **błąd** (*error*). Ideę metody NK zwanej jest w języku angielskim *Least Squares* przedstawia rysunek (zamiast $t$ jest tam $x$).
+Uwaga: można manipulować wykresem poprzez zmianę proporcji (współczynnika proporcji czyli po angielsku **aspect ratio**)
 
-![](./LeastSquares.png){width=80%}
 
-Wartość $b1$ ma interesującą interpretację, a mianowicie jest to przeciętna zmiana $Y$ z okresu na okres.
+```{r, echo=FALSE, fig.height=2.5}
+popl.flat <- ggplot(obesity, aes(x= as.Date(as.character(rok), "%Y"),
+        y=bmio )) +
+  geom_line(size=.5, color='steelblue' ) +
+  #geom_point(size=2.5, alpha=.3) +
+  ylab(label="%") +
+  xlab(label="") +
+  scale_x_date(breaks = date_breaks("4 years"),  labels = date_format("%Y")) +
+  ggtitle("Nadwaga w PL w latach 1975--2016 (BMI30 ogółem)")
+popl.flat
+```
 
-## Wygładzanie wykładnicze
+Teraz (optycznie) wolniej rośnie (proporcja wysokość/szerokość jest większa)...
 
-Oryginalne obserwacje są zastępowane obserwacjami obliczonymi według
-$S_t = α y_{t-1} + (1 – α) S_{t-1}$, gdzie $a \in (0,1)$ im $\alpha$ bliższe jedności tym krzywa trendu
-będąca wynikiem wgładzenia jest bardziej gładka.
+Oraz (albo raczej pośrednio) zakresem na osi OY; 
 
-## Oszacowanie dokładności modelu
+Jeżeli oś OY nie zaczyna się od zera to 
+krzywa będzie bardziej stroma bo efektywnie wykres będzie miał większe
+proporcje wysokość/szerokość:
 
-Zastąpienie wartości oryginalnych (empirycznych) obliczonymi (teoretycznymi)
-prowadzi do błędu $\hat y_t - y_t = e_t$. Błąd średniokwadratowy (MSE) definiowany
-jako 
-$\sum_i^N (\hat y-y)^2$ 
-to jak widać suma kwadratów różnic
-między wartościami *teoretycznymi* a oryginalnymi (**empirycznymi**). Im MSE jest większe tym model
-teoretyczny mniej dokładnie opisuje dane empiryczne.
-Jest to miara mianowana a mianem jest kwadrat jedostki miary $Y$. Czyli jeżeli na przykład
-$Y$ jest liczbą zwiedzających, to MSE będzie kwadratem liczby zwiedzających. 
-Dość abstrakcyjne pojęcie, zatem
-do celów interpretacji oblicza się zwykle RMSE, pierwiastek błędu średniokwadratowego. RMSE ma już normalną
-interpretację: wartości teoretyczne średnio
-różnią się od rzeczywistych wartości zmiennych o wartość współczynnika RMSE.
+```{r, echo=FALSE, fig.height=2.5}
+popl.flat <- ggplot(obesity, aes(x= as.Date(as.character(rok), "%Y"),
+        y=bmio )) +
+  geom_line(size=.5, color='steelblue' ) +
+  #geom_point(size=2.5, alpha=.3) +
+  ylab(label="%") +
+  xlab(label="") +
+  scale_x_date(breaks = date_breaks("4 years"),  labels = date_format("%Y")) +
+  coord_cartesian(ylim = c(0, NA)) +
+  ggtitle("Nadwaga w PL w latach 1975--2016 (BMI30 ogółem)")
+popl.flat
+```
 
-Względną miarą dokładności może być następujący wariant współczynnika zmienności:
-$V_\mathrm{RMSE} = \frac{\mathrm{RMSE}}{\bar y }\cdot 100$. 
-Interpretacja: średnio błąd stanowi $V_\mathrm{RMSE}$
-procent wartości średniej zmiennej $Y$.
+Puryści uważają że każdy wykres powinien zaczynać się od zera. Są przykłady
+zeznań przed komisją senacją w USA gdzie dowody prezentowane na wykresach
+**z niezerową linią bazową** były dyskwalifikowane jako manipulacja.
 
-## Szacowanie wskaźników sezonowości
+Słynna książka How to lie with statistics zawiera rozdział na temat
+zatytułowany **The Gee-Whiz Graphs**; 
+https://en.wikipedia.org/wiki/Misleading_graph
 
-Najprostszą metodą oszacowania sezonowości jest obliczenie średnich dla okresów jednoimiennych, tj dla danych
-kwartalnych będą to średnie dla poszczególnych kwartałów a dla danych miesięcznych dla miesięcy. Następnie
-obliczamy **wskaźniki sezonowości** według formuły: $S_k = \bar y_k / \bar y$, gdzie $\bar y_k$ średnia
-dla okresu $k$, $\bar y$ średnia wartość szeregu czasowego (wszystkie obserwacje). Dla celów interpretacji 
-zwykle mnoży się $S_k$ przez $100$, co pozwala na stwierdzenia
-w rodzaju przeciętnie *w pierwszym kwartale wartości Y są wyższe o 12%
-od wartości trendu*
-Obliczone wartości mogą służyć do poprawienia dokładności modelu zamiast $\hat y=at +b$
-obliczamy $\hat y=(at+B)*S_k$.
 
-Przykład: Zwiedzający Muzeum Zamkowe w Malborku
+Można umieścić wiele krzywych celem porównania:
 
-Wyznaczania trendu z wykorzystaniem średniej ruchomej, trendu liniowego, wygładzania
-wykładniczego za pomocą arkusza LibreOffice (który polecam) służą funkcje dostępne w menu Dane-Statystyka
-(a dalej al
 
-oraz oszacowania wskaźników sezonowości można 
+```{r, echo=FALSE}
+
+popl2 <- ggplot(obesity, aes(x= as.Date(as.character(rok), "%Y"),
+        y=bmio )) +
+  geom_line(aes(y=bmik), size=.5, color = "pink" ) +
+  geom_line(aes(y=bmim), size=.5, color = "steelblue" ) +
+  #geom_point(size=2.5, alpha=.3) +
+  ylab(label="%") +
+  xlab(label="") +
+   ##scale_x_discrete( breaks = every_nth(n = 4)) +
+  scale_x_date(breaks = date_breaks("4 years"),  labels = date_format("%Y")) +
+  #scale_color_discrete(name="Płeć", labels =c("M", 'F'),
+  #                     breaks=c('MLE', 'FMLE')) +
+  ggtitle("Nadwaga w PL w latach 1975--2016 (BMI30 ogółem)", 
+          subtitle = "Według płci; różowe = K | niebieskie = M")
+popl2
+```
+
+Jeżeli krzywe się **dobrze zachowują** (czytaj: nie przecinają się) na to sens;
+w innym przypadku trudno jest porównać krzywe. Nie należy też przesadzać z liczbą
+krzywych na wykresie. Na pewno coś co wygląda jak splątany makaron będzie
+bezużyteczne...
+
+
+Punktowy:
+
+```{r, echo=FALSE}
+popl <- ggplot(obesity, aes(x= as.Date(as.character(rok), "%Y"),
+        ##group=as.factor(plec), color=as.factor(plec), 
+        y=bmio )) +
+  #geom_line(size=.5 ) +
+  geom_point(size=1.25, color='steelblue' ) +
+  ylab(label="%") +
+  xlab(label="") +
+  scale_x_date(breaks = date_breaks("4 years"),  labels = date_format("%Y")) +
+  #scale_color_discrete(name="Płeć", labels =c("M", 'F'),
+  #                     breaks=c('MLE', 'FMLE')) +
+  ggtitle("Nadwaga w PL w latach 1975--2016 (BMI30 ogółem)")
+popl
+```
+
+Nie uważam za dobry pomysł. Nie podkreśla ciągłości zjawisk w czasie
+
+Słupkowy:
+
+```{r, echo=FALSE}
+popl <- ggplot(obesity, aes(x= as.factor(rok), y=bmio )) +
+  #geom_line(size=.5 ) +
+  geom_bar(stat="identity", position=position_dodge(width=.4), fill='steelblue' ) +
+  ylab(label="%") +
+  xlab(label="") +
+   scale_x_discrete( breaks = every_nth(n = 4)) +
+  #scale_color_discrete(name="Płeć", labels =c("M", 'F'),
+  #                     breaks=c('MLE', 'FMLE')) +
+  ggtitle("Nadwaga w PL w latach 1975--2016 (BMI30 ogółem)")
+popl
+```
+
+Jest OK. Ale wielosłupki zamiast wielu linii prowadzą do problemów:
+
+```{r, echo=FALSE}
+ol <- obesity %>% 
+  pivot_longer(cols=c(bmio, bmik, bmim), names_to='sex', values_to='bmi')
+popl3 <- ggplot(ol, aes(fill=sex, y=bmi, x=as.factor(rok))) + 
+   xlab(label="") +
+   scale_x_discrete( breaks = every_nth(n = 4)) +
+  geom_bar(position="dodge", stat="identity")
+
+## albo
+popl4 <- ggplot(ol, aes(fill=sex, y=bmi, x=as.factor(rok))) + 
+   xlab(label="") +
+   scale_x_discrete( breaks = every_nth(n = 4)) +
+  geom_bar(position="stack", stat="identity")
+
+popl3
+popl4
+
+```
+
+Oba dla mnie nieczytelne a do tego ten drugi
+ wykres daje mylne wrażenie że łącznie otyłych jest 3/4 ludności
+(jak ktoś nieuważnie czyta)
+
+## Model wahań w czasie
+
+W szeregu czasowym można zwykle wyróżnić długookresową tendencję (trend);
+powtarzalne wahania (sezonowość); resztę traktuje się jako wartości
+przypadkowe. Reasumując:
+
+$$TS = T + S + E$$
+
+lub
+
+$$TS = T \cdot S \cdot E$$
+
+Pierwszy wariant nazywa się **addytywny** drugi **multiplikatywny**.
+W wariancie addytywnym zmiany
+(trendu/sezonowości) okres/okres są stałe; w wariancie multiplikatywnym **tempo zmiany** jest stałe, tj. zjawisko okres/okres rośnie/spada o x%. 
+W jednostkach bezwzględnych
+oznacza to, że rośnie/spada coraz szybciej.
+
+Problem: oszacowanie $T$ oraz $S$
+
+## Szacowanie trendu
+
+### Metoda mechaniczna MA
+
+**Średnia ruchoma** (moving average MA). Idea tego wygładzania
+jest prosta: sumujemy kolejne wartości szeregu i dzielimy przez liczbę elementów
+sumy (średnia $k$-okresowa); 
+Ile elementów sumujemy jest dobierane metodą prób/błędów...
+
+średnia trzy okresowa
+
+$$\bar y_{n-1} = (y_{n-2} + y_{n-1} + y_n)/3$$
+
+$$\bar y_{n-2} = (y_{n-4} + y_{n-1} + y_n)/5$$
+scentrowana czterookresowa:
+
+$$\bar y_{n-2} = \frac{\frac{1}{2} y_{n-4} + y_{n-3} + y_{n-2} +y_{n-1} + \frac{1}{2} y_n }{4}$$
+
+
+Przykład dzienne dane nt. liczby zgonów z powodu COVID 
+(w okresie 1.10.2020--5.2.2021; źródło komunikaty MZ via Twitter 
+a od 28.01.2021 https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2; strona reklamowana przez Google!):
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+library("data.table")
+covid <- read.csv(file='covidPL.csv',sep=';',header=T)
+covidPL <- covid %>% filter(woj=='Polska')
+
+cPL <- covidPL %>%  summarise(
+  date = date,
+  newd = newd,
+  fmd3 = frollmean(newd, n=3, align='center'),
+  fmd7 = frollmean(newd, n=7, align='center'),
+  fmd14 = frollmean(newd, n=14, align='center'),
+  fmd28 = frollmean(newd, n=28, align='center') )
+
+pma1 <- ggplot(cPL, aes(x= as.Date(as.character(date), "%Y-%m-%d"),
+                            y=fmd7 )) +
+  geom_line(aes(y=fmd3), size=1, color = "orange" ) +
+  geom_line(aes(y=fmd7), size=1, color = "pink" ) +
+  geom_line(aes(y=fmd14), size=1, color = "red" ) +
+  geom_line(aes(y=fmd28), size=1, color = "violet" ) +
+  geom_point(aes(y=newd), size=.5, color = "black", alpha=.3 ) +
+  geom_line(aes(y=newd), size=.2, color = "black", alpha=.3 ) +
+  #geom_point(size=2.5, alpha=.3) +
+  ylab(label="%") +
+  xlab(label="") +
+  #scale_color_discrete(name="Płeć", labels =c("M", 'F'),
+  #                     breaks=c('MLE', 'FMLE')) +
+  ggtitle("Zgony z powodu COVID w okresie 1.10.2020--5.2.2021")
+pma1
+
+```
+
+Na powyższym wykresie mamy 4 średnie ruchome 3, 7, 14, 28 okresową. Średnia
+trzy okresowa jest za mało wygładzona. Średnie 7, 14, 28 są podobne ale
+każda kolejna jest krótsza.
+
+Najlepsza średnia ruchoma: 7 okresów. (Dostatecznie wygładza 
+trend i jest najdłuższa)
+
+### Metoda analityczna
+
+Polega na dopasowaniu określonej funkcji matematycznej; w najprostszym przypadku
+prostej przy użyciu metody najmniejszych kwadratów, czyli zakłada się że trend jest postaci:
+
+$$Y = a + b \cdot t + e$$
+
+gdzie: $e$ oznacza składnik losowy; 
+
+Parametry $a$ i $b$ są wyznaczane w taki
+sposób aby suma kwadratów różnic pomiędzy punktami na prostej, a odpowiadającymi im
+obserwacjami empirycznymi była jak najmniejsza. 
+
+Wielkość tej sumy (lub pierwiastek kwadratowy z sumy) 
+jest miarą dokładności dopasowania (**wariancja składnika losowego**;
+albo **średni błąd składnika losowego/resztowego** -- dla pierwiastka kwadratowego):
+
+$$S_y = \sqrt{\frac{1}{n-2} \sum_{i=1}^n (y_t - \hat y_t)^2}$$
+
+o ile średnio wartości empiryczne odchylają się od wartości
+teoretycznych wyznaczonych na podstawie funkcji trendu.
+
+Udział wariancji składnika losowego 
+w całości wariancji zmiennej $Y$ jest inną miarą
+dopasowania (znaną jako **współczynnik determinacji** $\Phi^2$:
+
+$$\Phi^2 =  
+\frac{\sum_{t=1}^n}{(y_t - y_t)^2}{\sum_{t=1}^n (y_t - \bar y_t)^2}$$
+
+im ten udział jest mniejszy tym lepiej (lub jeżeli współczynnik
+zdefiniujemy jako 1 minus $\Phi^2$ to im większy tym lepiej -- współczynnik
+zbieżności czyli $R^2$)
+
+**współczynnik zmienności resztowej**:
+
+$$V_{sy}=\frac{S_y}{\bar y_t}\cdot 100$$
+
+**Przykład** Dane nt zgonów z powodu COVID w okresie 1.10.2020--5.2.2021
+(linia niebieska trend dopasowany metodą Najmniejszych Kwadratów)
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+popclm <- ggplot(covidPL, aes(x= as.Date(as.character(date), "%Y-%m-%d"),
+                            y=newd )) +
+  geom_line(aes(y=newd), size=.5, color = "pink" ) +
+  geom_point(size=.9, color="red") +
+  geom_smooth(method="lm", size=1.0, alpha=.3) +
+  ylab(label="%") +
+  xlab(label="") +
+  ggtitle("Zgony z powodu COVID w okresie 1.10.2020--5.2.2021")
+popclm
+```
+
+
+
+```{r, echo=FALSE}
+trend = c (1:nrow(covidPL))
+covidPL["trend"] <- trend
+
+trendL.dPL <- lm(data=covidPL, newd ~ trend )
+##summary(trendL.dPL)
+lmc <- coef(trendL.dPL)
+lmr <- summary(trendL.dPL)$r.squared
+lmse <- summary(trendL.dPL)$sigma
+Ymean <- mean(covidPL$newd)
+
+##names(summary(trendL.dPL))
+
+b.coeff <- lmc["trend"]
+a.coeff <- lmc["(Intercept)"]
+```
+
+Współczynnik kierunkowy trendu liniowego wynoszący `r b.coeff` jest
+interpretowany jako przeciętna zmiana z okresu na okres. Równanie prostej można
+zapisać jako:
+
+zgony = `r b.coeff` czas + `r a.coeff`
+
+Interpretacja: **w omawianym okresie przeciętnie umierało 1,5 osoby więcej
+dziennie**. Ale dopasowanie linii prostej do danych jest słabe co widać
+oraz o czym świadczą wartości $R^2$ (`r lmr * 100`%, tj.  `r lmr * 100`% 
+zmienności jest objaśniane przez model) oraz 
+średni błąd składnika losowego $S_e$ (`r lmse`). Ten błąd warto
+porówać do średniej wartości zmiennej objaśmnianej (liczby zgonów), która w omawianym okresie wynosi `r Ymean`. Zatem błąd jaki popełniamy stanowi
+`r lmse/Ymean *100`% średniej. Dużo (coś jakby średnio 1 $\pm$ 0,6)
+
+
+Inny przykład (nadwaga w PL):
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+popclm2 <- ggplot(obesity, aes(x= as.Date(as.character(rok), "%Y"), y=bmio )) +
+  geom_line(size=.5, color='pink' ) +
+  geom_point(size=.9, color='red', alpha=.3) +
+  geom_smooth(method="lm", size=1.0, alpha=.3) +
+  ylab(label="%") +
+  xlab(label="") +
+  ggtitle("Nadwaga w PL w latach 1975--2016 (BMI30 ogółem)")
+  
+popclm2
+```
+
+```{r, echo=FALSE}
+trend = c (1:nrow(obesity))
+obesity["trend"] <- trend
+
+trendL.bmio <- lm(data=obesity, bmio ~ trend )
+##summary(trendL.bmio)
+
+lmc <- coef(trendL.bmio)
+lmr <- summary(trendL.bmio)$r.squared
+lmse <- summary(trendL.bmio)$sigma
+Ymean <- mean(obesity$bmio)
+
+##names(summary(trendL.dPL))
+
+b.coeff <- lmc["trend"]
+a.coeff <- lmc["(Intercept)"]
+
+## kobiety
+##trendL.bmik <- lm(data=obesity, bmik ~ trend )
+##summary(trendL.bmik)
+```
+
+
+Współczynnik kierunkowy trendu liniowego wynoszący `r b.coeff` jest
+interpretowany jako przeciętna zmiana z okresu na okres. Równanie prostej można
+zapisać jako:
+
+nadwaga = `r b.coeff` czas + `r a.coeff`
+
+Interpretacja: **w omawianym okresie przeciętnie przybywało `r b.coeff`% osób 
+z nadwagą rocznie**. Dopasowanie linii prostej do danych jest bardzo
+dobre co widać
+oraz o czym świadczą wartości $R^2$ (`r lmr * 100`%, tj.  `r lmr * 100`% 
+zmienności jest objaśniane przez model) oraz 
+średni błąd składnika losowego $S_e$ (`r lmse`). Ten błąd warto
+porówać do średniej wartości zmiennej objaśmnianej (liczby zgonów), która w omawianym okresie wynosi `r Ymean`. Zatem błąd jaki popełniamy stanowi
+`r lmse/Ymean *100`% średniej. 
+
+## Szacowanie sezonowości
+
+Wahania sezonowe to systematyczne wahania powtarzające się
+w ściśle określonych okresach roku, np.
+miesięczne (k = 12), kwartalne (k = 4) i półroczne (k = 2).
+
+Wahania sezonowe można
+wyodrębnić w wartościach bezwzględnych (**model addytywny**) 
+oraz procentach (**model multiplikatywny**).
+
+1. eliminujemy trend w szeregu czasowym 
+poprzez wyliczenie różnic $d_t$:
+
+$$d_t = y_t − \hat y_t$$
+
+gdzie: $y_t$ wartości rzeczywiste szeregu czasowego;
+
+$\hat y_t$ wartości teoretyczne obliczone na podstawie trendu
+
+obliczamy **surowe bezwzględne wahania sezonowe (W_sk)** dla
+jednoimiennego podokresu $k$:
+
+$$W_{sk} = \frac{\sum y_t - \hat y_t}{p} = \frac{d_t}{p}$$
+
+
+
+
+**średnich jednoimiennych okresów**
+
+1. Ustalamy względne wskaźniki sezonowości dla kolejnych
+podokresów, według formuły:
+ 
+$${}_wg_i=\frac{\bar y_i}{y}$$
+
+gdzie:
+
+$y_i$ -- średni poziom dla $i$-tego podokresu
+
+$\bar y$ --  średnia w całym okresie
+
+2. Bezwzględne wskaźniki sezonowości, które informują, o ile
+poziom badanego zjawiska w danym okresie różni się (w wartościach
+absolutnych) od przeciętnego poziomu tego zjawiskaw całym badanym
+okresie:
+
+$${}_bg_i=\bar y \cdot ({}_wg_i -1)$$
+
+**Metoda wskaźników**
+
+Stosowana w przypadku współwystępowania wahań sezonowych
+z trendem. W wariantach **sezonowści addytywnej** oraz
+**sezonowości multiplikatywnej**
+
+
+Plik `MZM.csv` zawiera dane miesięczne dotyczące liczby zwiedzających 
+**Muzeum Zamkowe w Malborku**
+w podziale
+na ogółem oraz gości krajowych i zagranicznych. Przy czym podział na krajowych/zagranicznych jest mocno umowny -- wg wyjaśnień pracownika MZM 
+zwiedzający jest pytany przy zakupie biletu na tę okoliczność.
+
+Dane zostały udostępnione przez biuro MZM w kwietniu 2019 roku.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+z <- read.csv("MZM00.csv", dec=".", sep = ',',  header=T, na.string="NA");
+
+mzmp <- ggplot(z, aes(x= as.Date(miesiac), y=razem )) +
+  geom_line(size=1, color='pink' ) +
+  geom_point(size=1.5, color='red', alpha=.3) +
+  geom_smooth(method="lm", size=1.0, alpha=.3) +
+  ylab(label="%") +
+  xlab(label="") +
+  ggtitle("Liczba zwiedzających MZM")
+  
+mzmp
+```
+
+Szacujemy linię trendu liniowego
+
+```{r, echo=FALSE}
+z0 <- z %>% mutate (miesiac = as.factor(substr(miesiac, 6, 7)))
+z0$miesiac <- relevel(z0$miesiac, ref="12")
+
+trend = c (1:nrow(z0))
+z0["trend"] <- trend
+
+trend.mzm <- lm(data=z0, razem ~ trend)
+lmc <- coef(trend.mzm)
+lmr <- summary(trend.mzm)$r.squared
+lmse <- summary(trend.mzm)$sigma
+Ymean <- mean(z0$razem)
+
+b.coeff <- lmc["trend"]
+a.coeff <- lmc["(Intercept)"]
+
+##summary(trend.mzm)
+```
+
+
+Interpretacja: **w omawianym okresie miesięczna liczba zwiedzających rosła
+o `r b.coeff` osób**. Dopasowanie linii prostej jest bardzo słabe
+($R^2$ = `r lmr * 100`% oraz $S_e$ = `r lmse`). 
+
+Sezonowość uwzględniamy dodając do równania $d -1$ zmiennych zero-jedynkowych,
+gdzie $d$ jest liczbą podokresów (dla danych kwartalnych $d=4$, 
+dla miesięcznych $d=12$). Dla $k$-tej zmiennej zero-jedynkowej:
+
+$z=1$ jeżeli podokres jest równy k, albo zero w każdej innej sytuacji
+
+Czyli pierwsza zmienna zerojedynkowa będzie miała wartość 1 dla stycznia,
+druga wartość 1 dla lutego itd...
+
+Wygląda to dość pracochłonnie ale np. jeżeli korzystamy z Gretla jest
+banalnie proste (Gretl sam się połapie ile wynosi $d$ i doda do równiania
+tyle zmiennych ile trzeba i jeszcze je odpowiednio przekoduje)
+
+Wynik jest taki:
+
+```{r, echo=FALSE}
+trend.mzm <- lm(data=z0, razem ~ trend + miesiac )
+
+summary(trend.mzm)
+
+lmc <- coef(trend.mzm)
+lmr <- summary(trend.mzm)$r.squared
+lmse <- summary(trend.mzm)$sigma
+Ymean <- mean(z0$razem)
+
+b.coeff <- lmc["trend"]
+a.coeff <- lmc["(Intercept)"]
+
+```
+
+Interpretacja: **w omawianym okresie miesięczna liczba zwiedzających rosła
+o `r b.coeff` osób**. Dopasowanie linii prostej jest znakomite
+($R^2$ = `r lmr * 100`% oraz $S_e$ = `r lmse`). 
+
+Przypominamy: do równania dodajemy $d-1$ zmiennych (jak dodamy $d$ to równanie nie da się oszacować); W powyższym przykładzie dodano zmienne styczeń--listopad
+(`miesiac01`--`miesiac12`) a nie ma zmiennej grudzień.
+
+Jeżeli wszystkie zmienne zero-jedynkowe mają wartość zero, to równanie opisuje
+grudzień. Zatem interpretacja współczynników przy zmiennych
+`miesiac01`--`miesiac12` sprowadza się do porównania względem grudnia, np.
+W styczniu jest  przeciętnie 455.48 osób więcej niż w grudniu a  sierpniu
+113808.97 osób więcej niż w grudniu. (Por wydruk powyżej)
+
+Oczywiście jeżeli grudzień nam nie pasuje jako baza do
+porównań możemy wybrać inny miesiąc czyli usunąć go z równania
+a dodać zamiast niego grudzień.
+
 

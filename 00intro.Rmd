@@ -40,11 +40,16 @@ współzależności; -- zmian zjawisk w czasie.
 **Badanie statystyczne** to zespół czynności zmierzających do
 uzyskania (za pomocą metod statystycznych) informacji
 charakteryzujących badaną zbiorowość lub zjawisko.  Najważniejsze
-kryteria klasyfikacji badań: -- zakres obserwacji badanych jednostek
-(pełne, częściowe); -- częstotliwość: (ciągłe, okresowe, doraźne); --
-zasięg przestrzenny (międzynarodowe, krajowe, regionalne,
-środowiskowe, monograficzne); -- dziedzina badań (demograficzne,
-społeczne, ekonomiczne, rolnicze, jakości środowiska naturalnego itp.
+kryteria klasyfikacji badań: 
+
+-- zakres obserwacji badanych jednostek (pełne, częściowe); 
+
+-- częstotliwość: (ciągłe, okresowe, doraźne); 
+
+-- zasięg przestrzenny (międzynarodowe, krajowe, regionalne, środowiskowe, monograficzne); 
+
+-- dziedzina badań (demograficzne, społeczne, ekonomiczne, rolnicze, 
+   jakości środowiska naturalnego itp.
 
 **Populacja, zbiorowość statystyczna**: zbiór obiektów (osób,
 przedmiotów, zdarzeń) logicznie ze sobą powiązanych (ale nie
@@ -61,8 +66,14 @@ kto? jest badane/y) przestrzenna (gdzie?)  czasowa (kiedy?)
 
 **Cechy zmienne** -- właściwości różnicujące jednostki
 jednostki z badanej populacji, tj. takie które mogą posiadać więcej niż 1 wariant
-(jeżeli posiadają jeden mamy do czynienia z przypadkiem trywialnym). Cechy
-zmienne dzielimy na: -- jakościowe (płeć, rok studiów) -- ilościowe (wiek)
+(jeżeli posiadają jeden mamy do czynienia z przypadkiem trywialnym). 
+
+Cechy zmienne dzielimy na: 
+
+-- jakościowe (płeć, rok studiów, miejsce zamieszkania). 
+
+-- ilościowe (wiek). Cela ilościowa przyjmuje wartości ze zbioru liczb rzeczywistych 
+(nieskończony i nieprzeliczalny.)
 
 Pojęcia stosowane w statystyce publicznej
 https://stat.gov.pl/metainformacje/slownik-pojec/pojecia-stosowane-w-statystyce-publicznej/lista.html
@@ -81,36 +92,53 @@ ale jest cechą użytej **skali pomiarowej** (nieprecyzyjna linijka).
 
 - **nominalna** (nominal scale), klasyfikuje: płeć; 
 
+  metody statystyczne: sumowanie, udziały, dominanta, korelacja
+
 - **porządkowa** (ordinal scale), klasyfikuje i porządkuje: zdolność kredytowa firmy, stadia choroby,
 
--- **przedziałowa** (interval scale), posiada jeszcze stałą jednostkę
-  miary (ów przedział) oraz umowne zero (temperatura w stopniach Celsjusza) 
+  metody statystyczne: mediana, i inne miary pozycyjne, korelacja
 
--- **ilorazowa** (rational scale), posiada to co przedziałowa plus 
+
+--**przedziałowa**/**stosunkowa** (*interval scale*), posiada jeszcze stałą jednostkę
+  miary (ów przedział) oraz umowne zero (temperatura w stopniach Celsjusza) 
+  
+  metody statystyczne: średnia, odchylenie standardowe itd  
+
+--**ilorazowa** (rational scale), posiada to co przedziałowa plus 
   naturalne zero (wiek, wzrost, obrót, temperatura w stopniach Kelwina).
+
+  metody statystyczne: dzielenie
+
 
 Skala Kelvina temperatury jest ilorazowa, skala Celsiusza jest przedziałowa.
 Zero w skali Kelvina to zero bezwzględne, 200K jest 2 razy mniejsze niż 400K
-podczas gdy 200C nie jest dwa razy mniejsze niż 400C. Na skali 
-przedziałowej **nie można** w *bezpieczny* sposób dokonywać dzielenia.
+podczas gdy 200C nie jest dwa razy mniejsze niż 400C. 
+
+Na skali przedziałowej **nie można** w *bezpieczny* sposób dokonywać dzielenia.
 Na liczbach w skali porządkowej nie można dokonywać nawet dodawania.
 Wszystkie operacje arytmetyczne są *bezpieczne* tylko dla skali ilorazowej.
 
 **Cecha statystyczna mierzalna (ilościowa)** -- określana jest za
-pomocą liczb np. oceny, płace. Cechy mierzalne dzielą się na skokowe
-i ciągłe.  Skokowe są to cechy, które przyjmują skończoną liczbę
-wartości, zwykle są to liczby całkowite; Ciągłe są to cechy, które
-przyjmują dowolne wartości liczbowe z pewnego przedziału liczbowego
-np. dochody, długość ziarna fasoli.
+pomocą liczb np. oceny, płace. Cechy mierzalne dzielą się na skokowe oraz ciągłe.  
+
+Skokowe są to cechy, które przyjmują skończoną liczbę wartości, zwykle są to liczby całkowite; 
+Ciągłe są to cechy, które przyjmują dowolne wartości liczbowe z pewnego przedziału liczbowego
+np. dochody, długość ziarna fasoli.
 
 ## Rodzaje badań statystycznych
 
-**Pełne** (spis, rejestracja), **częściowe** (reprezentacyjne),
+**Pełne** (spis, rejestracja), 
+
+**częściowe** (reprezentacyjne),
+
 **szacunki interpolacyjne i ekstrapolacyjne** (ustalenie wartości na podstawie
 znanych wartości podobnych/poprzednich/sąsiednich; 
 wbrew pozorom często stosowana metoda).
 
-**Ciągłe** (ewidencja urodzeń), **okresowe** (spisy rolne, spis powszechny), 
+**Ciągłe** (ewidencja urodzeń), 
+
+**okresowe** (spisy rolne, spis powszechny), 
+
 **doraźne** (sondaż poparcia w wyborach prezydenckich)
 
 **Spis** to gromadzenie danych na potrzeby badania; **Rejestracja** to gromadzenie danych przy
@@ -119,20 +147,69 @@ ludności, działanie wymiaru sprawiedliwości, gromadzenie danych pogodowych it
 
 Badanie **reprezentacyjne** to badanie oparte na **próbie** pobrane ze zbiorowości w taki sposób, 
 że wyniki uzyskane dla tej próby można uogólnić na 
-całą populację (wymaga to odpowiedniego sposobu wybrania jednostek do próby; nie każda
+całą **populację** (wymaga to odpowiedniego sposobu wybrania jednostek do próby; nie każda
 próba jest **reprezentacyjna**)
+
+Przykłady populacji i jednostek
+
+```
+Studenci PSW / student
+
+Gospodarstwa rolne w gminie Kwidzyn / gospodarstwo
+
+Gminy w Polsce / gmina
+```
+
 
 ## Organizacja badań statystycznych
 
 Etapy wstępne badania statystycznego:
 
-* ustalenie **celu i metody** (pełne częściowe); 
+* ustalenie **celu i metody** (pełne albo częściowe); 
+
+Do badań pełnych zalicza się:
+
+**Powszechne Spisy Rolne, Narodowe Spisy Powszechne Ludności i Mieszkań** (co 10 lat.
+ostatni spis w Polsce miał miejsce w 2021 r.),
+
+**Rejestrację bieżącą**
+
+**Sprawozdawczość statystyczną** ustawowy obowiązek podmiotów gospodarczych
+do przekazywania informacji i danych statystycznych dotyczących prowadzonej działalności właściwym organom administracji rządowej. Dane objęte są **tajemnicą statystyczną**.
+
+Zbierane i gromadzone w badaniach statystycznych statystyki publicznej, dane indywidualne i dane osobowe są poufne i podlegają szczególnej ochronie; 
+dane te mogą być wykorzystywane wyłącznie do opracowań, zestawień i analiz statystycznych oraz do tworzenia przez służby statystyki publicznej operatu do badań statystycznych prowadzonych przez te służby; udostępnianie lub wykorzystywanie danych indywidualnych 
+i danych osobowych dla innych niż podane celów jest zabronione (tajemnice statystyczne).
+
+https://pl.wikipedia.org/wiki/Tajemnica_statystyczna
+
+
+W badaniu częściowym obserwacji podlega część zbiorowości
+generalnej, tj próba **próba**. Dobór jednostek do próby ma charakter losowy lub
+celowy.  Badania częściowe dzielą się na:
+
+**badanie ankietowe** polega na zbieraniu informacji o zbiorowości za pomocą przygotowanej ankiety (tzw. kwestionariusza ankietowego),
+
+**badanie monograficzne**: wyczerpująca obserwacja typowej jednostki statystycznej (np. gminy). 
+Umożliwia pozyskanie informacji o badanej zbiorowości w zakresie ilościowym i jakościowym. 
+Jednostkę badania zwykle wybiera się celowo. [R]
+
+**badanie reprezentacyjne**: opiera się na próbie losowej uzyskanej z populacji generalnej (na podstawie wcześniej przygotowanego operatu badania, w którym znajdują zakwalifikowane jednostki zgodnie 
+z zakresem podmiotowym badania) według odpowiednio przyjętego schematu losowania. 
+Otrzymane wyniki z próby losowej uogólnia
+się z pewnym prawdopodobieństwem na całą populację. Próba losowa powinna być
+dostatecznie liczna, aby formułowane wnioski miały charakter **reprezentatywny**. [R]
+
 
 * określenie **zbiorowości** i **jednostki badania**;
 
-* określenie **cech/wartości cech** podlegających gromadzeniu (**definiowanie/klasyfikacja**) oraz sposobu pomiaru;
+* określenie **cech/wartości cech** podlegających 
+  gromadzeniu (**definiowanie/klasyfikacja**) oraz sposobu pomiaru;
 
 * zdefiniowanie **jednostki sprawozdawczej** (od kogo pozyskamy dane).
+
+Cechami statystycznymi nazywamy właściwości jednostek statystycznych
+(`numer buta`, `wzrost`, `waga`, `płeć`)
 
 **Klasyfikacja** to ustalenie (wyodrębnienie) wariantów cechy.
 Cechy/wartości cech nie mogą być wymyślane ad hoc ale (w imię porównywalności)
@@ -149,46 +226,56 @@ są obciążone zbytecznymi informacjami. Powyższe można uznać za mocno nieak
 Współcześnie dane z rejestrów 
 są coraz zarówno lepsze jakościowo jak i dominują ilościowo (Facebook/Google najlepszym przykładem).
 
+
 ## Opracowanie danych
 
 **Grupowanie** -- podział zbiorowości na jednorodne lub względnie
 jednorodne podgrupy z punktu widzenia wyróżnionej cechy (cech):
--- typologiczne (cechy jakościowe); -- wariancyjne (cechy ilościowe).
+-- **typologiczne** (cechy jakościowe); -- **wariancyjne** (cechy ilościowe).
 
-Zasady logiki formalnej: grupowanie musi być wyczerpujące -- każda
-jednostka zbiorowości musi być sklasyfikowana i włączona do
-odpowiedniej podgrupy; -- grupowanie powinno być rozłączne --
-wyodrębnione podgrupy muszą się wzajemnie wykluczać; -- grupowanie
-powinno być efektywne -- wyróżnione podgrupy powinny być na tyle
-jednorodne jakościowo, by mogły stanowić podstawę twierdzeń
-uogólniających
+Zasady logiki formalnej: 
+
+* grupowanie musi być wyczerpujące -- każda
+  jednostka zbiorowości musi być sklasyfikowana i włączona do
+  odpowiedniej podgrupy; 
+
+* grupowanie powinno być rozłączne --
+  wyodrębnione podgrupy muszą się wzajemnie wykluczać; 
+
+* grupowanie powinno być efektywne -- wyróżnione podgrupy powinny być na tyle
+  jednorodne jakościowo, by mogły stanowić podstawę twierdzeń uogólniających
 
 **Szereg statystyczny** to zbiór wyników **obserwacji** (pomiaru) pewnej cechy.
-Jeżeli pomiaru dokonano na zbiorze jednostek to mówimy o **szeregu przekrojowym** lub
-strukturalnym (mierzymy wiele jednostek w pewnym
+Jeżeli pomiaru dokonano na zbiorze jednostek to mówimy o **szeregu przekrojowym** lub
+strukturalnym (mierzymy wiele jednostek w pewnym
 momencie/okresie czasu), jeżeli pomiar dotyczy jednostki, a nie zbioru, ale dokonany został
-w kolejnych momentach/okresach czasu, to mówimy o **szeregu czasowym**. Jeżeli zbiór mierzonych jednostek
-zawiera informacje o ich położeniu na powierzchni Ziemi (np. współrzędne geograficzne), to  mówimy o **szeregu przestrzennym**.
+w kolejnych momentach/okresach czasu, to mówimy o **szeregu czasowym**. 
+Jeżeli zbiór mierzonych jednostek
+zawiera informacje o ich położeniu na powierzchni Ziemi (np. współrzędne geograficzne), 
+to  mówimy o **szeregu przestrzennym**.
 Zamiast szereg używa się teminu **dane** (dane przekrojowe/czasowe/przestrzenne)
 
 Reasumując: szereg strukturalny przestawia rozkład wartości cechy w pewnej zbiorowości (strukturę stąd nazwa);
-**szereg czasowy** określa zmianę wartości cechy w czasie, zaś
+
+**szereg czasowy** określa zmianę wartości cechy w czasie, zaś
+
 **szereg przestrzenny** rozkład wartości cechy na powierzchni Ziemi.
 
 Szereg przekrojowy/przestrzenny może być **szczegółowy** lub **rozdzielczy**.
 Szereg jest **szczegółowy** jeżeli tworzący go zbiór wartości zostanie uporządkowany (według wartości cechy)
+
 Szereg jest **rozdzielczy** jeżeli zostanie pogrupowany i uporządkowany tj. zostanie zamieniony na
 uporządkowane pary (cecha--liczebność cechy)
 
 **Szereg czasowy** może być **szeregiem okresów** (**strumieni**) lub
-momentów (**stanów**).  Przykładowo: liczba urodzeń żywych w powiecie kwidzyńskim w latach 2000--2019,
-to **szereg czasowy okresów**
+momentów (**stanów**).  Przykładowo: liczba urodzeń żywych w powiecie kwidzyńskim w latach 2000--2019, to **szereg czasowy okresów**
 (strumieni); w szczególności można dodać liczbę urodzeń
 w poszczególnych latach otrzymując łączną liczbę urodzonych w tym okresie.
 
-Liczba zarejestrowanych pojazdów w powiecie kwidzyńskim w latach 2000--2019 to szereg momentów (stan);
+Liczba zarejestrowanych pojazdów w powiecie kwidzyńskim w latach 2000--2019 to szereg momentów (stan);
 nie można sumować liczby zarejestrowanych samochodów, bo taka suma nie ma merytorycznie sensu.
-Można podać średnią (przeciętny stan) zarejestrowanych samochodów w latach 2000--2019.
+Można podać średnią (**przeciętny stan**) zarejestrowanych samochodów w latach 2000--2019.
 
 Wiele danych ekonomiczno-społecznych jest mierzonych na poziomie jednostek administracyjnych (gmina, powiat, województwo, państwo).
 Formalnie taki zbiór danych jest  **szeregiem przestrzennym**. 
+

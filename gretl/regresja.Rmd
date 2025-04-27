@@ -1,0 +1,210 @@
+---
+title: 'Regresja w praktyce'
+author:
+- name: Tomasz Przechlewski
+  email: t.plata-przechlewski@psw.kwidzyn.edu.pl
+  affiliation: Powiślańska Szkoła Wyższa (Kwidzyn/Poland)
+date: "1/2023"
+output: html_document
+description: (c) Tomasz Przechlewski / CC-BY license
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Modus operandi
+
+Podejście hypodedukcji: dedukcyjne sformułowanie hipotezy, która następnie jest empirycznie *falsyfikowana*, 
+tj. próbuje się wykazać, że jest ona nieprawdziwa
+
+(testując istotność parametru nachylenia prostej na przykład)
+
+**Co potrzebujemy?**
+
+1. Model (cześć dedukcyjna)
+
+2. Dane (z internetu zwykle)
+
+3. Program do weryfikacji, bo przecież nie będziemy liczyć ręcznie
+
+## Dane
+
+Przekrojowe
+
+Czasowe
+
+Panelowe
+
+## Narzędzia
+
+Arkusz (np. LibreOffice Dane→Statystyka→Regresja)
+
+Gretl (http://www.kufel.torun.pl/)
+
+## Case studies
+
+### Przykład 1: Konsumpcja a dochody
+
+Podobno Keynes, ale zależność jest w miarę oczywista:
+
+$$K = a + b \cdot  D$$
+https://en.wikipedia.org/wiki/Consumption_function
+Consumption vs Disposable Income (Dochód rozporządzalny;
+https://pl.wikipedia.org/wiki/Doch%C3%B3d_rozporz%C4%85dzalny)
+
+
+parametr $b$ jest być interpretowany jako **krańcowa skłonność do
+konsumpcji**. Pod tą szumną nazwą kryje się udział wydatków na konsumpcję
+w jednostce dochodów; parametr ten powinien być w przedziale 0--1
+Parametr ten ma zdroworosądkową interpretację pn ile dochodu wydamy
+
+Weryfikacja: potrzebujemy konsumpcji i dochodów
+
+Na poziomie indywidualnym (mikroekonomicznym) → Badania budżetów domowych
+
+Na poziomie makroekonomicznym → Bank Danych Lokalnych GUS
+https://bdl.stat.gov.pl/bdl/metadane/cechy/1870
+(przeciętne miesięczne wydatki na 1 osobę/przeciętny dochód rozporządzalny)
+
+### Przykład 2: Funkcja produkcji Cobba-Douglasa
+
+Zależność między wynikiem a nakładami:
+
+wartość = nakłady pracy * nakłady kapitałowe
+
+Im więcej pracuje tym więcej wytworzy ale
+im ma lepsze narzędza (nakłady kapitałowe) tym też więcej wytworzy
+
+$$P = a_0 \cdot L^{a_1}\cdot C^{a_2}$$
+
+Production/Labour/Capital
+
+Po obustronnym zlogarytmowaniu (log-log or log-linear model):
+
+$$\ln(P) = a_0 + a_1 \ln(L) + a_2 \ln(C)$$
+
+Współczynniki są interpretowane jako elastyczności
+(1% wzrostu L skutkuje a_1 wzrostem P)
+The coefficient of log-linear model are interpreted as elasticities
+(1\% increase in input results in a\% change in output)
+
+Do weryfikacji potrzeba danych nt $P$, $L$ oraz $C$
+
+Na poziomie makroekonomicznym? 
+
+Liczba zatrudnionych 
+
+Wartość technicznego uzbrojenia pracy? 
+
+Wartość brutto środków trwałych.
+
+
+Dane z książki Gujarat/Porter Basic Econometrics
+https://rdrr.io/github/brunoruas2/gujarati/
+
+Albo starszej Econometrics by example (Gujarati tylko)
+https://www.bloomsbury.com/us/econometrics-by-example-9781137375018/
+https://www.bloomsburyonlineresources.com/econometrics-by-example-2/learning-resources_data-sets
+
+added_value = labour_input * capital_expenditures 
+
+added_value/capital_expenditures = thousands of dollars
+labour_input = worker hours (thousands)
+
+The interpretation of the coefficient in `ln(labour_input)` of about 0,47
+is that if we increase the labour input by 1% on average, output goes up by 0,47% holding
+the capital input constant.
+
+Similarily, holding the labour input constant, if we increase the capital input
+by 1% on average, the output increases by 0,52%.
+
+Percentage increase in labour contributes more
+Increase by 1% in labour and by 1% in capital increases output by 0,99%
+
+### Przykład 3: Modele wzrostu
+
+Liniowy 
+
+$$GDP = a + b \cdot t$$ (liniowy)
+
+GDP zmienia się (z okresu na okres) przeciętnie o b (w jednostkach GDP)
+
+Semi-logarytmiczny
+
+$$GDP = GDP_0 \cdot (1 +r)t$$
+
+gdzie: r -- stopa wzrostu, t -- trend
+
+$$ln(GDP) = ln(GDP_0) + t ln(1 +r)$$
+
+podstawiając $a = ln(GDP_0)$ oraz $b = ln(1 +r)$ otrzymamy
+model regresji liniowej, przy czym parametr $b$ ma następujacą interpretację
+
+b = względna zmiana/zmiana
+
+zmiana czegoś o x powoduje zmianę o % procent. Czyli (w kontekście modeli wzrostu
+gdzie po prawej jest $t$: średnio z okresu na okres GDP zmienia się o b%.
+
+Bank danych makroekonomicznych (Produkt krajowy brutto/kwartalnie/rocznie)
+
+
+### Przykład 4: obietnica lidera opozycji jest sensowna?
+
+Albo czy babciowe coś zmieni w temacie zapaści w liczbie urodzeń?
+
+![](malzenstwa-urodzenia-zgony-pl.jpeg)
+
+$$F = GDP$$
+
+Bogatsi rodzą więcej dzieci (F=fertility czyli liczba dzieci/kobietę)
+
+Na poziomie makro
+
+$$F = GDP + UP + FE$$
+gdzie: F -- fertility; 
+
+UP -- odsetek ludności miejskiej (*urban population*);
+
+FE -- odsetek kobiet z wyższym wykształceniem (*female education*)
+
+
+Weryfikacja: baza Banku Światowego (na przykład)
+
+https://data.worldbank.org/
+
+https://github.com/apache/superset/issues/270
+
+### Przykład 4: Wzrost a emisja gazów cieplarnianych
+
+Emisja gazów cieplarnianych
+
+emisja = GDP  + UP
+
+emisja = energia
+
+emisja = GDP +  electricity% + livestock% + fertilizer + UP
+
+gdzie:
+
+emisja -- emisja per capita
+
+GDP -- GDP per capita
+
+UP -- odsetek ludności miejskiej
+
+%electricity -- % electricity from non-renovables
+
+Fertilizer -- zużycie nawozów na hektar
+
+livestock -- index pogłowia zwierząt (livestock index)
+
+Bank światowy
+
+
+## Inne bazy
+
+https://www.gapminder.org/data/
+
+https://db.nomics.world/ (od wczoraj nie działa)
+

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Analiza korelacji | Wprowadzenie do statystyki dla ekonomistów</title>
   <meta name="description" content="(c) Tomasz Przechlewski / CC-BY license" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Analiza korelacji | Wprowadzenie do statystyki dla ekonomistów" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="(c) Tomasz Przechlewski / CC-BY license" />
   
@@ -31,7 +30,6 @@
   
 <link rel="prev" href="interference.html"/>
 <link rel="next" href="analiza-szeregów-czasowych.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,11 +47,16 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 </head>
 
@@ -67,81 +70,86 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-metody-i-organizacja-badań-statystycznych" id="toc-przedmiot-metody-i-organizacja-badań-statystycznych"><span class="toc-section-number">1</span> Przedmiot, metody i organizacja badań statystycznych</a>
+<li class="chapter" data-level="1" data-path="przedmiot-metody-i-organizacja-badań-statystycznych.html"><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html"><i class="fa fa-check"></i><b>1</b> Przedmiot, metody i organizacja badań statystycznych</a>
 <ul>
-<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-statystyki" id="toc-przedmiot-statystyki"><span class="toc-section-number">1.1</span> Przedmiot statystyki</a></li>
-<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#pomiar" id="toc-pomiar"><span class="toc-section-number">1.2</span> Pomiar</a></li>
-<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#rodzaje-badań-statystycznych" id="toc-rodzaje-badań-statystycznych"><span class="toc-section-number">1.3</span> Rodzaje badań statystycznych</a></li>
-<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#organizacja-badań-statystycznych" id="toc-organizacja-badań-statystycznych"><span class="toc-section-number">1.4</span> Organizacja badań statystycznych</a></li>
-<li><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#opracowanie-danych" id="toc-opracowanie-danych"><span class="toc-section-number">1.5</span> Opracowanie danych</a></li>
+<li class="chapter" data-level="1.1" data-path="przedmiot-metody-i-organizacja-badań-statystycznych.html"><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#przedmiot-statystyki"><i class="fa fa-check"></i><b>1.1</b> Przedmiot statystyki</a></li>
+<li class="chapter" data-level="1.2" data-path="przedmiot-metody-i-organizacja-badań-statystycznych.html"><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#pomiar"><i class="fa fa-check"></i><b>1.2</b> Pomiar</a></li>
+<li class="chapter" data-level="1.3" data-path="przedmiot-metody-i-organizacja-badań-statystycznych.html"><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#rodzaje-badań-statystycznych"><i class="fa fa-check"></i><b>1.3</b> Rodzaje badań statystycznych</a></li>
+<li class="chapter" data-level="1.4" data-path="przedmiot-metody-i-organizacja-badań-statystycznych.html"><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#organizacja-badań-statystycznych"><i class="fa fa-check"></i><b>1.4</b> Organizacja badań statystycznych</a></li>
+<li class="chapter" data-level="1.5" data-path="przedmiot-metody-i-organizacja-badań-statystycznych.html"><a href="przedmiot-metody-i-organizacja-badań-statystycznych.html#opracowanie-danych"><i class="fa fa-check"></i><b>1.5</b> Opracowanie danych</a></li>
 </ul></li>
-<li><a href="analiza-struktury.html#analiza-struktury" id="toc-analiza-struktury"><span class="toc-section-number">2</span> Analiza struktury</a>
+<li class="chapter" data-level="2" data-path="analiza-struktury.html"><a href="analiza-struktury.html"><i class="fa fa-check"></i><b>2</b> Analiza struktury</a>
 <ul>
-<li><a href="analiza-struktury.html#tablice-statystyczne" id="toc-tablice-statystyczne"><span class="toc-section-number">2.1</span> Tablice statystyczne</a></li>
-<li><a href="analiza-struktury.html#rozkład-empiryczny" id="toc-rozkład-empiryczny"><span class="toc-section-number">2.2</span> Rozkład empiryczny</a></li>
-<li><a href="analiza-struktury.html#rozkład-normalny" id="toc-rozkład-normalny"><span class="toc-section-number">2.3</span> Rozkład normalny</a></li>
-<li><a href="analiza-struktury.html#wizualizacja-danych-i-wykresy" id="toc-wizualizacja-danych-i-wykresy"><span class="toc-section-number">2.4</span> Wizualizacja danych i wykresy</a>
+<li class="chapter" data-level="2.1" data-path="analiza-struktury.html"><a href="analiza-struktury.html#tablice-statystyczne"><i class="fa fa-check"></i><b>2.1</b> Tablice statystyczne</a></li>
+<li class="chapter" data-level="2.2" data-path="analiza-struktury.html"><a href="analiza-struktury.html#rozkład-empiryczny"><i class="fa fa-check"></i><b>2.2</b> Rozkład empiryczny</a></li>
+<li class="chapter" data-level="2.3" data-path="analiza-struktury.html"><a href="analiza-struktury.html#rozkład-normalny"><i class="fa fa-check"></i><b>2.3</b> Rozkład normalny</a></li>
+<li class="chapter" data-level="2.4" data-path="analiza-struktury.html"><a href="analiza-struktury.html#wizualizacja-danych-i-wykresy"><i class="fa fa-check"></i><b>2.4</b> Wizualizacja danych i wykresy</a>
 <ul>
-<li><a href="analiza-struktury.html#wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej" id="toc-wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej"><span class="toc-section-number">2.4.1</span> Wykresy przedstawiające rozkład wartości jednej zmiennej</a></li>
-<li><a href="analiza-struktury.html#histogram" id="toc-histogram"><span class="toc-section-number">2.4.2</span> Histogram</a></li>
-<li><a href="analiza-struktury.html#wykres-punktowy" id="toc-wykres-punktowy"><span class="toc-section-number">2.4.3</span> Wykres punktowy</a></li>
-<li><a href="analiza-struktury.html#porównanie-wielu-rozkładów" id="toc-porównanie-wielu-rozkładów"><span class="toc-section-number">2.4.4</span> Porównanie wielu rozkładów</a></li>
-<li><a href="analiza-struktury.html#wykresy-kołowe" id="toc-wykresy-kołowe"><span class="toc-section-number">2.4.5</span> Wykresy kołowe</a></li>
-<li><a href="analiza-struktury.html#wykres-pudełkowy" id="toc-wykres-pudełkowy"><span class="toc-section-number">2.4.6</span> Wykres pudełkowy</a></li>
-<li><a href="analiza-struktury.html#wykres-skrzypcowy-wariant-wykresu-pudełkowego" id="toc-wykres-skrzypcowy-wariant-wykresu-pudełkowego"><span class="toc-section-number">2.4.7</span> Wykres skrzypcowy (wariant wykresu pudełkowego)</a></li>
-<li><a href="analiza-struktury.html#przykład-zaufanie-do-politykow" id="toc-przykład-zaufanie-do-politykow"><span class="toc-section-number">2.4.8</span> Przykład: Zaufanie do Politykow</a></li>
-<li><a href="analiza-struktury.html#przykład-marimekko-mosaic-chart" id="toc-przykład-marimekko-mosaic-chart"><span class="toc-section-number">2.4.9</span> Przykład: Marimekko mosaic chart</a></li>
+<li class="chapter" data-level="2.4.1" data-path="analiza-struktury.html"><a href="analiza-struktury.html#wykresy-przedstawiające-rozkład-wartości-jednej-zmiennej"><i class="fa fa-check"></i><b>2.4.1</b> Wykresy przedstawiające rozkład wartości jednej zmiennej</a></li>
+<li class="chapter" data-level="2.4.2" data-path="analiza-struktury.html"><a href="analiza-struktury.html#histogram"><i class="fa fa-check"></i><b>2.4.2</b> Histogram</a></li>
+<li class="chapter" data-level="2.4.3" data-path="analiza-struktury.html"><a href="analiza-struktury.html#wykres-punktowy"><i class="fa fa-check"></i><b>2.4.3</b> Wykres punktowy</a></li>
+<li class="chapter" data-level="2.4.4" data-path="analiza-struktury.html"><a href="analiza-struktury.html#porównanie-wielu-rozkładów"><i class="fa fa-check"></i><b>2.4.4</b> Porównanie wielu rozkładów</a></li>
+<li class="chapter" data-level="2.4.5" data-path="analiza-struktury.html"><a href="analiza-struktury.html#wykresy-kołowe"><i class="fa fa-check"></i><b>2.4.5</b> Wykresy kołowe</a></li>
+<li class="chapter" data-level="2.4.6" data-path="analiza-struktury.html"><a href="analiza-struktury.html#wykres-pudełkowy"><i class="fa fa-check"></i><b>2.4.6</b> Wykres pudełkowy</a></li>
+<li class="chapter" data-level="2.4.7" data-path="analiza-struktury.html"><a href="analiza-struktury.html#wykres-skrzypcowy-wariant-wykresu-pudełkowego"><i class="fa fa-check"></i><b>2.4.7</b> Wykres skrzypcowy (wariant wykresu pudełkowego)</a></li>
+<li class="chapter" data-level="2.4.8" data-path="analiza-struktury.html"><a href="analiza-struktury.html#przykład-zaufanie-do-polityków"><i class="fa fa-check"></i><b>2.4.8</b> Przykład: Zaufanie do Polityków</a></li>
+<li class="chapter" data-level="2.4.9" data-path="analiza-struktury.html"><a href="analiza-struktury.html#przykład-marimekko-mosaic-chart"><i class="fa fa-check"></i><b>2.4.9</b> Przykład: Marimekko mosaic chart</a></li>
 </ul></li>
-<li><a href="analiza-struktury.html#analiza-parametryczna" id="toc-analiza-parametryczna"><span class="toc-section-number">2.5</span> Analiza parametryczna</a>
+<li class="chapter" data-level="2.5" data-path="analiza-struktury.html"><a href="analiza-struktury.html#analiza-parametryczna"><i class="fa fa-check"></i><b>2.5</b> Analiza parametryczna</a>
 <ul>
-<li><a href="analiza-struktury.html#miary-położenia" id="toc-miary-położenia"><span class="toc-section-number">2.5.1</span> Miary położenia</a></li>
-<li><a href="analiza-struktury.html#miary-zmienności" id="toc-miary-zmienności"><span class="toc-section-number">2.5.2</span> Miary zmienności</a></li>
-<li><a href="analiza-struktury.html#miary-asymetrii" id="toc-miary-asymetrii"><span class="toc-section-number">2.5.3</span> Miary asymetrii</a></li>
-<li><a href="analiza-struktury.html#miary-koncentracji" id="toc-miary-koncentracji"><span class="toc-section-number">2.5.4</span> Miary koncentracji</a></li>
+<li class="chapter" data-level="2.5.1" data-path="analiza-struktury.html"><a href="analiza-struktury.html#miary-położenia"><i class="fa fa-check"></i><b>2.5.1</b> Miary położenia</a></li>
+<li class="chapter" data-level="2.5.2" data-path="analiza-struktury.html"><a href="analiza-struktury.html#miary-zmienności"><i class="fa fa-check"></i><b>2.5.2</b> Miary zmienności</a></li>
+<li class="chapter" data-level="2.5.3" data-path="analiza-struktury.html"><a href="analiza-struktury.html#miary-asymetrii"><i class="fa fa-check"></i><b>2.5.3</b> Miary asymetrii</a></li>
+<li class="chapter" data-level="2.5.4" data-path="analiza-struktury.html"><a href="analiza-struktury.html#miary-koncentracji"><i class="fa fa-check"></i><b>2.5.4</b> Miary koncentracji</a></li>
 </ul></li>
 </ul></li>
-<li><a href="interference.html#interference" id="toc-interference"><span class="toc-section-number">3</span> Łagodne wprowadzenie do wnioskowania statystycznego</a>
+<li class="chapter" data-level="3" data-path="interference.html"><a href="interference.html"><i class="fa fa-check"></i><b>3</b> Łagodne wprowadzenie do wnioskowania statystycznego</a>
 <ul>
-<li><a href="interference.html#masa-ciała-uczestników-pś-w-rugby" id="toc-masa-ciała-uczestników-pś-w-rugby"><span class="toc-section-number">3.1</span> Masa ciała uczestników PŚ w rugby</a></li>
-<li><a href="interference.html#wiek-kandydatów-na-radnych" id="toc-wiek-kandydatów-na-radnych"><span class="toc-section-number">3.2</span> Wiek kandydatów na radnych</a></li>
-<li><a href="interference.html#rozkład-normalny-1" id="toc-rozkład-normalny-1"><span class="toc-section-number">3.3</span> Rozkład normalny</a></li>
-<li><a href="interference.html#odsetek-kobiet-wśród-kandydatów-na-radnych" id="toc-odsetek-kobiet-wśród-kandydatów-na-radnych"><span class="toc-section-number">3.4</span> Odsetek kobiet wśród kandydatów na radnych</a></li>
-<li><a href="interference.html#wnioskowanie-statystyczne" id="toc-wnioskowanie-statystyczne"><span class="toc-section-number">3.5</span> Wnioskowanie statystyczne</a>
+<li class="chapter" data-level="3.1" data-path="interference.html"><a href="interference.html#masa-ciała-uczestników-pś-w-rugby"><i class="fa fa-check"></i><b>3.1</b> Masa ciała uczestników PŚ w rugby</a></li>
+<li class="chapter" data-level="3.2" data-path="interference.html"><a href="interference.html#wiek-kandydatów-na-radnych"><i class="fa fa-check"></i><b>3.2</b> Wiek kandydatów na radnych</a></li>
+<li class="chapter" data-level="3.3" data-path="interference.html"><a href="interference.html#rozkład-normalny-1"><i class="fa fa-check"></i><b>3.3</b> Rozkład normalny</a></li>
+<li class="chapter" data-level="3.4" data-path="interference.html"><a href="interference.html#odsetek-kobiet-wśród-kandydatów-na-radnych"><i class="fa fa-check"></i><b>3.4</b> Odsetek kobiet wśród kandydatów na radnych</a></li>
+<li class="chapter" data-level="3.5" data-path="interference.html"><a href="interference.html#wnioskowanie-statystyczne"><i class="fa fa-check"></i><b>3.5</b> Wnioskowanie statystyczne</a>
 <ul>
-<li><a href="interference.html#estymacja-punktowa" id="toc-estymacja-punktowa"><span class="toc-section-number">3.5.1</span> Estymacja punktowa</a></li>
-<li><a href="interference.html#estymacja-przedziałowa" id="toc-estymacja-przedziałowa"><span class="toc-section-number">3.5.2</span> Estymacja przedziałowa</a></li>
-<li><a href="interference.html#testowanie-hipotez" id="toc-testowanie-hipotez"><span class="toc-section-number">3.5.3</span> Testowanie hipotez</a></li>
-<li><a href="interference.html#testy-nieparametryczne" id="toc-testy-nieparametryczne"><span class="toc-section-number">3.5.4</span> Testy nieparametryczne</a></li>
+<li class="chapter" data-level="3.5.1" data-path="interference.html"><a href="interference.html#estymacja-punktowa"><i class="fa fa-check"></i><b>3.5.1</b> Estymacja punktowa</a></li>
+<li class="chapter" data-level="3.5.2" data-path="interference.html"><a href="interference.html#estymacja-przedziałowa"><i class="fa fa-check"></i><b>3.5.2</b> Estymacja przedziałowa</a></li>
+<li class="chapter" data-level="3.5.3" data-path="interference.html"><a href="interference.html#testowanie-hipotez"><i class="fa fa-check"></i><b>3.5.3</b> Testowanie hipotez</a></li>
+<li class="chapter" data-level="3.5.4" data-path="interference.html"><a href="interference.html#testy-nieparametryczne"><i class="fa fa-check"></i><b>3.5.4</b> Testy nieparametryczne</a></li>
 </ul></li>
-<li><a href="interference.html#słownik-terminów-które-warto-znać" id="toc-słownik-terminów-które-warto-znać"><span class="toc-section-number">3.6</span> Słownik terminów które warto znać</a></li>
+<li class="chapter" data-level="3.6" data-path="interference.html"><a href="interference.html#słownik-terminów-które-warto-znać"><i class="fa fa-check"></i><b>3.6</b> Słownik terminów które warto znać</a></li>
 </ul></li>
-<li><a href="analiza-korelacji.html#analiza-korelacji" id="toc-analiza-korelacji"><span class="toc-section-number">4</span> Analiza korelacji</a>
+<li class="chapter" data-level="4" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html"><i class="fa fa-check"></i><b>4</b> Analiza korelacji</a>
 <ul>
-<li><a href="analiza-korelacji.html#pojęcia-wstępne" id="toc-pojęcia-wstępne"><span class="toc-section-number">4.1</span> Pojęcia wstępne</a>
+<li class="chapter" data-level="4.1" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html#pojęcia-wstępne"><i class="fa fa-check"></i><b>4.1</b> Pojęcia wstępne</a></li>
+<li class="chapter" data-level="4.2" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html#korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot"><i class="fa fa-check"></i><b>4.2</b> Korelacyjny wykres rozrzutu (korelogram, wykres XY w Excelu, scatter plot)</a></li>
+<li class="chapter" data-level="4.3" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html#pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona"><i class="fa fa-check"></i><b>4.3</b> Pomiar siły zależności: współczynnik korelacji liniowej Pearsona</a>
 <ul>
-<li><a href="analiza-korelacji.html#korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot" id="toc-korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot"><span class="toc-section-number">4.1.1</span> Korelacyjny wykres rozrzutu (korelogram, wykres XY w Excelu, scatter plot)</a></li>
-<li><a href="analiza-korelacji.html#pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona" id="toc-pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona"><span class="toc-section-number">4.1.2</span> Pomiar siły zależności: współczynnik korelacji liniowej Pearsona</a></li>
-<li><a href="analiza-korelacji.html#macierz-korelacji" id="toc-macierz-korelacji"><span class="toc-section-number">4.1.3</span> Macierz korelacji</a></li>
+<li class="chapter" data-level="4.3.1" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html#macierz-korelacji"><i class="fa fa-check"></i><b>4.3.1</b> Macierz korelacji</a></li>
+<li class="chapter" data-level="4.3.2" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html#pomiar-siły-zależności-współczynnik-korelacji-rang"><i class="fa fa-check"></i><b>4.3.2</b> Pomiar siły zależności: współczynnik korelacji rang</a></li>
 </ul></li>
-<li><a href="analiza-korelacji.html#pomiar-siły-zależności-regresja-liniowa" id="toc-pomiar-siły-zależności-regresja-liniowa"><span class="toc-section-number">4.2</span> Pomiar siły zależności: regresja liniowa</a></li>
-</ul></li>
-<li><a href="analiza-szeregów-czasowych.html#analiza-szeregów-czasowych" id="toc-analiza-szeregów-czasowych"><span class="toc-section-number">5</span> Analiza szeregów czasowych</a>
+<li class="chapter" data-level="4.4" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html#współczynnik-zbieżności-czuprowa"><i class="fa fa-check"></i><b>4.4</b> Współczynnik zbieżności Czuprowa</a></li>
+<li class="chapter" data-level="4.5" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html#pomiar-siły-zależności-regresja-liniowa"><i class="fa fa-check"></i><b>4.5</b> Pomiar siły zależności: regresja liniowa</a>
 <ul>
-<li><a href="analiza-szeregów-czasowych.html#pojęcia-wstępne-1" id="toc-pojęcia-wstępne-1"><span class="toc-section-number">5.1</span> Pojęcia wstępne</a></li>
-<li><a href="analiza-szeregów-czasowych.html#wykresy" id="toc-wykresy"><span class="toc-section-number">5.2</span> Wykresy</a>
+<li class="chapter" data-level="4.5.1" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html#regresja-prosta"><i class="fa fa-check"></i><b>4.5.1</b> Regresja prosta</a></li>
+<li class="chapter" data-level="4.5.2" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html#przypadek-ogólny-regresja-wieloraka"><i class="fa fa-check"></i><b>4.5.2</b> Przypadek ogólny: regresja wieloraka</a></li>
+<li class="chapter" data-level="4.5.3" data-path="analiza-korelacji.html"><a href="analiza-korelacji.html#zmienne-zero-jedynkowe"><i class="fa fa-check"></i><b>4.5.3</b> Zmienne zero-jedynkowe</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="analiza-szeregów-czasowych.html"><a href="analiza-szeregów-czasowych.html"><i class="fa fa-check"></i><b>5</b> Analiza szeregów czasowych</a>
 <ul>
-<li><a href="analiza-szeregów-czasowych.html#przykład-zwiedzający-muzeum-zamkowe-w-malborku" id="toc-przykład-zwiedzający-muzeum-zamkowe-w-malborku"><span class="toc-section-number">5.2.1</span> Przykład: Zwiedzający Muzeum Zamkowe w Malborku</a></li>
+<li class="chapter" data-level="5.1" data-path="analiza-szeregów-czasowych.html"><a href="analiza-szeregów-czasowych.html#pojęcia-wstępne-1"><i class="fa fa-check"></i><b>5.1</b> Pojęcia wstępne</a></li>
+<li class="chapter" data-level="5.2" data-path="analiza-szeregów-czasowych.html"><a href="analiza-szeregów-czasowych.html#przyrosty-i-indeksy"><i class="fa fa-check"></i><b>5.2</b> Przyrosty i indeksy</a></li>
+<li class="chapter" data-level="5.3" data-path="analiza-szeregów-czasowych.html"><a href="analiza-szeregów-czasowych.html#indeksy-agregatowe"><i class="fa fa-check"></i><b>5.3</b> Indeksy agregatowe</a></li>
+<li class="chapter" data-level="5.4" data-path="analiza-szeregów-czasowych.html"><a href="analiza-szeregów-czasowych.html#wykresy"><i class="fa fa-check"></i><b>5.4</b> Wykresy</a></li>
+<li class="chapter" data-level="5.5" data-path="analiza-szeregów-czasowych.html"><a href="analiza-szeregów-czasowych.html#model-wahań-w-czasie"><i class="fa fa-check"></i><b>5.5</b> Model wahań w czasie</a></li>
+<li class="chapter" data-level="5.6" data-path="analiza-szeregów-czasowych.html"><a href="analiza-szeregów-czasowych.html#szacowanie-trendu"><i class="fa fa-check"></i><b>5.6</b> Szacowanie trendu</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="analiza-szeregów-czasowych.html"><a href="analiza-szeregów-czasowych.html#metoda-mechaniczna-ma"><i class="fa fa-check"></i><b>5.6.1</b> Metoda mechaniczna MA</a></li>
+<li class="chapter" data-level="5.6.2" data-path="analiza-szeregów-czasowych.html"><a href="analiza-szeregów-czasowych.html#metoda-analityczna"><i class="fa fa-check"></i><b>5.6.2</b> Metoda analityczna</a></li>
 </ul></li>
-<li><a href="analiza-szeregów-czasowych.html#przyrosty" id="toc-przyrosty"><span class="toc-section-number">5.3</span> Przyrosty</a></li>
-<li><a href="analiza-szeregów-czasowych.html#indeksy-agregatowe" id="toc-indeksy-agregatowe"><span class="toc-section-number">5.4</span> Indeksy agregatowe</a></li>
-<li><a href="analiza-szeregów-czasowych.html#dekompozycja-szeregów-czasowych" id="toc-dekompozycja-szeregów-czasowych"><span class="toc-section-number">5.5</span> Dekompozycja szeregów czasowych</a></li>
-<li><a href="analiza-szeregów-czasowych.html#wygładzanie-za-pomocą-średniej-ruchomej" id="toc-wygładzanie-za-pomocą-średniej-ruchomej"><span class="toc-section-number">5.6</span> Wygładzanie za pomocą średniej ruchomej</a></li>
-<li><a href="analiza-szeregów-czasowych.html#liniowa-funkcja-trendu" id="toc-liniowa-funkcja-trendu"><span class="toc-section-number">5.7</span> Liniowa funkcja trendu</a></li>
-<li><a href="analiza-szeregów-czasowych.html#wygładzanie-wykładnicze" id="toc-wygładzanie-wykładnicze"><span class="toc-section-number">5.8</span> Wygładzanie wykładnicze</a></li>
-<li><a href="analiza-szeregów-czasowych.html#oszacowanie-dokładności-modelu" id="toc-oszacowanie-dokładności-modelu"><span class="toc-section-number">5.9</span> Oszacowanie dokładności modelu</a></li>
-<li><a href="analiza-szeregów-czasowych.html#szacowanie-wskaźników-sezonowości" id="toc-szacowanie-wskaźników-sezonowości"><span class="toc-section-number">5.10</span> Szacowanie wskaźników sezonowości</a></li>
+<li class="chapter" data-level="5.7" data-path="analiza-szeregów-czasowych.html"><a href="analiza-szeregów-czasowych.html#szacowanie-sezonowości"><i class="fa fa-check"></i><b>5.7</b> Szacowanie sezonowości</a></li>
 </ul></li>
-<li><a href="literatura.html#literatura" id="toc-literatura"><span class="toc-section-number">6</span> Literatura</a></li>
+<li class="chapter" data-level="6" data-path="literatura.html"><a href="literatura.html"><i class="fa fa-check"></i><b>6</b> Literatura</a></li>
 </ul>
 
       </nav>
@@ -159,10 +167,10 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="analiza-korelacji" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Analiza korelacji</h1>
-<div id="pojęcia-wstępne" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Pojęcia wstępne</h2>
+<div id="analiza-korelacji" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Analiza korelacji<a href="analiza-korelacji.html#analiza-korelacji" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="pojęcia-wstępne" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Pojęcia wstępne<a href="analiza-korelacji.html#pojęcia-wstępne" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Pomiędzy zjawiskami występują związki (zależności.) Nauki formułują te związki
 w postaci <strong>praw</strong>. Jak takie <strong>prawo naukowe</strong> powstaje? Typowo w dwu etapach,
 najpierw za pomocą <strong>dedukcji</strong> stawia się <strong>hipotezę</strong>, potem konfrontuje się
@@ -179,8 +187,9 @@ Jaki jest charakter zależności? Jaka jest siła zależności?
 Przykładowo czy istnieje związek pomiędzy wielkością dochodu (przyczyna)
 a wielkością spożycia mięsa (skutek), albo jako jest zależność pomiędzy wielkością
 produkcji, nakładami kapitałowymi i wielkości nakładów pracy?</p>
-<div id="korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot" class="section level3" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Korelacyjny wykres rozrzutu (korelogram, wykres XY w Excelu, scatter plot)</h3>
+</div>
+<div id="korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Korelacyjny wykres rozrzutu (korelogram, wykres XY w Excelu, scatter plot)<a href="analiza-korelacji.html#korelacyjny-wykres-rozrzutu-korelogram-wykres-xy-w-excelu-scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>W układzie kartezjańskim każdej obserwacji odpowiada
 kropka o współrzędnych XY.</p>
 <p>O występowaniu związku świadczy układanie się kropek według jakiegoś
@@ -197,15 +206,16 @@ udostępnia dane dotyczące dochodu narodowego.</p>
 <p>Konsumpcja mięsa jest mierzona jako średnia konsumpcja w kilogramach w każdym kraju (<em>per capita</em> się mówi);
 Dochód podobnie jako średnia wielkość dochodu narodowego <em>per capita</em>.
 Dane dotyczą roku 2013.</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
 </div>
-<div id="pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona" class="section level3" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Pomiar siły zależności: współczynnik korelacji liniowej Pearsona</h3>
-<p>Kowariancja to średnia arytemtyczna iloczynów odchyleń wartości zmiennych <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>
+<div id="pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Pomiar siły zależności: współczynnik korelacji liniowej Pearsona<a href="analiza-korelacji.html#pomiar-siły-zależności-współczynnik-korelacji-liniowej-pearsona" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Kowariancja to średnia arytmetyczna iloczynów odchyleń wartości zmiennych <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>
 od ich wartości średnich. Dla <span class="math inline">\(n\)</span> obserwacji na zmiennych <span class="math inline">\(X\)</span> oraz <span class="math inline">\(Y\)</span>
 można powyższe zapisać w postaci następującej formuły:</p>
-<p><span class="math display">\[\mathrm{cov} (xy) = \frac{1}{n} \left( (x_1 - \bar x) (y_1 - \bar y)  + ... +
-(x_n- \bar x) (y_n - \bar y) \right)\]</span></p>
+<p><span class="math display">\[\mathrm{cov} (xy) = \frac{\sum_{i=1}^n (x_i -
+\bar x)(y_i - \bar y)}{N}\]</span></p>
+<p>gdzie: <span class="math inline">\(N\)</span> – liczba obserwacji</p>
 <p>Kowariancja zależy od rozproszenia (im większe tym większa),
 ma też dziwną jednostkę (jednostkaX · jednostkaY) oraz zależy
 od wybranych skal (tony vs gramy na przykład.)</p>
@@ -219,8 +229,9 @@ kowariacji przez iloczyn odchyleń standardowych <span class="math inline">\(s_x
 Skrajne wartości <span class="math inline">\(\pm 1\)</span>
 świadczą o związku funkcyjnym (wszystkie punkty układają się na linii prostej);
 wartość zero świadczy o braku związku (linia pozioma/pionowa)</p>
-<p><img src="./covariance_explained.png" style="width:75.0%" /></p>
-<p>Interpretacja opisowa: wartości powyżej 0,9 świadczą o silnej zależności.</p>
+<p><img src="covariance_explained.png" style="width:75.0%" /></p>
+<p>Interpretacja opisowa: wartości powyżej 0,9 świadczą o silnej zależności. Kwadrat współczynnika korelacji liniowej
+Pearsonsa nazywamy współczynnikiem determinacji.</p>
 <p><strong>Przykład: korelacja między spożyciem mięsa a GDP</strong></p>
 <p>Współczynnik korelacji liniowej wynosi 0.6823158 (umiarkowana korelacja).</p>
 <p>Czy ta wartość jest istotnie różna od zera? Jest na to stosowny
@@ -229,9 +240,15 @@ prawdopodobieństwo otrzymania r = 0.6823158 przy założeniu że
 prawdziwa wartość r wynosi zero. Otóż w naszym przykładzie
 to prawdopodobieństwo wynosi 3.850676e-26
 (czyli jest ekstremalnie małe – r jest istotnie różne od zera).</p>
-</div>
-<div id="macierz-korelacji" class="section level3" number="4.1.3">
-<h3><span class="header-section-number">4.1.3</span> Macierz korelacji</h3>
+<p>Kwadrat współczynnika korelacji jest określany współczynnikiem determinacji
+i jest oznaczany jako <span class="math inline">\(r^2\)</span> lub <span class="math inline">\(R^2\)</span>. Współczynnik ten jest
+intrepretowany jako część zmiany wartości zmiennej objaśnianej która
+jest wyjaśniona przez zmiany wartości zmiennej objaśniającej (przyczyna).
+<span class="math inline">\(r^2\)</span> w zależności pomiędzy spożyciem mięsa a GDP wynosi 0.4655549, czyli
+46.56% zmienności spożycia mięsa jest
+objaśniana przez zmienność GDP.</p>
+<div id="macierz-korelacji" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Macierz korelacji<a href="analiza-korelacji.html#macierz-korelacji" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Wstępnym etapem analizy zależności między zmiennymi jest często
 hurtowa ocena współczynników korelacji w postaci kwadratowej <strong>macierzy korelacji</strong>.</p>
 <p><strong>Przykład: korelacja pomiędzy wiekiem, edukacją, szczęściem a stanem zdrowia</strong></p>
@@ -244,12 +261,434 @@ hurtowa ocena współczynników korelacji w postaci kwadratowej <strong>macierzy
 ## Happiness  0.04491863  0.07418519038 1.00000000  0.17863069296
 ## Health     0.00125623 -0.00003728405 0.17863069  1.00000000000</code></pre>
 <p>Albo w bardziej efektownej postaci tekstowo-graficznej:</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+</div>
+<div id="pomiar-siły-zależności-współczynnik-korelacji-rang" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Pomiar siły zależności: współczynnik korelacji rang<a href="analiza-korelacji.html#pomiar-siły-zależności-współczynnik-korelacji-rang" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Współczynnik korelacji rang (Spearmana vel <em>Spearman’s Rank-Order Correlation</em>)
+może być stosowany
+w przypadku gdy cechy są mierzone w skali porządkowej (lub lepszej)</p>
+<p>Obliczenie współczynnika Spearmana dla <span class="math inline">\(N\)</span> obserwacji na zmiennych <span class="math inline">\(XY\)</span>
+polega na zamianie wartości
+zmiennych <span class="math inline">\(X\)</span> oraz <span class="math inline">\(Y\)</span> na <strong>rangi</strong> (numery porządkowe od <span class="math inline">\(1...N\)</span>).
+Następnie stosowana jest formuła współczynnika korelacji
+liniowej Pearsona (<span class="math inline">\(\tau_x\)</span> oraz <span class="math inline">\(\tau_y\)</span> oznaczają <strong>rangi</strong>):</p>
+<p><span class="math display">\[\rho_{xy} = \frac{\textrm{cov}(\tau_x, \tau_y)}{s_{\tau_x}  s_{\tau_y}}\]</span></p>
+<p>Współczynnik <span class="math inline">\(\rho_{xy}\)</span> to – podobnie jak <strong>oryginalny</strong> współczynnik
+korelacji liniowej Pearsona – miara niemianowana, o wartościach
+ze zbioru [-1;1];</p>
+<p>Wzór alternatywny</p>
+<p><span class="math display">\[r_s = 1 - \frac{6\sum d_i^2}{n(n^2 -1)}\]</span>
+gdzie: <span class="math inline">\(d_i\)</span> to różnica pomiędzy rangami cech X oraz Y (<span class="math inline">\(d_i= x_i - y_i\)</span>);
+n – liczba par cech <span class="math inline">\(X/Y\)</span>.</p>
+<p><strong>Przykład: spożycie mięsa na świecie</strong></p>
+<p>Współczynnik Pearsona i Spearmana dla zależności między spożyciem mięsa w 1980
+a spożyciem mięsa w 2013 roku (zmienna objaśniana):</p>
+<pre><code>## [1] &quot;współczynnik Pearsona: 0.68&quot;</code></pre>
+<pre><code>## [1] &quot;współczynnik Spearmana: 0.68&quot;</code></pre>
+<p>Nie ma sensu liczenia współczynnika korelacji rang w przypadku kiedy obie
+cechy są liczbami, bo wtedy należy użyć normalnego współczynnika Pearsona.
+Ale nie jest to też błędem więc w powyższym przykładzie
+go liczymy :-)</p>
+<p>Współczynnik korelacji liniowej Spearmana wynosi 0.6845429 (umiarkowana korelacja).</p>
+<p>Czy ta wartość jest istotnie różna od zera? Jest na to stosowny
+test statystyczny, który sprowadza się do określenia jakie jest
+prawdopodobieństwo otrzymania <span class="math inline">\(r_s\)</span> = 0.6845429 przy założeniu że
+prawdziwa wartość <span class="math inline">\(r_s\)</span> wynosi zero. Otóż w naszym przykładzie
+to prawdopodobieństwo wynosi 2.302116e-26
+(czyli jest ekstremalnie małe – <span class="math inline">\(r_s\)</span> jest istotnie różne od zera).</p>
 </div>
 </div>
-<div id="pomiar-siły-zależności-regresja-liniowa" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Pomiar siły zależności: regresja liniowa</h2>
+<div id="współczynnik-zbieżności-czuprowa" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Współczynnik zbieżności Czuprowa<a href="analiza-korelacji.html#współczynnik-zbieżności-czuprowa" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Współczynnik zbieżności Czuprowa (<span class="math inline">\(T_xy\)</span>) stosuje się w badaniu zależności cech ilościowych, jak i jakościowych. Miara ta wykorzystuje statystykę chi-kwadrat (<span class="math inline">\(\chi^2\)</span>) o postaci:</p>
+<p><span class="math display">\[\chi^2 = \sum_{i=1}^k\sum_{j=1}^r \frac{(n_{ij} - \hat n_{ij})^2}{\hat n_{ij}} = \sum_{i=1}^k \sum_{j=1}^r \frac{\hat n_{ij}^2}{ \hat n_{ij}} -n\]</span>
+gdzie:</p>
+<p><span class="math display">\[\hat n_{ij}= \frac{n_{i.} \cdot n_{.j}}{n}\]</span></p>
+<p><span class="math inline">\(n_{ij}\)</span> – liczebności rzeczywiste (empiryczne),</p>
+<p><span class="math inline">\(\hat n_{ij}\)</span> – liczebności teoretyczne (oczekiwane),</p>
+<p><span class="math inline">\(n_{i.}\)</span> – suma liczebności i-tego wiersza,</p>
+<p><span class="math inline">\(n_{.j}\)</span> – suma liczebności j-tej kolumny,</p>
+<p><span class="math inline">\(n\)</span> – łączna suma liczebności,</p>
+<p><span class="math inline">\(r\)</span> – liczba wierszy,</p>
+<p><span class="math inline">\(k\)</span> – liczba kolumn.</p>
+<p><span class="math display">\[T_{xy} = \sqrt{\frac{\chi^2}{n \sqrt{(r-1)(k-1)}}}\]</span>
+Wartości współczynnika korelacji Czuprowa znajdują się w przedziale [0, 1].
+Im wartość współczynnika jest bliższa jedności tym zależność jest silniejsza.</p>
+</div>
+<div id="pomiar-siły-zależności-regresja-liniowa" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Pomiar siły zależności: regresja liniowa<a href="analiza-korelacji.html#pomiar-siły-zależności-regresja-liniowa" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Regresja liniowa</strong> zakłada, że istnieje związek przyczyna-skutek
+i ten związek można opisać linią prostą (stąd liniowa). Skutek jest
+jeden i nazywa się go <strong>zmienną zależną</strong> a przyczyn może być wiele i noszą
+nazwę <strong>zmiennych niezależnych</strong> (albo <strong>predyktorów</strong>).
+W przypadku gdy związek dotyczy dwóch zmiennych mówi się o <strong>regresji prostej</strong>.
+Przykładowo zależność
+pomiędzy spożywaniem kawy w czasie sesji egzaminacyjnej a wynikiem egzaminu
+można formalnie zapisać jako:</p>
+<p><span class="math display">\[\textrm{wynik} = b_0 + b_1 \cdot \textrm{kawa}\]</span></p>
+<p>Współczynnik <span class="math inline">\(b_1\)</span> określa wpływ spożycia kawy na wynik egzaminu.
+W szczególności jeżeli <span class="math inline">\(b_1 = 0\)</span> to
+nie ma związku między spożywaniem kawy a wynikiem egzaminu.</p>
+<p>Jeżeli zmiennych niezależnych jest więcej niż jedna,
+to mówimy o <strong>regresji wielorakiej</strong>. Przykładowo
+zależność
+pomiędzy wynikiem egzaminu, spożyciem kawy czasem nauki oraz predyspozycjami
+opisuje następujący model regresji:</p>
+<p><span class="math display">\[\textrm{wynik} = b_0 + b_1 \cdot \textrm{kawa} + b_2 \cdot \textrm{czas} + b_3 \cdot \textrm{predyspozycje} \]</span></p>
+<p>Współczynnik <span class="math inline">\(b_1\)</span> określa wpływ spożycia kawy
+<span class="math inline">\(b_2\)</span> czasu poświęconego na naukę,
+a <span class="math inline">\(b_3\)</span> predyspozycji
+(intelektualnych, mierzonych np. średnią oceną ze studiów)</p>
+<div id="regresja-prosta" class="section level3 hasAnchor" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Regresja prosta<a href="analiza-korelacji.html#regresja-prosta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Równanie regresji dla zmiennych <span class="math inline">\(Y\)</span> (skutek) oraz <span class="math inline">\(X\)</span> (przyczyna) można zapisać następująco:</p>
+<p><span class="math display">\[Y = b_0 + b_1 \cdot X + e \]</span></p>
+<p><span class="math inline">\(Y = b_0 + b_1 \cdot X\)</span> to <strong>część deterministyczna</strong>,
+a <span class="math inline">\(e\)</span> oznacza <strong>składnik losowy</strong>.</p>
+<p>O tym składniku zakładamy, że średnia jego wartość wynosi zero.
+Można to sobie wyobrazić, że w populacji jest jakaś prawdziwa zależność
+<span class="math inline">\(Y = b_0 + b_1 \cdot X\)</span> pomiędzy <span class="math inline">\(X\)</span> a <span class="math inline">\(Y\)</span>, która w próbie
+ujawnia się z błędem o charakterze losowym. Ten błąd może wynikać
+z pominięcia jakiejś ważnej zmiennej (model
+to zawsze uproszczenie rzeczywistości), przybliżonego charakteru linii
+prostej jako zależności pomiędzy <span class="math inline">\(X\)</span> a <span class="math inline">\(Y\)</span> (prosta ale nie do końca prosta)
+albo błędu pomiaru.</p>
+<p>Współczynnik <span class="math inline">\(b_1\)</span> (nachylenia prostej) określa wielkość efektu
+w przypadku regresji, tj. siły zależności pomiędzy zmiennymi.</p>
+<p>Współczynnik <span class="math inline">\(b_1\)</span> ma prostą interpretację: jeżeli wartość zmiennej <span class="math inline">\(X\)</span>
+rośnie o jednostkę to wartość zmiennej <span class="math inline">\(Y\)</span> zmienia
+się przeciętnie o <span class="math inline">\(b_1\)</span> jednostek zmiennej <span class="math inline">\(Y\)</span>.</p>
+<p>Wyraz wolny zwykle nie ma sensownej interpretacji
+(formalnie jest to wartość zmiennej <span class="math inline">\(Y\)</span> dla <span class="math inline">\(X=0\)</span>)</p>
+<p>Oznaczmy przez <span class="math inline">\(y_i\)</span> wartości obserwowane (zwane też empirycznymi)
+a przez <span class="math inline">\(\hat y_i\)</span> <em>wartości teoretyczne</em> (leżące na prostej linii regresji).</p>
+<p>Wartości <span class="math inline">\(b_0\)</span> oraz <span class="math inline">\(b_1\)</span> wyznacza się minimalizując sumę kwadratów
+odchyleń wartości teoretycznych od wartości empirycznych, tj.:</p>
+<p><span class="math display">\[\sum_{i=1}^n (y_i - \hat y_i)^2 = \sum_{i=1}^n e_i^2 \to \min\]</span></p>
+<p>Rozwiązując powyższy <strong>problem minimalizacyjny</strong> otrzymujemy wzory
+definiujące parametry <span class="math inline">\(b_0\)</span> oraz <span class="math inline">\(b_1\)</span>. Metoda wyznaczania parametrów
+linii prostej w oparciu o minimalizację sumy kwadratów odchyleń
+nosi nazwę <strong>metoda największych kwadratów</strong>.</p>
+<p>Przypominamy, że <strong>estymatorem</strong> nazywamy metodę oszacowania parametru na podstawie próby.
+Ponieważ traktujemy <span class="math inline">\(b_0\)</span> oraz <span class="math inline">\(b_1\)</span> jako parametry jakieś populacji generalnej
+to wzory na <span class="math inline">\(b_0\)</span> oraz <span class="math inline">\(b_1\)</span> statystyk nazwie estymatorami parametrów
+<span class="math inline">\(b_0\)</span> oraz <span class="math inline">\(b_1\)</span>. W konsekwencji tego <span class="math inline">\(b_0\)</span>/<span class="math inline">\(b_1\)</span> posiadają jakąś wartość średnią oraz wariancję.</p>
+<p>Przypominamy że wartość średnia <strong>dobrego estymatora</strong> powinna wynosić zero (bo wtedy nie ma błędu systematycznego)
+oraz że wariancja estymatora powinna maleć wraz ze wzrostem liczebności próby. Można udowodnić
+że estymatory parametrów <span class="math inline">\(b_0\)</span>/<span class="math inline">\(b_1\)</span>
+uzyskane <strong>metodą najmniejszych kwadratów</strong> posiadają obie właściwości.</p>
+<p>Graficznie <strong>kryterium minimalizacyjne</strong> przedstawia rysunek</p>
+<p><img src="kmnk_roznice.png" style="width:75.0%" /></p>
+<p>Suma podniesionych do kwadratu odległości pomiędzy czerwonymi
+i niebieskimi kropkami ma być minimalna. Kropki niebieskie to
+wartości empiryczne; kropki czerwone to wartości teoretyczne.
+Zadanie wyznaczenie
+parametrów takiej prostej sprowadza się do (dla dwóch zmiennych):</p>
+<p><span class="math display">\[\sum (y_i - b_0 - b_1 x)^2 \to \min\]</span></p>
+<p>Rozwązując powyższe ze względu na <span class="math inline">\(b_0\)</span> i <span class="math inline">\(b_1\)</span> otrzymujemy
+oceny parametrów regresji:</p>
+<p><span class="math display">\[b_1 = \frac{\sum_{i=1}^n (x_i - \bar x)(y_i - \bar y)}{\sum_{i=1}^n (x_i - \bar x)^2}\]</span></p>
+<p><span class="math display">\[b_0 =  \bar y - b\bar x\]</span></p>
+<p>Interpretacja: jednostkowa zmiana <span class="math inline">\(Y\)</span> przy zmianie <span class="math inline">\(X\)</span> o jednostkę.</p>
+<p>Można udowodnić, że bez względu czy punkty na wykresie układają się
+w przybliżeniu wzdłuż prostej czy nie, zawsze <strong>jakaś prosta</strong> zostanie
+dopasowana (jeżeli tylko punktów jest więcej niż jeden.)
+Jak to ocenić w sposób bardziej konkretny a nie tylko na oko dopasowanie
+prostej do wartości empirycznych?</p>
+<p><strong>Ocena dopasowania: wariancja resztowa oraz średni błąd szacunku</strong></p>
+<p>Oznaczając <em>resztę</em> jako: <span class="math inline">\(e_i = y_i - \hat y_i\)</span>,
+definiujemy <strong>wariancję resztową</strong> jako:</p>
+<p><span class="math display">\[s_e^2 = \frac{\sum e_i^2}{n-k}\]</span>.</p>
+<p>Gdzie <span class="math inline">\(n\)</span> oznacza liczbę obserwacji (liczebność próby), a <span class="math inline">\(k\)</span> liczbę
+szacowanych parametrów bez wyrazu wolnego czyli jeden w regresji
+prostej (a więcej niż jeden w regresji wielorakiej o czym dalej.)</p>
+<p>Pierwiastek kwadratowy z <strong>wariancji resztowej</strong>.
+nazywamy <strong>średnim błędem szacunku</strong> (<em>mean square error</em>, MSE)</p>
+<p><strong>Ocena dopasowania: współczynniki zbieżności i determinacji</strong></p>
+<p>Suma kwadratów reszt (albo odchyleń wartości teoretycznych
+od wartości empirycznych,
+albo suma kwadratów błędów vel <strong>resztowa suma kwadratów</strong>):</p>
+<p><span class="math display">\[\mathrm{RSK} = (y_1 - \hat y_1)^2 + (y_2 - \hat y_2)^2 + ... +  (y_n - \hat y_n)^2\]</span>.</p>
+<p>Suma kwadratów odchyleń <strong>wartości empirycznych</strong>
+od średniej (<strong>ogólna suma kwadratów</strong>):</p>
+<p><span class="math display">\[\mathrm{OSK} = (y_1 - \bar y)^2 + (y_2 - \bar y)^2 + ... +  (y_n - \bar y)^2\]</span></p>
+<p>Suma kwadratów odchyleń <strong>wartości teoretycznych</strong>
+od średniej (<strong>wyjaśniona suma kwadratów</strong>):</p>
+<p><span class="math display">\[\mathrm{WSK} = (\hat y_1 - \bar y)^2 + (\hat y_2 - \bar y)^2 + ... +  (\hat y_n - \bar y)^2\]</span></p>
+<p>Można wykazać, że <span class="math inline">\(\mathrm{OSK} = \mathrm{WSK} + \mathrm{RSK}\)</span> zatem (po podzieleniu obu stron
+równania przez <span class="math inline">\(\mathrm{OSK}\)</span> otrzymujemy:</p>
+<p><span class="math display">\[ 1 =  \mathrm{WSK}/\mathrm{OSK} + \mathrm{RSK}/\mathrm{OSK}\]</span></p>
+<p><strong>Współczynnik determinacji </strong> oznaczany jako <span class="math inline">\(R^2\)</span> to <span class="math inline">\(\mathrm{WSK}/\mathrm{OSK}\)</span>.</p>
+<p><strong>Współczynnik zbieżności</strong> oznaczany jako <span class="math inline">\(\Phi^2\)</span> (duża grecka litera Fi) to <span class="math inline">\(RSK/OSK\)</span>.</p>
+<p>Współczynnik zbieżności $^2$100% informuje ile % zmienności zmiennej <span class="math inline">\(Y\)</span> nie została
+wyjaśniona przez zmienne regresji.</p>
+<p>Współczynniki przyjmują wartość z przedziału <span class="math inline">\([0,1]\)</span> lub <span class="math inline">\([0, 100]\)</span>% jeżeli
+ich wartości zostaną pomnożone przez 100.</p>
+<p>Interpretacja współczynnika zbieżności: udział (procent) zmienność wyjaśnianej
+przez linię regresji. Im <span class="math inline">\(R^2\)</span> jest bliższe jedności (lub 100% jeżeli
+jest współczynnik zbieżności jest wyrażony w procentach) tym lepiej.</p>
+<p><strong>Odchylenie standardowe składnika resztowego <span class="math inline">\(S_e\)</span></strong></p>
+<p><span class="math display">\[S_e^2 = \sqrt{\sum e_i^2}{n-2}\]</span></p>
+<p>O ile średnio (<span class="math inline">\(\pm\)</span>) odchylają się wartości rzeczywiste zmiennej objaśnianej
+od teoretycznych obliczonych na podstawie regresji.</p>
+<p><strong>Współczynnik zmienności resztowej <span class="math inline">\(V_e\)</span></strong></p>
+<p><span class="math display">\[V_e = \frac{S_e}{\bar y} \cdot 100\]</span></p>
+<p>Jaką część średniej wartości zmiennej objaśnianej stanowi
+jej odchylenie standardowe reszt.</p>
+<p><strong>Ocena dopasowania: istotność parametru <span class="math inline">\(b_1\)</span></strong></p>
+<p>Jeżeli: <span class="math inline">\(Y= 0 \cdot X + b_0\)</span>, to <span class="math inline">\(Y = b_0\)</span> czyli nie ma zależności
+pomiędzy <span class="math inline">\(X\)</span> oraz <span class="math inline">\(Y\)</span>. Wartości <span class="math inline">\(b_1\)</span> bliskie zero wskazują na słabą zależność
+pomiędzy cechami.</p>
+<p>Przypominamy, że <strong>estymator</strong> parametru <span class="math inline">\(b_1\)</span> ma średnią równą prawdziej wartości <span class="math inline">\(b_1\)</span>.
+Dodatkowo zakładamy, że rozkład tego estymatora jest normalny. To założenie
+pozwala wiarygodnie oszacować wariancję; w konsekwencji znamy dokładny
+rozkład (bo przypominamy, że rozkład
+normalny jest określony przez dwa parametry: średnią oraz właśnie wariancję)</p>
+<p>Można teraz zadać pytanie jeżeli faktycznie <span class="math inline">\(b_1=0\)</span>, to jakie jest prawdopodobieństwo, że
+współczynnik <span class="math inline">\(\hat b_1\)</span> oszacowany
+na podstawie <span class="math inline">\(n\)</span> obserwacji będzie (co do wartości bezwzględnej) większy niż <span class="math inline">\(b_e\)</span>.
+Albo inaczej: otrzymaliśmy <span class="math inline">\(b_e\)</span>, jakie jest prawdopodobieństwo
+otrzymania takiej wartości (lub większej co do wartości bezwzględnej)
+przy założeniu, że istotnie <span class="math inline">\(b_1=0\)</span>.</p>
+<p>Jeżeli takie prawdopodobieństwo jest duże, to uznajemy, że być może <span class="math inline">\(b_1 = 0\)</span>,
+a jeżeli małe to będziemy skłonni uznać, że <span class="math inline">\(b_1 \not= 0\)</span>.
+Duże/małe przyjmujemy arbitralnie, zwykle
+jest to <span class="math inline">\(0,1\)</span>, <span class="math inline">\(0,05\)</span> lub <span class="math inline">\(0,01\)</span>. Tak zgadza się, to prawdopodobieństwo
+to <strong>poziom istotności</strong></p>
+<p>Testowanie istotności współczynnika regresji jest ważnym kryterium oceny
+jakości dopasowania.
+Regresja z <strong>nieistotnym</strong> współczynnikiem nie
+może być podstawą do interpretowania zależności pomiędzy <span class="math inline">\(X\)</span> oraz <span class="math inline">\(Y\)</span>.</p>
+<p><strong>Przykład: Waga a wzrost rugbystów</strong></p>
+<p>Zależność między wagą (<code>weight</code>) a wzrostem (<code>height</code>):</p>
+<p><span class="math display">\[ \textrm{height} = b_0 + b_1 \textrm{weight}\]</span>
+Oszacowanie tego równania na próbie 635 uczestników
+Pucharu Świata w rugby w 2023 roku daje następujące wyniki:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+<table>
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="15%" />
+<col width="12%" />
+<col width="4%" />
+<col width="32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Zmienna</th>
+<th align="right">B</th>
+<th align="right">Błąd stand</th>
+<th align="right">z</th>
+<th align="right">p</th>
+<th align="left">CI95</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">155.9260196</td>
+<td align="right">1.7525838</td>
+<td align="right">88.96922</td>
+<td align="right">0</td>
+<td align="left">152.480000–159.370000</td>
+</tr>
+<tr class="even">
+<td align="left">weight</td>
+<td align="right">0.2944082</td>
+<td align="right">0.0170125</td>
+<td align="right">17.30539</td>
+<td align="right">0</td>
+<td align="left">0.260000–0.330000</td>
+</tr>
+</tbody>
+</table>
+<p>Co oznacza, że wzrost wagi o 1kg
+skutkuje przeciętnie większym wzrostem o 0.2944082 cm. Współczynnik determinacji
+wynosi 32.86%.
+Współczynnik nachylenia prostej jest istotny ponieważ wartość <span class="math inline">\(p\)</span> (tak mała, że w tabeli
+oznaczona jako 0)
+jest grubo poniżej zwyczajowego poziomu istotności (p &lt; 0,05).</p>
+<p>Kolumna <code>CI95</code> zawiera 95% przedziały ufności:
+z 95% prawdopodobieństwem wartość współczynnika nachylenia
+prostej znajduje się w przedziale 0,24–0,32.</p>
+<p><strong>Przykład: zamożność a konsumpcja mięsa</strong></p>
+<p>Następujące równanie opisuje zależność pomiędzy dochodem narodowym na głowę (<em>per capita</em>)
+a konsumpcją mięsa w kilogramach:</p>
+<p><span class="math display">\[\textrm{konsumpcja} = b_0 + b_1 \textrm{gdp}\]</span>
+Model oszacowano dla krajów świata w roku 2013 na podstawie danych
+pobranych z bazy FAO Food Balance Sheet oraz Banku Światowego, otrzymując
+następujące wyniki</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<table>
+<colgroup>
+<col width="17%" />
+<col width="16%" />
+<col width="16%" />
+<col width="13%" />
+<col width="4%" />
+<col width="31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Zmienna</th>
+<th align="right">B</th>
+<th align="right">Błąd stand</th>
+<th align="right">z</th>
+<th align="right">p</th>
+<th align="left">CI95</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">34.0847681</td>
+<td align="right">2.2324799</td>
+<td align="right">15.26767</td>
+<td align="right">0</td>
+<td align="left">29.680000–38.490000</td>
+</tr>
+<tr class="even">
+<td align="left">gdp2013</td>
+<td align="right">0.0011075</td>
+<td align="right">0.0000996</td>
+<td align="right">11.12427</td>
+<td align="right">0</td>
+<td align="left">0.000000–0.000000</td>
+</tr>
+</tbody>
+</table>
+<p>Każdy USD <em>per capita</em> więcej dochodu narodowego (GDP) oznacza przeciętny
+wzrost spożycia mięsa o 0.0011075 kg. Przeciętna różnica wartości teoretycznych
+od empirycznych wynosi 21,04 kg (średni błąd szacunku).
+Współczynnik zbieżności wynosi 40.88%.
+Współczynnik nachylenia prostej (mimo że jego wartość wynosi zaledwie
+0.0011075) jest statystycznie istotny.</p>
+</div>
+<div id="przypadek-ogólny-regresja-wieloraka" class="section level3 hasAnchor" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> Przypadek ogólny: regresja wieloraka<a href="analiza-korelacji.html#przypadek-ogólny-regresja-wieloraka" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Uogólnieniem regresji prostej jest regresja wieloraka.
+W modelu
+regresji wielorakiej po lewej stronie równania występuje zmienna
+liczbowa oznaczona jako <span class="math inline">\(Y\)</span>, a po prawej zmienne liczbowe
+lub nominalne, <span class="math inline">\(X_1, \ldots, X_k\)</span>:</p>
+<p><span class="math display">\[Y = b_0 + b_1 \cdot X_1 + b_2 \cdot X_2 + ... + b_k \cdot X_k \]</span></p>
+<p>Wpływ każdej
+zmiennej <span class="math inline">\(X_i\)</span> na zmienną zależną <span class="math inline">\(Y\)</span> jest określony przez odpowiedni współczynnik <span class="math inline">\(b_i\)</span>.</p>
+<p>Podobnie jak w przypadku regresji prostej do oceny stopnia dopasowania modelu do danych
+wykorzystuje się:
+średni błąd szacunku, współczynnik zbieżności <span class="math inline">\(R^2\)</span> oraz
+weryfikuje się istotność współczynników <span class="math inline">\(b_i\)</span>.</p>
+<p><strong>Przykład: płodność a dochody</strong></p>
+<p>Czy bogatsi i pracujący na etatach rodzą mniej dzieci?</p>
+<p><span class="math display">\[F = GDP + UP + FE\]</span></p>
+<p>gdzie:</p>
+<p><code>f</code> – współczynnik płodności (<em>fertility ratio</em>);</p>
+<p><code>urbanpop</code> – odsetek ludności miejskiej (<em>urban population</em>);</p>
+<p><code>fe</code> – odsetek kobiet z wyższym wykształceniem (<em>female education</em>)</p>
+<p>Dane pochodzą z Banku Światowego…</p>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="14%" />
+<col width="14%" />
+<col width="13%" />
+<col width="13%" />
+<col width="28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Zmienna</th>
+<th align="right">B</th>
+<th align="right">Błąd stand</th>
+<th align="right">z</th>
+<th align="right">p</th>
+<th align="left">CI95</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">2.9529179</td>
+<td align="right">0.4936601</td>
+<td align="right">5.981682</td>
+<td align="right">0.0000003</td>
+<td align="left">1.960000–3.950000</td>
+</tr>
+<tr class="even">
+<td align="left">urbanpop</td>
+<td align="right">-0.0081040</td>
+<td align="right">0.0066170</td>
+<td align="right">-1.224732</td>
+<td align="right">0.2269110</td>
+<td align="left">-0.020000–0.010000</td>
+</tr>
+<tr class="odd">
+<td align="left">womenedu</td>
+<td align="right">-0.0551752</td>
+<td align="right">0.0206348</td>
+<td align="right">-2.673892</td>
+<td align="right">0.0103439</td>
+<td align="left">-0.100000—0.010000</td>
+</tr>
+</tbody>
+</table>
+<p>Współczynnik determinacji <span class="math inline">\(R^2\)</span> zaledwie 0.172232.
+Zmienna <code>urbanpop</code> okazała się nieistotna statystycznie.</p>
+<p><strong>Wybór zmiennych objaśniających</strong></p>
+<p>Zwykle jest tak, że do objaśniającej kształtowanie się wartości zmiennej <span class="math inline">\(Y\)</span> kandyduje wiele potencjalnych
+predyktorów <span class="math inline">\(X_k\)</span>.
+Model zawierający wszystkie <span class="math inline">\(X_k\)</span> predyktory niekoniecznie będzie najlepszy.
+Nie wdając się w omawianie szczegółowych zasad poprzestaniemy na dwóch kryteriach:</p>
+<ol style="list-style-type: decimal">
+<li><p>Model prostszy jest lepszy od modelu bardziej skomplikowanego jeżeli adekwatnie objaśnia zmienność <span class="math inline">\(Y\)</span> (zasada brzytwy Ockhama)</p></li>
+<li><p>Model powinien zawierać tylko zmienne o współczynnikach, których wartości są statystycznie różne od zera</p></li>
+</ol>
+<p>Regresja krokowa (<strong>stepwise regression</strong>) jest metodą wyboru najlepszych predyktorów
+spośród większego zbioru zmiennych. Występuje w dwóch wariantach <strong>dołączania</strong> i <strong>eliminacji</strong>.
+Ponieważ <strong>eliminacja</strong> wydaje się prostsza omówimy tylko ten wariant.</p>
+<p>W metodzie eliminacji początkowym modelem jest model zawierający wszystkie potencjalne <span class="math inline">\(X_k\)</span> predyktory.
+Następnie testujemy istotność wszystkich współczynników regresji i usuwamy
+ze zbioru predyktorów ten, który jest „najbardziej nieistotny“ (ma największą wartość <span class="math inline">\(p\)</span>)
+Procedurę powtarzamy dla modelu bez usuniętej zmiennej.
+Procedurę przerywamy gdy wszystkie współczynniki regresji są statystycznie istotne.</p>
+</div>
+<div id="zmienne-zero-jedynkowe" class="section level3 hasAnchor" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> Zmienne zero-jedynkowe<a href="analiza-korelacji.html#zmienne-zero-jedynkowe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Zamiast (celem wykazania związku między zmienną liczbową a nominalną) porównywać
+średnie w grupach możemy wykorzystać metodę regresji
+wielorakiej. Zmienna nominalna jest zamieniana na jedną lub więcej
+zmiennych binarnych, które przyjmują tylko dwie wartości 0 lub 1.</p>
+<p>Przykładowo rodzaj miejsca pracy (skala nominalna; dwie wartości: szpital, przychodnia)
+można zamienić na zmienną binarną <code>praca</code> przypisując 1 = szpital, oraz
+0 = przychodnia (lub odwrotnie). Załóżmy że poziom stresu zależy od stażu pracy, satysfakcji
+(obie mierzone na skali liczbowej)
+rodzaju miejsca pracy. Możemy to zapisać jako następujące równanie regresji</p>
+<p><span class="math display">\[\textrm{stres} = b_0 + b_1\textrm{staż} + b_2 \textrm{satysfakcja} + b_3 \textrm{praca}\]</span>
+Jaka jest interpretacja współczynnika <span class="math inline">\(b_3\)</span>? Zakładając że 0 = przychodnia, <span class="math inline">\(b_3\)</span> oznacza
+przeciętną zmianę wielkości stresu
+spowodowaną pracą w szpitalu w porównaniu do pracy w przychodni. Jeżeli ten współczynnik jest istotny
+statystycznie, to istnieje zależność pomiędzy stresem a miejscem pracy. Czyli zamiast
+stosować test <span class="math inline">\(t\)</span>-Studenta i porównywać średnie w grupach,
+możemy oszacować model regresji z wykorzystaniem stosownej
+zmiennej zero-jedynkowej a następnie sprawdzić czy współczynnik stojący przy tej zmiennej jest istotny.</p>
+<p>Jeżeli zmienna nominalna ma <span class="math inline">\(n\)</span> wartości należy ją zamienić na <span class="math inline">\(n-1\)</span> zmiennych zero-jedynkowych.
+Załóżmy że stress zależy także od wykształcenia, mierzonego w skali nominalnej
+(średnie, licencjat, magisterskie.) Tworzymy dwie zmienne:
+magister (jeden jeżeli respondent ma wykształcenie magisterskie lub 0 jeżeli nie ma)
+oraz licencjat (jeden jeżeli respondent ma licencjat lub 0 jeżeli nie ma). Równanie
+regresji ma postać:</p>
+<p><span class="math display">\[\textrm{stres} = b_0 + b_1\textrm{staż} + b_2 \textrm{satysfakcja} + b_3 \textrm{praca}
++ b_4 \textrm{magister} + b_5 \textrm{licencjat} \]</span></p>
+<p>Jeżeli <span class="math inline">\(\textrm{magister} = 0\)</span> oraz <span class="math inline">\(\textrm{licencjat} = 0\)</span> to osoba ma wykształcenie średnie.</p>
+<p>Interpretacja: <span class="math inline">\(b_4\)</span> (jeżeli istotne) oznacza przeciętną zmianę wielkości stresu osoby z wykształceniem magisterskim w porównaniu do osoby z wykształceniem średnim. Podobnie <span class="math inline">\(b_5\)</span> oznacza przeciętną zmianę
+wielkości stresu osoby z wykształceniem licencjackim
+w porównaniu do osoby z wykształceniem średnim.</p>
+<p>Sobczyk komplikuje sprawę wprowadzając pojęcie regresji I oraz II rodzaju.
+Regresja I rodzaju to zależność pomiędzy wartościami zmiennej</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -318,7 +757,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
